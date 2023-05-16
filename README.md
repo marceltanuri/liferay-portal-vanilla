@@ -1,4 +1,4 @@
-# Liferay DXP Docker Compose Environment
+# Liferay Portal CE Docker Compose Environment
 
 ## Requirements
 

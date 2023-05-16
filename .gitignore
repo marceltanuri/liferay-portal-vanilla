@@ -2,7 +2,10 @@ elasticsearch-data/nodes
 liferay-document-library/**
 !liferay-document-library/.keep
 liferay-logs/*.log
+liferay-logs/**/.log
 liferay-logs/*.xml
+liferay-logs/**/*.xml
 liferay-logs/*.json
+liferay-logs/**/*.json
 liferay-patching/*.zip
 mysql-dump/*.sql
