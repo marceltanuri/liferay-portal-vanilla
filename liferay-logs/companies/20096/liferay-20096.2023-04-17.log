@@ -1,0 +1,2 @@
+2023-04-17 20:07:11.189 WARN  [liferay/mail-2][MailMessageListener:125] Email test@domain.invalid will be ignored because it is included in mail.send.blacklist
+2023-04-17 20:07:11.190 WARN  [liferay/mail-2][MailMessageListener:51] Skipping email because the sender is not specified

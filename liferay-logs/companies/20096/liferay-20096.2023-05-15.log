@@ -1,0 +1,264 @@
+2023-05-15 23:53:06.498 ERROR [com.liferay.portal.osgi.web.portlet.tracker.internal.PortletTracker-ServiceTrackerOpener][BatchingBatch:134] HHH000315: Exception executing batch [java.sql.BatchUpdateException: Duplicate entry '20096-Account Member-0' for key 'Role_.IX_4CC99816'], SQL: insert into Role_ (mvccVersion, ctCollectionId, uuid_, companyId, userId, userName, createDate, modifiedDate, classNameId, classPK, name, title, description, type_, subtype, roleId) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2023-05-15 23:53:06.500 ERROR [com.liferay.portal.osgi.web.portlet.tracker.internal.PortletTracker-ServiceTrackerOpener][SqlExceptionHelper:142] Duplicate entry '20096-Account Member-0' for key 'Role_.IX_4CC99816'
+2023-05-15 23:53:06.507 WARN  [com.liferay.portal.osgi.web.portlet.tracker.internal.PortletTracker-ServiceTrackerOpener][PortalInstanceLifecycleListenerManagerImpl:204] Unable to register portal instance {"mvccVersion": 1, "companyId": 20096, "userId": 0, "userName": "", "createDate": "Mon May 15 23:52:27 GMT 2023", "modifiedDate": "Mon May 15 23:52:27 GMT 2023", "webId": "liferay.com", "mx": "liferay.com", "homeURL": "", "logoId": 0, "maxUsers": 0, "active": true, "name": "Liferay", "legalName": "", "legalId": "", "legalType": "", "sicCode": "", "tickerSymbol": "", "industry": "", "type": "", "size": ""}
+com.liferay.portal.kernel.exception.SystemException: com.liferay.portal.kernel.dao.orm.ORMException: javax.persistence.PersistenceException: org.hibernate.exception.ConstraintViolationException: could not execute batch
+	at com.liferay.portal.kernel.service.persistence.impl.BasePersistenceImpl.processException(BasePersistenceImpl.java:649) ~[portal-kernel.jar:?]
+	at com.liferay.portal.service.persistence.impl.ResourcePermissionPersistenceImpl.findByC_N_S_P(ResourcePermissionPersistenceImpl.java:3384) ~[portal-impl.jar:?]
+	at com.liferay.portal.service.persistence.impl.ResourcePermissionPersistenceImpl.findByC_N_S_P(ResourcePermissionPersistenceImpl.java:3231) ~[portal-impl.jar:?]
+	at com.liferay.portal.service.persistence.impl.ResourcePermissionPersistenceImpl.findByC_N_S_P(ResourcePermissionPersistenceImpl.java:3182) ~[portal-impl.jar:?]
+	at com.liferay.portal.service.impl.ResourcePermissionLocalServiceImpl.addResourcePermissions(ResourcePermissionLocalServiceImpl.java:368) ~[portal-impl.jar:?]
+	at jdk.internal.reflect.GeneratedMethodAccessor279.invoke(Unknown Source) ~[?:?]
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:566) ~[?:?]
+	at com.liferay.portal.spring.aop.AopMethodInvocationImpl.proceed(AopMethodInvocationImpl.java:50) ~[portal-impl.jar:?]
+	at com.liferay.portal.spring.transaction.TransactionInterceptor.invoke(TransactionInterceptor.java:69) ~[portal-impl.jar:?]
+	at com.liferay.portal.spring.aop.AopMethodInvocationImpl.proceed(AopMethodInvocationImpl.java:57) ~[portal-impl.jar:?]
+	at com.liferay.portal.service.ServiceContextAdvice.invoke(ServiceContextAdvice.java:60) ~[portal-impl.jar:?]
+	at com.liferay.portal.spring.aop.AopMethodInvocationImpl.proceed(AopMethodInvocationImpl.java:57) ~[portal-impl.jar:?]
+	at com.liferay.portal.spring.aop.AopInvocationHandler.invoke(AopInvocationHandler.java:49) ~[portal-impl.jar:?]
+	at com.sun.proxy.$Proxy87.addResourcePermissions(Unknown Source) ~[?:?]
+	at com.liferay.portal.service.impl.ResourceLocalServiceImpl.addResources(ResourceLocalServiceImpl.java:254) ~[portal-impl.jar:?]
+	at com.liferay.portal.service.impl.ResourceLocalServiceImpl.addResources(ResourceLocalServiceImpl.java:243) ~[portal-impl.jar:?]
+	at jdk.internal.reflect.GeneratedMethodAccessor278.invoke(Unknown Source) ~[?:?]
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:566) ~[?:?]
+	at com.liferay.portal.spring.aop.AopMethodInvocationImpl.proceed(AopMethodInvocationImpl.java:50) ~[portal-impl.jar:?]
+	at com.liferay.portal.spring.aop.AopInvocationHandler.invoke(AopInvocationHandler.java:49) ~[portal-impl.jar:?]
+	at com.sun.proxy.$Proxy92.addResources(Unknown Source) ~[?:?]
+	at com.liferay.account.service.impl.AccountRoleLocalServiceImpl.addAccountRole(AccountRoleLocalServiceImpl.java:108) ~[?:?]
+	at com.liferay.account.service.impl.AccountRoleLocalServiceImpl._checkAccountRole(AccountRoleLocalServiceImpl.java:377) ~[?:?]
+	at com.liferay.account.service.impl.AccountRoleLocalServiceImpl.checkCompanyAccountRoles(AccountRoleLocalServiceImpl.java:146) ~[?:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:?]
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:566) ~[?:?]
+	at com.liferay.portal.spring.aop.AopMethodInvocationImpl.proceed(AopMethodInvocationImpl.java:50) ~[portal-impl.jar:?]
+	at com.liferay.portal.spring.transaction.TransactionInterceptor.invoke(TransactionInterceptor.java:69) ~[portal-impl.jar:?]
+	at com.liferay.portal.spring.aop.AopMethodInvocationImpl.proceed(AopMethodInvocationImpl.java:57) ~[portal-impl.jar:?]
+	at com.liferay.change.tracking.internal.aop.CTTransactionAdvice.invoke(CTTransactionAdvice.java:79) ~[?:?]
+	at com.liferay.portal.spring.aop.AopMethodInvocationImpl.proceed(AopMethodInvocationImpl.java:57) ~[portal-impl.jar:?]
+	at com.liferay.portal.spring.aop.AopInvocationHandler.invoke(AopInvocationHandler.java:49) ~[portal-impl.jar:?]
+	at com.sun.proxy.$Proxy780.checkCompanyAccountRoles(Unknown Source) ~[?:?]
+	at com.liferay.account.admin.web.internal.instance.lifecycle.AddDefaultAccountRolesPortletPermissionsPortalInstanceLifecycleListener.portalInstanceRegistered(AddDefaultAccountRolesPortletPermissionsPortalInstanceLifecycleListener.java:52) ~[?:?]
+	at com.liferay.portal.instance.lifecycle.internal.PortalInstanceLifecycleListenerManagerImpl.lambda$registerCompany$1(PortalInstanceLifecycleListenerManagerImpl.java:199) ~[?:?]
+	at com.liferay.portal.instance.lifecycle.internal.PortalInstanceLifecycleListenerManagerImpl._runIfNeeded(PortalInstanceLifecycleListenerManagerImpl.java:304) ~[?:?]
+	at com.liferay.portal.instance.lifecycle.internal.PortalInstanceLifecycleListenerManagerImpl.registerCompany(PortalInstanceLifecycleListenerManagerImpl.java:183) ~[?:?]
+	at com.liferay.portal.instance.lifecycle.internal.PortalInstanceLifecycleListenerManagerImpl$PortalInstanceLifecycleListenerServiceTrackerCustomizer.lambda$null$1(PortalInstanceLifecycleListenerManagerImpl.java:430) ~[?:?]
+	at com.liferay.portal.spring.transaction.BaseTransactionExecutor.execute(BaseTransactionExecutor.java:37) ~[portal-impl.jar:?]
+	at com.liferay.portal.spring.transaction.TransactionInvokerImpl.invoke(TransactionInvokerImpl.java:39) ~[portal-impl.jar:?]
+	at com.liferay.portal.kernel.transaction.TransactionInvokerUtil.invoke(TransactionInvokerUtil.java:28) ~[portal-kernel.jar:?]
+	at com.liferay.portal.instance.lifecycle.internal.PortalInstanceLifecycleListenerManagerImpl$PortalInstanceLifecycleListenerServiceTrackerCustomizer.lambda$addingService$2(PortalInstanceLifecycleListenerManagerImpl.java:423) ~[?:?]
+	at com.liferay.portal.service.impl.CompanyLocalServiceImpl.forEachCompany(CompanyLocalServiceImpl.java:496) ~[portal-impl.jar:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:?]
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:566) ~[?:?]
+	at com.liferay.portal.spring.aop.AopMethodInvocationImpl.proceed(AopMethodInvocationImpl.java:50) ~[portal-impl.jar:?]
+	at com.liferay.portal.spring.aop.AopInvocationHandler.invoke(AopInvocationHandler.java:49) ~[portal-impl.jar:?]
+	at com.sun.proxy.$Proxy86.forEachCompany(Unknown Source) ~[?:?]
+	at com.liferay.portal.instance.lifecycle.internal.PortalInstanceLifecycleListenerManagerImpl$PortalInstanceLifecycleListenerServiceTrackerCustomizer.addingService(PortalInstanceLifecycleListenerManagerImpl.java:420) ~[?:?]
+	at com.liferay.portal.instance.lifecycle.internal.PortalInstanceLifecycleListenerManagerImpl$PortalInstanceLifecycleListenerServiceTrackerCustomizer.addingService(PortalInstanceLifecycleListenerManagerImpl.java:377) ~[?:?]
+	at com.liferay.osgi.service.tracker.collections.internal.list.ServiceTrackerListImpl$ServiceReferenceServiceTrackerCustomizer.addingService(ServiceTrackerListImpl.java:164) ~[com.liferay.osgi.service.tracker.collections.jar:?]
+	at org.osgi.util.tracker.ServiceTracker$Tracked.customizerAdding(ServiceTracker.java:943) ~[org.eclipse.osgi.jar:?]
+	at org.osgi.util.tracker.ServiceTracker$Tracked.customizerAdding(ServiceTracker.java:1) ~[org.eclipse.osgi.jar:?]
+	at org.osgi.util.tracker.AbstractTracked.trackAdding(AbstractTracked.java:256) ~[org.eclipse.osgi.jar:?]
+	at org.osgi.util.tracker.AbstractTracked.track(AbstractTracked.java:229) ~[org.eclipse.osgi.jar:?]
+	at org.osgi.util.tracker.ServiceTracker$Tracked.serviceChanged(ServiceTracker.java:903) ~[org.eclipse.osgi.jar:?]
+	at org.eclipse.osgi.internal.serviceregistry.FilteredServiceListener.serviceChanged(FilteredServiceListener.java:109) ~[org.eclipse.osgi.jar:?]
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistry.publishServiceEventPrivileged(ServiceRegistry.java:907) ~[org.eclipse.osgi.jar:?]
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistry.publishServiceEvent(ServiceRegistry.java:805) ~[org.eclipse.osgi.jar:?]
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistrationImpl.register(ServiceRegistrationImpl.java:127) ~[org.eclipse.osgi.jar:?]
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistry.registerService(ServiceRegistry.java:229) ~[org.eclipse.osgi.jar:?]
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.registerService(BundleContextImpl.java:469) ~[org.eclipse.osgi.jar:?]
+	at org.apache.felix.scr.impl.manager.AbstractComponentManager$3.register(AbstractComponentManager.java:906) ~[?:?]
+	at org.apache.felix.scr.impl.manager.AbstractComponentManager$3.register(AbstractComponentManager.java:892) ~[?:?]
+	at org.apache.felix.scr.impl.manager.RegistrationManager.changeRegistration(RegistrationManager.java:128) ~[?:?]
+	at org.apache.felix.scr.impl.manager.AbstractComponentManager.registerService(AbstractComponentManager.java:962) ~[?:?]
+	at org.apache.felix.scr.impl.manager.AbstractComponentManager.activateInternal(AbstractComponentManager.java:732) ~[?:?]
+	at org.apache.felix.scr.impl.manager.DependencyManager$SingleStaticCustomizer.addedService(DependencyManager.java:1053) ~[?:?]
+	at org.apache.felix.scr.impl.manager.DependencyManager$SingleStaticCustomizer.addedService(DependencyManager.java:1007) ~[?:?]
+	at org.apache.felix.scr.impl.manager.ServiceTracker$Tracked.customizerAdded(ServiceTracker.java:1216) ~[?:?]
+	at org.apache.felix.scr.impl.manager.ServiceTracker$Tracked.customizerAdded(ServiceTracker.java:1137) ~[?:?]
+	at org.apache.felix.scr.impl.manager.ServiceTracker$AbstractTracked.trackAdding(ServiceTracker.java:944) ~[?:?]
+	at org.apache.felix.scr.impl.manager.ServiceTracker$AbstractTracked.track(ServiceTracker.java:880) ~[?:?]
+	at org.apache.felix.scr.impl.manager.ServiceTracker$Tracked.serviceChanged(ServiceTracker.java:1168) ~[?:?]
+	at org.apache.felix.scr.impl.BundleComponentActivator$ListenerInfo.serviceChanged(BundleComponentActivator.java:124) ~[?:?]
+	at org.eclipse.osgi.internal.serviceregistry.FilteredServiceListener.serviceChanged(FilteredServiceListener.java:109) ~[org.eclipse.osgi.jar:?]
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistry.publishServiceEventPrivileged(ServiceRegistry.java:907) ~[org.eclipse.osgi.jar:?]
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistry.publishServiceEvent(ServiceRegistry.java:805) ~[org.eclipse.osgi.jar:?]
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistrationImpl.register(ServiceRegistrationImpl.java:127) ~[org.eclipse.osgi.jar:?]
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistry.registerService(ServiceRegistry.java:229) ~[org.eclipse.osgi.jar:?]
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.registerService(BundleContextImpl.java:469) ~[org.eclipse.osgi.jar:?]
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.registerService(BundleContextImpl.java:487) ~[org.eclipse.osgi.jar:?]
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.registerService(BundleContextImpl.java:1004) ~[org.eclipse.osgi.jar:?]
+	at com.liferay.portal.model.impl.PortletImpl.setReady(PortletImpl.java:3809) ~[portal-impl.jar:?]
+	at com.liferay.portal.osgi.web.portlet.tracker.internal.PortletTracker._addingPortlet(PortletTracker.java:450) ~[?:?]
+	at com.liferay.portal.osgi.web.portlet.tracker.internal.PortletTracker.addingService(PortletTracker.java:179) ~[?:?]
+	at com.liferay.portal.osgi.web.portlet.tracker.internal.PortletTracker.addingService(PortletTracker.java:121) ~[?:?]
+	at org.osgi.util.tracker.ServiceTracker$Tracked.customizerAdding(ServiceTracker.java:943) ~[org.eclipse.osgi.jar:?]
+	at org.osgi.util.tracker.ServiceTracker$Tracked.customizerAdding(ServiceTracker.java:1) ~[org.eclipse.osgi.jar:?]
+	at org.osgi.util.tracker.AbstractTracked.trackAdding(AbstractTracked.java:256) ~[org.eclipse.osgi.jar:?]
+	at org.osgi.util.tracker.AbstractTracked.trackInitial(AbstractTracked.java:183) ~[org.eclipse.osgi.jar:?]
+	at org.osgi.util.tracker.ServiceTracker.open(ServiceTracker.java:321) ~[org.eclipse.osgi.jar:?]
+	at org.osgi.util.tracker.ServiceTracker.open(ServiceTracker.java:264) ~[org.eclipse.osgi.jar:?]
+	at com.liferay.portal.osgi.web.portlet.tracker.internal.PortletTracker.lambda$activate$2(PortletTracker.java:306) ~[?:?]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:264) [?:?]
+	at java.lang.Thread.run(Thread.java:829) [?:?]
+Caused by: com.liferay.portal.kernel.dao.orm.ORMException: javax.persistence.PersistenceException: org.hibernate.exception.ConstraintViolationException: could not execute batch
+	at com.liferay.portal.dao.orm.hibernate.ExceptionTranslator.translate(ExceptionTranslator.java:39) ~[portal-impl.jar:?]
+	at com.liferay.portal.dao.orm.hibernate.QueryImpl.list(QueryImpl.java:124) ~[portal-impl.jar:?]
+	at com.liferay.portal.dao.orm.hibernate.QueryImpl.list(QueryImpl.java:104) ~[portal-impl.jar:?]
+	at com.liferay.portal.kernel.dao.orm.QueryUtil.list(QueryUtil.java:61) ~[portal-kernel.jar:?]
+	at com.liferay.portal.kernel.dao.orm.QueryUtil.list(QueryUtil.java:53) ~[portal-kernel.jar:?]
+	at com.liferay.portal.service.persistence.impl.ResourcePermissionPersistenceImpl.findByC_N_S_P(ResourcePermissionPersistenceImpl.java:3374) ~[portal-impl.jar:?]
+	... 100 more
+Caused by: javax.persistence.PersistenceException: org.hibernate.exception.ConstraintViolationException: could not execute batch
+	at org.hibernate.internal.ExceptionConverterImpl.convert(ExceptionConverterImpl.java:154) ~[hibernate-core.jar:5.6.7.Final]
+	at org.hibernate.query.internal.AbstractProducedQuery.list(AbstractProducedQuery.java:1626) ~[hibernate-core.jar:5.6.7.Final]
+	at com.liferay.portal.dao.orm.hibernate.QueryImpl.list(QueryImpl.java:112) ~[portal-impl.jar:?]
+	at com.liferay.portal.dao.orm.hibernate.QueryImpl.list(QueryImpl.java:104) ~[portal-impl.jar:?]
+	at com.liferay.portal.kernel.dao.orm.QueryUtil.list(QueryUtil.java:61) ~[portal-kernel.jar:?]
+	at com.liferay.portal.kernel.dao.orm.QueryUtil.list(QueryUtil.java:53) ~[portal-kernel.jar:?]
+	at com.liferay.portal.service.persistence.impl.ResourcePermissionPersistenceImpl.findByC_N_S_P(ResourcePermissionPersistenceImpl.java:3374) ~[portal-impl.jar:?]
+	... 100 more
+Caused by: org.hibernate.exception.ConstraintViolationException: could not execute batch
+	at org.hibernate.exception.internal.SQLStateConversionDelegate.convert(SQLStateConversionDelegate.java:109) ~[hibernate-core.jar:5.6.7.Final]
+	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:37) ~[hibernate-core.jar:5.6.7.Final]
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:113) ~[hibernate-core.jar:5.6.7.Final]
+	at org.hibernate.engine.jdbc.batch.internal.BatchingBatch.performExecution(BatchingBatch.java:135) ~[hibernate-core.jar:5.6.7.Final]
+	at org.hibernate.engine.jdbc.batch.internal.BatchingBatch.doExecuteBatch(BatchingBatch.java:110) ~[hibernate-core.jar:5.6.7.Final]
+	at org.hibernate.engine.jdbc.batch.internal.AbstractBatchImpl.execute(AbstractBatchImpl.java:153) ~[hibernate-core.jar:5.6.7.Final]
+	at org.hibernate.engine.jdbc.internal.JdbcCoordinatorImpl.getBatch(JdbcCoordinatorImpl.java:187) ~[hibernate-core.jar:5.6.7.Final]
+	at org.hibernate.persister.entity.AbstractEntityPersister.insert(AbstractEntityPersister.java:3355) ~[hibernate-core.jar:5.6.7.Final]
+	at org.hibernate.persister.entity.AbstractEntityPersister.insert(AbstractEntityPersister.java:3908) ~[hibernate-core.jar:5.6.7.Final]
+	at org.hibernate.action.internal.EntityInsertAction.execute(EntityInsertAction.java:107) ~[hibernate-core.jar:5.6.7.Final]
+	at org.hibernate.engine.spi.ActionQueue.executeActions(ActionQueue.java:604) ~[hibernate-core.jar:5.6.7.Final]
+	at org.hibernate.engine.spi.ActionQueue.lambda$executeActions$1(ActionQueue.java:478) ~[hibernate-core.jar:5.6.7.Final]
+	at java.util.LinkedHashMap.forEach(LinkedHashMap.java:684) ~[?:?]
+	at org.hibernate.engine.spi.ActionQueue.executeActions(ActionQueue.java:475) ~[hibernate-core.jar:5.6.7.Final]
+	at org.hibernate.event.internal.AbstractFlushingEventListener.performExecutions(AbstractFlushingEventListener.java:344) ~[hibernate-core.jar:5.6.7.Final]
+	at org.hibernate.event.internal.DefaultAutoFlushEventListener.onAutoFlush(DefaultAutoFlushEventListener.java:57) ~[hibernate-core.jar:5.6.7.Final]
+	at org.hibernate.event.service.internal.EventListenerGroupImpl.fireEventOnEachListener(EventListenerGroupImpl.java:107) ~[hibernate-core.jar:5.6.7.Final]
+	at org.hibernate.internal.SessionImpl.autoFlushIfRequired(SessionImpl.java:1372) ~[hibernate-core.jar:5.6.7.Final]
+	at org.hibernate.internal.SessionImpl.list(SessionImpl.java:1452) ~[hibernate-core.jar:5.6.7.Final]
+	at org.hibernate.query.internal.AbstractProducedQuery.doList(AbstractProducedQuery.java:1649) ~[hibernate-core.jar:5.6.7.Final]
+	at org.hibernate.query.internal.AbstractProducedQuery.list(AbstractProducedQuery.java:1617) ~[hibernate-core.jar:5.6.7.Final]
+	at com.liferay.portal.dao.orm.hibernate.QueryImpl.list(QueryImpl.java:112) ~[portal-impl.jar:?]
+	at com.liferay.portal.dao.orm.hibernate.QueryImpl.list(QueryImpl.java:104) ~[portal-impl.jar:?]
+	at com.liferay.portal.kernel.dao.orm.QueryUtil.list(QueryUtil.java:61) ~[portal-kernel.jar:?]
+	at com.liferay.portal.kernel.dao.orm.QueryUtil.list(QueryUtil.java:53) ~[portal-kernel.jar:?]
+	at com.liferay.portal.service.persistence.impl.ResourcePermissionPersistenceImpl.findByC_N_S_P(ResourcePermissionPersistenceImpl.java:3374) ~[portal-impl.jar:?]
+	... 100 more
+Caused by: java.sql.BatchUpdateException: Duplicate entry '20096-Account Member-0' for key 'Role_.IX_4CC99816'
+	at jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[?:?]
+	at jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62) ~[?:?]
+	at jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[?:?]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:490) ~[?:?]
+	at com.mysql.cj.util.Util.handleNewInstance(Util.java:192) ~[mysql.jar:8.0.29]
+	at com.mysql.cj.util.Util.getInstance(Util.java:167) ~[mysql.jar:8.0.29]
+	at com.mysql.cj.util.Util.getInstance(Util.java:174) ~[mysql.jar:8.0.29]
+	at com.mysql.cj.jdbc.exceptions.SQLError.createBatchUpdateException(SQLError.java:224) ~[mysql.jar:8.0.29]
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeBatchSerially(ClientPreparedStatement.java:816) ~[mysql.jar:8.0.29]
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeBatchInternal(ClientPreparedStatement.java:418) ~[mysql.jar:8.0.29]
+	at com.mysql.cj.jdbc.StatementImpl.executeBatch(StatementImpl.java:795) ~[mysql.jar:8.0.29]
+	at com.zaxxer.hikari.pool.ProxyStatement.executeBatch(ProxyStatement.java:127) ~[hikaricp.jar:?]
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeBatch(HikariProxyPreparedStatement.java) ~[hikaricp.jar:?]
+	at org.hibernate.engine.jdbc.batch.internal.BatchingBatch.performExecution(BatchingBatch.java:125) ~[hibernate-core.jar:5.6.7.Final]
+	at org.hibernate.engine.jdbc.batch.internal.BatchingBatch.doExecuteBatch(BatchingBatch.java:110) ~[hibernate-core.jar:5.6.7.Final]
+	at org.hibernate.engine.jdbc.batch.internal.AbstractBatchImpl.execute(AbstractBatchImpl.java:153) ~[hibernate-core.jar:5.6.7.Final]
+	at org.hibernate.engine.jdbc.internal.JdbcCoordinatorImpl.getBatch(JdbcCoordinatorImpl.java:187) ~[hibernate-core.jar:5.6.7.Final]
+	at org.hibernate.persister.entity.AbstractEntityPersister.insert(AbstractEntityPersister.java:3355) ~[hibernate-core.jar:5.6.7.Final]
+	at org.hibernate.persister.entity.AbstractEntityPersister.insert(AbstractEntityPersister.java:3908) ~[hibernate-core.jar:5.6.7.Final]
+	at org.hibernate.action.internal.EntityInsertAction.execute(EntityInsertAction.java:107) ~[hibernate-core.jar:5.6.7.Final]
+	at org.hibernate.engine.spi.ActionQueue.executeActions(ActionQueue.java:604) ~[hibernate-core.jar:5.6.7.Final]
+	at org.hibernate.engine.spi.ActionQueue.lambda$executeActions$1(ActionQueue.java:478) ~[hibernate-core.jar:5.6.7.Final]
+	at java.util.LinkedHashMap.forEach(LinkedHashMap.java:684) ~[?:?]
+	at org.hibernate.engine.spi.ActionQueue.executeActions(ActionQueue.java:475) ~[hibernate-core.jar:5.6.7.Final]
+	at org.hibernate.event.internal.AbstractFlushingEventListener.performExecutions(AbstractFlushingEventListener.java:344) ~[hibernate-core.jar:5.6.7.Final]
+	at org.hibernate.event.internal.DefaultAutoFlushEventListener.onAutoFlush(DefaultAutoFlushEventListener.java:57) ~[hibernate-core.jar:5.6.7.Final]
+	at org.hibernate.event.service.internal.EventListenerGroupImpl.fireEventOnEachListener(EventListenerGroupImpl.java:107) ~[hibernate-core.jar:5.6.7.Final]
+	at org.hibernate.internal.SessionImpl.autoFlushIfRequired(SessionImpl.java:1372) ~[hibernate-core.jar:5.6.7.Final]
+	at org.hibernate.internal.SessionImpl.list(SessionImpl.java:1452) ~[hibernate-core.jar:5.6.7.Final]
+	at org.hibernate.query.internal.AbstractProducedQuery.doList(AbstractProducedQuery.java:1649) ~[hibernate-core.jar:5.6.7.Final]
+	at org.hibernate.query.internal.AbstractProducedQuery.list(AbstractProducedQuery.java:1617) ~[hibernate-core.jar:5.6.7.Final]
+	at com.liferay.portal.dao.orm.hibernate.QueryImpl.list(QueryImpl.java:112) ~[portal-impl.jar:?]
+	at com.liferay.portal.dao.orm.hibernate.QueryImpl.list(QueryImpl.java:104) ~[portal-impl.jar:?]
+	at com.liferay.portal.kernel.dao.orm.QueryUtil.list(QueryUtil.java:61) ~[portal-kernel.jar:?]
+	at com.liferay.portal.kernel.dao.orm.QueryUtil.list(QueryUtil.java:53) ~[portal-kernel.jar:?]
+	at com.liferay.portal.service.persistence.impl.ResourcePermissionPersistenceImpl.findByC_N_S_P(ResourcePermissionPersistenceImpl.java:3374) ~[portal-impl.jar:?]
+	... 100 more
+Caused by: java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '20096-Account Member-0' for key 'Role_.IX_4CC99816'
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:117) ~[mysql.jar:8.0.29]
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122) ~[mysql.jar:8.0.29]
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:916) ~[mysql.jar:8.0.29]
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdateInternal(ClientPreparedStatement.java:1061) ~[mysql.jar:8.0.29]
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeBatchSerially(ClientPreparedStatement.java:795) ~[mysql.jar:8.0.29]
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeBatchInternal(ClientPreparedStatement.java:418) ~[mysql.jar:8.0.29]
+	at com.mysql.cj.jdbc.StatementImpl.executeBatch(StatementImpl.java:795) ~[mysql.jar:8.0.29]
+	at com.zaxxer.hikari.pool.ProxyStatement.executeBatch(ProxyStatement.java:127) ~[hikaricp.jar:?]
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeBatch(HikariProxyPreparedStatement.java) ~[hikaricp.jar:?]
+	at org.hibernate.engine.jdbc.batch.internal.BatchingBatch.performExecution(BatchingBatch.java:125) ~[hibernate-core.jar:5.6.7.Final]
+	at org.hibernate.engine.jdbc.batch.internal.BatchingBatch.doExecuteBatch(BatchingBatch.java:110) ~[hibernate-core.jar:5.6.7.Final]
+	at org.hibernate.engine.jdbc.batch.internal.AbstractBatchImpl.execute(AbstractBatchImpl.java:153) ~[hibernate-core.jar:5.6.7.Final]
+	at org.hibernate.engine.jdbc.internal.JdbcCoordinatorImpl.getBatch(JdbcCoordinatorImpl.java:187) ~[hibernate-core.jar:5.6.7.Final]
+	at org.hibernate.persister.entity.AbstractEntityPersister.insert(AbstractEntityPersister.java:3355) ~[hibernate-core.jar:5.6.7.Final]
+	at org.hibernate.persister.entity.AbstractEntityPersister.insert(AbstractEntityPersister.java:3908) ~[hibernate-core.jar:5.6.7.Final]
+	at org.hibernate.action.internal.EntityInsertAction.execute(EntityInsertAction.java:107) ~[hibernate-core.jar:5.6.7.Final]
+	at org.hibernate.engine.spi.ActionQueue.executeActions(ActionQueue.java:604) ~[hibernate-core.jar:5.6.7.Final]
+	at org.hibernate.engine.spi.ActionQueue.lambda$executeActions$1(ActionQueue.java:478) ~[hibernate-core.jar:5.6.7.Final]
+	at java.util.LinkedHashMap.forEach(LinkedHashMap.java:684) ~[?:?]
+	at org.hibernate.engine.spi.ActionQueue.executeActions(ActionQueue.java:475) ~[hibernate-core.jar:5.6.7.Final]
+	at org.hibernate.event.internal.AbstractFlushingEventListener.performExecutions(AbstractFlushingEventListener.java:344) ~[hibernate-core.jar:5.6.7.Final]
+	at org.hibernate.event.internal.DefaultAutoFlushEventListener.onAutoFlush(DefaultAutoFlushEventListener.java:57) ~[hibernate-core.jar:5.6.7.Final]
+	at org.hibernate.event.service.internal.EventListenerGroupImpl.fireEventOnEachListener(EventListenerGroupImpl.java:107) ~[hibernate-core.jar:5.6.7.Final]
+	at org.hibernate.internal.SessionImpl.autoFlushIfRequired(SessionImpl.java:1372) ~[hibernate-core.jar:5.6.7.Final]
+	at org.hibernate.internal.SessionImpl.list(SessionImpl.java:1452) ~[hibernate-core.jar:5.6.7.Final]
+	at org.hibernate.query.internal.AbstractProducedQuery.doList(AbstractProducedQuery.java:1649) ~[hibernate-core.jar:5.6.7.Final]
+	at org.hibernate.query.internal.AbstractProducedQuery.list(AbstractProducedQuery.java:1617) ~[hibernate-core.jar:5.6.7.Final]
+	at com.liferay.portal.dao.orm.hibernate.QueryImpl.list(QueryImpl.java:112) ~[portal-impl.jar:?]
+	at com.liferay.portal.dao.orm.hibernate.QueryImpl.list(QueryImpl.java:104) ~[portal-impl.jar:?]
+	at com.liferay.portal.kernel.dao.orm.QueryUtil.list(QueryUtil.java:61) ~[portal-kernel.jar:?]
+	at com.liferay.portal.kernel.dao.orm.QueryUtil.list(QueryUtil.java:53) ~[portal-kernel.jar:?]
+	at com.liferay.portal.service.persistence.impl.ResourcePermissionPersistenceImpl.findByC_N_S_P(ResourcePermissionPersistenceImpl.java:3374) ~[portal-impl.jar:?]
+	... 100 more
+2023-05-15 23:53:29.591 INFO  [Portal Dependency Manager Component Executor--1][BundleSiteInitializer:420] Initializing com.liferay.site.initializer.welcome for group 20119
+2023-05-15 23:53:29.593 INFO  [Portal Dependency Manager Component Executor--1][BundleSiteInitializer:4442] Invoking line 446 took 1 ms
+2023-05-15 23:53:29.594 INFO  [Portal Dependency Manager Component Executor--1][BundleSiteInitializer:4461] Invoking line 449 in 0 ms
+2023-05-15 23:53:29.595 INFO  [Portal Dependency Manager Component Executor--1][BundleSiteInitializer:4461] Invoking line 452 in 1 ms
+2023-05-15 23:53:30.255 INFO  [Portal Dependency Manager Component Executor--1][BundleSiteInitializer:4461] Invoking line 455 in 659 ms
+2023-05-15 23:53:30.256 INFO  [Portal Dependency Manager Component Executor--1][BundleSiteInitializer:4442] Invoking line 459 took 0 ms
+2023-05-15 23:53:30.257 INFO  [Portal Dependency Manager Component Executor--1][BundleSiteInitializer:4442] Invoking line 464 took 0 ms
+2023-05-15 23:53:30.257 INFO  [Portal Dependency Manager Component Executor--1][BundleSiteInitializer:4442] Invoking line 465 took 0 ms
+2023-05-15 23:53:30.258 INFO  [Portal Dependency Manager Component Executor--1][BundleSiteInitializer:4442] Invoking line 466 took 0 ms
+2023-05-15 23:53:30.261 INFO  [Portal Dependency Manager Component Executor--1][BundleSiteInitializer:4461] Invoking line 468 in 3 ms
+2023-05-15 23:53:30.262 INFO  [Portal Dependency Manager Component Executor--1][BundleSiteInitializer:4442] Invoking line 471 took 0 ms
+2023-05-15 23:53:30.262 INFO  [Portal Dependency Manager Component Executor--1][BundleSiteInitializer:4461] Invoking line 474 in 0 ms
+2023-05-15 23:53:30.263 INFO  [Portal Dependency Manager Component Executor--1][BundleSiteInitializer:4442] Invoking line 476 took 1 ms
+2023-05-15 23:53:30.263 INFO  [Portal Dependency Manager Component Executor--1][BundleSiteInitializer:4442] Invoking line 477 took 0 ms
+2023-05-15 23:53:30.263 INFO  [Portal Dependency Manager Component Executor--1][BundleSiteInitializer:4442] Invoking line 478 took 0 ms
+2023-05-15 23:53:30.264 INFO  [Portal Dependency Manager Component Executor--1][BundleSiteInitializer:4442] Invoking line 479 took 0 ms
+2023-05-15 23:53:30.265 INFO  [Portal Dependency Manager Component Executor--1][BundleSiteInitializer:4461] Invoking line 482 in 0 ms
+2023-05-15 23:53:30.265 INFO  [Portal Dependency Manager Component Executor--1][BundleSiteInitializer:4442] Invoking line 486 took 0 ms
+2023-05-15 23:53:30.275 INFO  [Portal Dependency Manager Component Executor--1][BundleSiteInitializer:4442] Invoking line 487 took 10 ms
+2023-05-15 23:53:30.276 INFO  [Portal Dependency Manager Component Executor--1][BundleSiteInitializer:4442] Invoking line 491 took 0 ms
+2023-05-15 23:53:30.277 INFO  [Portal Dependency Manager Component Executor--1][BundleSiteInitializer:4442] Invoking line 494 took 0 ms
+2023-05-15 23:53:30.278 INFO  [Portal Dependency Manager Component Executor--1][BundleSiteInitializer:4461] Invoking line 501 in 0 ms
+2023-05-15 23:53:30.279 INFO  [Portal Dependency Manager Component Executor--1][BundleSiteInitializer:4442] Invoking line 503 took 0 ms
+2023-05-15 23:53:30.282 INFO  [Portal Dependency Manager Component Executor--1][BundleSiteInitializer:4461] Invoking line 507 in 2 ms
+2023-05-15 23:53:30.283 INFO  [Portal Dependency Manager Component Executor--1][BundleSiteInitializer:4442] Invoking line 514 took 0 ms
+2023-05-15 23:53:30.440 INFO  [Portal Dependency Manager Component Executor--1][BundleSiteInitializer:4461] Invoking line 520 in 156 ms
+2023-05-15 23:53:30.441 INFO  [Portal Dependency Manager Component Executor--1][BundleSiteInitializer:4442] Invoking line 523 took 0 ms
+2023-05-15 23:53:30.442 INFO  [Portal Dependency Manager Component Executor--1][BundleSiteInitializer:4442] Invoking line 532 took 1 ms
+2023-05-15 23:53:31.745 INFO  [Portal Dependency Manager Component Executor--1][BundleSiteInitializer:4442] Invoking line 540 took 1303 ms
+2023-05-15 23:53:31.746 INFO  [Portal Dependency Manager Component Executor--1][BundleSiteInitializer:4461] Invoking line 551 in 0 ms
+2023-05-15 23:53:31.807 INFO  [Portal Dependency Manager Component Executor--1][BundleSiteInitializer:4442] Invoking line 555 took 59 ms
+2023-05-15 23:53:31.808 INFO  [Portal Dependency Manager Component Executor--1][BundleSiteInitializer:4442] Invoking line 566 took 0 ms
+2023-05-15 23:53:31.810 INFO  [Portal Dependency Manager Component Executor--1][BundleSiteInitializer:4442] Invoking line 568 took 1 ms
+2023-05-15 23:53:31.810 INFO  [Portal Dependency Manager Component Executor--1][BundleSiteInitializer:4442] Invoking line 577 took 0 ms
+2023-05-15 23:53:31.811 INFO  [Portal Dependency Manager Component Executor--1][BundleSiteInitializer:4442] Invoking line 579 took 0 ms
+2023-05-15 23:53:31.812 INFO  [Portal Dependency Manager Component Executor--1][BundleSiteInitializer:4442] Invoking line 583 took 0 ms
+2023-05-15 23:53:31.813 INFO  [Portal Dependency Manager Component Executor--1][BundleSiteInitializer:4442] Invoking line 588 took 0 ms
+2023-05-15 23:53:31.814 INFO  [Portal Dependency Manager Component Executor--1][BundleSiteInitializer:597] Initialized com.liferay.site.initializer.welcome for group 20119 in 2222 ms
+2023-05-15 23:53:36.340 INFO  [http-nio-8080-exec-2][IPGeocoderImpl:146] Use temp file /opt/liferay/tomcat/temp/20230515235336296GKXZZFYN
+2023-05-15 23:54:00.192 WARN  [liferay/mail-2][MailMessageListener:125] Email test@domain.invalid will be ignored because it is included in mail.send.blacklist
+2023-05-15 23:54:00.192 WARN  [liferay/mail-2][MailMessageListener:51] Skipping email because the sender is not specified

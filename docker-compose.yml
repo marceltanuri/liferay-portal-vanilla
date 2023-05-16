@@ -20,7 +20,7 @@ services:
     # image: liferay/dxp:7.3.10-dxp-1-d2.0.2-20210920131018
     # image: liferay/dxp:7.3.10-dxp-1-d1.6.1-20210608121929
     # image: liferay/dxp:7.3.10-dxp-1-d1.6.1-20210607133304
-    image: liferay/dxp:7.3.10-dxp-2-d2.0.4-20211022091811
+    image: liferay/dxp:7.4.13.nightly
     environment:
       - LIFERAY_JVM_OPTS=-Xms3g -Xmx3g
       - LIFERAY_JDBC_PERIOD_DEFAULT_PERIOD_DRIVER_UPPERCASEC_LASS_UPPERCASEN_AME=com.mysql.cj.jdbc.Driver
