@@ -1,6 +1,19 @@
 version: '3.8'
 
 services:
+  web:
+    image: nginx:latest
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./nginx/nginx.conf:/etc/nginx/nginx.conf
+      - ./nginx/scripts:/scripts
+    depends_on:
+      - liferay
+    command: /bin/sh -c "/scripts/generate_certs.sh"
+
+
   database:
     image: mysql:8.0.25
     container_name: liferay-portal-7.4_db
@@ -14,12 +27,6 @@ services:
       - "3306:3306"
 
   liferay:
-    # image: liferay/dxp:7.3.10-dxp-1
-    # image: liferay/dxp:7.3.10-dxp-1-d1.6.2-20210628171603
-    # image: liferay/dxp:7.3.10-dxp-1-d2.0.4-20211022091526 (*)
-    # image: liferay/dxp:7.3.10-dxp-1-d2.0.2-20210920131018
-    # image: liferay/dxp:7.3.10-dxp-1-d1.6.1-20210608121929
-    # image: liferay/dxp:7.3.10-dxp-1-d1.6.1-20210607133304
     image: liferay/dxp:7.4.13.nightly
     environment:
       - LIFERAY_JVM_OPTS=-Xms3g -Xmx3g
@@ -27,6 +34,7 @@ services:
       - LIFERAY_JDBC_PERIOD_DEFAULT_PERIOD_URL=jdbc:mysql://database/lportal?characterEncoding=UTF-8&dontTrackOpenResources=true&holdResultsOpenOverStatementClose=true&serverTimezone=GMT&useFastDateParsing=false&useUnicode=true
       - LIFERAY_JDBC_PERIOD_DEFAULT_PERIOD_USERNAME=root
       - LIFERAY_JDBC_PERIOD_DEFAULT_PERIOD_PASSWORD=root
+      - LIFERAY_PASSWORDS_PERIOD_DEFAULT_PERIOD_POLICY_PERIOD_CHANGE_PERIOD_REQUIRED=false
       - LIFERAY_MODULE_PERIOD_FRAMEWORK_PERIOD_PROPERTIES_PERIOD_OSGI_PERIOD_CONSOLE=0.0.0.0:11311
       - LIFERAY_RETRY_PERIOD_JDBC_PERIOD_ON_PERIOD_STARTUP_PERIOD_DELAY=20
       - LIFERAY_RETRY_PERIOD_JDBC_PERIOD_ON_PERIOD_STARTUP_PERIOD_MAX_PERIOD_RETRIES=10
@@ -49,11 +57,14 @@ services:
       - LIFERAY_HTTP_PERIOD_HEADER_PERIOD_VERSION_PERIOD_VERBOSITY=off
       - LIFERAY_LOCALE_PERIOD_PREPEND_PERIOD_FRIENDLY_PERIOD_URL_PERIOD_STYLE=0
       - LIFERAY_BROWSER_PERIOD_LAUNCHER_PERIOD_URL=
+      - LIFERAY_FEATURE_PERIOD_FLAG_PERIOD__UPPERCASEL__UPPERCASEP__UPPERCASES__MINUS__NUMBER1__NUMBER7__NUMBER9__NUMBER6__NUMBER6__NUMBER9_=true
+
     ports:
       - "8080:8080"
       - "11311:11311"
       - "8000:8000"
     volumes:
+      - ./liferay-ext:/opt/liferay/osgi/marketplace/override
       - ./liferay-deploy:/mnt/liferay/deploy
       - ./liferay-files:/mnt/liferay/files
       - ./liferay-logs:/opt/liferay/logs
@@ -64,7 +75,7 @@ services:
       - search
 
   search:
-    image: elasticsearch-with-plugins-for-liferay:1.0.0
+    image: marceltanuri/elasticsearch-with-plugins:7.17.10
     container_name: liferay-portal-7.4_search
     environment:
       - "cluster.name=LiferayElasticsearchCluster"
