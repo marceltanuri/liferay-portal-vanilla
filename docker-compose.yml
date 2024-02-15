@@ -5,13 +5,10 @@ services:
     image: nginx:latest
     ports:
       - "80:80"
-      - "443:443"
     volumes:
       - ./nginx/nginx.conf:/etc/nginx/nginx.conf
-      - ./nginx/scripts:/scripts
     depends_on:
       - liferay
-    command: /bin/sh -c "/scripts/generate_certs.sh"
 
 
   database:
