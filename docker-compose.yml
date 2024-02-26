@@ -64,7 +64,7 @@ services:
       - search
 
   search:
-    image: elasticsearch-with-plugins-for-liferay:1.0.0
+    image: marceltanuri/elasticsearch-with-plugins:7.17.10
     container_name: liferay-portal-7.4_search
     environment:
       - "cluster.name=LiferayElasticsearchCluster"
