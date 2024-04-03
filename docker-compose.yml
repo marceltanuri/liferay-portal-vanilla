@@ -20,13 +20,19 @@ services:
     # image: liferay/dxp:7.3.10-dxp-1-d2.0.2-20210920131018
     # image: liferay/dxp:7.3.10-dxp-1-d1.6.1-20210608121929
     # image: liferay/dxp:7.3.10-dxp-1-d1.6.1-20210607133304
-    image: liferay/dxp:7.4.13.nightly
+    # image: liferay/dxp:2023.q4.1
+    # image: liferay/dxp:2023.q4.8
+    image: liferay/dxp:2024.q1.1
+    # image: liferay/dxp:7.4.13-u112
+    # image: liferay/dxp:7.4.13-u75
+    # image: liferay/portal:7.4.3.109-ga109
     environment:
-      - LIFERAY_JVM_OPTS=-Xms3g -Xmx3g
+      - LIFERAY_JVM_OPTS=-Xms6g -Xmx6g -Djdk.util.zip.disableZip64ExtraFieldValidation=true
       - LIFERAY_JDBC_PERIOD_DEFAULT_PERIOD_DRIVER_UPPERCASEC_LASS_UPPERCASEN_AME=com.mysql.cj.jdbc.Driver
       - LIFERAY_JDBC_PERIOD_DEFAULT_PERIOD_URL=jdbc:mysql://database/lportal?characterEncoding=UTF-8&dontTrackOpenResources=true&holdResultsOpenOverStatementClose=true&serverTimezone=GMT&useFastDateParsing=false&useUnicode=true
       - LIFERAY_JDBC_PERIOD_DEFAULT_PERIOD_USERNAME=root
       - LIFERAY_JDBC_PERIOD_DEFAULT_PERIOD_PASSWORD=root
+      - LIFERAY_PASSWORDS_PERIOD_DEFAULT_PERIOD_POLICY_PERIOD_CHANGE_PERIOD_REQUIRED=false
       - LIFERAY_MODULE_PERIOD_FRAMEWORK_PERIOD_PROPERTIES_PERIOD_OSGI_PERIOD_CONSOLE=0.0.0.0:11311
       - LIFERAY_RETRY_PERIOD_JDBC_PERIOD_ON_PERIOD_STARTUP_PERIOD_DELAY=20
       - LIFERAY_RETRY_PERIOD_JDBC_PERIOD_ON_PERIOD_STARTUP_PERIOD_MAX_PERIOD_RETRIES=10
@@ -49,6 +55,8 @@ services:
       - LIFERAY_HTTP_PERIOD_HEADER_PERIOD_VERSION_PERIOD_VERBOSITY=off
       - LIFERAY_LOCALE_PERIOD_PREPEND_PERIOD_FRIENDLY_PERIOD_URL_PERIOD_STYLE=0
       - LIFERAY_BROWSER_PERIOD_LAUNCHER_PERIOD_URL=
+      - GLOWROOT_ENABLED=
+      - LIFERAY_DISABLE_TRIAL_LICENSE=TRUE
     ports:
       - "8080:8080"
       - "11311:11311"

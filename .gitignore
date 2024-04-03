@@ -1,6 +1,7 @@
 elasticsearch-data/nodes
 liferay-document-library/**
 !liferay-document-library/.keep
+liferay-logs/
 liferay-logs/*.log
 liferay-logs/**/.log
 liferay-logs/*.xml
