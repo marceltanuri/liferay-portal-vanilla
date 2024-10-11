@@ -14,7 +14,7 @@ services:
   #     - "3306:3306"
 
   database:
-    image: gvenzl/oracle-xe # Imagem Oracle XE para desenvolvimento
+    image: gvenzl/oracle-free
     container_name: liferay-portal-7.4_db
     ports:
       - "1521:1521"
@@ -29,12 +29,12 @@ services:
     restart: always
 
   liferay:
-    image: liferay/dxp:7.3.10-u33
+    image: liferay/dxp:7.3.10-u36
     environment:
       - LIFERAY_JVM_OPTS=-Xms6g -Xmx6g -Djdk.util.zip.disableZip64ExtraFieldValidation=true
       - LIFERAY_JDBC_PERIOD_DEFAULT_PERIOD_DRIVER_UPPERCASEC_LASS_UPPERCASEN_AME=oracle.jdbc.OracleDriver
-      - LIFERAY_JDBC_PERIOD_DEFAULT_PERIOD_URL=jdbc:oracle:thin:@(DESCRIPTION=(ADDRESS=(PROTOCOL=TCP)(HOST=database)(PORT=1521))(CONNECT_DATA=(SERVICE_NAME=XE)))
-      - LIFERAY_JDBC_PERIOD_DEFAULT_PERIOD_USERNAME=lportal
+      - LIFERAY_JDBC_PERIOD_DEFAULT_PERIOD_URL=jdbc:oracle:thin:@(DESCRIPTION=(ADDRESS=(PROTOCOL=TCP)(HOST=database)(PORT=1521))(CONNECT_DATA=(SERVICE_NAME=FREE)))
+      - LIFERAY_JDBC_PERIOD_DEFAULT_PERIOD_USERNAME=LPORTAL
       - LIFERAY_JDBC_PERIOD_DEFAULT_PERIOD_PASSWORD=root
       - LIFERAY_PASSWORDS_PERIOD_DEFAULT_PERIOD_POLICY_PERIOD_CHANGE_PERIOD_REQUIRED=false
       - LIFERAY_MODULE_PERIOD_FRAMEWORK_PERIOD_PROPERTIES_PERIOD_OSGI_PERIOD_CONSOLE=0.0.0.0:11311

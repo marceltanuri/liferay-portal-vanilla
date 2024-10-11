@@ -9,4 +9,4 @@ liferay-logs/**/*.xml
 liferay-logs/*.json
 liferay-logs/**/*.json
 liferay-patching/*.zip
-mysql-dump/*.sql
+ora-dump/*
