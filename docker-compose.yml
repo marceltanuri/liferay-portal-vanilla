@@ -1,36 +1,40 @@
 version: '3.8'
 
 services:
+  # database:
+  #   image: mysql:8.0.25
+  #   container_name: liferay-portal-7.4_db
+  #   environment:
+  #     - MYSQL_ROOT_PASSWORD=root
+  #     - MYSQL_DATABASE=lportal
+  #   command: --character-set-server=utf8 --collation-server=utf8_general_ci --character-set-filesystem=utf8 --lower-case-table-names=0
+  #   volumes:
+  #     - ./mysql-dump:/docker-entrypoint-initdb.d
+  #   ports:
+  #     - "3306:3306"
+
   database:
-    image: mysql:8.0.25
+    image: gvenzl/oracle-xe # Imagem Oracle XE para desenvolvimento
     container_name: liferay-portal-7.4_db
-    environment:
-      - MYSQL_ROOT_PASSWORD=root
-      - MYSQL_DATABASE=lportal
-    command: --character-set-server=utf8 --collation-server=utf8_general_ci --character-set-filesystem=utf8 --lower-case-table-names=0
-    volumes:
-      - ./mysql-dump:/docker-entrypoint-initdb.d
     ports:
-      - "3306:3306"
+      - "1521:1521"
+      - "5500:5500" # Porta de administração web, se necessário
+    environment:
+      - ORACLE_PASSWORD=root
+      - ORACLE_DISABLE_ASYNCH_IO=true
+    volumes:
+      #- oracle_data:/opt/oracle/oradata
+      - ./ora-dump:/opt/oracle/dump 
+      - ./ora-scripts:/docker-entrypoint-initdb.d/
+    restart: always
 
   liferay:
-    # image: liferay/dxp:7.3.10-dxp-1
-    # image: liferay/dxp:7.3.10-dxp-1-d1.6.2-20210628171603
-    # image: liferay/dxp:7.3.10-dxp-1-d2.0.4-20211022091526 (*)
-    # image: liferay/dxp:7.3.10-dxp-1-d2.0.2-20210920131018
-    # image: liferay/dxp:7.3.10-dxp-1-d1.6.1-20210608121929
-    # image: liferay/dxp:7.3.10-dxp-1-d1.6.1-20210607133304
-    # image: liferay/dxp:2023.q4.1
-    # image: liferay/dxp:2023.q4.8
-    image: liferay/dxp:2024.q1.1
-    # image: liferay/dxp:7.4.13-u112
-    # image: liferay/dxp:7.4.13-u75
-    # image: liferay/portal:7.4.3.109-ga109
+    image: liferay/dxp:7.3.10-u33
     environment:
       - LIFERAY_JVM_OPTS=-Xms6g -Xmx6g -Djdk.util.zip.disableZip64ExtraFieldValidation=true
-      - LIFERAY_JDBC_PERIOD_DEFAULT_PERIOD_DRIVER_UPPERCASEC_LASS_UPPERCASEN_AME=com.mysql.cj.jdbc.Driver
-      - LIFERAY_JDBC_PERIOD_DEFAULT_PERIOD_URL=jdbc:mysql://database/lportal?characterEncoding=UTF-8&dontTrackOpenResources=true&holdResultsOpenOverStatementClose=true&serverTimezone=GMT&useFastDateParsing=false&useUnicode=true
-      - LIFERAY_JDBC_PERIOD_DEFAULT_PERIOD_USERNAME=root
+      - LIFERAY_JDBC_PERIOD_DEFAULT_PERIOD_DRIVER_UPPERCASEC_LASS_UPPERCASEN_AME=oracle.jdbc.OracleDriver
+      - LIFERAY_JDBC_PERIOD_DEFAULT_PERIOD_URL=jdbc:oracle:thin:@(DESCRIPTION=(ADDRESS=(PROTOCOL=TCP)(HOST=database)(PORT=1521))(CONNECT_DATA=(SERVICE_NAME=XE)))
+      - LIFERAY_JDBC_PERIOD_DEFAULT_PERIOD_USERNAME=lportal
       - LIFERAY_JDBC_PERIOD_DEFAULT_PERIOD_PASSWORD=root
       - LIFERAY_PASSWORDS_PERIOD_DEFAULT_PERIOD_POLICY_PERIOD_CHANGE_PERIOD_REQUIRED=false
       - LIFERAY_MODULE_PERIOD_FRAMEWORK_PERIOD_PROPERTIES_PERIOD_OSGI_PERIOD_CONSOLE=0.0.0.0:11311
