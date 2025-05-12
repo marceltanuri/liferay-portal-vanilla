@@ -22,7 +22,7 @@ services:
     # image: liferay/dxp:7.3.10-dxp-1-d1.6.1-20210607133304
     # image: liferay/dxp:2023.q4.1
     # image: liferay/dxp:2023.q4.8
-    image: liferay/dxp:2024.q1.1
+    image: liferay/dxp:2025.q1.4-lts
     # image: liferay/dxp:7.4.13-u112
     # image: liferay/dxp:7.4.13-u75
     # image: liferay/portal:7.4.3.109-ga109
@@ -55,7 +55,7 @@ services:
       - LIFERAY_HTTP_PERIOD_HEADER_PERIOD_VERSION_PERIOD_VERBOSITY=off
       - LIFERAY_LOCALE_PERIOD_PREPEND_PERIOD_FRIENDLY_PERIOD_URL_PERIOD_STYLE=0
       - LIFERAY_BROWSER_PERIOD_LAUNCHER_PERIOD_URL=
-      - GLOWROOT_ENABLED=
+      - GLOWROOT_ENABLED=true
       - LIFERAY_DISABLE_TRIAL_LICENSE=TRUE
     ports:
       - "8080:8080"
