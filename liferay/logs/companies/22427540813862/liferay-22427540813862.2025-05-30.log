@@ -1,0 +1,324 @@
+2025-05-30 19:14:27.779 INFO  [http-nio-8080-exec-3][BundleSiteInitializer:520] Initializing com.liferay.site.initializer.welcome for group 34311
+2025-05-30 19:14:27.781 INFO  [http-nio-8080-exec-3][BundleSiteInitializer:5576] Invoking addSiteSettings took 0 ms
+2025-05-30 19:14:27.782 INFO  [http-nio-8080-exec-3][BundleSiteInitializer:5576] Invoking addOrUpdateDDMStructures took 0 ms
+2025-05-30 19:14:27.782 INFO  [http-nio-8080-exec-3][BundleSiteInitializer:5576] Invoking addOrUpdateExpandoColumns took 0 ms
+2025-05-30 19:14:27.783 INFO  [http-nio-8080-exec-3][BundleSiteInitializer:5576] Invoking addAccounts took 0 ms
+2025-05-30 19:14:27.783 INFO  [http-nio-8080-exec-3][BundleSiteInitializer:5576] Invoking addStyleBookEntries took 0 ms
+2025-05-30 19:14:27.784 INFO  [http-nio-8080-exec-3][BundleSiteInitializer:5576] Invoking addOrUpdateDataDefinitions took 1 ms
+2025-05-30 19:14:27.785 INFO  [http-nio-8080-exec-3][BundleSiteInitializer:5576] Invoking addAccountGroups took 1 ms
+2025-05-30 19:14:27.785 INFO  [http-nio-8080-exec-3][BundleSiteInitializer:5576] Invoking addOrUpdateTaxonomyVocabularies took 0 ms
+2025-05-30 19:14:27.786 INFO  [http-nio-8080-exec-3][BundleSiteInitializer:5576] Invoking addAccountGroupAssignments took 0 ms
+2025-05-30 19:14:27.786 INFO  [http-nio-8080-exec-3][BundleSiteInitializer:5576] Invoking addOrUpdateSAPEntries took 0 ms
+2025-05-30 19:14:27.787 INFO  [http-nio-8080-exec-3][BundleSiteInitializer:5576] Invoking addOrUpdateOrganizations took 0 ms
+2025-05-30 19:14:27.790 INFO  [http-nio-8080-exec-3][BundleSiteInitializer:5576] Invoking addOrUpdateRoles took 3 ms
+2025-05-30 19:14:27.790 INFO  [http-nio-8080-exec-3][BundleSiteInitializer:5576] Invoking addOrUpdateKnowledgeBaseArticles took 0 ms
+2025-05-30 19:14:27.790 INFO  [http-nio-8080-exec-3][BundleSiteInitializer:5576] Invoking addAccountsOrganizations took 0 ms
+2025-05-30 19:14:27.791 INFO  [http-nio-8080-exec-3][BundleSiteInitializer:5576] Invoking addOrUpdateUserGroups took 0 ms
+2025-05-30 19:14:27.791 INFO  [http-nio-8080-exec-3][BundleSiteInitializer:5576] Invoking addOrUpdateObjectFolders took 0 ms
+2025-05-30 19:14:27.901 INFO  [http-nio-8080-exec-3][BundleSiteInitializer:5576] Invoking addOrUpdateLayouts took 110 ms
+2025-05-30 19:14:27.902 INFO  [http-nio-8080-exec-3][BundleSiteInitializer:5576] Invoking addOrUpdateDepotEntries took 0 ms
+2025-05-30 19:14:27.902 INFO  [http-nio-8080-exec-3][BundleSiteInitializer:5576] Invoking addOrUpdateListTypeDefinitions took 0 ms
+2025-05-30 19:14:27.902 INFO  [http-nio-8080-exec-3][BundleSiteInitializer:5576] Invoking setPLOEntries took 0 ms
+2025-05-30 19:14:27.909 INFO  [http-nio-8080-exec-3][BundleSiteInitializer:5576] Invoking updateLayoutSets took 6 ms
+2025-05-30 19:14:27.910 INFO  [http-nio-8080-exec-3][BundleSiteInitializer:5576] Invoking addSiteConfiguration took 0 ms
+2025-05-30 19:14:27.911 INFO  [http-nio-8080-exec-3][BundleSiteInitializer:5576] Invoking addOrUpdateSXPBlueprint took 0 ms
+2025-05-30 19:14:27.912 INFO  [http-nio-8080-exec-3][BundleSiteInitializer:5576] Invoking addWorkflowDefinitions took 0 ms
+2025-05-30 19:14:27.912 INFO  [http-nio-8080-exec-3][BundleSiteInitializer:5576] Invoking addPortletSettings took 0 ms
+2025-05-30 19:14:27.913 INFO  [http-nio-8080-exec-3][BundleSiteInitializer:5576] Invoking addKeywords took 0 ms
+2025-05-30 19:14:28.350 INFO  [http-nio-8080-exec-3][BundleSiteInitializer:5576] Invoking addOrUpdateDocuments took 437 ms
+2025-05-30 19:14:28.351 INFO  [http-nio-8080-exec-3][BundleSiteInitializer:5576] Invoking addFragmentEntries took 0 ms
+2025-05-30 19:14:28.351 INFO  [http-nio-8080-exec-3][BundleSiteInitializer:5576] Invoking addOrUpdateBlogPostings took 0 ms
+2025-05-30 19:14:28.352 INFO  [http-nio-8080-exec-3][BundleSiteInitializer:5576] Invoking addOrUpdateClientExtensionEntries took 1 ms
+2025-05-30 19:14:28.352 INFO  [http-nio-8080-exec-3][BundleSiteInitializer:5576] Invoking addUserAccounts took 0 ms
+2025-05-30 19:14:28.353 INFO  [http-nio-8080-exec-3][BundleSiteInitializer:5576] Invoking addUserRoles took 0 ms
+2025-05-30 19:14:28.354 INFO  [http-nio-8080-exec-3][BundleSiteInitializer:5576] Invoking addObjectDefinitions took 1 ms
+2025-05-30 19:14:28.354 INFO  [http-nio-8080-exec-3][BundleSiteInitializer:5576] Invoking addOrUpdateAssetLinkEntries took 0 ms
+2025-05-30 19:14:28.354 INFO  [http-nio-8080-exec-3][BundleSiteInitializer:5576] Invoking addOrUpdateSegmentsEntries took 0 ms
+2025-05-30 19:14:28.354 INFO  [http-nio-8080-exec-3][BundleSiteInitializer:5576] Invoking addOrUpdateObjectRelationships took 0 ms
+2025-05-30 19:14:28.354 INFO  [http-nio-8080-exec-3][BundleSiteInitializer:5576] Invoking addRolesAssignments took 0 ms
+2025-05-30 19:14:28.355 INFO  [http-nio-8080-exec-3][BundleSiteInitializer:5576] Invoking addOrUpdateObjectFields took 0 ms
+2025-05-30 19:14:28.355 INFO  [http-nio-8080-exec-3][BundleSiteInitializer:5576] Invoking publishObjectDefinitions took 0 ms
+2025-05-30 19:14:28.355 INFO  [http-nio-8080-exec-3][BundleSiteInitializer:5576] Invoking addOrUpdateNotificationTemplates took 0 ms
+2025-05-30 19:14:28.355 INFO  [http-nio-8080-exec-3][BundleSiteInitializer:5576] Invoking addAssetListEntries took 0 ms
+2025-05-30 19:14:28.355 INFO  [http-nio-8080-exec-3][BundleSiteInitializer:5576] Invoking addOrUpdateAccountEntryRestrictions took 0 ms
+2025-05-30 19:14:28.373 INFO  [http-nio-8080-exec-3][BundleSiteInitializer:5576] Invoking addOrUpdateDDMTemplates took 17 ms
+2025-05-30 19:14:28.373 INFO  [http-nio-8080-exec-3][BundleSiteInitializer:5576] Invoking addOrUpdateJournalArticles took 0 ms
+2025-05-30 19:14:28.373 INFO  [http-nio-8080-exec-3][BundleSiteInitializer:5576] Invoking addOrUpdateObjectActions took 0 ms
+2025-05-30 19:14:28.373 INFO  [http-nio-8080-exec-3][BundleSiteInitializer:5576] Invoking addOrUpdateObjectEntries took 0 ms
+2025-05-30 19:14:28.374 INFO  [http-nio-8080-exec-3][BundleSiteInitializer:5576] Invoking addCPDefinitions took 1 ms
+2025-05-30 19:14:28.938 INFO  [http-nio-8080-exec-3][BundleSiteInitializer:5576] Invoking addLayoutUtilityPageEntries took 564 ms
+2025-05-30 19:14:28.939 INFO  [http-nio-8080-exec-3][BundleSiteInitializer:5576] Invoking addLayoutPageTemplates took 0 ms
+2025-05-30 19:14:29.015 INFO  [http-nio-8080-exec-3][BundleSiteInitializer:5576] Invoking addOrUpdateLayoutsContent took 75 ms
+2025-05-30 19:14:29.015 INFO  [http-nio-8080-exec-3][BundleSiteInitializer:5576] Invoking addExpandoValues took 0 ms
+2025-05-30 19:14:29.015 INFO  [http-nio-8080-exec-3][BundleSiteInitializer:5576] Invoking addSegmentsExperiences took 0 ms
+2025-05-30 19:14:29.016 INFO  [http-nio-8080-exec-3][BundleSiteInitializer:5576] Invoking addOrUpdateResourcePermissions took 0 ms
+2025-05-30 19:14:29.016 INFO  [http-nio-8080-exec-3][BundleSiteInitializer:538] Initialized com.liferay.site.initializer.welcome for group 34311 in 1237 ms
+2025-05-30 19:24:17.627 ERROR [http-nio-8080-exec-1][BaseSamlStrutsAction:55] java.lang.NullPointerException
+com.liferay.saml.runtime.SamlException: java.lang.NullPointerException
+	at com.liferay.saml.opensaml.integration.internal.servlet.profile.ExceptionHandlerUtil.handleException(ExceptionHandlerUtil.java:27) ~[?:?]
+	at com.liferay.saml.opensaml.integration.internal.servlet.profile.WebSsoProfileImpl.processAuthnRequest(WebSsoProfileImpl.java:187) ~[?:?]
+	at com.liferay.saml.web.internal.struts.WebSsoAction.doExecute(WebSsoAction.java:39) ~[bundleFile:?]
+	at com.liferay.saml.web.internal.struts.BaseSamlStrutsAction.execute(BaseSamlStrutsAction.java:48) [bundleFile:?]
+	at com.liferay.portal.struts.ActionAdapter.execute(ActionAdapter.java:31) [portal-impl.jar:?]
+	at com.liferay.portal.struts.PortalRequestProcessor._process(PortalRequestProcessor.java:375) [portal-impl.jar:?]
+	at com.liferay.portal.struts.PortalRequestProcessor.process(PortalRequestProcessor.java:142) [portal-impl.jar:?]
+	at com.liferay.portal.internal.servlet.MainServlet.doPost(MainServlet.java:204) [portal-impl.jar:?]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:555) [servlet-api.jar:4.0.FR]
+	at com.liferay.portal.internal.servlet.MainServlet.service(MainServlet.java:582) [portal-impl.jar:?]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:623) [servlet-api.jar:4.0.FR]
+	at com.liferay.shielded.container.internal.proxy.ServletWrapper.service(ServletWrapper.java:103) [com.liferay.shielded.container.impl.jar:?]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:199) [catalina.jar:9.0.90]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:144) [catalina.jar:9.0.90]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) [tomcat-websocket.jar:9.0.90]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:168) [catalina.jar:9.0.90]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:144) [catalina.jar:9.0.90]
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:117) [portal-kernel.jar:?]
+	at com.liferay.portal.kernel.servlet.BaseFilter.processFilter(BaseFilter.java:152) [portal-kernel.jar:?]
+	at com.liferay.change.tracking.internal.servlet.filter.CTCollectionPreviewFilter.processFilter(CTCollectionPreviewFilter.java:57) [bundleFile:?]
+	at com.liferay.portal.kernel.servlet.BaseFilter.doFilter(BaseFilter.java:42) [portal-kernel.jar:?]
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDoFilter(InvokerFilterChain.java:204) [portal-kernel.jar:?]
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:109) [portal-kernel.jar:?]
+	at com.liferay.portal.remote.cors.internal.servlet.filter.PortalCORSServletFilter.processFilter(PortalCORSServletFilter.java:159) [bundleFile:?]
+	at com.liferay.portal.kernel.servlet.BaseFilter.doFilter(BaseFilter.java:42) [portal-kernel.jar:?]
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDoFilter(InvokerFilterChain.java:204) [portal-kernel.jar:?]
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:109) [portal-kernel.jar:?]
+	at com.liferay.portal.servlet.filters.password.modified.PasswordModifiedFilter.processFilter(PasswordModifiedFilter.java:47) [portal-impl.jar:?]
+	at com.liferay.portal.kernel.servlet.BaseFilter.doFilter(BaseFilter.java:42) [portal-kernel.jar:?]
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDoFilter(InvokerFilterChain.java:204) [portal-kernel.jar:?]
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:109) [portal-kernel.jar:?]
+	at com.liferay.portal.servlet.filters.lockout.LockoutFilter.processFilter(LockoutFilter.java:49) [portal-impl.jar:?]
+	at com.liferay.portal.kernel.servlet.BaseFilter.doFilter(BaseFilter.java:42) [portal-kernel.jar:?]
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDoFilter(InvokerFilterChain.java:204) [portal-kernel.jar:?]
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:109) [portal-kernel.jar:?]
+	at com.liferay.portal.kernel.servlet.BaseFilter.processFilter(BaseFilter.java:152) [portal-kernel.jar:?]
+	at com.liferay.portal.servlet.filters.secure.BaseAuthFilter.processFilter(BaseAuthFilter.java:336) [portal-impl.jar:?]
+	at com.liferay.portal.kernel.servlet.BaseFilter.doFilter(BaseFilter.java:42) [portal-kernel.jar:?]
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDoFilter(InvokerFilterChain.java:204) [portal-kernel.jar:?]
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:109) [portal-kernel.jar:?]
+	at com.liferay.portal.kernel.servlet.BaseFilter.processFilter(BaseFilter.java:152) [portal-kernel.jar:?]
+	at com.liferay.portal.servlet.filters.virtualhost.VirtualHostFilter.processFilter(VirtualHostFilter.java:243) [portal-impl.jar:?]
+	at com.liferay.portal.kernel.servlet.BaseFilter.doFilter(BaseFilter.java:42) [portal-kernel.jar:?]
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDoFilter(InvokerFilterChain.java:204) [portal-kernel.jar:?]
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:109) [portal-kernel.jar:?]
+	at com.liferay.portal.kernel.servlet.BaseFilter.processFilter(BaseFilter.java:152) [portal-kernel.jar:?]
+	at com.liferay.portal.monitoring.internal.servlet.filter.MonitoringFilter.processFilter(MonitoringFilter.java:116) [bundleFile:?]
+	at com.liferay.portal.kernel.servlet.BaseFilter.doFilter(BaseFilter.java:42) [portal-kernel.jar:?]
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDoFilter(InvokerFilterChain.java:204) [portal-kernel.jar:?]
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:109) [portal-kernel.jar:?]
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDirectCallFilter(InvokerFilterChain.java:189) [portal-kernel.jar:?]
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:92) [portal-kernel.jar:?]
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDirectCallFilter(InvokerFilterChain.java:189) [portal-kernel.jar:?]
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:92) [portal-kernel.jar:?]
+	at org.tuckey.web.filters.urlrewrite.RuleChain.handleRewrite(RuleChain.java:176) [urlrewritefilter-4.0.4.jar:4.0.4]
+	at org.tuckey.web.filters.urlrewrite.RuleChain.doRules(RuleChain.java:145) [urlrewritefilter-4.0.4.jar:4.0.4]
+	at org.tuckey.web.filters.urlrewrite.UrlRewriter.processRequest(UrlRewriter.java:92) [urlrewritefilter-4.0.4.jar:4.0.4]
+	at org.tuckey.web.filters.urlrewrite.UrlRewriteFilter.doFilter(UrlRewriteFilter.java:389) [urlrewritefilter-4.0.4.jar:4.0.4]
+	at com.liferay.portal.url.rewrite.filter.internal.URLRewriteFilter.processFilter(URLRewriteFilter.java:86) [bundleFile:?]
+	at com.liferay.portal.kernel.servlet.BaseFilter.doFilter(BaseFilter.java:42) [portal-kernel.jar:?]
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDoFilter(InvokerFilterChain.java:204) [portal-kernel.jar:?]
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:109) [portal-kernel.jar:?]
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDirectCallFilter(InvokerFilterChain.java:168) [portal-kernel.jar:?]
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:92) [portal-kernel.jar:?]
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDirectCallFilter(InvokerFilterChain.java:189) [portal-kernel.jar:?]
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:92) [portal-kernel.jar:?]
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilter.doFilter(InvokerFilter.java:109) [portal-kernel.jar:?]
+	at com.liferay.shielded.container.internal.proxy.FilterWrapper.doFilter(FilterWrapper.java:69) [com.liferay.shielded.container.impl.jar:?]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:168) [catalina.jar:9.0.90]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:144) [catalina.jar:9.0.90]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:168) [catalina.jar:9.0.90]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) [catalina.jar:9.0.90]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481) [catalina.jar:9.0.90]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130) [catalina.jar:9.0.90]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) [catalina.jar:9.0.90]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) [catalina.jar:9.0.90]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:346) [catalina.jar:9.0.90]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:388) [tomcat-coyote.jar:9.0.90]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) [tomcat-coyote.jar:9.0.90]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:936) [tomcat-coyote.jar:9.0.90]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1791) [tomcat-coyote.jar:9.0.90]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) [tomcat-coyote.jar:9.0.90]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190) [tomcat-util.jar:9.0.90]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) [tomcat-util.jar:9.0.90]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63) [tomcat-util.jar:9.0.90]
+	at java.lang.Thread.run(Thread.java:829) [?:?]
+Caused by: java.lang.NullPointerException
+	at com.liferay.saml.opensaml.integration.internal.servlet.profile.BaseProfile.decodeSamlMessage(BaseProfile.java:182) ~[?:?]
+	at com.liferay.saml.opensaml.integration.internal.servlet.profile.WebSsoProfileImpl.decodeAuthnRequest(WebSsoProfileImpl.java:438) ~[?:?]
+	at com.liferay.saml.opensaml.integration.internal.servlet.profile.WebSsoProfileImpl._processAuthnRequest(WebSsoProfileImpl.java:1690) ~[?:?]
+	at com.liferay.saml.opensaml.integration.internal.servlet.profile.WebSsoProfileImpl.processAuthnRequest(WebSsoProfileImpl.java:184) ~[?:?]
+	... 84 more
+2025-05-30 19:26:18.843 WARN  [liferay/mail-2][MailMessageListener:116] Email test@domain.invalid will be ignored because it is included in mail.send.blacklist
+2025-05-30 19:26:18.844 WARN  [liferay/mail-2][MailMessageListener:42] Skipping email because the sender is not specified
+2025-05-30 19:26:34.048 WARN  [liferay/mail-3][MailMessageListener:116] Email test@domain.invalid will be ignored because it is included in mail.send.blacklist
+2025-05-30 19:26:34.049 WARN  [liferay/mail-3][MailMessageListener:42] Skipping email because the sender is not specified
+2025-05-30 19:29:44.865 ERROR [http-nio-8080-exec-4][BaseSamlStrutsAction:55] Received logout response from gateway without an active SSO session
+com.liferay.saml.runtime.exception.UnsolicitedLogoutResponseException: Received logout response from gateway without an active SSO session
+	at com.liferay.saml.opensaml.integration.internal.servlet.profile.SingleLogoutProfileImpl._processIdpLogoutResponse(SingleLogoutProfileImpl.java:904) ~[?:?]
+	at com.liferay.saml.opensaml.integration.internal.servlet.profile.SingleLogoutProfileImpl._processSingleLogoutResponse(SingleLogoutProfileImpl.java:982) ~[?:?]
+	at com.liferay.saml.opensaml.integration.internal.servlet.profile.SingleLogoutProfileImpl.processSingleLogout(SingleLogoutProfileImpl.java:287) ~[?:?]
+	at com.liferay.saml.web.internal.struts.SingleLogoutAction.doExecute(SingleLogoutAction.java:49) ~[bundleFile:?]
+	at com.liferay.saml.web.internal.struts.BaseSamlStrutsAction.execute(BaseSamlStrutsAction.java:48) [bundleFile:?]
+	at com.liferay.portal.struts.ActionAdapter.execute(ActionAdapter.java:31) [portal-impl.jar:?]
+	at com.liferay.portal.struts.PortalRequestProcessor._process(PortalRequestProcessor.java:375) [portal-impl.jar:?]
+	at com.liferay.portal.struts.PortalRequestProcessor.process(PortalRequestProcessor.java:142) [portal-impl.jar:?]
+	at com.liferay.portal.internal.servlet.MainServlet.doGet(MainServlet.java:194) [portal-impl.jar:?]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:529) [servlet-api.jar:4.0.FR]
+	at com.liferay.portal.internal.servlet.MainServlet.service(MainServlet.java:582) [portal-impl.jar:?]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:623) [servlet-api.jar:4.0.FR]
+	at com.liferay.shielded.container.internal.proxy.ServletWrapper.service(ServletWrapper.java:103) [com.liferay.shielded.container.impl.jar:?]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:199) [catalina.jar:9.0.90]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:144) [catalina.jar:9.0.90]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) [tomcat-websocket.jar:9.0.90]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:168) [catalina.jar:9.0.90]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:144) [catalina.jar:9.0.90]
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:117) [portal-kernel.jar:?]
+	at com.liferay.portal.kernel.servlet.BaseFilter.processFilter(BaseFilter.java:152) [portal-kernel.jar:?]
+	at com.liferay.change.tracking.internal.servlet.filter.CTCollectionPreviewFilter.processFilter(CTCollectionPreviewFilter.java:57) [bundleFile:?]
+	at com.liferay.portal.kernel.servlet.BaseFilter.doFilter(BaseFilter.java:42) [portal-kernel.jar:?]
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDoFilter(InvokerFilterChain.java:204) [portal-kernel.jar:?]
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:109) [portal-kernel.jar:?]
+	at com.liferay.portal.servlet.filters.password.modified.PasswordModifiedFilter.processFilter(PasswordModifiedFilter.java:47) [portal-impl.jar:?]
+	at com.liferay.portal.kernel.servlet.BaseFilter.doFilter(BaseFilter.java:42) [portal-kernel.jar:?]
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDoFilter(InvokerFilterChain.java:204) [portal-kernel.jar:?]
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:109) [portal-kernel.jar:?]
+	at com.liferay.portal.servlet.filters.lockout.LockoutFilter.processFilter(LockoutFilter.java:49) [portal-impl.jar:?]
+	at com.liferay.portal.kernel.servlet.BaseFilter.doFilter(BaseFilter.java:42) [portal-kernel.jar:?]
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDoFilter(InvokerFilterChain.java:204) [portal-kernel.jar:?]
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:109) [portal-kernel.jar:?]
+	at com.liferay.portal.kernel.servlet.BaseFilter.processFilter(BaseFilter.java:152) [portal-kernel.jar:?]
+	at com.liferay.portal.servlet.filters.secure.BaseAuthFilter.processFilter(BaseAuthFilter.java:336) [portal-impl.jar:?]
+	at com.liferay.portal.kernel.servlet.BaseFilter.doFilter(BaseFilter.java:42) [portal-kernel.jar:?]
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDoFilter(InvokerFilterChain.java:204) [portal-kernel.jar:?]
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:109) [portal-kernel.jar:?]
+	at com.liferay.portal.kernel.servlet.BaseFilter.processFilter(BaseFilter.java:152) [portal-kernel.jar:?]
+	at com.liferay.portal.servlet.filters.virtualhost.VirtualHostFilter.processFilter(VirtualHostFilter.java:243) [portal-impl.jar:?]
+	at com.liferay.portal.kernel.servlet.BaseFilter.doFilter(BaseFilter.java:42) [portal-kernel.jar:?]
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDoFilter(InvokerFilterChain.java:204) [portal-kernel.jar:?]
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:109) [portal-kernel.jar:?]
+	at com.liferay.portal.kernel.servlet.BaseFilter.processFilter(BaseFilter.java:152) [portal-kernel.jar:?]
+	at com.liferay.portal.monitoring.internal.servlet.filter.MonitoringFilter.processFilter(MonitoringFilter.java:116) [bundleFile:?]
+	at com.liferay.portal.kernel.servlet.BaseFilter.doFilter(BaseFilter.java:42) [portal-kernel.jar:?]
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDoFilter(InvokerFilterChain.java:204) [portal-kernel.jar:?]
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:109) [portal-kernel.jar:?]
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDirectCallFilter(InvokerFilterChain.java:189) [portal-kernel.jar:?]
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:92) [portal-kernel.jar:?]
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDirectCallFilter(InvokerFilterChain.java:189) [portal-kernel.jar:?]
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:92) [portal-kernel.jar:?]
+	at org.tuckey.web.filters.urlrewrite.RuleChain.handleRewrite(RuleChain.java:176) [urlrewritefilter-4.0.4.jar:4.0.4]
+	at org.tuckey.web.filters.urlrewrite.RuleChain.doRules(RuleChain.java:145) [urlrewritefilter-4.0.4.jar:4.0.4]
+	at org.tuckey.web.filters.urlrewrite.UrlRewriter.processRequest(UrlRewriter.java:92) [urlrewritefilter-4.0.4.jar:4.0.4]
+	at org.tuckey.web.filters.urlrewrite.UrlRewriteFilter.doFilter(UrlRewriteFilter.java:389) [urlrewritefilter-4.0.4.jar:4.0.4]
+	at com.liferay.portal.url.rewrite.filter.internal.URLRewriteFilter.processFilter(URLRewriteFilter.java:86) [bundleFile:?]
+	at com.liferay.portal.kernel.servlet.BaseFilter.doFilter(BaseFilter.java:42) [portal-kernel.jar:?]
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDoFilter(InvokerFilterChain.java:204) [portal-kernel.jar:?]
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:109) [portal-kernel.jar:?]
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDirectCallFilter(InvokerFilterChain.java:168) [portal-kernel.jar:?]
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:92) [portal-kernel.jar:?]
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDirectCallFilter(InvokerFilterChain.java:189) [portal-kernel.jar:?]
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:92) [portal-kernel.jar:?]
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilter.doFilter(InvokerFilter.java:109) [portal-kernel.jar:?]
+	at com.liferay.shielded.container.internal.proxy.FilterWrapper.doFilter(FilterWrapper.java:69) [com.liferay.shielded.container.impl.jar:?]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:168) [catalina.jar:9.0.90]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:144) [catalina.jar:9.0.90]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:168) [catalina.jar:9.0.90]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) [catalina.jar:9.0.90]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481) [catalina.jar:9.0.90]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130) [catalina.jar:9.0.90]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) [catalina.jar:9.0.90]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) [catalina.jar:9.0.90]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:346) [catalina.jar:9.0.90]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:388) [tomcat-coyote.jar:9.0.90]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) [tomcat-coyote.jar:9.0.90]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:936) [tomcat-coyote.jar:9.0.90]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1791) [tomcat-coyote.jar:9.0.90]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) [tomcat-coyote.jar:9.0.90]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190) [tomcat-util.jar:9.0.90]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) [tomcat-util.jar:9.0.90]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63) [tomcat-util.jar:9.0.90]
+	at java.lang.Thread.run(Thread.java:829) [?:?]
+2025-05-30 19:29:50.284 ERROR [http-nio-8080-exec-10][BaseSamlStrutsAction:55] Received logout response from gateway without an active SSO session
+com.liferay.saml.runtime.exception.UnsolicitedLogoutResponseException: Received logout response from gateway without an active SSO session
+	at com.liferay.saml.opensaml.integration.internal.servlet.profile.SingleLogoutProfileImpl._processIdpLogoutResponse(SingleLogoutProfileImpl.java:904) ~[?:?]
+	at com.liferay.saml.opensaml.integration.internal.servlet.profile.SingleLogoutProfileImpl._processSingleLogoutResponse(SingleLogoutProfileImpl.java:982) ~[?:?]
+	at com.liferay.saml.opensaml.integration.internal.servlet.profile.SingleLogoutProfileImpl.processSingleLogout(SingleLogoutProfileImpl.java:287) ~[?:?]
+	at com.liferay.saml.web.internal.struts.SingleLogoutAction.doExecute(SingleLogoutAction.java:49) ~[bundleFile:?]
+	at com.liferay.saml.web.internal.struts.BaseSamlStrutsAction.execute(BaseSamlStrutsAction.java:48) [bundleFile:?]
+	at com.liferay.portal.struts.ActionAdapter.execute(ActionAdapter.java:31) [portal-impl.jar:?]
+	at com.liferay.portal.struts.PortalRequestProcessor._process(PortalRequestProcessor.java:375) [portal-impl.jar:?]
+	at com.liferay.portal.struts.PortalRequestProcessor.process(PortalRequestProcessor.java:142) [portal-impl.jar:?]
+	at com.liferay.portal.internal.servlet.MainServlet.doGet(MainServlet.java:194) [portal-impl.jar:?]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:529) [servlet-api.jar:4.0.FR]
+	at com.liferay.portal.internal.servlet.MainServlet.service(MainServlet.java:582) [portal-impl.jar:?]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:623) [servlet-api.jar:4.0.FR]
+	at com.liferay.shielded.container.internal.proxy.ServletWrapper.service(ServletWrapper.java:103) [com.liferay.shielded.container.impl.jar:?]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:199) [catalina.jar:9.0.90]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:144) [catalina.jar:9.0.90]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) [tomcat-websocket.jar:9.0.90]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:168) [catalina.jar:9.0.90]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:144) [catalina.jar:9.0.90]
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:117) [portal-kernel.jar:?]
+	at com.liferay.portal.kernel.servlet.BaseFilter.processFilter(BaseFilter.java:152) [portal-kernel.jar:?]
+	at com.liferay.change.tracking.internal.servlet.filter.CTCollectionPreviewFilter.processFilter(CTCollectionPreviewFilter.java:57) [bundleFile:?]
+	at com.liferay.portal.kernel.servlet.BaseFilter.doFilter(BaseFilter.java:42) [portal-kernel.jar:?]
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDoFilter(InvokerFilterChain.java:204) [portal-kernel.jar:?]
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:109) [portal-kernel.jar:?]
+	at com.liferay.portal.servlet.filters.password.modified.PasswordModifiedFilter.processFilter(PasswordModifiedFilter.java:47) [portal-impl.jar:?]
+	at com.liferay.portal.kernel.servlet.BaseFilter.doFilter(BaseFilter.java:42) [portal-kernel.jar:?]
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDoFilter(InvokerFilterChain.java:204) [portal-kernel.jar:?]
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:109) [portal-kernel.jar:?]
+	at com.liferay.portal.servlet.filters.lockout.LockoutFilter.processFilter(LockoutFilter.java:49) [portal-impl.jar:?]
+	at com.liferay.portal.kernel.servlet.BaseFilter.doFilter(BaseFilter.java:42) [portal-kernel.jar:?]
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDoFilter(InvokerFilterChain.java:204) [portal-kernel.jar:?]
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:109) [portal-kernel.jar:?]
+	at com.liferay.portal.kernel.servlet.BaseFilter.processFilter(BaseFilter.java:152) [portal-kernel.jar:?]
+	at com.liferay.portal.servlet.filters.secure.BaseAuthFilter.processFilter(BaseAuthFilter.java:336) [portal-impl.jar:?]
+	at com.liferay.portal.kernel.servlet.BaseFilter.doFilter(BaseFilter.java:42) [portal-kernel.jar:?]
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDoFilter(InvokerFilterChain.java:204) [portal-kernel.jar:?]
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:109) [portal-kernel.jar:?]
+	at com.liferay.portal.kernel.servlet.BaseFilter.processFilter(BaseFilter.java:152) [portal-kernel.jar:?]
+	at com.liferay.portal.servlet.filters.virtualhost.VirtualHostFilter.processFilter(VirtualHostFilter.java:243) [portal-impl.jar:?]
+	at com.liferay.portal.kernel.servlet.BaseFilter.doFilter(BaseFilter.java:42) [portal-kernel.jar:?]
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDoFilter(InvokerFilterChain.java:204) [portal-kernel.jar:?]
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:109) [portal-kernel.jar:?]
+	at com.liferay.portal.kernel.servlet.BaseFilter.processFilter(BaseFilter.java:152) [portal-kernel.jar:?]
+	at com.liferay.portal.monitoring.internal.servlet.filter.MonitoringFilter.processFilter(MonitoringFilter.java:116) [bundleFile:?]
+	at com.liferay.portal.kernel.servlet.BaseFilter.doFilter(BaseFilter.java:42) [portal-kernel.jar:?]
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDoFilter(InvokerFilterChain.java:204) [portal-kernel.jar:?]
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:109) [portal-kernel.jar:?]
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDirectCallFilter(InvokerFilterChain.java:189) [portal-kernel.jar:?]
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:92) [portal-kernel.jar:?]
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDirectCallFilter(InvokerFilterChain.java:189) [portal-kernel.jar:?]
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:92) [portal-kernel.jar:?]
+	at org.tuckey.web.filters.urlrewrite.RuleChain.handleRewrite(RuleChain.java:176) [urlrewritefilter-4.0.4.jar:4.0.4]
+	at org.tuckey.web.filters.urlrewrite.RuleChain.doRules(RuleChain.java:145) [urlrewritefilter-4.0.4.jar:4.0.4]
+	at org.tuckey.web.filters.urlrewrite.UrlRewriter.processRequest(UrlRewriter.java:92) [urlrewritefilter-4.0.4.jar:4.0.4]
+	at org.tuckey.web.filters.urlrewrite.UrlRewriteFilter.doFilter(UrlRewriteFilter.java:389) [urlrewritefilter-4.0.4.jar:4.0.4]
+	at com.liferay.portal.url.rewrite.filter.internal.URLRewriteFilter.processFilter(URLRewriteFilter.java:86) [bundleFile:?]
+	at com.liferay.portal.kernel.servlet.BaseFilter.doFilter(BaseFilter.java:42) [portal-kernel.jar:?]
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDoFilter(InvokerFilterChain.java:204) [portal-kernel.jar:?]
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:109) [portal-kernel.jar:?]
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDirectCallFilter(InvokerFilterChain.java:168) [portal-kernel.jar:?]
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:92) [portal-kernel.jar:?]
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDirectCallFilter(InvokerFilterChain.java:189) [portal-kernel.jar:?]
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:92) [portal-kernel.jar:?]
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilter.doFilter(InvokerFilter.java:109) [portal-kernel.jar:?]
+	at com.liferay.shielded.container.internal.proxy.FilterWrapper.doFilter(FilterWrapper.java:69) [com.liferay.shielded.container.impl.jar:?]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:168) [catalina.jar:9.0.90]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:144) [catalina.jar:9.0.90]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:168) [catalina.jar:9.0.90]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) [catalina.jar:9.0.90]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481) [catalina.jar:9.0.90]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130) [catalina.jar:9.0.90]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) [catalina.jar:9.0.90]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) [catalina.jar:9.0.90]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:346) [catalina.jar:9.0.90]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:388) [tomcat-coyote.jar:9.0.90]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) [tomcat-coyote.jar:9.0.90]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:936) [tomcat-coyote.jar:9.0.90]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1791) [tomcat-coyote.jar:9.0.90]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) [tomcat-coyote.jar:9.0.90]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190) [tomcat-util.jar:9.0.90]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) [tomcat-util.jar:9.0.90]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63) [tomcat-util.jar:9.0.90]
+	at java.lang.Thread.run(Thread.java:829) [?:?]
+2025-05-30 19:42:14.942 WARN  [http-nio-8080-exec-4][extend_session_jsp:598] Unable to extend the HTTP session

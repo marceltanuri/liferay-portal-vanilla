@@ -1,0 +1,1121 @@
+2025-06-17 13:42:05.790 INFO  [main][PortalContextLoaderListener:114] JVM arguments: --add-opens=java.base/java.lang=ALL-UNNAMED --add-opens=java.base/java.lang.invoke=ALL-UNNAMED --add-opens=java.base/java.lang.reflect=ALL-UNNAMED --add-opens=java.base/java.net=ALL-UNNAMED --add-opens=java.base/sun.net.www.protocol.http=ALL-UNNAMED --add-opens=java.base/sun.net.www.protocol.https=ALL-UNNAMED --add-opens=java.base/sun.util.calendar=ALL-UNNAMED --add-opens=jdk.zipfs/jdk.nio.zipfs=ALL-UNNAMED --add-opens=java.base/java.lang=ALL-UNNAMED --add-opens=java.base/java.lang.invoke=ALL-UNNAMED --add-opens=java.base/java.lang.reflect=ALL-UNNAMED --add-opens=java.base/java.io=ALL-UNNAMED --add-opens=java.base/java.util=ALL-UNNAMED --add-opens=java.base/java.util.concurrent=ALL-UNNAMED --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED -Djava.util.logging.config.file=/opt/liferay/tomcat/conf/logging.properties -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager -Djdk.tls.ephemeralDHKeySize=2048 -Djava.protocol.handler.pkgs=org.apache.catalina.webresources -Dsun.io.useCanonCaches=false -Dorg.apache.catalina.security.SecurityListener.UMASK=0027 -Dfile.encoding=UTF-8 -Djava.net.preferIPv4Stack=true -Duser.timezone=GMT -Xms2560m -Xmx2560m -XX:MaxNewSize=1536m -XX:MaxMetaspaceSize=768m -XX:MetaspaceSize=768m -XX:NewSize=1536m -XX:SurvivorRatio=7 -javaagent:/opt/liferay/tomcat/../glowroot/glowroot.jar -Dglowroot.enabled=true -Xms6g -Xmx6g -Djdk.util.zip.disableZip64ExtraFieldValidation=true -Dignore.endorsed.dirs= -Dcatalina.base=/opt/liferay/tomcat -Dcatalina.home=/opt/liferay/tomcat -Djava.io.tmpdir=/opt/liferay/tomcat/temp
+2025-06-17 13:42:12.554 INFO  [SystemExecutorServiceUtil-1][DataSourceFactoryImpl:475] Successfully acquired JDBC connection
+2025-06-17 13:42:12.775 WARN  [SystemExecutorServiceUtil-1][DialectDetector:73] Liferay is configured to use Hypersonic as its database. Do NOT use Hypersonic in production. Hypersonic is an embedded database useful for development and demonstration purposes. The database settings can be changed in portal-ext.properties.
+2025-06-17 13:42:12.775 INFO  [SystemExecutorServiceUtil-1][DialectDetector:134] Using dialect com.liferay.portal.dao.orm.hibernate.HSQLDialect for HSQL Database Engine 2.7
+2025-06-17 13:42:14.116 INFO  [main][ModuleFrameworkImpl:1374] Starting initial bundles
+2025-06-17 13:42:14.993 INFO  [main][InterpolationConfigurationPlugin:109] Configured directory for secrets: /opt/liferay/osgi/configs
+2025-06-17 13:42:15.312 INFO  [main][ModuleFrameworkImpl:1664] Started initial bundles
+2025-06-17 13:42:15.313 INFO  [main][ModuleFrameworkImpl:1709] Starting dynamic bundles
+2025-06-17 13:42:17.119 WARN  [Start Level: Equinox Container: a17be8d2-692e-4e21-ae3a-88b25d52f4d7][SidecarManager:70] Liferay automatically starts a child process of Elasticsearch named sidecar for convenient development and demonstration purposes. Do NOT use sidecar in production. Refer to the documentation for details on the limitations of sidecar and instructions on configuring a remote Elasticsearch connection in the Control Panel.
+2025-06-17 13:42:21.295 INFO  [main][ModuleFrameworkImpl:1732] Started dynamic bundles
+2025-06-17 13:42:21.296 INFO  [main][ModuleFrameworkImpl:1739] Starting web bundles
+2025-06-17 13:42:22.748 INFO  [main][ModuleFrameworkImpl:1793] Started web bundles
+2025-06-17 13:42:22.748 INFO  [main][ModuleFrameworkImpl:284] Navigate to Control Panel > System > Gogo Shell and enter "lb" to see all bundles
+2025-06-17 13:42:24.107 INFO  [main][StartupHelperUtil:100] There are no patches installed
+2025-06-17 13:42:24.111 ERROR [main][MainServlet:259] You must first upgrade the portal to the required schema version 32.0.0
+java.lang.RuntimeException: You must first upgrade the portal to the required schema version 32.0.0
+	at com.liferay.portal.events.StartupHelperUtil.verifyRequiredSchemaVersion(StartupHelperUtil.java:213) ~[portal-impl.jar:?]
+	at com.liferay.portal.events.StartupAction.doRun(StartupAction.java:112) ~[portal-impl.jar:?]
+	at com.liferay.portal.ee.license.StartupAction.doRun(Unknown Source) ~[?:?]
+	at com.liferay.portal.events.StartupAction.run(StartupAction.java:42) ~[portal-impl.jar:?]
+	at com.liferay.portal.internal.servlet.MainServlet.init(MainServlet.java:256) [portal-impl.jar:?]
+	at javax.servlet.GenericServlet.init(GenericServlet.java:143) [servlet-api.jar:4.0.FR]
+	at com.liferay.shielded.container.internal.proxy.ServletWrapper.init(ServletWrapper.java:82) [com.liferay.shielded.container.impl.jar:?]
+	at org.apache.catalina.core.StandardWrapper.initServlet(StandardWrapper.java:989) [catalina.jar:9.0.104]
+	at org.apache.catalina.core.StandardWrapper.load(StandardWrapper.java:846) [catalina.jar:9.0.104]
+	at org.apache.catalina.core.StandardContext.loadOnStartup(StandardContext.java:4234) [catalina.jar:9.0.104]
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:4535) [catalina.jar:9.0.104]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164) [catalina.jar:9.0.104]
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:599) [catalina.jar:9.0.104]
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:571) [catalina.jar:9.0.104]
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:603) [catalina.jar:9.0.104]
+	at org.apache.catalina.startup.HostConfig.deployDescriptor(HostConfig.java:680) [catalina.jar:9.0.104]
+	at org.apache.catalina.startup.HostConfig$DeployDescriptor.run(HostConfig.java:1838) [catalina.jar:9.0.104]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572) [?:?]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:317) [?:?]
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:76) [tomcat-util.jar:9.0.104]
+	at java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:123) [?:?]
+	at org.apache.catalina.startup.HostConfig.deployDescriptors(HostConfig.java:575) [catalina.jar:9.0.104]
+	at org.apache.catalina.startup.HostConfig.deployApps(HostConfig.java:466) [catalina.jar:9.0.104]
+	at org.apache.catalina.startup.HostConfig.start(HostConfig.java:1578) [catalina.jar:9.0.104]
+	at org.apache.catalina.startup.HostConfig.lifecycleEvent(HostConfig.java:312) [catalina.jar:9.0.104]
+	at org.apache.catalina.util.LifecycleBase.fireLifecycleEvent(LifecycleBase.java:109) [catalina.jar:9.0.104]
+	at org.apache.catalina.util.LifecycleBase.setStateInternal(LifecycleBase.java:389) [catalina.jar:9.0.104]
+	at org.apache.catalina.util.LifecycleBase.setState(LifecycleBase.java:336) [catalina.jar:9.0.104]
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:776) [catalina.jar:9.0.104]
+	at org.apache.catalina.core.StandardHost.startInternal(StandardHost.java:721) [catalina.jar:9.0.104]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164) [catalina.jar:9.0.104]
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1203) [catalina.jar:9.0.104]
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1193) [catalina.jar:9.0.104]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:317) [?:?]
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:76) [tomcat-util.jar:9.0.104]
+	at java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:145) [?:?]
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:749) [catalina.jar:9.0.104]
+	at org.apache.catalina.core.StandardEngine.startInternal(StandardEngine.java:211) [catalina.jar:9.0.104]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164) [catalina.jar:9.0.104]
+	at org.apache.catalina.core.StandardService.startInternal(StandardService.java:412) [catalina.jar:9.0.104]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164) [catalina.jar:9.0.104]
+	at org.apache.catalina.core.StandardServer.startInternal(StandardServer.java:874) [catalina.jar:9.0.104]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164) [catalina.jar:9.0.104]
+	at org.apache.catalina.startup.Catalina.start(Catalina.java:739) [catalina.jar:9.0.104]
+	at jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:580) ~[?:?]
+	at org.apache.catalina.startup.Bootstrap.start(Bootstrap.java:345) [bootstrap.jar:9.0.104]
+	at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:476) [bootstrap.jar:9.0.104]
+2025-06-17 13:45:31.918 INFO  [main][PortalContextLoaderListener:114] JVM arguments: --add-opens=java.base/java.lang=ALL-UNNAMED --add-opens=java.base/java.lang.invoke=ALL-UNNAMED --add-opens=java.base/java.lang.reflect=ALL-UNNAMED --add-opens=java.base/java.net=ALL-UNNAMED --add-opens=java.base/sun.net.www.protocol.http=ALL-UNNAMED --add-opens=java.base/sun.net.www.protocol.https=ALL-UNNAMED --add-opens=java.base/sun.util.calendar=ALL-UNNAMED --add-opens=jdk.zipfs/jdk.nio.zipfs=ALL-UNNAMED --add-opens=java.base/java.lang=ALL-UNNAMED --add-opens=java.base/java.lang.invoke=ALL-UNNAMED --add-opens=java.base/java.lang.reflect=ALL-UNNAMED --add-opens=java.base/java.io=ALL-UNNAMED --add-opens=java.base/java.util=ALL-UNNAMED --add-opens=java.base/java.util.concurrent=ALL-UNNAMED --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED -Djava.util.logging.config.file=/opt/liferay/tomcat/conf/logging.properties -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager -Djdk.tls.ephemeralDHKeySize=2048 -Djava.protocol.handler.pkgs=org.apache.catalina.webresources -Dsun.io.useCanonCaches=false -Dorg.apache.catalina.security.SecurityListener.UMASK=0027 -Dfile.encoding=UTF-8 -Djava.net.preferIPv4Stack=true -Duser.timezone=GMT -Xms2560m -Xmx2560m -XX:MaxNewSize=1536m -XX:MaxMetaspaceSize=768m -XX:MetaspaceSize=768m -XX:NewSize=1536m -XX:SurvivorRatio=7 -javaagent:/opt/liferay/tomcat/../glowroot/glowroot.jar -Dglowroot.enabled=true -Xms6g -Xmx6g -Djdk.util.zip.disableZip64ExtraFieldValidation=true -Dignore.endorsed.dirs= -Dcatalina.base=/opt/liferay/tomcat -Dcatalina.home=/opt/liferay/tomcat -Djava.io.tmpdir=/opt/liferay/tomcat/temp
+2025-06-17 13:45:37.819 INFO  [SystemExecutorServiceUtil-1][DataSourceFactoryImpl:475] Successfully acquired JDBC connection
+2025-06-17 13:45:38.038 WARN  [SystemExecutorServiceUtil-1][DialectDetector:73] Liferay is configured to use Hypersonic as its database. Do NOT use Hypersonic in production. Hypersonic is an embedded database useful for development and demonstration purposes. The database settings can be changed in portal-ext.properties.
+2025-06-17 13:45:38.039 INFO  [SystemExecutorServiceUtil-1][DialectDetector:134] Using dialect com.liferay.portal.dao.orm.hibernate.HSQLDialect for HSQL Database Engine 2.7
+2025-06-17 13:45:38.124 INFO  [SystemExecutorServiceUtil-1][DBInitUtil:109] Create tables and populate with default data
+2025-06-17 13:45:39.393 INFO  [main][ModuleFrameworkImpl:1374] Starting initial bundles
+2025-06-17 13:45:40.489 INFO  [main][InterpolationConfigurationPlugin:109] Configured directory for secrets: /opt/liferay/osgi/configs
+2025-06-17 13:45:40.785 INFO  [main][ModuleFrameworkImpl:1664] Started initial bundles
+2025-06-17 13:45:40.785 INFO  [main][ModuleFrameworkImpl:1709] Starting dynamic bundles
+2025-06-17 13:45:42.654 WARN  [Start Level: Equinox Container: 93b2f825-46e7-4c2f-86ab-260964321dd7][SidecarManager:70] Liferay automatically starts a child process of Elasticsearch named sidecar for convenient development and demonstration purposes. Do NOT use sidecar in production. Refer to the documentation for details on the limitations of sidecar and instructions on configuring a remote Elasticsearch connection in the Control Panel.
+2025-06-17 13:45:46.382 INFO  [main][ModuleFrameworkImpl:1732] Started dynamic bundles
+2025-06-17 13:45:46.383 INFO  [main][ModuleFrameworkImpl:1739] Starting web bundles
+2025-06-17 13:45:47.545 INFO  [main][ModuleFrameworkImpl:1793] Started web bundles
+2025-06-17 13:45:47.545 INFO  [main][ModuleFrameworkImpl:284] Navigate to Control Panel > System > Gogo Shell and enter "lb" to see all bundles
+2025-06-17 13:45:48.858 INFO  [main][StartupHelperUtil:100] There are no patches installed
+2025-06-17 13:45:49.018 INFO  [main][LicenseManager:-1] Failed to find directory /opt/liferay/data/license
+2025-06-17 13:45:49.019 INFO  [main][LicenseManager:-1] No binary licenses found
+2025-06-17 13:45:49.200 INFO  [SystemExecutorServiceUtil-13][Sidecar:102] Sidecar Elasticsearch 7.17.28 liferay_sidecar started at 127.0.0.1:9201
+2025-06-17 13:45:49.422 INFO  [main][AutoDeployDir:152] Auto deploy scanner started for /opt/liferay/deploy
+2025-06-17 13:45:58.497 INFO  [main][VerifyProcess:65] Verifying com.liferay.portal.security.service.access.policy.internal.verify.SAPServiceVerifyProcess
+2025-06-17 13:45:58.498 INFO  [main][LoggingTimer:74] Starting com.liferay.portal.security.service.access.policy.internal.verify.SAPServiceVerifyProcess#verifyDefaultSAPEntry
+2025-06-17 13:45:58.532 INFO  [main][LoggingTimer:35] Completed com.liferay.portal.security.service.access.policy.internal.verify.SAPServiceVerifyProcess#verifyDefaultSAPEntry in 35 ms
+2025-06-17 13:45:58.533 INFO  [main][VerifyProcess:80] Completed verification process com.liferay.portal.security.service.access.policy.internal.verify.SAPServiceVerifyProcess in 38 ms
+2025-06-17 13:45:58.538 INFO  [main][VerifyProcess:65] Verifying com.liferay.search.experiences.internal.verify.SXPServiceVerifyProcess
+2025-06-17 13:45:59.139 INFO  [SystemExecutorServiceUtil-6-com.liferay.portal.spring.extender.internal.configuration.ServiceConfigurationInitializer-com.liferay.change.tracking.service][VerifyProcess:65] Verifying com.liferay.commerce.product.internal.verify.CommerceProductServiceVerifyProcess
+2025-06-17 13:45:59.139 INFO  [SystemExecutorServiceUtil-6-com.liferay.portal.spring.extender.internal.configuration.ServiceConfigurationInitializer-com.liferay.change.tracking.service][LoggingTimer:74] Starting com.liferay.commerce.product.internal.verify.CommerceProductServiceVerifyProcess#verifyCPMeasurementUnits
+2025-06-17 13:45:59.200 INFO  [main][VerifyProcess:80] Completed verification process com.liferay.search.experiences.internal.verify.SXPServiceVerifyProcess in 663 ms
+2025-06-17 13:45:59.205 INFO  [main][VerifyProcess:65] Verifying com.liferay.portal.search.tuning.synonyms.web.internal.verify.SynonymSetsDatabaseImporterVerifyProcess
+2025-06-17 13:45:59.436 INFO  [SystemExecutorServiceUtil-6-com.liferay.portal.spring.extender.internal.configuration.ServiceConfigurationInitializer-com.liferay.change.tracking.service][LoggingTimer:35] Completed com.liferay.commerce.product.internal.verify.CommerceProductServiceVerifyProcess#verifyCPMeasurementUnits in 296 ms
+2025-06-17 13:45:59.436 INFO  [SystemExecutorServiceUtil-6-com.liferay.portal.spring.extender.internal.configuration.ServiceConfigurationInitializer-com.liferay.change.tracking.service][VerifyProcess:80] Completed verification process com.liferay.commerce.product.internal.verify.CommerceProductServiceVerifyProcess in 297 ms
+2025-06-17 13:45:59.671 INFO  [main][VerifyProcess:80] Completed verification process com.liferay.portal.search.tuning.synonyms.web.internal.verify.SynonymSetsDatabaseImporterVerifyProcess in 465 ms
+2025-06-17 13:46:02.423 INFO  [com.liferay.portal.kernel.deploy.auto.AutoDeployScanner][AutoDeployDir:212] Processing trial-dxp-license-1749215857000.xml
+2025-06-17 13:46:02.682 INFO  [fileinstall-directory-watcher][BaseAutoDeployListener:34] Copying themes for /opt/liferay/tomcat/temp/20250617134602635OVCUHZZQ/admin-theme.war
+2025-06-17 13:46:03.323 INFO  [fileinstall-directory-watcher][BaseAutoDeployListener:41] Themes for /opt/liferay/tomcat/temp/20250617134602635OVCUHZZQ/admin-theme.war copied successfully
+2025-06-17 13:46:04.828 INFO  [fileinstall-directory-watcher][BaseAutoDeployListener:34] Copying themes for /opt/liferay/tomcat/temp/20250617134604817HPYXYGYL/classic-theme.war
+2025-06-17 13:46:04.931 INFO  [SystemExecutorServiceUtil-6-com.liferay.portal.spring.extender.internal.configuration.ServiceConfigurationInitializer-com.liferay.change.tracking.service][VerifyProcess:65] Verifying com.liferay.portal.search.tuning.rankings.web.internal.verify.RankingsDatabaseImporterVerifyProcess
+2025-06-17 13:46:05.118 INFO  [SystemExecutorServiceUtil-6-com.liferay.portal.spring.extender.internal.configuration.ServiceConfigurationInitializer-com.liferay.change.tracking.service][VerifyProcess:80] Completed verification process com.liferay.portal.search.tuning.rankings.web.internal.verify.RankingsDatabaseImporterVerifyProcess in 186 ms
+2025-06-17 13:46:05.226 INFO  [SystemExecutorServiceUtil-6-com.liferay.portal.spring.extender.internal.configuration.ServiceConfigurationInitializer-com.liferay.change.tracking.service][VerifyProcess:65] Verifying com.liferay.adaptive.media.document.library.thumbnails.internal.verify.DocumentLibraryThumbnailsConfigurationVerifyProcess
+2025-06-17 13:46:05.264 INFO  [SystemExecutorServiceUtil-6-com.liferay.portal.spring.extender.internal.configuration.ServiceConfigurationInitializer-com.liferay.change.tracking.service][VerifyProcess:80] Completed verification process com.liferay.adaptive.media.document.library.thumbnails.internal.verify.DocumentLibraryThumbnailsConfigurationVerifyProcess in 38 ms
+2025-06-17 13:46:05.739 INFO  [fileinstall-directory-watcher][BaseAutoDeployListener:41] Themes for /opt/liferay/tomcat/temp/20250617134604817HPYXYGYL/classic-theme.war copied successfully
+2025-06-17 13:46:06.235 INFO  [SystemExecutorServiceUtil-6-com.liferay.portal.spring.extender.internal.configuration.ServiceConfigurationInitializer-com.liferay.change.tracking.service][VerifyProcess:65] Verifying com.liferay.commerce.price.list.internal.verify.CommercePriceListServiceVerifyProcess
+2025-06-17 13:46:06.236 INFO  [SystemExecutorServiceUtil-6-com.liferay.portal.spring.extender.internal.configuration.ServiceConfigurationInitializer-com.liferay.change.tracking.service][LoggingTimer:74] Starting com.liferay.commerce.price.list.internal.verify.CommercePriceListServiceVerifyProcess#verifyBasePriceLists
+2025-06-17 13:46:06.242 INFO  [SystemExecutorServiceUtil-6-com.liferay.portal.spring.extender.internal.configuration.ServiceConfigurationInitializer-com.liferay.change.tracking.service][LoggingTimer:35] Completed com.liferay.commerce.price.list.internal.verify.CommercePriceListServiceVerifyProcess#verifyBasePriceLists in 6 ms
+2025-06-17 13:46:06.243 INFO  [SystemExecutorServiceUtil-6-com.liferay.portal.spring.extender.internal.configuration.ServiceConfigurationInitializer-com.liferay.change.tracking.service][VerifyProcess:80] Completed verification process com.liferay.commerce.price.list.internal.verify.CommercePriceListServiceVerifyProcess in 8 ms
+2025-06-17 13:46:06.861 INFO  [fileinstall-directory-watcher][BaseAutoDeployListener:34] Copying themes for /opt/liferay/tomcat/temp/20250617134606856BDCSJZGS/dialect-theme.war
+2025-06-17 13:46:07.459 INFO  [fileinstall-directory-watcher][BaseAutoDeployListener:41] Themes for /opt/liferay/tomcat/temp/20250617134606856BDCSJZGS/dialect-theme.war copied successfully
+2025-06-17 13:46:08.067 INFO  [SystemExecutorServiceUtil-6-com.liferay.portal.spring.extender.internal.configuration.ServiceConfigurationInitializer-com.liferay.change.tracking.service][VerifyProcess:65] Verifying com.liferay.commerce.internal.verify.CommerceAccountServiceVerifyProcess
+2025-06-17 13:46:08.068 INFO  [SystemExecutorServiceUtil-6-com.liferay.portal.spring.extender.internal.configuration.ServiceConfigurationInitializer-com.liferay.change.tracking.service][LoggingTimer:74] Starting com.liferay.commerce.internal.verify.CommerceAccountServiceVerifyProcess#verifyAccountRoles
+2025-06-17 13:46:08.076 INFO  [SystemExecutorServiceUtil-6-com.liferay.portal.spring.extender.internal.configuration.ServiceConfigurationInitializer-com.liferay.change.tracking.service][LoggingTimer:35] Completed com.liferay.commerce.internal.verify.CommerceAccountServiceVerifyProcess#verifyAccountRoles in 7 ms
+2025-06-17 13:46:08.076 INFO  [SystemExecutorServiceUtil-6-com.liferay.portal.spring.extender.internal.configuration.ServiceConfigurationInitializer-com.liferay.change.tracking.service][LoggingTimer:74] Starting com.liferay.commerce.internal.verify.CommerceAccountServiceVerifyProcess#verifyAccountGroup
+2025-06-17 13:46:08.079 INFO  [SystemExecutorServiceUtil-6-com.liferay.portal.spring.extender.internal.configuration.ServiceConfigurationInitializer-com.liferay.change.tracking.service][LoggingTimer:35] Completed com.liferay.commerce.internal.verify.CommerceAccountServiceVerifyProcess#verifyAccountGroup in 2 ms
+2025-06-17 13:46:08.079 INFO  [SystemExecutorServiceUtil-6-com.liferay.portal.spring.extender.internal.configuration.ServiceConfigurationInitializer-com.liferay.change.tracking.service][VerifyProcess:80] Completed verification process com.liferay.commerce.internal.verify.CommerceAccountServiceVerifyProcess in 12 ms
+2025-06-17 13:46:08.450 INFO  [fileinstall-directory-watcher][BaseAutoDeployListener:34] Copying themes for /opt/liferay/tomcat/temp/20250617134608444YHRYVGFC/minium-theme.war
+2025-06-17 13:46:09.133 INFO  [fileinstall-directory-watcher][BaseAutoDeployListener:41] Themes for /opt/liferay/tomcat/temp/20250617134608444YHRYVGFC/minium-theme.war copied successfully
+2025-06-17 13:46:09.135 INFO  [SystemExecutorServiceUtil-6-com.liferay.portal.spring.extender.internal.configuration.ServiceConfigurationInitializer-com.liferay.change.tracking.service][BatchEngineImportTaskExecutorImpl:96] Started batch engine import task 1
+2025-06-17 13:46:09.818 INFO  [SystemExecutorServiceUtil-6-com.liferay.portal.spring.extender.internal.configuration.ServiceConfigurationInitializer-com.liferay.change.tracking.service][BatchEngineImportTaskExecutorImpl:177] Finished batch engine import task 1 in 682ms
+2025-06-17 13:46:09.872 INFO  [SystemExecutorServiceUtil-6-com.liferay.portal.spring.extender.internal.configuration.ServiceConfigurationInitializer-com.liferay.change.tracking.service][BatchEngineImportTaskExecutorImpl:96] Started batch engine import task 2
+2025-06-17 13:46:10.297 INFO  [fileinstall-directory-watcher][BaseAutoDeployListener:34] Copying themes for /opt/liferay/tomcat/temp/20250617134610292NNRREUPM/speedwell-theme.war
+2025-06-17 13:46:10.495 INFO  [SystemExecutorServiceUtil-6-com.liferay.portal.spring.extender.internal.configuration.ServiceConfigurationInitializer-com.liferay.change.tracking.service][BatchEngineImportTaskExecutorImpl:177] Finished batch engine import task 2 in 623ms
+2025-06-17 13:46:10.502 INFO  [SystemExecutorServiceUtil-6-com.liferay.portal.spring.extender.internal.configuration.ServiceConfigurationInitializer-com.liferay.change.tracking.service][BatchEngineImportTaskExecutorImpl:96] Started batch engine import task 3
+2025-06-17 13:46:10.831 INFO  [SystemExecutorServiceUtil-6-com.liferay.portal.spring.extender.internal.configuration.ServiceConfigurationInitializer-com.liferay.change.tracking.service][BatchEngineImportTaskExecutorImpl:177] Finished batch engine import task 3 in 329ms
+2025-06-17 13:46:11.019 INFO  [fileinstall-directory-watcher][BaseAutoDeployListener:41] Themes for /opt/liferay/tomcat/temp/20250617134610292NNRREUPM/speedwell-theme.war copied successfully
+2025-06-17 13:46:17.341 INFO  [fileinstall-directory-watcher][LicenseManager:-1] DXP Development license validation passed
+2025-06-17 13:46:17.341 INFO  [fileinstall-directory-watcher][LicenseManager:-1] License registered for DXP Development
+2025-06-17 21:29:03.752 INFO  [main][PortalContextLoaderListener:114] JVM arguments: --add-opens=java.base/java.lang=ALL-UNNAMED --add-opens=java.base/java.lang.invoke=ALL-UNNAMED --add-opens=java.base/java.lang.reflect=ALL-UNNAMED --add-opens=java.base/java.net=ALL-UNNAMED --add-opens=java.base/sun.net.www.protocol.http=ALL-UNNAMED --add-opens=java.base/sun.net.www.protocol.https=ALL-UNNAMED --add-opens=java.base/sun.util.calendar=ALL-UNNAMED --add-opens=jdk.zipfs/jdk.nio.zipfs=ALL-UNNAMED --add-opens=java.base/java.lang=ALL-UNNAMED --add-opens=java.base/java.lang.invoke=ALL-UNNAMED --add-opens=java.base/java.lang.reflect=ALL-UNNAMED --add-opens=java.base/java.io=ALL-UNNAMED --add-opens=java.base/java.util=ALL-UNNAMED --add-opens=java.base/java.util.concurrent=ALL-UNNAMED --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED -Djava.util.logging.config.file=/opt/liferay/tomcat/conf/logging.properties -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager -Djdk.tls.ephemeralDHKeySize=2048 -Djava.protocol.handler.pkgs=org.apache.catalina.webresources -Dsun.io.useCanonCaches=false -Dorg.apache.catalina.security.SecurityListener.UMASK=0027 -Dfile.encoding=UTF-8 -Djava.net.preferIPv4Stack=true -Duser.timezone=GMT -Xms2560m -Xmx2560m -XX:MaxNewSize=1536m -XX:MaxMetaspaceSize=768m -XX:MetaspaceSize=768m -XX:NewSize=1536m -XX:SurvivorRatio=7 -javaagent:/opt/liferay/tomcat/../glowroot/glowroot.jar -Dglowroot.enabled=true -Xms6g -Xmx6g -Djdk.util.zip.disableZip64ExtraFieldValidation=true -Dignore.endorsed.dirs= -Dcatalina.base=/opt/liferay/tomcat -Dcatalina.home=/opt/liferay/tomcat -Djava.io.tmpdir=/opt/liferay/tomcat/temp
+2025-06-17 21:29:14.629 INFO  [SystemExecutorServiceUtil-1][DataSourceFactoryImpl:472] Successfully acquired JDBC connection
+2025-06-17 21:29:14.945 WARN  [SystemExecutorServiceUtil-1][DialectDetector:73] Liferay is configured to use Hypersonic as its database. Do NOT use Hypersonic in production. Hypersonic is an embedded database useful for development and demonstration purposes. The database settings can be changed in portal-ext.properties.
+2025-06-17 21:29:14.946 INFO  [SystemExecutorServiceUtil-1][DialectDetector:134] Using dialect com.liferay.portal.dao.orm.hibernate.HSQLDialect for HSQL Database Engine 2.7
+2025-06-17 21:29:15.056 INFO  [SystemExecutorServiceUtil-1][DBInitUtil:109] Create tables and populate with default data
+2025-06-17 21:29:17.940 INFO  [main][ModuleFrameworkImpl:1355] Starting initial bundles
+2025-06-17 21:29:19.139 INFO  [main][InterpolationConfigurationPlugin:109] Configured directory for secrets: /opt/liferay/osgi/configs
+2025-06-17 21:29:19.718 INFO  [main][ModuleFrameworkImpl:1645] Started initial bundles
+2025-06-17 21:29:19.720 INFO  [main][ModuleFrameworkImpl:1690] Starting dynamic bundles
+2025-06-17 21:29:22.837 WARN  [Start Level: Equinox Container: 4079d9db-70b7-4147-83da-bad7ff92d013][SidecarManager:70] Liferay automatically starts a child process of Elasticsearch named sidecar for convenient development and demonstration purposes. Do NOT use sidecar in production. Refer to the documentation for details on the limitations of sidecar and instructions on configuring a remote Elasticsearch connection in the Control Panel.
+2025-06-17 21:29:30.106 INFO  [main][ModuleFrameworkImpl:1713] Started dynamic bundles
+2025-06-17 21:29:30.107 INFO  [main][ModuleFrameworkImpl:1720] Starting web bundles
+2025-06-17 21:29:32.359 INFO  [main][ModuleFrameworkImpl:1774] Started web bundles
+2025-06-17 21:29:32.360 INFO  [main][ModuleFrameworkImpl:283] Navigate to Control Panel > System > Gogo Shell and enter "lb" to see all bundles
+2025-06-17 21:29:34.635 INFO  [main][StartupHelperUtil:100] There are no patches installed
+2025-06-17 21:29:34.904 INFO  [main][LicenseManager:-1] Failed to find directory /opt/liferay/data/license
+2025-06-17 21:29:34.905 INFO  [main][LicenseManager:-1] No binary licenses found
+2025-06-17 21:29:35.235 INFO  [SystemExecutorServiceUtil-4][Sidecar:100] Sidecar Elasticsearch 7.17.26 liferay_sidecar started at 127.0.0.1:9201
+2025-06-17 21:29:35.719 INFO  [main][AutoDeployDir:152] Auto deploy scanner started for /opt/liferay/deploy
+2025-06-17 21:29:48.720 INFO  [com.liferay.portal.kernel.deploy.auto.AutoDeployScanner][AutoDeployDir:212] Processing trial-dxp-license-1744886699000.xml
+2025-06-17 21:29:53.297 INFO  [main][VerifyProcess:65] Verifying com.liferay.portal.security.service.access.policy.internal.verify.SAPServiceVerifyProcess
+2025-06-17 21:29:53.299 INFO  [main][LoggingTimer:74] Starting com.liferay.portal.security.service.access.policy.internal.verify.SAPServiceVerifyProcess#verifyDefaultSAPEntry
+2025-06-17 21:29:53.369 INFO  [main][LoggingTimer:35] Completed com.liferay.portal.security.service.access.policy.internal.verify.SAPServiceVerifyProcess#verifyDefaultSAPEntry in 71 ms
+2025-06-17 21:29:53.370 INFO  [main][VerifyProcess:78] Completed verification process com.liferay.portal.security.service.access.policy.internal.verify.SAPServiceVerifyProcess in 76 ms
+2025-06-17 21:29:53.376 INFO  [main][VerifyProcess:65] Verifying com.liferay.search.experiences.internal.verify.SXPServiceVerifyProcess
+2025-06-17 21:29:54.468 INFO  [main][VerifyProcess:78] Completed verification process com.liferay.search.experiences.internal.verify.SXPServiceVerifyProcess in 1092 ms
+2025-06-17 21:29:54.476 INFO  [main][VerifyProcess:65] Verifying com.liferay.portal.search.tuning.synonyms.web.internal.verify.SynonymSetsDatabaseImporterVerifyProcess
+2025-06-17 21:29:54.891 INFO  [main][VerifyProcess:78] Completed verification process com.liferay.portal.search.tuning.synonyms.web.internal.verify.SynonymSetsDatabaseImporterVerifyProcess in 415 ms
+2025-06-17 21:29:57.704 INFO  [fileinstall-directory-watcher][LicenseManager:-1] DXP Development license validation passed
+2025-06-17 21:29:57.704 INFO  [fileinstall-directory-watcher][LicenseManager:-1] License registered for DXP Development
+2025-06-17 21:29:57.756 INFO  [fileinstall-directory-watcher][BaseAutoDeployListener:34] Copying themes for /opt/liferay/tomcat/temp/20250617212957709RYPLSHBF/admin-theme.war
+2025-06-17 21:29:58.782 INFO  [fileinstall-directory-watcher][BaseAutoDeployListener:41] Themes for /opt/liferay/tomcat/temp/20250617212957709RYPLSHBF/admin-theme.war copied successfully
+2025-06-17 21:30:00.371 INFO  [fileinstall-directory-watcher][BaseAutoDeployListener:34] Copying themes for /opt/liferay/tomcat/temp/20250617213000365SZHMBOGB/classic-theme.war
+2025-06-17 21:30:01.093 INFO  [fileinstall-directory-watcher][BaseAutoDeployListener:41] Themes for /opt/liferay/tomcat/temp/20250617213000365SZHMBOGB/classic-theme.war copied successfully
+2025-06-17 21:30:02.601 INFO  [fileinstall-directory-watcher][BaseAutoDeployListener:34] Copying themes for /opt/liferay/tomcat/temp/20250617213002594XJISFGNQ/dialect-theme.war
+2025-06-17 21:30:03.328 INFO  [fileinstall-directory-watcher][BaseAutoDeployListener:41] Themes for /opt/liferay/tomcat/temp/20250617213002594XJISFGNQ/dialect-theme.war copied successfully
+2025-06-17 21:30:04.686 INFO  [fileinstall-directory-watcher][BaseAutoDeployListener:34] Copying themes for /opt/liferay/tomcat/temp/20250617213004667ALEUMDMO/minium-theme.war
+2025-06-17 21:30:05.647 INFO  [fileinstall-directory-watcher][BaseAutoDeployListener:41] Themes for /opt/liferay/tomcat/temp/20250617213004667ALEUMDMO/minium-theme.war copied successfully
+2025-06-17 21:30:07.491 INFO  [fileinstall-directory-watcher][BaseAutoDeployListener:34] Copying themes for /opt/liferay/tomcat/temp/20250617213007484XYNXKKFG/speedwell-theme.war
+2025-06-17 21:30:08.324 INFO  [fileinstall-directory-watcher][BaseAutoDeployListener:41] Themes for /opt/liferay/tomcat/temp/20250617213007484XYNXKKFG/speedwell-theme.war copied successfully
+2025-06-17 21:33:46.809 INFO  [main][PortalContextLoaderListener:114] JVM arguments: --add-opens=java.base/java.lang=ALL-UNNAMED --add-opens=java.base/java.lang.invoke=ALL-UNNAMED --add-opens=java.base/java.lang.reflect=ALL-UNNAMED --add-opens=java.base/java.net=ALL-UNNAMED --add-opens=java.base/sun.net.www.protocol.http=ALL-UNNAMED --add-opens=java.base/sun.net.www.protocol.https=ALL-UNNAMED --add-opens=java.base/sun.util.calendar=ALL-UNNAMED --add-opens=jdk.zipfs/jdk.nio.zipfs=ALL-UNNAMED --add-opens=java.base/java.lang=ALL-UNNAMED --add-opens=java.base/java.lang.invoke=ALL-UNNAMED --add-opens=java.base/java.lang.reflect=ALL-UNNAMED --add-opens=java.base/java.io=ALL-UNNAMED --add-opens=java.base/java.util=ALL-UNNAMED --add-opens=java.base/java.util.concurrent=ALL-UNNAMED --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED -Djava.util.logging.config.file=/opt/liferay/tomcat/conf/logging.properties -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager -Djdk.tls.ephemeralDHKeySize=2048 -Djava.protocol.handler.pkgs=org.apache.catalina.webresources -Dsun.io.useCanonCaches=false -Dorg.apache.catalina.security.SecurityListener.UMASK=0027 -Dfile.encoding=UTF-8 -Djava.net.preferIPv4Stack=true -Duser.timezone=GMT -Xms2560m -Xmx2560m -XX:MaxNewSize=1536m -XX:MaxMetaspaceSize=768m -XX:MetaspaceSize=768m -XX:NewSize=1536m -XX:SurvivorRatio=7 -javaagent:/opt/liferay/tomcat/../glowroot/glowroot.jar -Dglowroot.enabled=true -Xms6g -Xmx6g -Djdk.util.zip.disableZip64ExtraFieldValidation=true -Dignore.endorsed.dirs= -Dcatalina.base=/opt/liferay/tomcat -Dcatalina.home=/opt/liferay/tomcat -Djava.io.tmpdir=/opt/liferay/tomcat/temp
+2025-06-17 21:33:59.326 INFO  [SystemExecutorServiceUtil-1][DataSourceFactoryImpl:472] Successfully acquired JDBC connection
+2025-06-17 21:33:59.699 WARN  [SystemExecutorServiceUtil-1][DialectDetector:73] Liferay is configured to use Hypersonic as its database. Do NOT use Hypersonic in production. Hypersonic is an embedded database useful for development and demonstration purposes. The database settings can be changed in portal-ext.properties.
+2025-06-17 21:33:59.700 INFO  [SystemExecutorServiceUtil-1][DialectDetector:134] Using dialect com.liferay.portal.dao.orm.hibernate.HSQLDialect for HSQL Database Engine 2.7
+2025-06-17 21:34:02.700 INFO  [main][ModuleFrameworkImpl:1355] Starting initial bundles
+2025-06-17 21:34:04.484 INFO  [main][InterpolationConfigurationPlugin:109] Configured directory for secrets: /opt/liferay/osgi/configs
+2025-06-17 21:34:05.190 INFO  [main][ModuleFrameworkImpl:1645] Started initial bundles
+2025-06-17 21:34:05.192 INFO  [main][ModuleFrameworkImpl:1690] Starting dynamic bundles
+2025-06-17 21:34:08.812 WARN  [Start Level: Equinox Container: aa23ebe4-2379-44c9-8adf-2849f7b40b6b][SidecarManager:70] Liferay automatically starts a child process of Elasticsearch named sidecar for convenient development and demonstration purposes. Do NOT use sidecar in production. Refer to the documentation for details on the limitations of sidecar and instructions on configuring a remote Elasticsearch connection in the Control Panel.
+2025-06-17 21:34:15.508 INFO  [main][ModuleFrameworkImpl:1713] Started dynamic bundles
+2025-06-17 21:34:15.509 INFO  [main][ModuleFrameworkImpl:1720] Starting web bundles
+2025-06-17 21:34:17.838 INFO  [main][ModuleFrameworkImpl:1774] Started web bundles
+2025-06-17 21:34:17.839 INFO  [main][ModuleFrameworkImpl:283] Navigate to Control Panel > System > Gogo Shell and enter "lb" to see all bundles
+2025-06-17 21:34:19.124 INFO  [main][StartupHelperUtil:100] There are no patches installed
+2025-06-17 21:34:19.270 INFO  [main][LicenseManager:-1] DXP Development license validation passed
+2025-06-17 21:34:19.914 INFO  [main][AutoDeployDir:152] Auto deploy scanner started for /opt/liferay/deploy
+2025-06-17 21:34:22.413 INFO  [SystemExecutorServiceUtil-4][Sidecar:100] Sidecar Elasticsearch 7.17.26 liferay_sidecar started at 127.0.0.1:9201
+2025-06-17 21:34:26.998 INFO  [main][LoggingTimer:74] Starting com.liferay.portal.db.index.IndexUpdaterUtil#updateAllIndexes#Updating database indexes
+2025-06-17 21:34:28.163 INFO  [fileinstall-directory-watcher][BaseAutoDeployListener:34] Copying themes for /opt/liferay/tomcat/temp/20250617213428028ZSTPQKST/admin-theme.war
+2025-06-17 21:34:29.363 INFO  [main][LoggingTimer:35] Completed com.liferay.portal.db.index.IndexUpdaterUtil#updateAllIndexes#Updating database indexes in 2365 ms
+2025-06-17 21:34:30.344 INFO  [fileinstall-directory-watcher][BaseAutoDeployListener:41] Themes for /opt/liferay/tomcat/temp/20250617213428028ZSTPQKST/admin-theme.war copied successfully
+2025-06-17 21:34:32.915 INFO  [com.liferay.portal.kernel.deploy.auto.AutoDeployScanner][AutoDeployDir:212] Processing trial-dxp-license-1744886699000.xml
+2025-06-17 21:34:33.078 INFO  [fileinstall-directory-watcher][BaseAutoDeployListener:34] Copying themes for /opt/liferay/tomcat/temp/20250617213433066NKIFRTZC/classic-theme.war
+2025-06-17 21:34:34.285 INFO  [fileinstall-directory-watcher][BaseAutoDeployListener:41] Themes for /opt/liferay/tomcat/temp/20250617213433066NKIFRTZC/classic-theme.war copied successfully
+2025-06-17 21:34:35.871 INFO  [fileinstall-directory-watcher][BaseAutoDeployListener:34] Copying themes for /opt/liferay/tomcat/temp/20250617213435865ZHMFLWAA/dialect-theme.war
+2025-06-17 21:34:36.749 INFO  [fileinstall-directory-watcher][BaseAutoDeployListener:41] Themes for /opt/liferay/tomcat/temp/20250617213435865ZHMFLWAA/dialect-theme.war copied successfully
+2025-06-17 21:34:38.284 INFO  [fileinstall-directory-watcher][BaseAutoDeployListener:34] Copying themes for /opt/liferay/tomcat/temp/20250617213438277YEQQEHHL/minium-theme.war
+2025-06-17 21:34:39.043 INFO  [fileinstall-directory-watcher][BaseAutoDeployListener:41] Themes for /opt/liferay/tomcat/temp/20250617213438277YEQQEHHL/minium-theme.war copied successfully
+2025-06-17 21:34:40.615 INFO  [fileinstall-directory-watcher][BaseAutoDeployListener:34] Copying themes for /opt/liferay/tomcat/temp/20250617213440609NQLFEDTN/speedwell-theme.war
+2025-06-17 21:34:41.450 INFO  [fileinstall-directory-watcher][BaseAutoDeployListener:41] Themes for /opt/liferay/tomcat/temp/20250617213440609NQLFEDTN/speedwell-theme.war copied successfully
+2025-06-17 21:38:17.949 INFO  [com.liferay.portal.kernel.deploy.auto.AutoDeployScanner][AutoDeployDir:212] Processing bms.com.liferay.saml.admin.rest.api-1.1.1.jar
+2025-06-17 21:38:17.960 INFO  [com.liferay.portal.kernel.deploy.auto.AutoDeployScanner][AutoDeployDir:212] Processing bms.com.liferay.saml.admin.rest.api-1.1.6.jar
+2025-06-17 21:38:17.962 INFO  [com.liferay.portal.kernel.deploy.auto.AutoDeployScanner][AutoDeployDir:212] Processing bms.com.liferay.saml.admin.rest.impl-1.0.12.jar
+2025-06-17 21:38:17.964 INFO  [com.liferay.portal.kernel.deploy.auto.AutoDeployScanner][AutoDeployDir:212] Processing bms.com.liferay.saml.admin.rest.impl-1.0.23.jar
+2025-06-17 21:38:17.967 INFO  [com.liferay.portal.kernel.deploy.auto.AutoDeployScanner][AutoDeployDir:212] Processing bms.com.liferay.saml.api-10.0.1.jar
+2025-06-17 21:38:17.970 INFO  [com.liferay.portal.kernel.deploy.auto.AutoDeployScanner][AutoDeployDir:212] Processing bms.com.liferay.saml.api-8.1.2.jar
+2025-06-17 21:38:17.972 INFO  [com.liferay.portal.kernel.deploy.auto.AutoDeployScanner][AutoDeployDir:212] Processing bms.com.liferay.saml.impl-5.0.48.jar
+2025-06-17 21:38:17.973 INFO  [com.liferay.portal.kernel.deploy.auto.AutoDeployScanner][AutoDeployDir:212] Processing bms.com.liferay.saml.impl-5.0.53.jar
+2025-06-17 21:38:17.976 INFO  [com.liferay.portal.kernel.deploy.auto.AutoDeployScanner][AutoDeployDir:212] Processing bms.com.liferay.saml.opensaml.integration-6.2.15.jar
+2025-06-17 21:38:18.025 INFO  [com.liferay.portal.kernel.deploy.auto.AutoDeployScanner][AutoDeployDir:212] Processing bms.com.liferay.saml.opensaml.integration-6.2.23.jar
+2025-06-17 21:38:18.054 INFO  [com.liferay.portal.kernel.deploy.auto.AutoDeployScanner][AutoDeployDir:212] Processing bms.com.liferay.saml.web-5.0.68.jar
+2025-06-17 21:38:18.060 INFO  [com.liferay.portal.kernel.deploy.auto.AutoDeployScanner][AutoDeployDir:212] Processing bms.com.liferay.saml.web-5.0.80.jar
+2025-06-17 21:38:24.728 INFO  [fileinstall-directory-watcher][BundleStartStopLogger:68] STARTED bms.com.liferay.saml.api_8.1.2 [1470]
+2025-06-17 21:38:25.122 INFO  [fileinstall-directory-watcher][BundleStartStopLogger:68] STARTED bms.com.liferay.saml.opensaml.integration_6.2.23 [1474]
+2025-06-17 21:38:25.137 WARN  [fileinstall-directory-watcher][QuartzSchedulerEngine:608] Scheduler job com.liferay.saml.internal.scheduler.SamlIdpSsoSessionSchedulerJobConfiguration.com.liferay.saml.internal.scheduler.SamlIdpSsoSessionSchedulerJobConfiguration already exists
+org.quartz.ObjectAlreadyExistsException: Unable to store Job : 'com.liferay.saml.internal.scheduler.SamlIdpSsoSessionSchedulerJobConfiguration.com.liferay.saml.internal.scheduler.SamlIdpSsoSessionSchedulerJobConfiguration', because one already exists with this identification.
+	at org.quartz.simpl.RAMJobStore.storeJob(RAMJobStore.java:277) ~[bundleFile:?]
+	at org.quartz.simpl.RAMJobStore.storeJobAndTrigger(RAMJobStore.java:249) ~[bundleFile:?]
+	at org.quartz.core.QuartzScheduler.scheduleJob(QuartzScheduler.java:840) ~[bundleFile:?]
+	at org.quartz.impl.StdScheduler.scheduleJob(StdScheduler.java:250) ~[bundleFile:?]
+	at com.liferay.portal.scheduler.quartz.internal.QuartzSchedulerEngine.schedule(QuartzSchedulerEngine.java:604) [bundleFile:?]
+	at com.liferay.portal.scheduler.quartz.internal.QuartzSchedulerEngine.schedule(QuartzSchedulerEngine.java:332) [bundleFile:?]
+	at com.liferay.portal.scheduler.internal.SchedulerEngineHelperImpl.schedule(SchedulerEngineHelperImpl.java:242) [bundleFile:?]
+	at com.liferay.portal.scheduler.internal.SchedulerEngineHelperImpl$SchedulerJobConfigurationServiceTrackerCustomizer.addingService(SchedulerEngineHelperImpl.java:491) [bundleFile:?]
+	at com.liferay.portal.scheduler.internal.SchedulerEngineHelperImpl$SchedulerJobConfigurationServiceTrackerCustomizer.addingService(SchedulerEngineHelperImpl.java:455) [bundleFile:?]
+	at org.osgi.util.tracker.ServiceTracker$Tracked.customizerAdding(ServiceTracker.java:943) [org.eclipse.osgi.jar:?]
+	at org.osgi.util.tracker.ServiceTracker$Tracked.customizerAdding(ServiceTracker.java:1) [org.eclipse.osgi.jar:?]
+	at org.osgi.util.tracker.AbstractTracked.trackAdding(AbstractTracked.java:256) [org.eclipse.osgi.jar:?]
+	at org.osgi.util.tracker.AbstractTracked.track(AbstractTracked.java:229) [org.eclipse.osgi.jar:?]
+	at org.osgi.util.tracker.ServiceTracker$Tracked.serviceChanged(ServiceTracker.java:903) [org.eclipse.osgi.jar:?]
+	at org.eclipse.osgi.internal.serviceregistry.FilteredServiceListener.doServiceChanged(FilteredServiceListener.java:114) [org.eclipse.osgi.jar:?]
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistry._serviceChanged(ServiceRegistry.java:987) [org.eclipse.osgi.jar:?]
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistry.publishServiceEventPrivileged(ServiceRegistry.java:969) [org.eclipse.osgi.jar:?]
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistry.publishServiceEvent(ServiceRegistry.java:853) [org.eclipse.osgi.jar:?]
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistrationImpl.register(ServiceRegistrationImpl.java:126) [org.eclipse.osgi.jar:?]
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistry.registerService(ServiceRegistry.java:227) [org.eclipse.osgi.jar:?]
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.registerService(BundleContextImpl.java:461) [org.eclipse.osgi.jar:?]
+	at org.apache.felix.scr.impl.manager.AbstractComponentManager$3.register(AbstractComponentManager.java:906) [bundleFile:?]
+	at org.apache.felix.scr.impl.manager.AbstractComponentManager$3.register(AbstractComponentManager.java:892) [bundleFile:?]
+	at org.apache.felix.scr.impl.manager.RegistrationManager.changeRegistration(RegistrationManager.java:128) [bundleFile:?]
+	at org.apache.felix.scr.impl.manager.AbstractComponentManager.registerService(AbstractComponentManager.java:962) [bundleFile:?]
+	at org.apache.felix.scr.impl.manager.AbstractComponentManager.activateInternal(AbstractComponentManager.java:732) [bundleFile:?]
+	at org.apache.felix.scr.impl.manager.AbstractComponentManager.enableInternal(AbstractComponentManager.java:666) [bundleFile:?]
+	at org.apache.felix.scr.impl.manager.AbstractComponentManager.enable(AbstractComponentManager.java:432) [bundleFile:?]
+	at org.apache.felix.scr.impl.manager.ConfigurableComponentHolder.enableComponents(ConfigurableComponentHolder.java:665) [bundleFile:?]
+	at org.apache.felix.scr.impl.BundleComponentActivator.initialEnable(BundleComponentActivator.java:336) [bundleFile:?]
+	at org.apache.felix.scr.impl.Activator.loadComponents(Activator.java:469) [bundleFile:?]
+	at org.apache.felix.scr.impl.Activator.access$400(Activator.java:55) [bundleFile:?]
+	at org.apache.felix.scr.impl.Activator$ScrExtension.start(Activator.java:351) [bundleFile:?]
+	at org.apache.felix.scr.impl.AbstractExtender.createExtension(AbstractExtender.java:196) [bundleFile:?]
+	at org.apache.felix.scr.impl.AbstractExtender.modifiedBundle(AbstractExtender.java:169) [bundleFile:?]
+	at org.apache.felix.scr.impl.AbstractExtender.modifiedBundle(AbstractExtender.java:49) [bundleFile:?]
+	at org.osgi.util.tracker.BundleTracker$Tracked.customizerModified(BundleTracker.java:488) [org.eclipse.osgi.jar:?]
+	at org.osgi.util.tracker.BundleTracker$Tracked.customizerModified(BundleTracker.java:1) [org.eclipse.osgi.jar:?]
+	at org.osgi.util.tracker.AbstractTracked.track(AbstractTracked.java:232) [org.eclipse.osgi.jar:?]
+	at org.osgi.util.tracker.BundleTracker$Tracked.bundleChanged(BundleTracker.java:450) [org.eclipse.osgi.jar:?]
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.dispatchEvent(BundleContextImpl.java:890) [org.eclipse.osgi.jar:?]
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230) [org.eclipse.osgi.jar:?]
+	at org.eclipse.osgi.framework.eventmgr.ListenerQueue.dispatchEventSynchronous(ListenerQueue.java:148) [org.eclipse.osgi.jar:?]
+	at org.eclipse.osgi.internal.framework.EquinoxEventPublisher.publishBundleEventPrivileged(EquinoxEventPublisher.java:230) [org.eclipse.osgi.jar:?]
+	at org.eclipse.osgi.internal.framework.EquinoxEventPublisher.publishBundleEvent(EquinoxEventPublisher.java:137) [org.eclipse.osgi.jar:?]
+	at org.eclipse.osgi.internal.framework.EquinoxEventPublisher.publishBundleEvent(EquinoxEventPublisher.java:129) [org.eclipse.osgi.jar:?]
+	at org.eclipse.osgi.internal.framework.EquinoxContainerAdaptor.publishModuleEvent(EquinoxContainerAdaptor.java:191) [org.eclipse.osgi.jar:?]
+	at org.eclipse.osgi.container.Module.publishEvent(Module.java:476) [org.eclipse.osgi.jar:?]
+	at org.eclipse.osgi.container.Module.start(Module.java:467) [org.eclipse.osgi.jar:?]
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.start(EquinoxBundle.java:426) [org.eclipse.osgi.jar:?]
+	at com.liferay.portal.file.install.internal.DirectoryWatcher._startBundle(DirectoryWatcher.java:971) [bundleFile:?]
+	at com.liferay.portal.file.install.internal.DirectoryWatcher._startBundles(DirectoryWatcher.java:1004) [bundleFile:?]
+	at com.liferay.portal.file.install.internal.DirectoryWatcher._process(DirectoryWatcher.java:843) [bundleFile:?]
+	at com.liferay.portal.file.install.internal.DirectoryWatcher.run(DirectoryWatcher.java:298) [bundleFile:?]
+2025-06-17 21:38:25.146 WARN  [fileinstall-directory-watcher][QuartzSchedulerEngine:608] Scheduler job com.liferay.saml.internal.scheduler.SamlMetadataSchedulerJobConfiguration.com.liferay.saml.internal.scheduler.SamlMetadataSchedulerJobConfiguration already exists
+org.quartz.ObjectAlreadyExistsException: Unable to store Job : 'com.liferay.saml.internal.scheduler.SamlMetadataSchedulerJobConfiguration.com.liferay.saml.internal.scheduler.SamlMetadataSchedulerJobConfiguration', because one already exists with this identification.
+	at org.quartz.simpl.RAMJobStore.storeJob(RAMJobStore.java:277) ~[bundleFile:?]
+	at org.quartz.simpl.RAMJobStore.storeJobAndTrigger(RAMJobStore.java:249) ~[bundleFile:?]
+	at org.quartz.core.QuartzScheduler.scheduleJob(QuartzScheduler.java:840) ~[bundleFile:?]
+	at org.quartz.impl.StdScheduler.scheduleJob(StdScheduler.java:250) ~[bundleFile:?]
+	at com.liferay.portal.scheduler.quartz.internal.QuartzSchedulerEngine.schedule(QuartzSchedulerEngine.java:604) [bundleFile:?]
+	at com.liferay.portal.scheduler.quartz.internal.QuartzSchedulerEngine.schedule(QuartzSchedulerEngine.java:332) [bundleFile:?]
+	at com.liferay.portal.scheduler.internal.SchedulerEngineHelperImpl.schedule(SchedulerEngineHelperImpl.java:242) [bundleFile:?]
+	at com.liferay.portal.scheduler.internal.SchedulerEngineHelperImpl$SchedulerJobConfigurationServiceTrackerCustomizer.addingService(SchedulerEngineHelperImpl.java:491) [bundleFile:?]
+	at com.liferay.portal.scheduler.internal.SchedulerEngineHelperImpl$SchedulerJobConfigurationServiceTrackerCustomizer.addingService(SchedulerEngineHelperImpl.java:455) [bundleFile:?]
+	at org.osgi.util.tracker.ServiceTracker$Tracked.customizerAdding(ServiceTracker.java:943) [org.eclipse.osgi.jar:?]
+	at org.osgi.util.tracker.ServiceTracker$Tracked.customizerAdding(ServiceTracker.java:1) [org.eclipse.osgi.jar:?]
+	at org.osgi.util.tracker.AbstractTracked.trackAdding(AbstractTracked.java:256) [org.eclipse.osgi.jar:?]
+	at org.osgi.util.tracker.AbstractTracked.track(AbstractTracked.java:229) [org.eclipse.osgi.jar:?]
+	at org.osgi.util.tracker.ServiceTracker$Tracked.serviceChanged(ServiceTracker.java:903) [org.eclipse.osgi.jar:?]
+	at org.eclipse.osgi.internal.serviceregistry.FilteredServiceListener.doServiceChanged(FilteredServiceListener.java:114) [org.eclipse.osgi.jar:?]
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistry._serviceChanged(ServiceRegistry.java:987) [org.eclipse.osgi.jar:?]
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistry.publishServiceEventPrivileged(ServiceRegistry.java:969) [org.eclipse.osgi.jar:?]
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistry.publishServiceEvent(ServiceRegistry.java:853) [org.eclipse.osgi.jar:?]
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistrationImpl.register(ServiceRegistrationImpl.java:126) [org.eclipse.osgi.jar:?]
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistry.registerService(ServiceRegistry.java:227) [org.eclipse.osgi.jar:?]
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.registerService(BundleContextImpl.java:461) [org.eclipse.osgi.jar:?]
+	at org.apache.felix.scr.impl.manager.AbstractComponentManager$3.register(AbstractComponentManager.java:906) [bundleFile:?]
+	at org.apache.felix.scr.impl.manager.AbstractComponentManager$3.register(AbstractComponentManager.java:892) [bundleFile:?]
+	at org.apache.felix.scr.impl.manager.RegistrationManager.changeRegistration(RegistrationManager.java:128) [bundleFile:?]
+	at org.apache.felix.scr.impl.manager.AbstractComponentManager.registerService(AbstractComponentManager.java:962) [bundleFile:?]
+	at org.apache.felix.scr.impl.manager.AbstractComponentManager.activateInternal(AbstractComponentManager.java:732) [bundleFile:?]
+	at org.apache.felix.scr.impl.manager.AbstractComponentManager.enableInternal(AbstractComponentManager.java:666) [bundleFile:?]
+	at org.apache.felix.scr.impl.manager.AbstractComponentManager.enable(AbstractComponentManager.java:432) [bundleFile:?]
+	at org.apache.felix.scr.impl.manager.ConfigurableComponentHolder.enableComponents(ConfigurableComponentHolder.java:665) [bundleFile:?]
+	at org.apache.felix.scr.impl.BundleComponentActivator.initialEnable(BundleComponentActivator.java:336) [bundleFile:?]
+	at org.apache.felix.scr.impl.Activator.loadComponents(Activator.java:469) [bundleFile:?]
+	at org.apache.felix.scr.impl.Activator.access$400(Activator.java:55) [bundleFile:?]
+	at org.apache.felix.scr.impl.Activator$ScrExtension.start(Activator.java:351) [bundleFile:?]
+	at org.apache.felix.scr.impl.AbstractExtender.createExtension(AbstractExtender.java:196) [bundleFile:?]
+	at org.apache.felix.scr.impl.AbstractExtender.modifiedBundle(AbstractExtender.java:169) [bundleFile:?]
+	at org.apache.felix.scr.impl.AbstractExtender.modifiedBundle(AbstractExtender.java:49) [bundleFile:?]
+	at org.osgi.util.tracker.BundleTracker$Tracked.customizerModified(BundleTracker.java:488) [org.eclipse.osgi.jar:?]
+	at org.osgi.util.tracker.BundleTracker$Tracked.customizerModified(BundleTracker.java:1) [org.eclipse.osgi.jar:?]
+	at org.osgi.util.tracker.AbstractTracked.track(AbstractTracked.java:232) [org.eclipse.osgi.jar:?]
+	at org.osgi.util.tracker.BundleTracker$Tracked.bundleChanged(BundleTracker.java:450) [org.eclipse.osgi.jar:?]
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.dispatchEvent(BundleContextImpl.java:890) [org.eclipse.osgi.jar:?]
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230) [org.eclipse.osgi.jar:?]
+	at org.eclipse.osgi.framework.eventmgr.ListenerQueue.dispatchEventSynchronous(ListenerQueue.java:148) [org.eclipse.osgi.jar:?]
+	at org.eclipse.osgi.internal.framework.EquinoxEventPublisher.publishBundleEventPrivileged(EquinoxEventPublisher.java:230) [org.eclipse.osgi.jar:?]
+	at org.eclipse.osgi.internal.framework.EquinoxEventPublisher.publishBundleEvent(EquinoxEventPublisher.java:137) [org.eclipse.osgi.jar:?]
+	at org.eclipse.osgi.internal.framework.EquinoxEventPublisher.publishBundleEvent(EquinoxEventPublisher.java:129) [org.eclipse.osgi.jar:?]
+	at org.eclipse.osgi.internal.framework.EquinoxContainerAdaptor.publishModuleEvent(EquinoxContainerAdaptor.java:191) [org.eclipse.osgi.jar:?]
+	at org.eclipse.osgi.container.Module.publishEvent(Module.java:476) [org.eclipse.osgi.jar:?]
+	at org.eclipse.osgi.container.Module.start(Module.java:467) [org.eclipse.osgi.jar:?]
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.start(EquinoxBundle.java:426) [org.eclipse.osgi.jar:?]
+	at com.liferay.portal.file.install.internal.DirectoryWatcher._startBundle(DirectoryWatcher.java:971) [bundleFile:?]
+	at com.liferay.portal.file.install.internal.DirectoryWatcher._startBundles(DirectoryWatcher.java:1004) [bundleFile:?]
+	at com.liferay.portal.file.install.internal.DirectoryWatcher._process(DirectoryWatcher.java:843) [bundleFile:?]
+	at com.liferay.portal.file.install.internal.DirectoryWatcher.run(DirectoryWatcher.java:298) [bundleFile:?]
+2025-06-17 21:38:25.149 WARN  [fileinstall-directory-watcher][QuartzSchedulerEngine:608] Scheduler job com.liferay.saml.internal.scheduler.SamlSpAuthRequestSchedulerJobConfiguration.com.liferay.saml.internal.scheduler.SamlSpAuthRequestSchedulerJobConfiguration already exists
+org.quartz.ObjectAlreadyExistsException: Unable to store Job : 'com.liferay.saml.internal.scheduler.SamlSpAuthRequestSchedulerJobConfiguration.com.liferay.saml.internal.scheduler.SamlSpAuthRequestSchedulerJobConfiguration', because one already exists with this identification.
+	at org.quartz.simpl.RAMJobStore.storeJob(RAMJobStore.java:277) ~[bundleFile:?]
+	at org.quartz.simpl.RAMJobStore.storeJobAndTrigger(RAMJobStore.java:249) ~[bundleFile:?]
+	at org.quartz.core.QuartzScheduler.scheduleJob(QuartzScheduler.java:840) ~[bundleFile:?]
+	at org.quartz.impl.StdScheduler.scheduleJob(StdScheduler.java:250) ~[bundleFile:?]
+	at com.liferay.portal.scheduler.quartz.internal.QuartzSchedulerEngine.schedule(QuartzSchedulerEngine.java:604) [bundleFile:?]
+	at com.liferay.portal.scheduler.quartz.internal.QuartzSchedulerEngine.schedule(QuartzSchedulerEngine.java:332) [bundleFile:?]
+	at com.liferay.portal.scheduler.internal.SchedulerEngineHelperImpl.schedule(SchedulerEngineHelperImpl.java:242) [bundleFile:?]
+	at com.liferay.portal.scheduler.internal.SchedulerEngineHelperImpl$SchedulerJobConfigurationServiceTrackerCustomizer.addingService(SchedulerEngineHelperImpl.java:491) [bundleFile:?]
+	at com.liferay.portal.scheduler.internal.SchedulerEngineHelperImpl$SchedulerJobConfigurationServiceTrackerCustomizer.addingService(SchedulerEngineHelperImpl.java:455) [bundleFile:?]
+	at org.osgi.util.tracker.ServiceTracker$Tracked.customizerAdding(ServiceTracker.java:943) [org.eclipse.osgi.jar:?]
+	at org.osgi.util.tracker.ServiceTracker$Tracked.customizerAdding(ServiceTracker.java:1) [org.eclipse.osgi.jar:?]
+	at org.osgi.util.tracker.AbstractTracked.trackAdding(AbstractTracked.java:256) [org.eclipse.osgi.jar:?]
+	at org.osgi.util.tracker.AbstractTracked.track(AbstractTracked.java:229) [org.eclipse.osgi.jar:?]
+	at org.osgi.util.tracker.ServiceTracker$Tracked.serviceChanged(ServiceTracker.java:903) [org.eclipse.osgi.jar:?]
+	at org.eclipse.osgi.internal.serviceregistry.FilteredServiceListener.doServiceChanged(FilteredServiceListener.java:114) [org.eclipse.osgi.jar:?]
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistry._serviceChanged(ServiceRegistry.java:987) [org.eclipse.osgi.jar:?]
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistry.publishServiceEventPrivileged(ServiceRegistry.java:969) [org.eclipse.osgi.jar:?]
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistry.publishServiceEvent(ServiceRegistry.java:853) [org.eclipse.osgi.jar:?]
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistrationImpl.register(ServiceRegistrationImpl.java:126) [org.eclipse.osgi.jar:?]
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistry.registerService(ServiceRegistry.java:227) [org.eclipse.osgi.jar:?]
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.registerService(BundleContextImpl.java:461) [org.eclipse.osgi.jar:?]
+	at org.apache.felix.scr.impl.manager.AbstractComponentManager$3.register(AbstractComponentManager.java:906) [bundleFile:?]
+	at org.apache.felix.scr.impl.manager.AbstractComponentManager$3.register(AbstractComponentManager.java:892) [bundleFile:?]
+	at org.apache.felix.scr.impl.manager.RegistrationManager.changeRegistration(RegistrationManager.java:128) [bundleFile:?]
+	at org.apache.felix.scr.impl.manager.AbstractComponentManager.registerService(AbstractComponentManager.java:962) [bundleFile:?]
+	at org.apache.felix.scr.impl.manager.AbstractComponentManager.activateInternal(AbstractComponentManager.java:732) [bundleFile:?]
+	at org.apache.felix.scr.impl.manager.AbstractComponentManager.enableInternal(AbstractComponentManager.java:666) [bundleFile:?]
+	at org.apache.felix.scr.impl.manager.AbstractComponentManager.enable(AbstractComponentManager.java:432) [bundleFile:?]
+	at org.apache.felix.scr.impl.manager.ConfigurableComponentHolder.enableComponents(ConfigurableComponentHolder.java:665) [bundleFile:?]
+	at org.apache.felix.scr.impl.BundleComponentActivator.initialEnable(BundleComponentActivator.java:336) [bundleFile:?]
+	at org.apache.felix.scr.impl.Activator.loadComponents(Activator.java:469) [bundleFile:?]
+	at org.apache.felix.scr.impl.Activator.access$400(Activator.java:55) [bundleFile:?]
+	at org.apache.felix.scr.impl.Activator$ScrExtension.start(Activator.java:351) [bundleFile:?]
+	at org.apache.felix.scr.impl.AbstractExtender.createExtension(AbstractExtender.java:196) [bundleFile:?]
+	at org.apache.felix.scr.impl.AbstractExtender.modifiedBundle(AbstractExtender.java:169) [bundleFile:?]
+	at org.apache.felix.scr.impl.AbstractExtender.modifiedBundle(AbstractExtender.java:49) [bundleFile:?]
+	at org.osgi.util.tracker.BundleTracker$Tracked.customizerModified(BundleTracker.java:488) [org.eclipse.osgi.jar:?]
+	at org.osgi.util.tracker.BundleTracker$Tracked.customizerModified(BundleTracker.java:1) [org.eclipse.osgi.jar:?]
+	at org.osgi.util.tracker.AbstractTracked.track(AbstractTracked.java:232) [org.eclipse.osgi.jar:?]
+	at org.osgi.util.tracker.BundleTracker$Tracked.bundleChanged(BundleTracker.java:450) [org.eclipse.osgi.jar:?]
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.dispatchEvent(BundleContextImpl.java:890) [org.eclipse.osgi.jar:?]
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230) [org.eclipse.osgi.jar:?]
+	at org.eclipse.osgi.framework.eventmgr.ListenerQueue.dispatchEventSynchronous(ListenerQueue.java:148) [org.eclipse.osgi.jar:?]
+	at org.eclipse.osgi.internal.framework.EquinoxEventPublisher.publishBundleEventPrivileged(EquinoxEventPublisher.java:230) [org.eclipse.osgi.jar:?]
+	at org.eclipse.osgi.internal.framework.EquinoxEventPublisher.publishBundleEvent(EquinoxEventPublisher.java:137) [org.eclipse.osgi.jar:?]
+	at org.eclipse.osgi.internal.framework.EquinoxEventPublisher.publishBundleEvent(EquinoxEventPublisher.java:129) [org.eclipse.osgi.jar:?]
+	at org.eclipse.osgi.internal.framework.EquinoxContainerAdaptor.publishModuleEvent(EquinoxContainerAdaptor.java:191) [org.eclipse.osgi.jar:?]
+	at org.eclipse.osgi.container.Module.publishEvent(Module.java:476) [org.eclipse.osgi.jar:?]
+	at org.eclipse.osgi.container.Module.start(Module.java:467) [org.eclipse.osgi.jar:?]
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.start(EquinoxBundle.java:426) [org.eclipse.osgi.jar:?]
+	at com.liferay.portal.file.install.internal.DirectoryWatcher._startBundle(DirectoryWatcher.java:971) [bundleFile:?]
+	at com.liferay.portal.file.install.internal.DirectoryWatcher._startBundles(DirectoryWatcher.java:1004) [bundleFile:?]
+	at com.liferay.portal.file.install.internal.DirectoryWatcher._process(DirectoryWatcher.java:843) [bundleFile:?]
+	at com.liferay.portal.file.install.internal.DirectoryWatcher.run(DirectoryWatcher.java:298) [bundleFile:?]
+2025-06-17 21:38:25.152 WARN  [fileinstall-directory-watcher][QuartzSchedulerEngine:608] Scheduler job com.liferay.saml.internal.scheduler.SamlSpMessageSchedulerJobConfiguration.com.liferay.saml.internal.scheduler.SamlSpMessageSchedulerJobConfiguration already exists
+org.quartz.ObjectAlreadyExistsException: Unable to store Job : 'com.liferay.saml.internal.scheduler.SamlSpMessageSchedulerJobConfiguration.com.liferay.saml.internal.scheduler.SamlSpMessageSchedulerJobConfiguration', because one already exists with this identification.
+	at org.quartz.simpl.RAMJobStore.storeJob(RAMJobStore.java:277) ~[bundleFile:?]
+	at org.quartz.simpl.RAMJobStore.storeJobAndTrigger(RAMJobStore.java:249) ~[bundleFile:?]
+	at org.quartz.core.QuartzScheduler.scheduleJob(QuartzScheduler.java:840) ~[bundleFile:?]
+	at org.quartz.impl.StdScheduler.scheduleJob(StdScheduler.java:250) ~[bundleFile:?]
+	at com.liferay.portal.scheduler.quartz.internal.QuartzSchedulerEngine.schedule(QuartzSchedulerEngine.java:604) [bundleFile:?]
+	at com.liferay.portal.scheduler.quartz.internal.QuartzSchedulerEngine.schedule(QuartzSchedulerEngine.java:332) [bundleFile:?]
+	at com.liferay.portal.scheduler.internal.SchedulerEngineHelperImpl.schedule(SchedulerEngineHelperImpl.java:242) [bundleFile:?]
+	at com.liferay.portal.scheduler.internal.SchedulerEngineHelperImpl$SchedulerJobConfigurationServiceTrackerCustomizer.addingService(SchedulerEngineHelperImpl.java:491) [bundleFile:?]
+	at com.liferay.portal.scheduler.internal.SchedulerEngineHelperImpl$SchedulerJobConfigurationServiceTrackerCustomizer.addingService(SchedulerEngineHelperImpl.java:455) [bundleFile:?]
+	at org.osgi.util.tracker.ServiceTracker$Tracked.customizerAdding(ServiceTracker.java:943) [org.eclipse.osgi.jar:?]
+	at org.osgi.util.tracker.ServiceTracker$Tracked.customizerAdding(ServiceTracker.java:1) [org.eclipse.osgi.jar:?]
+	at org.osgi.util.tracker.AbstractTracked.trackAdding(AbstractTracked.java:256) [org.eclipse.osgi.jar:?]
+	at org.osgi.util.tracker.AbstractTracked.track(AbstractTracked.java:229) [org.eclipse.osgi.jar:?]
+	at org.osgi.util.tracker.ServiceTracker$Tracked.serviceChanged(ServiceTracker.java:903) [org.eclipse.osgi.jar:?]
+	at org.eclipse.osgi.internal.serviceregistry.FilteredServiceListener.doServiceChanged(FilteredServiceListener.java:114) [org.eclipse.osgi.jar:?]
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistry._serviceChanged(ServiceRegistry.java:987) [org.eclipse.osgi.jar:?]
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistry.publishServiceEventPrivileged(ServiceRegistry.java:969) [org.eclipse.osgi.jar:?]
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistry.publishServiceEvent(ServiceRegistry.java:853) [org.eclipse.osgi.jar:?]
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistrationImpl.register(ServiceRegistrationImpl.java:126) [org.eclipse.osgi.jar:?]
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistry.registerService(ServiceRegistry.java:227) [org.eclipse.osgi.jar:?]
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.registerService(BundleContextImpl.java:461) [org.eclipse.osgi.jar:?]
+	at org.apache.felix.scr.impl.manager.AbstractComponentManager$3.register(AbstractComponentManager.java:906) [bundleFile:?]
+	at org.apache.felix.scr.impl.manager.AbstractComponentManager$3.register(AbstractComponentManager.java:892) [bundleFile:?]
+	at org.apache.felix.scr.impl.manager.RegistrationManager.changeRegistration(RegistrationManager.java:128) [bundleFile:?]
+	at org.apache.felix.scr.impl.manager.AbstractComponentManager.registerService(AbstractComponentManager.java:962) [bundleFile:?]
+	at org.apache.felix.scr.impl.manager.AbstractComponentManager.activateInternal(AbstractComponentManager.java:732) [bundleFile:?]
+	at org.apache.felix.scr.impl.manager.AbstractComponentManager.enableInternal(AbstractComponentManager.java:666) [bundleFile:?]
+	at org.apache.felix.scr.impl.manager.AbstractComponentManager.enable(AbstractComponentManager.java:432) [bundleFile:?]
+	at org.apache.felix.scr.impl.manager.ConfigurableComponentHolder.enableComponents(ConfigurableComponentHolder.java:665) [bundleFile:?]
+	at org.apache.felix.scr.impl.BundleComponentActivator.initialEnable(BundleComponentActivator.java:336) [bundleFile:?]
+	at org.apache.felix.scr.impl.Activator.loadComponents(Activator.java:469) [bundleFile:?]
+	at org.apache.felix.scr.impl.Activator.access$400(Activator.java:55) [bundleFile:?]
+	at org.apache.felix.scr.impl.Activator$ScrExtension.start(Activator.java:351) [bundleFile:?]
+	at org.apache.felix.scr.impl.AbstractExtender.createExtension(AbstractExtender.java:196) [bundleFile:?]
+	at org.apache.felix.scr.impl.AbstractExtender.modifiedBundle(AbstractExtender.java:169) [bundleFile:?]
+	at org.apache.felix.scr.impl.AbstractExtender.modifiedBundle(AbstractExtender.java:49) [bundleFile:?]
+	at org.osgi.util.tracker.BundleTracker$Tracked.customizerModified(BundleTracker.java:488) [org.eclipse.osgi.jar:?]
+	at org.osgi.util.tracker.BundleTracker$Tracked.customizerModified(BundleTracker.java:1) [org.eclipse.osgi.jar:?]
+	at org.osgi.util.tracker.AbstractTracked.track(AbstractTracked.java:232) [org.eclipse.osgi.jar:?]
+	at org.osgi.util.tracker.BundleTracker$Tracked.bundleChanged(BundleTracker.java:450) [org.eclipse.osgi.jar:?]
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.dispatchEvent(BundleContextImpl.java:890) [org.eclipse.osgi.jar:?]
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230) [org.eclipse.osgi.jar:?]
+	at org.eclipse.osgi.framework.eventmgr.ListenerQueue.dispatchEventSynchronous(ListenerQueue.java:148) [org.eclipse.osgi.jar:?]
+	at org.eclipse.osgi.internal.framework.EquinoxEventPublisher.publishBundleEventPrivileged(EquinoxEventPublisher.java:230) [org.eclipse.osgi.jar:?]
+	at org.eclipse.osgi.internal.framework.EquinoxEventPublisher.publishBundleEvent(EquinoxEventPublisher.java:137) [org.eclipse.osgi.jar:?]
+	at org.eclipse.osgi.internal.framework.EquinoxEventPublisher.publishBundleEvent(EquinoxEventPublisher.java:129) [org.eclipse.osgi.jar:?]
+	at org.eclipse.osgi.internal.framework.EquinoxContainerAdaptor.publishModuleEvent(EquinoxContainerAdaptor.java:191) [org.eclipse.osgi.jar:?]
+	at org.eclipse.osgi.container.Module.publishEvent(Module.java:476) [org.eclipse.osgi.jar:?]
+	at org.eclipse.osgi.container.Module.start(Module.java:467) [org.eclipse.osgi.jar:?]
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.start(EquinoxBundle.java:426) [org.eclipse.osgi.jar:?]
+	at com.liferay.portal.file.install.internal.DirectoryWatcher._startBundle(DirectoryWatcher.java:971) [bundleFile:?]
+	at com.liferay.portal.file.install.internal.DirectoryWatcher._startBundles(DirectoryWatcher.java:1004) [bundleFile:?]
+	at com.liferay.portal.file.install.internal.DirectoryWatcher._process(DirectoryWatcher.java:843) [bundleFile:?]
+	at com.liferay.portal.file.install.internal.DirectoryWatcher.run(DirectoryWatcher.java:298) [bundleFile:?]
+2025-06-17 21:38:25.221 INFO  [fileinstall-directory-watcher][BundleStartStopLogger:68] STARTED bms.com.liferay.saml.impl_5.0.53 [1472]
+2025-06-17 21:38:25.234 ERROR [fileinstall-directory-watcher][PortletTracker:165] Portlet id com_liferay_saml_web_internal_portlet_SamlAdminPortlet is already in use
+2025-06-17 21:38:25.252 INFO  [fileinstall-directory-watcher][BundleStartStopLogger:68] STARTED bms.com.liferay.saml.web_5.0.80 [1476]
+2025-06-17 21:38:25.259 INFO  [fileinstall-directory-watcher][BundleStartStopLogger:68] STARTED bms.com.liferay.saml.admin.rest.api_1.1.6 [1466]
+2025-06-17 21:38:25.262 INFO  [fileinstall-directory-watcher][BundleStartStopLogger:68] STARTED bms.com.liferay.saml.admin.rest.impl_1.0.12 [1467]
+2025-06-17 21:38:25.274 WARN  [fileinstall-directory-watcher][QuartzSchedulerEngine:608] Scheduler job com.liferay.saml.internal.scheduler.SamlIdpSsoSessionSchedulerJobConfiguration.com.liferay.saml.internal.scheduler.SamlIdpSsoSessionSchedulerJobConfiguration already exists
+org.quartz.ObjectAlreadyExistsException: Unable to store Job : 'com.liferay.saml.internal.scheduler.SamlIdpSsoSessionSchedulerJobConfiguration.com.liferay.saml.internal.scheduler.SamlIdpSsoSessionSchedulerJobConfiguration', because one already exists with this identification.
+	at org.quartz.simpl.RAMJobStore.storeJob(RAMJobStore.java:277) ~[bundleFile:?]
+	at org.quartz.simpl.RAMJobStore.storeJobAndTrigger(RAMJobStore.java:249) ~[bundleFile:?]
+	at org.quartz.core.QuartzScheduler.scheduleJob(QuartzScheduler.java:840) ~[bundleFile:?]
+	at org.quartz.impl.StdScheduler.scheduleJob(StdScheduler.java:250) ~[bundleFile:?]
+	at com.liferay.portal.scheduler.quartz.internal.QuartzSchedulerEngine.schedule(QuartzSchedulerEngine.java:604) [bundleFile:?]
+	at com.liferay.portal.scheduler.quartz.internal.QuartzSchedulerEngine.schedule(QuartzSchedulerEngine.java:332) [bundleFile:?]
+	at com.liferay.portal.scheduler.internal.SchedulerEngineHelperImpl.schedule(SchedulerEngineHelperImpl.java:242) [bundleFile:?]
+	at com.liferay.portal.scheduler.internal.SchedulerEngineHelperImpl$SchedulerJobConfigurationServiceTrackerCustomizer.addingService(SchedulerEngineHelperImpl.java:491) [bundleFile:?]
+	at com.liferay.portal.scheduler.internal.SchedulerEngineHelperImpl$SchedulerJobConfigurationServiceTrackerCustomizer.addingService(SchedulerEngineHelperImpl.java:455) [bundleFile:?]
+	at org.osgi.util.tracker.ServiceTracker$Tracked.customizerAdding(ServiceTracker.java:943) [org.eclipse.osgi.jar:?]
+	at org.osgi.util.tracker.ServiceTracker$Tracked.customizerAdding(ServiceTracker.java:1) [org.eclipse.osgi.jar:?]
+	at org.osgi.util.tracker.AbstractTracked.trackAdding(AbstractTracked.java:256) [org.eclipse.osgi.jar:?]
+	at org.osgi.util.tracker.AbstractTracked.track(AbstractTracked.java:229) [org.eclipse.osgi.jar:?]
+	at org.osgi.util.tracker.ServiceTracker$Tracked.serviceChanged(ServiceTracker.java:903) [org.eclipse.osgi.jar:?]
+	at org.eclipse.osgi.internal.serviceregistry.FilteredServiceListener.doServiceChanged(FilteredServiceListener.java:114) [org.eclipse.osgi.jar:?]
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistry._serviceChanged(ServiceRegistry.java:987) [org.eclipse.osgi.jar:?]
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistry.publishServiceEventPrivileged(ServiceRegistry.java:969) [org.eclipse.osgi.jar:?]
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistry.publishServiceEvent(ServiceRegistry.java:853) [org.eclipse.osgi.jar:?]
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistrationImpl.register(ServiceRegistrationImpl.java:126) [org.eclipse.osgi.jar:?]
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistry.registerService(ServiceRegistry.java:227) [org.eclipse.osgi.jar:?]
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.registerService(BundleContextImpl.java:461) [org.eclipse.osgi.jar:?]
+	at org.apache.felix.scr.impl.manager.AbstractComponentManager$3.register(AbstractComponentManager.java:906) [bundleFile:?]
+	at org.apache.felix.scr.impl.manager.AbstractComponentManager$3.register(AbstractComponentManager.java:892) [bundleFile:?]
+	at org.apache.felix.scr.impl.manager.RegistrationManager.changeRegistration(RegistrationManager.java:128) [bundleFile:?]
+	at org.apache.felix.scr.impl.manager.AbstractComponentManager.registerService(AbstractComponentManager.java:962) [bundleFile:?]
+	at org.apache.felix.scr.impl.manager.AbstractComponentManager.activateInternal(AbstractComponentManager.java:732) [bundleFile:?]
+	at org.apache.felix.scr.impl.manager.AbstractComponentManager.enableInternal(AbstractComponentManager.java:666) [bundleFile:?]
+	at org.apache.felix.scr.impl.manager.AbstractComponentManager.enable(AbstractComponentManager.java:432) [bundleFile:?]
+	at org.apache.felix.scr.impl.manager.ConfigurableComponentHolder.enableComponents(ConfigurableComponentHolder.java:665) [bundleFile:?]
+	at org.apache.felix.scr.impl.BundleComponentActivator.initialEnable(BundleComponentActivator.java:336) [bundleFile:?]
+	at org.apache.felix.scr.impl.Activator.loadComponents(Activator.java:469) [bundleFile:?]
+	at org.apache.felix.scr.impl.Activator.access$400(Activator.java:55) [bundleFile:?]
+	at org.apache.felix.scr.impl.Activator$ScrExtension.start(Activator.java:351) [bundleFile:?]
+	at org.apache.felix.scr.impl.AbstractExtender.createExtension(AbstractExtender.java:196) [bundleFile:?]
+	at org.apache.felix.scr.impl.AbstractExtender.modifiedBundle(AbstractExtender.java:169) [bundleFile:?]
+	at org.apache.felix.scr.impl.AbstractExtender.modifiedBundle(AbstractExtender.java:49) [bundleFile:?]
+	at org.osgi.util.tracker.BundleTracker$Tracked.customizerModified(BundleTracker.java:488) [org.eclipse.osgi.jar:?]
+	at org.osgi.util.tracker.BundleTracker$Tracked.customizerModified(BundleTracker.java:1) [org.eclipse.osgi.jar:?]
+	at org.osgi.util.tracker.AbstractTracked.track(AbstractTracked.java:232) [org.eclipse.osgi.jar:?]
+	at org.osgi.util.tracker.BundleTracker$Tracked.bundleChanged(BundleTracker.java:450) [org.eclipse.osgi.jar:?]
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.dispatchEvent(BundleContextImpl.java:890) [org.eclipse.osgi.jar:?]
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230) [org.eclipse.osgi.jar:?]
+	at org.eclipse.osgi.framework.eventmgr.ListenerQueue.dispatchEventSynchronous(ListenerQueue.java:148) [org.eclipse.osgi.jar:?]
+	at org.eclipse.osgi.internal.framework.EquinoxEventPublisher.publishBundleEventPrivileged(EquinoxEventPublisher.java:230) [org.eclipse.osgi.jar:?]
+	at org.eclipse.osgi.internal.framework.EquinoxEventPublisher.publishBundleEvent(EquinoxEventPublisher.java:137) [org.eclipse.osgi.jar:?]
+	at org.eclipse.osgi.internal.framework.EquinoxEventPublisher.publishBundleEvent(EquinoxEventPublisher.java:129) [org.eclipse.osgi.jar:?]
+	at org.eclipse.osgi.internal.framework.EquinoxContainerAdaptor.publishModuleEvent(EquinoxContainerAdaptor.java:191) [org.eclipse.osgi.jar:?]
+	at org.eclipse.osgi.container.Module.publishEvent(Module.java:476) [org.eclipse.osgi.jar:?]
+	at org.eclipse.osgi.container.Module.start(Module.java:467) [org.eclipse.osgi.jar:?]
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.start(EquinoxBundle.java:426) [org.eclipse.osgi.jar:?]
+	at com.liferay.portal.file.install.internal.DirectoryWatcher._startBundle(DirectoryWatcher.java:971) [bundleFile:?]
+	at com.liferay.portal.file.install.internal.DirectoryWatcher._startBundles(DirectoryWatcher.java:1004) [bundleFile:?]
+	at com.liferay.portal.file.install.internal.DirectoryWatcher._process(DirectoryWatcher.java:843) [bundleFile:?]
+	at com.liferay.portal.file.install.internal.DirectoryWatcher.run(DirectoryWatcher.java:298) [bundleFile:?]
+2025-06-17 21:38:25.278 WARN  [fileinstall-directory-watcher][QuartzSchedulerEngine:608] Scheduler job com.liferay.saml.internal.scheduler.SamlMetadataSchedulerJobConfiguration.com.liferay.saml.internal.scheduler.SamlMetadataSchedulerJobConfiguration already exists
+org.quartz.ObjectAlreadyExistsException: Unable to store Job : 'com.liferay.saml.internal.scheduler.SamlMetadataSchedulerJobConfiguration.com.liferay.saml.internal.scheduler.SamlMetadataSchedulerJobConfiguration', because one already exists with this identification.
+	at org.quartz.simpl.RAMJobStore.storeJob(RAMJobStore.java:277) ~[bundleFile:?]
+	at org.quartz.simpl.RAMJobStore.storeJobAndTrigger(RAMJobStore.java:249) ~[bundleFile:?]
+	at org.quartz.core.QuartzScheduler.scheduleJob(QuartzScheduler.java:840) ~[bundleFile:?]
+	at org.quartz.impl.StdScheduler.scheduleJob(StdScheduler.java:250) ~[bundleFile:?]
+	at com.liferay.portal.scheduler.quartz.internal.QuartzSchedulerEngine.schedule(QuartzSchedulerEngine.java:604) [bundleFile:?]
+	at com.liferay.portal.scheduler.quartz.internal.QuartzSchedulerEngine.schedule(QuartzSchedulerEngine.java:332) [bundleFile:?]
+	at com.liferay.portal.scheduler.internal.SchedulerEngineHelperImpl.schedule(SchedulerEngineHelperImpl.java:242) [bundleFile:?]
+	at com.liferay.portal.scheduler.internal.SchedulerEngineHelperImpl$SchedulerJobConfigurationServiceTrackerCustomizer.addingService(SchedulerEngineHelperImpl.java:491) [bundleFile:?]
+	at com.liferay.portal.scheduler.internal.SchedulerEngineHelperImpl$SchedulerJobConfigurationServiceTrackerCustomizer.addingService(SchedulerEngineHelperImpl.java:455) [bundleFile:?]
+	at org.osgi.util.tracker.ServiceTracker$Tracked.customizerAdding(ServiceTracker.java:943) [org.eclipse.osgi.jar:?]
+	at org.osgi.util.tracker.ServiceTracker$Tracked.customizerAdding(ServiceTracker.java:1) [org.eclipse.osgi.jar:?]
+	at org.osgi.util.tracker.AbstractTracked.trackAdding(AbstractTracked.java:256) [org.eclipse.osgi.jar:?]
+	at org.osgi.util.tracker.AbstractTracked.track(AbstractTracked.java:229) [org.eclipse.osgi.jar:?]
+	at org.osgi.util.tracker.ServiceTracker$Tracked.serviceChanged(ServiceTracker.java:903) [org.eclipse.osgi.jar:?]
+	at org.eclipse.osgi.internal.serviceregistry.FilteredServiceListener.doServiceChanged(FilteredServiceListener.java:114) [org.eclipse.osgi.jar:?]
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistry._serviceChanged(ServiceRegistry.java:987) [org.eclipse.osgi.jar:?]
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistry.publishServiceEventPrivileged(ServiceRegistry.java:969) [org.eclipse.osgi.jar:?]
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistry.publishServiceEvent(ServiceRegistry.java:853) [org.eclipse.osgi.jar:?]
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistrationImpl.register(ServiceRegistrationImpl.java:126) [org.eclipse.osgi.jar:?]
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistry.registerService(ServiceRegistry.java:227) [org.eclipse.osgi.jar:?]
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.registerService(BundleContextImpl.java:461) [org.eclipse.osgi.jar:?]
+	at org.apache.felix.scr.impl.manager.AbstractComponentManager$3.register(AbstractComponentManager.java:906) [bundleFile:?]
+	at org.apache.felix.scr.impl.manager.AbstractComponentManager$3.register(AbstractComponentManager.java:892) [bundleFile:?]
+	at org.apache.felix.scr.impl.manager.RegistrationManager.changeRegistration(RegistrationManager.java:128) [bundleFile:?]
+	at org.apache.felix.scr.impl.manager.AbstractComponentManager.registerService(AbstractComponentManager.java:962) [bundleFile:?]
+	at org.apache.felix.scr.impl.manager.AbstractComponentManager.activateInternal(AbstractComponentManager.java:732) [bundleFile:?]
+	at org.apache.felix.scr.impl.manager.AbstractComponentManager.enableInternal(AbstractComponentManager.java:666) [bundleFile:?]
+	at org.apache.felix.scr.impl.manager.AbstractComponentManager.enable(AbstractComponentManager.java:432) [bundleFile:?]
+	at org.apache.felix.scr.impl.manager.ConfigurableComponentHolder.enableComponents(ConfigurableComponentHolder.java:665) [bundleFile:?]
+	at org.apache.felix.scr.impl.BundleComponentActivator.initialEnable(BundleComponentActivator.java:336) [bundleFile:?]
+	at org.apache.felix.scr.impl.Activator.loadComponents(Activator.java:469) [bundleFile:?]
+	at org.apache.felix.scr.impl.Activator.access$400(Activator.java:55) [bundleFile:?]
+	at org.apache.felix.scr.impl.Activator$ScrExtension.start(Activator.java:351) [bundleFile:?]
+	at org.apache.felix.scr.impl.AbstractExtender.createExtension(AbstractExtender.java:196) [bundleFile:?]
+	at org.apache.felix.scr.impl.AbstractExtender.modifiedBundle(AbstractExtender.java:169) [bundleFile:?]
+	at org.apache.felix.scr.impl.AbstractExtender.modifiedBundle(AbstractExtender.java:49) [bundleFile:?]
+	at org.osgi.util.tracker.BundleTracker$Tracked.customizerModified(BundleTracker.java:488) [org.eclipse.osgi.jar:?]
+	at org.osgi.util.tracker.BundleTracker$Tracked.customizerModified(BundleTracker.java:1) [org.eclipse.osgi.jar:?]
+	at org.osgi.util.tracker.AbstractTracked.track(AbstractTracked.java:232) [org.eclipse.osgi.jar:?]
+	at org.osgi.util.tracker.BundleTracker$Tracked.bundleChanged(BundleTracker.java:450) [org.eclipse.osgi.jar:?]
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.dispatchEvent(BundleContextImpl.java:890) [org.eclipse.osgi.jar:?]
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230) [org.eclipse.osgi.jar:?]
+	at org.eclipse.osgi.framework.eventmgr.ListenerQueue.dispatchEventSynchronous(ListenerQueue.java:148) [org.eclipse.osgi.jar:?]
+	at org.eclipse.osgi.internal.framework.EquinoxEventPublisher.publishBundleEventPrivileged(EquinoxEventPublisher.java:230) [org.eclipse.osgi.jar:?]
+	at org.eclipse.osgi.internal.framework.EquinoxEventPublisher.publishBundleEvent(EquinoxEventPublisher.java:137) [org.eclipse.osgi.jar:?]
+	at org.eclipse.osgi.internal.framework.EquinoxEventPublisher.publishBundleEvent(EquinoxEventPublisher.java:129) [org.eclipse.osgi.jar:?]
+	at org.eclipse.osgi.internal.framework.EquinoxContainerAdaptor.publishModuleEvent(EquinoxContainerAdaptor.java:191) [org.eclipse.osgi.jar:?]
+	at org.eclipse.osgi.container.Module.publishEvent(Module.java:476) [org.eclipse.osgi.jar:?]
+	at org.eclipse.osgi.container.Module.start(Module.java:467) [org.eclipse.osgi.jar:?]
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.start(EquinoxBundle.java:426) [org.eclipse.osgi.jar:?]
+	at com.liferay.portal.file.install.internal.DirectoryWatcher._startBundle(DirectoryWatcher.java:971) [bundleFile:?]
+	at com.liferay.portal.file.install.internal.DirectoryWatcher._startBundles(DirectoryWatcher.java:1004) [bundleFile:?]
+	at com.liferay.portal.file.install.internal.DirectoryWatcher._process(DirectoryWatcher.java:843) [bundleFile:?]
+	at com.liferay.portal.file.install.internal.DirectoryWatcher.run(DirectoryWatcher.java:298) [bundleFile:?]
+2025-06-17 21:38:25.281 WARN  [fileinstall-directory-watcher][QuartzSchedulerEngine:608] Scheduler job com.liferay.saml.internal.scheduler.SamlSpAuthRequestSchedulerJobConfiguration.com.liferay.saml.internal.scheduler.SamlSpAuthRequestSchedulerJobConfiguration already exists
+org.quartz.ObjectAlreadyExistsException: Unable to store Job : 'com.liferay.saml.internal.scheduler.SamlSpAuthRequestSchedulerJobConfiguration.com.liferay.saml.internal.scheduler.SamlSpAuthRequestSchedulerJobConfiguration', because one already exists with this identification.
+	at org.quartz.simpl.RAMJobStore.storeJob(RAMJobStore.java:277) ~[bundleFile:?]
+	at org.quartz.simpl.RAMJobStore.storeJobAndTrigger(RAMJobStore.java:249) ~[bundleFile:?]
+	at org.quartz.core.QuartzScheduler.scheduleJob(QuartzScheduler.java:840) ~[bundleFile:?]
+	at org.quartz.impl.StdScheduler.scheduleJob(StdScheduler.java:250) ~[bundleFile:?]
+	at com.liferay.portal.scheduler.quartz.internal.QuartzSchedulerEngine.schedule(QuartzSchedulerEngine.java:604) [bundleFile:?]
+	at com.liferay.portal.scheduler.quartz.internal.QuartzSchedulerEngine.schedule(QuartzSchedulerEngine.java:332) [bundleFile:?]
+	at com.liferay.portal.scheduler.internal.SchedulerEngineHelperImpl.schedule(SchedulerEngineHelperImpl.java:242) [bundleFile:?]
+	at com.liferay.portal.scheduler.internal.SchedulerEngineHelperImpl$SchedulerJobConfigurationServiceTrackerCustomizer.addingService(SchedulerEngineHelperImpl.java:491) [bundleFile:?]
+	at com.liferay.portal.scheduler.internal.SchedulerEngineHelperImpl$SchedulerJobConfigurationServiceTrackerCustomizer.addingService(SchedulerEngineHelperImpl.java:455) [bundleFile:?]
+	at org.osgi.util.tracker.ServiceTracker$Tracked.customizerAdding(ServiceTracker.java:943) [org.eclipse.osgi.jar:?]
+	at org.osgi.util.tracker.ServiceTracker$Tracked.customizerAdding(ServiceTracker.java:1) [org.eclipse.osgi.jar:?]
+	at org.osgi.util.tracker.AbstractTracked.trackAdding(AbstractTracked.java:256) [org.eclipse.osgi.jar:?]
+	at org.osgi.util.tracker.AbstractTracked.track(AbstractTracked.java:229) [org.eclipse.osgi.jar:?]
+	at org.osgi.util.tracker.ServiceTracker$Tracked.serviceChanged(ServiceTracker.java:903) [org.eclipse.osgi.jar:?]
+	at org.eclipse.osgi.internal.serviceregistry.FilteredServiceListener.doServiceChanged(FilteredServiceListener.java:114) [org.eclipse.osgi.jar:?]
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistry._serviceChanged(ServiceRegistry.java:987) [org.eclipse.osgi.jar:?]
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistry.publishServiceEventPrivileged(ServiceRegistry.java:969) [org.eclipse.osgi.jar:?]
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistry.publishServiceEvent(ServiceRegistry.java:853) [org.eclipse.osgi.jar:?]
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistrationImpl.register(ServiceRegistrationImpl.java:126) [org.eclipse.osgi.jar:?]
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistry.registerService(ServiceRegistry.java:227) [org.eclipse.osgi.jar:?]
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.registerService(BundleContextImpl.java:461) [org.eclipse.osgi.jar:?]
+	at org.apache.felix.scr.impl.manager.AbstractComponentManager$3.register(AbstractComponentManager.java:906) [bundleFile:?]
+	at org.apache.felix.scr.impl.manager.AbstractComponentManager$3.register(AbstractComponentManager.java:892) [bundleFile:?]
+	at org.apache.felix.scr.impl.manager.RegistrationManager.changeRegistration(RegistrationManager.java:128) [bundleFile:?]
+	at org.apache.felix.scr.impl.manager.AbstractComponentManager.registerService(AbstractComponentManager.java:962) [bundleFile:?]
+	at org.apache.felix.scr.impl.manager.AbstractComponentManager.activateInternal(AbstractComponentManager.java:732) [bundleFile:?]
+	at org.apache.felix.scr.impl.manager.AbstractComponentManager.enableInternal(AbstractComponentManager.java:666) [bundleFile:?]
+	at org.apache.felix.scr.impl.manager.AbstractComponentManager.enable(AbstractComponentManager.java:432) [bundleFile:?]
+	at org.apache.felix.scr.impl.manager.ConfigurableComponentHolder.enableComponents(ConfigurableComponentHolder.java:665) [bundleFile:?]
+	at org.apache.felix.scr.impl.BundleComponentActivator.initialEnable(BundleComponentActivator.java:336) [bundleFile:?]
+	at org.apache.felix.scr.impl.Activator.loadComponents(Activator.java:469) [bundleFile:?]
+	at org.apache.felix.scr.impl.Activator.access$400(Activator.java:55) [bundleFile:?]
+	at org.apache.felix.scr.impl.Activator$ScrExtension.start(Activator.java:351) [bundleFile:?]
+	at org.apache.felix.scr.impl.AbstractExtender.createExtension(AbstractExtender.java:196) [bundleFile:?]
+	at org.apache.felix.scr.impl.AbstractExtender.modifiedBundle(AbstractExtender.java:169) [bundleFile:?]
+	at org.apache.felix.scr.impl.AbstractExtender.modifiedBundle(AbstractExtender.java:49) [bundleFile:?]
+	at org.osgi.util.tracker.BundleTracker$Tracked.customizerModified(BundleTracker.java:488) [org.eclipse.osgi.jar:?]
+	at org.osgi.util.tracker.BundleTracker$Tracked.customizerModified(BundleTracker.java:1) [org.eclipse.osgi.jar:?]
+	at org.osgi.util.tracker.AbstractTracked.track(AbstractTracked.java:232) [org.eclipse.osgi.jar:?]
+	at org.osgi.util.tracker.BundleTracker$Tracked.bundleChanged(BundleTracker.java:450) [org.eclipse.osgi.jar:?]
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.dispatchEvent(BundleContextImpl.java:890) [org.eclipse.osgi.jar:?]
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230) [org.eclipse.osgi.jar:?]
+	at org.eclipse.osgi.framework.eventmgr.ListenerQueue.dispatchEventSynchronous(ListenerQueue.java:148) [org.eclipse.osgi.jar:?]
+	at org.eclipse.osgi.internal.framework.EquinoxEventPublisher.publishBundleEventPrivileged(EquinoxEventPublisher.java:230) [org.eclipse.osgi.jar:?]
+	at org.eclipse.osgi.internal.framework.EquinoxEventPublisher.publishBundleEvent(EquinoxEventPublisher.java:137) [org.eclipse.osgi.jar:?]
+	at org.eclipse.osgi.internal.framework.EquinoxEventPublisher.publishBundleEvent(EquinoxEventPublisher.java:129) [org.eclipse.osgi.jar:?]
+	at org.eclipse.osgi.internal.framework.EquinoxContainerAdaptor.publishModuleEvent(EquinoxContainerAdaptor.java:191) [org.eclipse.osgi.jar:?]
+	at org.eclipse.osgi.container.Module.publishEvent(Module.java:476) [org.eclipse.osgi.jar:?]
+	at org.eclipse.osgi.container.Module.start(Module.java:467) [org.eclipse.osgi.jar:?]
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.start(EquinoxBundle.java:426) [org.eclipse.osgi.jar:?]
+	at com.liferay.portal.file.install.internal.DirectoryWatcher._startBundle(DirectoryWatcher.java:971) [bundleFile:?]
+	at com.liferay.portal.file.install.internal.DirectoryWatcher._startBundles(DirectoryWatcher.java:1004) [bundleFile:?]
+	at com.liferay.portal.file.install.internal.DirectoryWatcher._process(DirectoryWatcher.java:843) [bundleFile:?]
+	at com.liferay.portal.file.install.internal.DirectoryWatcher.run(DirectoryWatcher.java:298) [bundleFile:?]
+2025-06-17 21:38:25.283 WARN  [fileinstall-directory-watcher][QuartzSchedulerEngine:608] Scheduler job com.liferay.saml.internal.scheduler.SamlSpMessageSchedulerJobConfiguration.com.liferay.saml.internal.scheduler.SamlSpMessageSchedulerJobConfiguration already exists
+org.quartz.ObjectAlreadyExistsException: Unable to store Job : 'com.liferay.saml.internal.scheduler.SamlSpMessageSchedulerJobConfiguration.com.liferay.saml.internal.scheduler.SamlSpMessageSchedulerJobConfiguration', because one already exists with this identification.
+	at org.quartz.simpl.RAMJobStore.storeJob(RAMJobStore.java:277) ~[bundleFile:?]
+	at org.quartz.simpl.RAMJobStore.storeJobAndTrigger(RAMJobStore.java:249) ~[bundleFile:?]
+	at org.quartz.core.QuartzScheduler.scheduleJob(QuartzScheduler.java:840) ~[bundleFile:?]
+	at org.quartz.impl.StdScheduler.scheduleJob(StdScheduler.java:250) ~[bundleFile:?]
+	at com.liferay.portal.scheduler.quartz.internal.QuartzSchedulerEngine.schedule(QuartzSchedulerEngine.java:604) [bundleFile:?]
+	at com.liferay.portal.scheduler.quartz.internal.QuartzSchedulerEngine.schedule(QuartzSchedulerEngine.java:332) [bundleFile:?]
+	at com.liferay.portal.scheduler.internal.SchedulerEngineHelperImpl.schedule(SchedulerEngineHelperImpl.java:242) [bundleFile:?]
+	at com.liferay.portal.scheduler.internal.SchedulerEngineHelperImpl$SchedulerJobConfigurationServiceTrackerCustomizer.addingService(SchedulerEngineHelperImpl.java:491) [bundleFile:?]
+	at com.liferay.portal.scheduler.internal.SchedulerEngineHelperImpl$SchedulerJobConfigurationServiceTrackerCustomizer.addingService(SchedulerEngineHelperImpl.java:455) [bundleFile:?]
+	at org.osgi.util.tracker.ServiceTracker$Tracked.customizerAdding(ServiceTracker.java:943) [org.eclipse.osgi.jar:?]
+	at org.osgi.util.tracker.ServiceTracker$Tracked.customizerAdding(ServiceTracker.java:1) [org.eclipse.osgi.jar:?]
+	at org.osgi.util.tracker.AbstractTracked.trackAdding(AbstractTracked.java:256) [org.eclipse.osgi.jar:?]
+	at org.osgi.util.tracker.AbstractTracked.track(AbstractTracked.java:229) [org.eclipse.osgi.jar:?]
+	at org.osgi.util.tracker.ServiceTracker$Tracked.serviceChanged(ServiceTracker.java:903) [org.eclipse.osgi.jar:?]
+	at org.eclipse.osgi.internal.serviceregistry.FilteredServiceListener.doServiceChanged(FilteredServiceListener.java:114) [org.eclipse.osgi.jar:?]
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistry._serviceChanged(ServiceRegistry.java:987) [org.eclipse.osgi.jar:?]
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistry.publishServiceEventPrivileged(ServiceRegistry.java:969) [org.eclipse.osgi.jar:?]
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistry.publishServiceEvent(ServiceRegistry.java:853) [org.eclipse.osgi.jar:?]
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistrationImpl.register(ServiceRegistrationImpl.java:126) [org.eclipse.osgi.jar:?]
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistry.registerService(ServiceRegistry.java:227) [org.eclipse.osgi.jar:?]
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.registerService(BundleContextImpl.java:461) [org.eclipse.osgi.jar:?]
+	at org.apache.felix.scr.impl.manager.AbstractComponentManager$3.register(AbstractComponentManager.java:906) [bundleFile:?]
+	at org.apache.felix.scr.impl.manager.AbstractComponentManager$3.register(AbstractComponentManager.java:892) [bundleFile:?]
+	at org.apache.felix.scr.impl.manager.RegistrationManager.changeRegistration(RegistrationManager.java:128) [bundleFile:?]
+	at org.apache.felix.scr.impl.manager.AbstractComponentManager.registerService(AbstractComponentManager.java:962) [bundleFile:?]
+	at org.apache.felix.scr.impl.manager.AbstractComponentManager.activateInternal(AbstractComponentManager.java:732) [bundleFile:?]
+	at org.apache.felix.scr.impl.manager.AbstractComponentManager.enableInternal(AbstractComponentManager.java:666) [bundleFile:?]
+	at org.apache.felix.scr.impl.manager.AbstractComponentManager.enable(AbstractComponentManager.java:432) [bundleFile:?]
+	at org.apache.felix.scr.impl.manager.ConfigurableComponentHolder.enableComponents(ConfigurableComponentHolder.java:665) [bundleFile:?]
+	at org.apache.felix.scr.impl.BundleComponentActivator.initialEnable(BundleComponentActivator.java:336) [bundleFile:?]
+	at org.apache.felix.scr.impl.Activator.loadComponents(Activator.java:469) [bundleFile:?]
+	at org.apache.felix.scr.impl.Activator.access$400(Activator.java:55) [bundleFile:?]
+	at org.apache.felix.scr.impl.Activator$ScrExtension.start(Activator.java:351) [bundleFile:?]
+	at org.apache.felix.scr.impl.AbstractExtender.createExtension(AbstractExtender.java:196) [bundleFile:?]
+	at org.apache.felix.scr.impl.AbstractExtender.modifiedBundle(AbstractExtender.java:169) [bundleFile:?]
+	at org.apache.felix.scr.impl.AbstractExtender.modifiedBundle(AbstractExtender.java:49) [bundleFile:?]
+	at org.osgi.util.tracker.BundleTracker$Tracked.customizerModified(BundleTracker.java:488) [org.eclipse.osgi.jar:?]
+	at org.osgi.util.tracker.BundleTracker$Tracked.customizerModified(BundleTracker.java:1) [org.eclipse.osgi.jar:?]
+	at org.osgi.util.tracker.AbstractTracked.track(AbstractTracked.java:232) [org.eclipse.osgi.jar:?]
+	at org.osgi.util.tracker.BundleTracker$Tracked.bundleChanged(BundleTracker.java:450) [org.eclipse.osgi.jar:?]
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.dispatchEvent(BundleContextImpl.java:890) [org.eclipse.osgi.jar:?]
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230) [org.eclipse.osgi.jar:?]
+	at org.eclipse.osgi.framework.eventmgr.ListenerQueue.dispatchEventSynchronous(ListenerQueue.java:148) [org.eclipse.osgi.jar:?]
+	at org.eclipse.osgi.internal.framework.EquinoxEventPublisher.publishBundleEventPrivileged(EquinoxEventPublisher.java:230) [org.eclipse.osgi.jar:?]
+	at org.eclipse.osgi.internal.framework.EquinoxEventPublisher.publishBundleEvent(EquinoxEventPublisher.java:137) [org.eclipse.osgi.jar:?]
+	at org.eclipse.osgi.internal.framework.EquinoxEventPublisher.publishBundleEvent(EquinoxEventPublisher.java:129) [org.eclipse.osgi.jar:?]
+	at org.eclipse.osgi.internal.framework.EquinoxContainerAdaptor.publishModuleEvent(EquinoxContainerAdaptor.java:191) [org.eclipse.osgi.jar:?]
+	at org.eclipse.osgi.container.Module.publishEvent(Module.java:476) [org.eclipse.osgi.jar:?]
+	at org.eclipse.osgi.container.Module.start(Module.java:467) [org.eclipse.osgi.jar:?]
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.start(EquinoxBundle.java:426) [org.eclipse.osgi.jar:?]
+	at com.liferay.portal.file.install.internal.DirectoryWatcher._startBundle(DirectoryWatcher.java:971) [bundleFile:?]
+	at com.liferay.portal.file.install.internal.DirectoryWatcher._startBundles(DirectoryWatcher.java:1004) [bundleFile:?]
+	at com.liferay.portal.file.install.internal.DirectoryWatcher._process(DirectoryWatcher.java:843) [bundleFile:?]
+	at com.liferay.portal.file.install.internal.DirectoryWatcher.run(DirectoryWatcher.java:298) [bundleFile:?]
+2025-06-17 21:38:25.298 INFO  [fileinstall-directory-watcher][BundleStartStopLogger:68] STARTED bms.com.liferay.saml.impl_5.0.48 [1471]
+2025-06-17 21:38:25.684 INFO  [fileinstall-directory-watcher][BundleStartStopLogger:68] STARTED bms.com.liferay.saml.opensaml.integration_6.2.15 [1473]
+2025-06-17 21:38:25.697 ERROR [fileinstall-directory-watcher][PortletTracker:165] Portlet id com_liferay_saml_web_internal_portlet_SamlAdminPortlet is already in use
+2025-06-17 21:38:25.705 ERROR [fileinstall-directory-watcher][ROOT:47] bundle bms.com.liferay.saml.web:5.0.68 (1475)[com.liferay.saml.web.internal.struts.AssertionConsumerServiceAction(12288)] : Field _portal cannot be found in component class com.liferay.saml.web.internal.struts.AssertionConsumerServiceAction. The field will be ignored.
+java.lang.NoClassDefFoundError: com/liferay/saml/helper/RelayStateHelper
+	at java.lang.Class.getDeclaredFields0(Native Method) ~[?:?]
+	at java.lang.Class.privateGetDeclaredFields(Class.java:3473) ~[?:?]
+	at java.lang.Class.getDeclaredField(Class.java:2780) ~[?:?]
+	at org.apache.felix.scr.impl.inject.field.FieldUtils.getField(FieldUtils.java:154) ~[bundleFile:?]
+	at org.apache.felix.scr.impl.inject.field.FieldUtils.searchField(FieldUtils.java:87) [bundleFile:?]
+	at org.apache.felix.scr.impl.inject.field.FieldHandler$NotResolved.resolve(FieldHandler.java:360) [bundleFile:?]
+	at org.apache.felix.scr.impl.inject.field.FieldHandler$NotResolved.fieldExists(FieldHandler.java:378) [bundleFile:?]
+	at org.apache.felix.scr.impl.inject.field.FieldHandler.fieldExists(FieldHandler.java:434) [bundleFile:?]
+	at org.apache.felix.scr.impl.inject.field.FieldHandler$ReferenceMethodImpl.getServiceObject(FieldHandler.java:515) [bundleFile:?]
+	at org.apache.felix.scr.impl.manager.DependencyManager.getServiceObject(DependencyManager.java:2308) [bundleFile:?]
+	at org.apache.felix.scr.impl.manager.DependencyManager$SingleStaticCustomizer.prebind(DependencyManager.java:1162) [bundleFile:?]
+	at org.apache.felix.scr.impl.manager.DependencyManager.prebind(DependencyManager.java:1576) [bundleFile:?]
+	at org.apache.felix.scr.impl.manager.AbstractComponentManager.collectDependencies(AbstractComponentManager.java:1037) [bundleFile:?]
+	at org.apache.felix.scr.impl.manager.SingleComponentManager.getServiceInternal(SingleComponentManager.java:936) [bundleFile:?]
+	at org.apache.felix.scr.impl.manager.SingleComponentManager.getService(SingleComponentManager.java:901) [bundleFile:?]
+	at org.eclipse.osgi.internal.serviceregistry.ServiceFactoryUse.factoryGetService(ServiceFactoryUse.java:210) [org.eclipse.osgi.jar:?]
+	at org.eclipse.osgi.internal.serviceregistry.ServiceFactoryUse.getService(ServiceFactoryUse.java:111) [org.eclipse.osgi.jar:?]
+	at org.eclipse.osgi.internal.serviceregistry.ServiceConsumer$2.getService(ServiceConsumer.java:45) [org.eclipse.osgi.jar:?]
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistrationImpl.getService(ServiceRegistrationImpl.java:520) [org.eclipse.osgi.jar:?]
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistry.getService(ServiceRegistry.java:463) [org.eclipse.osgi.jar:?]
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.getService(BundleContextImpl.java:616) [org.eclipse.osgi.jar:?]
+	at com.liferay.portal.struts.model.ModuleConfig$1.addingService(ModuleConfig.java:79) [portal-impl.jar:?]
+	at com.liferay.portal.struts.model.ModuleConfig$1.addingService(ModuleConfig.java:72) [portal-impl.jar:?]
+	at com.liferay.osgi.service.tracker.collections.internal.map.ServiceTrackerMapImpl$DefaultEmitter.emit(ServiceTrackerMapImpl.java:200) [com.liferay.osgi.service.tracker.collections.jar:?]
+	at com.liferay.osgi.service.tracker.collections.map.PropertyServiceReferenceMapper.map(PropertyServiceReferenceMapper.java:41) [com.liferay.osgi.service.tracker.collections.jar:?]
+	at com.liferay.osgi.service.tracker.collections.internal.map.ServiceTrackerMapImpl$ServiceReferenceServiceTrackerCustomizer.addingService(ServiceTrackerMapImpl.java:256) [com.liferay.osgi.service.tracker.collections.jar:?]
+	at com.liferay.osgi.service.tracker.collections.internal.map.ServiceTrackerMapImpl$ServiceReferenceServiceTrackerCustomizer.addingService(ServiceTrackerMapImpl.java:244) [com.liferay.osgi.service.tracker.collections.jar:?]
+	at org.osgi.util.tracker.ServiceTracker$Tracked.customizerAdding(ServiceTracker.java:943) [org.eclipse.osgi.jar:?]
+	at org.osgi.util.tracker.ServiceTracker$Tracked.customizerAdding(ServiceTracker.java:1) [org.eclipse.osgi.jar:?]
+	at org.osgi.util.tracker.AbstractTracked.trackAdding(AbstractTracked.java:256) [org.eclipse.osgi.jar:?]
+	at org.osgi.util.tracker.AbstractTracked.track(AbstractTracked.java:229) [org.eclipse.osgi.jar:?]
+	at org.osgi.util.tracker.ServiceTracker$Tracked.serviceChanged(ServiceTracker.java:903) [org.eclipse.osgi.jar:?]
+	at org.eclipse.osgi.internal.serviceregistry.FilteredServiceListener.doServiceChanged(FilteredServiceListener.java:114) [org.eclipse.osgi.jar:?]
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistry._serviceChanged(ServiceRegistry.java:987) [org.eclipse.osgi.jar:?]
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistry.publishServiceEventPrivileged(ServiceRegistry.java:969) [org.eclipse.osgi.jar:?]
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistry.publishServiceEvent(ServiceRegistry.java:853) [org.eclipse.osgi.jar:?]
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistrationImpl.register(ServiceRegistrationImpl.java:126) [org.eclipse.osgi.jar:?]
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistry.registerService(ServiceRegistry.java:227) [org.eclipse.osgi.jar:?]
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.registerService(BundleContextImpl.java:461) [org.eclipse.osgi.jar:?]
+	at org.apache.felix.scr.impl.manager.AbstractComponentManager$3.register(AbstractComponentManager.java:906) [bundleFile:?]
+	at org.apache.felix.scr.impl.manager.AbstractComponentManager$3.register(AbstractComponentManager.java:892) [bundleFile:?]
+	at org.apache.felix.scr.impl.manager.RegistrationManager.changeRegistration(RegistrationManager.java:128) [bundleFile:?]
+	at org.apache.felix.scr.impl.manager.AbstractComponentManager.registerService(AbstractComponentManager.java:962) [bundleFile:?]
+	at org.apache.felix.scr.impl.manager.AbstractComponentManager.activateInternal(AbstractComponentManager.java:732) [bundleFile:?]
+	at org.apache.felix.scr.impl.manager.AbstractComponentManager.enableInternal(AbstractComponentManager.java:666) [bundleFile:?]
+	at org.apache.felix.scr.impl.manager.AbstractComponentManager.enable(AbstractComponentManager.java:432) [bundleFile:?]
+	at org.apache.felix.scr.impl.manager.ConfigurableComponentHolder.enableComponents(ConfigurableComponentHolder.java:665) [bundleFile:?]
+	at org.apache.felix.scr.impl.BundleComponentActivator.initialEnable(BundleComponentActivator.java:336) [bundleFile:?]
+	at org.apache.felix.scr.impl.Activator.loadComponents(Activator.java:469) [bundleFile:?]
+	at org.apache.felix.scr.impl.Activator.access$400(Activator.java:55) [bundleFile:?]
+	at org.apache.felix.scr.impl.Activator$ScrExtension.start(Activator.java:351) [bundleFile:?]
+	at org.apache.felix.scr.impl.AbstractExtender.createExtension(AbstractExtender.java:196) [bundleFile:?]
+	at org.apache.felix.scr.impl.AbstractExtender.modifiedBundle(AbstractExtender.java:169) [bundleFile:?]
+	at org.apache.felix.scr.impl.AbstractExtender.modifiedBundle(AbstractExtender.java:49) [bundleFile:?]
+	at org.osgi.util.tracker.BundleTracker$Tracked.customizerModified(BundleTracker.java:488) [org.eclipse.osgi.jar:?]
+	at org.osgi.util.tracker.BundleTracker$Tracked.customizerModified(BundleTracker.java:1) [org.eclipse.osgi.jar:?]
+	at org.osgi.util.tracker.AbstractTracked.track(AbstractTracked.java:232) [org.eclipse.osgi.jar:?]
+	at org.osgi.util.tracker.BundleTracker$Tracked.bundleChanged(BundleTracker.java:450) [org.eclipse.osgi.jar:?]
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.dispatchEvent(BundleContextImpl.java:890) [org.eclipse.osgi.jar:?]
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230) [org.eclipse.osgi.jar:?]
+	at org.eclipse.osgi.framework.eventmgr.ListenerQueue.dispatchEventSynchronous(ListenerQueue.java:148) [org.eclipse.osgi.jar:?]
+	at org.eclipse.osgi.internal.framework.EquinoxEventPublisher.publishBundleEventPrivileged(EquinoxEventPublisher.java:230) [org.eclipse.osgi.jar:?]
+	at org.eclipse.osgi.internal.framework.EquinoxEventPublisher.publishBundleEvent(EquinoxEventPublisher.java:137) [org.eclipse.osgi.jar:?]
+	at org.eclipse.osgi.internal.framework.EquinoxEventPublisher.publishBundleEvent(EquinoxEventPublisher.java:129) [org.eclipse.osgi.jar:?]
+	at org.eclipse.osgi.internal.framework.EquinoxContainerAdaptor.publishModuleEvent(EquinoxContainerAdaptor.java:191) [org.eclipse.osgi.jar:?]
+	at org.eclipse.osgi.container.Module.publishEvent(Module.java:476) [org.eclipse.osgi.jar:?]
+	at org.eclipse.osgi.container.Module.start(Module.java:467) [org.eclipse.osgi.jar:?]
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.start(EquinoxBundle.java:426) [org.eclipse.osgi.jar:?]
+	at com.liferay.portal.file.install.internal.DirectoryWatcher._startBundle(DirectoryWatcher.java:971) [bundleFile:?]
+	at com.liferay.portal.file.install.internal.DirectoryWatcher._startBundles(DirectoryWatcher.java:1004) [bundleFile:?]
+	at com.liferay.portal.file.install.internal.DirectoryWatcher._process(DirectoryWatcher.java:843) [bundleFile:?]
+	at com.liferay.portal.file.install.internal.DirectoryWatcher.run(DirectoryWatcher.java:298) [bundleFile:?]
+Caused by: java.lang.ClassNotFoundException: com.liferay.saml.helper.RelayStateHelper cannot be found by bms.com.liferay.saml.web_5.0.68
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClassInternal(BundleLoader.java:450) ~[org.eclipse.osgi.jar:?]
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:412) ~[org.eclipse.osgi.jar:?]
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:404) ~[org.eclipse.osgi.jar:?]
+	at org.eclipse.osgi.internal.loader.ModuleClassLoader.loadClass(ModuleClassLoader.java:151) ~[org.eclipse.osgi.jar:?]
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:526) ~[?:?]
+	... 72 more
+2025-06-17 21:38:25.711 ERROR [fileinstall-directory-watcher][ROOT:47] bundle bms.com.liferay.saml.web:5.0.68 (1475)[com.liferay.saml.web.internal.struts.AssertionConsumerServiceAction(12288)] : Field [_portal] not found; Component will fail
+2025-06-17 21:38:25.714 ERROR [fileinstall-directory-watcher][ROOT:47] bundle bms.com.liferay.saml.web:5.0.68 (1475)[com.liferay.saml.web.internal.struts.AssertionConsumerServiceAction(12288)] : Field _relayStateHelper cannot be found in component class com.liferay.saml.web.internal.struts.AssertionConsumerServiceAction. The field will be ignored.
+java.lang.NoClassDefFoundError: com/liferay/saml/helper/RelayStateHelper
+	at java.lang.Class.getDeclaredFields0(Native Method) ~[?:?]
+	at java.lang.Class.privateGetDeclaredFields(Class.java:3473) ~[?:?]
+	at java.lang.Class.getDeclaredField(Class.java:2780) ~[?:?]
+	at org.apache.felix.scr.impl.inject.field.FieldUtils.getField(FieldUtils.java:154) ~[bundleFile:?]
+	at org.apache.felix.scr.impl.inject.field.FieldUtils.searchField(FieldUtils.java:87) [bundleFile:?]
+	at org.apache.felix.scr.impl.inject.field.FieldHandler$NotResolved.resolve(FieldHandler.java:360) [bundleFile:?]
+	at org.apache.felix.scr.impl.inject.field.FieldHandler$NotResolved.fieldExists(FieldHandler.java:378) [bundleFile:?]
+	at org.apache.felix.scr.impl.inject.field.FieldHandler.fieldExists(FieldHandler.java:434) [bundleFile:?]
+	at org.apache.felix.scr.impl.inject.field.FieldHandler$ReferenceMethodImpl.getServiceObject(FieldHandler.java:515) [bundleFile:?]
+	at org.apache.felix.scr.impl.manager.DependencyManager.getServiceObject(DependencyManager.java:2308) [bundleFile:?]
+	at org.apache.felix.scr.impl.manager.DependencyManager$SingleStaticCustomizer.prebind(DependencyManager.java:1162) [bundleFile:?]
+	at org.apache.felix.scr.impl.manager.DependencyManager.prebind(DependencyManager.java:1576) [bundleFile:?]
+	at org.apache.felix.scr.impl.manager.AbstractComponentManager.collectDependencies(AbstractComponentManager.java:1037) [bundleFile:?]
+	at org.apache.felix.scr.impl.manager.SingleComponentManager.getServiceInternal(SingleComponentManager.java:936) [bundleFile:?]
+	at org.apache.felix.scr.impl.manager.SingleComponentManager.getService(SingleComponentManager.java:901) [bundleFile:?]
+	at org.eclipse.osgi.internal.serviceregistry.ServiceFactoryUse.factoryGetService(ServiceFactoryUse.java:210) [org.eclipse.osgi.jar:?]
+	at org.eclipse.osgi.internal.serviceregistry.ServiceFactoryUse.getService(ServiceFactoryUse.java:111) [org.eclipse.osgi.jar:?]
+	at org.eclipse.osgi.internal.serviceregistry.ServiceConsumer$2.getService(ServiceConsumer.java:45) [org.eclipse.osgi.jar:?]
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistrationImpl.getService(ServiceRegistrationImpl.java:520) [org.eclipse.osgi.jar:?]
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistry.getService(ServiceRegistry.java:463) [org.eclipse.osgi.jar:?]
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.getService(BundleContextImpl.java:616) [org.eclipse.osgi.jar:?]
+	at com.liferay.portal.struts.model.ModuleConfig$1.addingService(ModuleConfig.java:79) [portal-impl.jar:?]
+	at com.liferay.portal.struts.model.ModuleConfig$1.addingService(ModuleConfig.java:72) [portal-impl.jar:?]
+	at com.liferay.osgi.service.tracker.collections.internal.map.ServiceTrackerMapImpl$DefaultEmitter.emit(ServiceTrackerMapImpl.java:200) [com.liferay.osgi.service.tracker.collections.jar:?]
+	at com.liferay.osgi.service.tracker.collections.map.PropertyServiceReferenceMapper.map(PropertyServiceReferenceMapper.java:41) [com.liferay.osgi.service.tracker.collections.jar:?]
+	at com.liferay.osgi.service.tracker.collections.internal.map.ServiceTrackerMapImpl$ServiceReferenceServiceTrackerCustomizer.addingService(ServiceTrackerMapImpl.java:256) [com.liferay.osgi.service.tracker.collections.jar:?]
+	at com.liferay.osgi.service.tracker.collections.internal.map.ServiceTrackerMapImpl$ServiceReferenceServiceTrackerCustomizer.addingService(ServiceTrackerMapImpl.java:244) [com.liferay.osgi.service.tracker.collections.jar:?]
+	at org.osgi.util.tracker.ServiceTracker$Tracked.customizerAdding(ServiceTracker.java:943) [org.eclipse.osgi.jar:?]
+	at org.osgi.util.tracker.ServiceTracker$Tracked.customizerAdding(ServiceTracker.java:1) [org.eclipse.osgi.jar:?]
+	at org.osgi.util.tracker.AbstractTracked.trackAdding(AbstractTracked.java:256) [org.eclipse.osgi.jar:?]
+	at org.osgi.util.tracker.AbstractTracked.track(AbstractTracked.java:229) [org.eclipse.osgi.jar:?]
+	at org.osgi.util.tracker.ServiceTracker$Tracked.serviceChanged(ServiceTracker.java:903) [org.eclipse.osgi.jar:?]
+	at org.eclipse.osgi.internal.serviceregistry.FilteredServiceListener.doServiceChanged(FilteredServiceListener.java:114) [org.eclipse.osgi.jar:?]
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistry._serviceChanged(ServiceRegistry.java:987) [org.eclipse.osgi.jar:?]
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistry.publishServiceEventPrivileged(ServiceRegistry.java:969) [org.eclipse.osgi.jar:?]
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistry.publishServiceEvent(ServiceRegistry.java:853) [org.eclipse.osgi.jar:?]
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistrationImpl.register(ServiceRegistrationImpl.java:126) [org.eclipse.osgi.jar:?]
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistry.registerService(ServiceRegistry.java:227) [org.eclipse.osgi.jar:?]
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.registerService(BundleContextImpl.java:461) [org.eclipse.osgi.jar:?]
+	at org.apache.felix.scr.impl.manager.AbstractComponentManager$3.register(AbstractComponentManager.java:906) [bundleFile:?]
+	at org.apache.felix.scr.impl.manager.AbstractComponentManager$3.register(AbstractComponentManager.java:892) [bundleFile:?]
+	at org.apache.felix.scr.impl.manager.RegistrationManager.changeRegistration(RegistrationManager.java:128) [bundleFile:?]
+	at org.apache.felix.scr.impl.manager.AbstractComponentManager.registerService(AbstractComponentManager.java:962) [bundleFile:?]
+	at org.apache.felix.scr.impl.manager.AbstractComponentManager.activateInternal(AbstractComponentManager.java:732) [bundleFile:?]
+	at org.apache.felix.scr.impl.manager.AbstractComponentManager.enableInternal(AbstractComponentManager.java:666) [bundleFile:?]
+	at org.apache.felix.scr.impl.manager.AbstractComponentManager.enable(AbstractComponentManager.java:432) [bundleFile:?]
+	at org.apache.felix.scr.impl.manager.ConfigurableComponentHolder.enableComponents(ConfigurableComponentHolder.java:665) [bundleFile:?]
+	at org.apache.felix.scr.impl.BundleComponentActivator.initialEnable(BundleComponentActivator.java:336) [bundleFile:?]
+	at org.apache.felix.scr.impl.Activator.loadComponents(Activator.java:469) [bundleFile:?]
+	at org.apache.felix.scr.impl.Activator.access$400(Activator.java:55) [bundleFile:?]
+	at org.apache.felix.scr.impl.Activator$ScrExtension.start(Activator.java:351) [bundleFile:?]
+	at org.apache.felix.scr.impl.AbstractExtender.createExtension(AbstractExtender.java:196) [bundleFile:?]
+	at org.apache.felix.scr.impl.AbstractExtender.modifiedBundle(AbstractExtender.java:169) [bundleFile:?]
+	at org.apache.felix.scr.impl.AbstractExtender.modifiedBundle(AbstractExtender.java:49) [bundleFile:?]
+	at org.osgi.util.tracker.BundleTracker$Tracked.customizerModified(BundleTracker.java:488) [org.eclipse.osgi.jar:?]
+	at org.osgi.util.tracker.BundleTracker$Tracked.customizerModified(BundleTracker.java:1) [org.eclipse.osgi.jar:?]
+	at org.osgi.util.tracker.AbstractTracked.track(AbstractTracked.java:232) [org.eclipse.osgi.jar:?]
+	at org.osgi.util.tracker.BundleTracker$Tracked.bundleChanged(BundleTracker.java:450) [org.eclipse.osgi.jar:?]
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.dispatchEvent(BundleContextImpl.java:890) [org.eclipse.osgi.jar:?]
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230) [org.eclipse.osgi.jar:?]
+	at org.eclipse.osgi.framework.eventmgr.ListenerQueue.dispatchEventSynchronous(ListenerQueue.java:148) [org.eclipse.osgi.jar:?]
+	at org.eclipse.osgi.internal.framework.EquinoxEventPublisher.publishBundleEventPrivileged(EquinoxEventPublisher.java:230) [org.eclipse.osgi.jar:?]
+	at org.eclipse.osgi.internal.framework.EquinoxEventPublisher.publishBundleEvent(EquinoxEventPublisher.java:137) [org.eclipse.osgi.jar:?]
+	at org.eclipse.osgi.internal.framework.EquinoxEventPublisher.publishBundleEvent(EquinoxEventPublisher.java:129) [org.eclipse.osgi.jar:?]
+	at org.eclipse.osgi.internal.framework.EquinoxContainerAdaptor.publishModuleEvent(EquinoxContainerAdaptor.java:191) [org.eclipse.osgi.jar:?]
+	at org.eclipse.osgi.container.Module.publishEvent(Module.java:476) [org.eclipse.osgi.jar:?]
+	at org.eclipse.osgi.container.Module.start(Module.java:467) [org.eclipse.osgi.jar:?]
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.start(EquinoxBundle.java:426) [org.eclipse.osgi.jar:?]
+	at com.liferay.portal.file.install.internal.DirectoryWatcher._startBundle(DirectoryWatcher.java:971) [bundleFile:?]
+	at com.liferay.portal.file.install.internal.DirectoryWatcher._startBundles(DirectoryWatcher.java:1004) [bundleFile:?]
+	at com.liferay.portal.file.install.internal.DirectoryWatcher._process(DirectoryWatcher.java:843) [bundleFile:?]
+	at com.liferay.portal.file.install.internal.DirectoryWatcher.run(DirectoryWatcher.java:298) [bundleFile:?]
+Caused by: java.lang.ClassNotFoundException: com.liferay.saml.helper.RelayStateHelper cannot be found by bms.com.liferay.saml.web_5.0.68
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClassInternal(BundleLoader.java:450) ~[org.eclipse.osgi.jar:?]
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:412) ~[org.eclipse.osgi.jar:?]
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:404) ~[org.eclipse.osgi.jar:?]
+	at org.eclipse.osgi.internal.loader.ModuleClassLoader.loadClass(ModuleClassLoader.java:151) ~[org.eclipse.osgi.jar:?]
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:526) ~[?:?]
+	... 72 more
+2025-06-17 21:38:25.717 ERROR [fileinstall-directory-watcher][ROOT:47] bundle bms.com.liferay.saml.web:5.0.68 (1475)[com.liferay.saml.web.internal.struts.AssertionConsumerServiceAction(12288)] : Field [_relayStateHelper] not found; Component will fail
+2025-06-17 21:38:25.719 ERROR [fileinstall-directory-watcher][ROOT:47] bundle bms.com.liferay.saml.web:5.0.68 (1475)[com.liferay.saml.web.internal.struts.AssertionConsumerServiceAction(12288)] : Field _samlProviderConfigurationHelper cannot be found in component class com.liferay.saml.web.internal.struts.AssertionConsumerServiceAction. The field will be ignored.
+java.lang.NoClassDefFoundError: com/liferay/saml/helper/RelayStateHelper
+	at java.lang.Class.getDeclaredFields0(Native Method) ~[?:?]
+	at java.lang.Class.privateGetDeclaredFields(Class.java:3473) ~[?:?]
+	at java.lang.Class.getDeclaredField(Class.java:2780) ~[?:?]
+	at org.apache.felix.scr.impl.inject.field.FieldUtils.getField(FieldUtils.java:154) ~[bundleFile:?]
+	at org.apache.felix.scr.impl.inject.field.FieldUtils.searchField(FieldUtils.java:87) [bundleFile:?]
+	at org.apache.felix.scr.impl.inject.field.FieldHandler$NotResolved.resolve(FieldHandler.java:360) [bundleFile:?]
+	at org.apache.felix.scr.impl.inject.field.FieldHandler$NotResolved.fieldExists(FieldHandler.java:378) [bundleFile:?]
+	at org.apache.felix.scr.impl.inject.field.FieldHandler.fieldExists(FieldHandler.java:434) [bundleFile:?]
+	at org.apache.felix.scr.impl.inject.field.FieldHandler$ReferenceMethodImpl.getServiceObject(FieldHandler.java:515) [bundleFile:?]
+	at org.apache.felix.scr.impl.manager.DependencyManager.getServiceObject(DependencyManager.java:2308) [bundleFile:?]
+	at org.apache.felix.scr.impl.manager.DependencyManager$SingleStaticCustomizer.prebind(DependencyManager.java:1162) [bundleFile:?]
+	at org.apache.felix.scr.impl.manager.DependencyManager.prebind(DependencyManager.java:1576) [bundleFile:?]
+	at org.apache.felix.scr.impl.manager.AbstractComponentManager.collectDependencies(AbstractComponentManager.java:1037) [bundleFile:?]
+	at org.apache.felix.scr.impl.manager.SingleComponentManager.getServiceInternal(SingleComponentManager.java:936) [bundleFile:?]
+	at org.apache.felix.scr.impl.manager.SingleComponentManager.getService(SingleComponentManager.java:901) [bundleFile:?]
+	at org.eclipse.osgi.internal.serviceregistry.ServiceFactoryUse.factoryGetService(ServiceFactoryUse.java:210) [org.eclipse.osgi.jar:?]
+	at org.eclipse.osgi.internal.serviceregistry.ServiceFactoryUse.getService(ServiceFactoryUse.java:111) [org.eclipse.osgi.jar:?]
+	at org.eclipse.osgi.internal.serviceregistry.ServiceConsumer$2.getService(ServiceConsumer.java:45) [org.eclipse.osgi.jar:?]
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistrationImpl.getService(ServiceRegistrationImpl.java:520) [org.eclipse.osgi.jar:?]
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistry.getService(ServiceRegistry.java:463) [org.eclipse.osgi.jar:?]
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.getService(BundleContextImpl.java:616) [org.eclipse.osgi.jar:?]
+	at com.liferay.portal.struts.model.ModuleConfig$1.addingService(ModuleConfig.java:79) [portal-impl.jar:?]
+	at com.liferay.portal.struts.model.ModuleConfig$1.addingService(ModuleConfig.java:72) [portal-impl.jar:?]
+	at com.liferay.osgi.service.tracker.collections.internal.map.ServiceTrackerMapImpl$DefaultEmitter.emit(ServiceTrackerMapImpl.java:200) [com.liferay.osgi.service.tracker.collections.jar:?]
+	at com.liferay.osgi.service.tracker.collections.map.PropertyServiceReferenceMapper.map(PropertyServiceReferenceMapper.java:41) [com.liferay.osgi.service.tracker.collections.jar:?]
+	at com.liferay.osgi.service.tracker.collections.internal.map.ServiceTrackerMapImpl$ServiceReferenceServiceTrackerCustomizer.addingService(ServiceTrackerMapImpl.java:256) [com.liferay.osgi.service.tracker.collections.jar:?]
+	at com.liferay.osgi.service.tracker.collections.internal.map.ServiceTrackerMapImpl$ServiceReferenceServiceTrackerCustomizer.addingService(ServiceTrackerMapImpl.java:244) [com.liferay.osgi.service.tracker.collections.jar:?]
+	at org.osgi.util.tracker.ServiceTracker$Tracked.customizerAdding(ServiceTracker.java:943) [org.eclipse.osgi.jar:?]
+	at org.osgi.util.tracker.ServiceTracker$Tracked.customizerAdding(ServiceTracker.java:1) [org.eclipse.osgi.jar:?]
+	at org.osgi.util.tracker.AbstractTracked.trackAdding(AbstractTracked.java:256) [org.eclipse.osgi.jar:?]
+	at org.osgi.util.tracker.AbstractTracked.track(AbstractTracked.java:229) [org.eclipse.osgi.jar:?]
+	at org.osgi.util.tracker.ServiceTracker$Tracked.serviceChanged(ServiceTracker.java:903) [org.eclipse.osgi.jar:?]
+	at org.eclipse.osgi.internal.serviceregistry.FilteredServiceListener.doServiceChanged(FilteredServiceListener.java:114) [org.eclipse.osgi.jar:?]
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistry._serviceChanged(ServiceRegistry.java:987) [org.eclipse.osgi.jar:?]
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistry.publishServiceEventPrivileged(ServiceRegistry.java:969) [org.eclipse.osgi.jar:?]
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistry.publishServiceEvent(ServiceRegistry.java:853) [org.eclipse.osgi.jar:?]
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistrationImpl.register(ServiceRegistrationImpl.java:126) [org.eclipse.osgi.jar:?]
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistry.registerService(ServiceRegistry.java:227) [org.eclipse.osgi.jar:?]
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.registerService(BundleContextImpl.java:461) [org.eclipse.osgi.jar:?]
+	at org.apache.felix.scr.impl.manager.AbstractComponentManager$3.register(AbstractComponentManager.java:906) [bundleFile:?]
+	at org.apache.felix.scr.impl.manager.AbstractComponentManager$3.register(AbstractComponentManager.java:892) [bundleFile:?]
+	at org.apache.felix.scr.impl.manager.RegistrationManager.changeRegistration(RegistrationManager.java:128) [bundleFile:?]
+	at org.apache.felix.scr.impl.manager.AbstractComponentManager.registerService(AbstractComponentManager.java:962) [bundleFile:?]
+	at org.apache.felix.scr.impl.manager.AbstractComponentManager.activateInternal(AbstractComponentManager.java:732) [bundleFile:?]
+	at org.apache.felix.scr.impl.manager.AbstractComponentManager.enableInternal(AbstractComponentManager.java:666) [bundleFile:?]
+	at org.apache.felix.scr.impl.manager.AbstractComponentManager.enable(AbstractComponentManager.java:432) [bundleFile:?]
+	at org.apache.felix.scr.impl.manager.ConfigurableComponentHolder.enableComponents(ConfigurableComponentHolder.java:665) [bundleFile:?]
+	at org.apache.felix.scr.impl.BundleComponentActivator.initialEnable(BundleComponentActivator.java:336) [bundleFile:?]
+	at org.apache.felix.scr.impl.Activator.loadComponents(Activator.java:469) [bundleFile:?]
+	at org.apache.felix.scr.impl.Activator.access$400(Activator.java:55) [bundleFile:?]
+	at org.apache.felix.scr.impl.Activator$ScrExtension.start(Activator.java:351) [bundleFile:?]
+	at org.apache.felix.scr.impl.AbstractExtender.createExtension(AbstractExtender.java:196) [bundleFile:?]
+	at org.apache.felix.scr.impl.AbstractExtender.modifiedBundle(AbstractExtender.java:169) [bundleFile:?]
+	at org.apache.felix.scr.impl.AbstractExtender.modifiedBundle(AbstractExtender.java:49) [bundleFile:?]
+	at org.osgi.util.tracker.BundleTracker$Tracked.customizerModified(BundleTracker.java:488) [org.eclipse.osgi.jar:?]
+	at org.osgi.util.tracker.BundleTracker$Tracked.customizerModified(BundleTracker.java:1) [org.eclipse.osgi.jar:?]
+	at org.osgi.util.tracker.AbstractTracked.track(AbstractTracked.java:232) [org.eclipse.osgi.jar:?]
+	at org.osgi.util.tracker.BundleTracker$Tracked.bundleChanged(BundleTracker.java:450) [org.eclipse.osgi.jar:?]
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.dispatchEvent(BundleContextImpl.java:890) [org.eclipse.osgi.jar:?]
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230) [org.eclipse.osgi.jar:?]
+	at org.eclipse.osgi.framework.eventmgr.ListenerQueue.dispatchEventSynchronous(ListenerQueue.java:148) [org.eclipse.osgi.jar:?]
+	at org.eclipse.osgi.internal.framework.EquinoxEventPublisher.publishBundleEventPrivileged(EquinoxEventPublisher.java:230) [org.eclipse.osgi.jar:?]
+	at org.eclipse.osgi.internal.framework.EquinoxEventPublisher.publishBundleEvent(EquinoxEventPublisher.java:137) [org.eclipse.osgi.jar:?]
+	at org.eclipse.osgi.internal.framework.EquinoxEventPublisher.publishBundleEvent(EquinoxEventPublisher.java:129) [org.eclipse.osgi.jar:?]
+	at org.eclipse.osgi.internal.framework.EquinoxContainerAdaptor.publishModuleEvent(EquinoxContainerAdaptor.java:191) [org.eclipse.osgi.jar:?]
+	at org.eclipse.osgi.container.Module.publishEvent(Module.java:476) [org.eclipse.osgi.jar:?]
+	at org.eclipse.osgi.container.Module.start(Module.java:467) [org.eclipse.osgi.jar:?]
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.start(EquinoxBundle.java:426) [org.eclipse.osgi.jar:?]
+	at com.liferay.portal.file.install.internal.DirectoryWatcher._startBundle(DirectoryWatcher.java:971) [bundleFile:?]
+	at com.liferay.portal.file.install.internal.DirectoryWatcher._startBundles(DirectoryWatcher.java:1004) [bundleFile:?]
+	at com.liferay.portal.file.install.internal.DirectoryWatcher._process(DirectoryWatcher.java:843) [bundleFile:?]
+	at com.liferay.portal.file.install.internal.DirectoryWatcher.run(DirectoryWatcher.java:298) [bundleFile:?]
+Caused by: java.lang.ClassNotFoundException: com.liferay.saml.helper.RelayStateHelper cannot be found by bms.com.liferay.saml.web_5.0.68
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClassInternal(BundleLoader.java:450) ~[org.eclipse.osgi.jar:?]
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:412) ~[org.eclipse.osgi.jar:?]
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:404) ~[org.eclipse.osgi.jar:?]
+	at org.eclipse.osgi.internal.loader.ModuleClassLoader.loadClass(ModuleClassLoader.java:151) ~[org.eclipse.osgi.jar:?]
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:526) ~[?:?]
+	... 72 more
+2025-06-17 21:38:25.722 ERROR [fileinstall-directory-watcher][ROOT:47] bundle bms.com.liferay.saml.web:5.0.68 (1475)[com.liferay.saml.web.internal.struts.AssertionConsumerServiceAction(12288)] : Field [_samlProviderConfigurationHelper] not found; Component will fail
+2025-06-17 21:38:25.724 ERROR [fileinstall-directory-watcher][ROOT:47] bundle bms.com.liferay.saml.web:5.0.68 (1475)[com.liferay.saml.web.internal.struts.AssertionConsumerServiceAction(12288)] : Field _webSsoProfile cannot be found in component class com.liferay.saml.web.internal.struts.AssertionConsumerServiceAction. The field will be ignored.
+java.lang.NoClassDefFoundError: com/liferay/saml/helper/RelayStateHelper
+	at java.lang.Class.getDeclaredFields0(Native Method) ~[?:?]
+	at java.lang.Class.privateGetDeclaredFields(Class.java:3473) ~[?:?]
+	at java.lang.Class.getDeclaredField(Class.java:2780) ~[?:?]
+	at org.apache.felix.scr.impl.inject.field.FieldUtils.getField(FieldUtils.java:154) ~[bundleFile:?]
+	at org.apache.felix.scr.impl.inject.field.FieldUtils.searchField(FieldUtils.java:87) [bundleFile:?]
+	at org.apache.felix.scr.impl.inject.field.FieldHandler$NotResolved.resolve(FieldHandler.java:360) [bundleFile:?]
+	at org.apache.felix.scr.impl.inject.field.FieldHandler$NotResolved.fieldExists(FieldHandler.java:378) [bundleFile:?]
+	at org.apache.felix.scr.impl.inject.field.FieldHandler.fieldExists(FieldHandler.java:434) [bundleFile:?]
+	at org.apache.felix.scr.impl.inject.field.FieldHandler$ReferenceMethodImpl.getServiceObject(FieldHandler.java:515) [bundleFile:?]
+	at org.apache.felix.scr.impl.manager.DependencyManager.getServiceObject(DependencyManager.java:2308) [bundleFile:?]
+	at org.apache.felix.scr.impl.manager.DependencyManager$SingleStaticCustomizer.prebind(DependencyManager.java:1162) [bundleFile:?]
+	at org.apache.felix.scr.impl.manager.DependencyManager.prebind(DependencyManager.java:1576) [bundleFile:?]
+	at org.apache.felix.scr.impl.manager.AbstractComponentManager.collectDependencies(AbstractComponentManager.java:1037) [bundleFile:?]
+	at org.apache.felix.scr.impl.manager.SingleComponentManager.getServiceInternal(SingleComponentManager.java:936) [bundleFile:?]
+	at org.apache.felix.scr.impl.manager.SingleComponentManager.getService(SingleComponentManager.java:901) [bundleFile:?]
+	at org.eclipse.osgi.internal.serviceregistry.ServiceFactoryUse.factoryGetService(ServiceFactoryUse.java:210) [org.eclipse.osgi.jar:?]
+	at org.eclipse.osgi.internal.serviceregistry.ServiceFactoryUse.getService(ServiceFactoryUse.java:111) [org.eclipse.osgi.jar:?]
+	at org.eclipse.osgi.internal.serviceregistry.ServiceConsumer$2.getService(ServiceConsumer.java:45) [org.eclipse.osgi.jar:?]
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistrationImpl.getService(ServiceRegistrationImpl.java:520) [org.eclipse.osgi.jar:?]
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistry.getService(ServiceRegistry.java:463) [org.eclipse.osgi.jar:?]
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.getService(BundleContextImpl.java:616) [org.eclipse.osgi.jar:?]
+	at com.liferay.portal.struts.model.ModuleConfig$1.addingService(ModuleConfig.java:79) [portal-impl.jar:?]
+	at com.liferay.portal.struts.model.ModuleConfig$1.addingService(ModuleConfig.java:72) [portal-impl.jar:?]
+	at com.liferay.osgi.service.tracker.collections.internal.map.ServiceTrackerMapImpl$DefaultEmitter.emit(ServiceTrackerMapImpl.java:200) [com.liferay.osgi.service.tracker.collections.jar:?]
+	at com.liferay.osgi.service.tracker.collections.map.PropertyServiceReferenceMapper.map(PropertyServiceReferenceMapper.java:41) [com.liferay.osgi.service.tracker.collections.jar:?]
+	at com.liferay.osgi.service.tracker.collections.internal.map.ServiceTrackerMapImpl$ServiceReferenceServiceTrackerCustomizer.addingService(ServiceTrackerMapImpl.java:256) [com.liferay.osgi.service.tracker.collections.jar:?]
+	at com.liferay.osgi.service.tracker.collections.internal.map.ServiceTrackerMapImpl$ServiceReferenceServiceTrackerCustomizer.addingService(ServiceTrackerMapImpl.java:244) [com.liferay.osgi.service.tracker.collections.jar:?]
+	at org.osgi.util.tracker.ServiceTracker$Tracked.customizerAdding(ServiceTracker.java:943) [org.eclipse.osgi.jar:?]
+	at org.osgi.util.tracker.ServiceTracker$Tracked.customizerAdding(ServiceTracker.java:1) [org.eclipse.osgi.jar:?]
+	at org.osgi.util.tracker.AbstractTracked.trackAdding(AbstractTracked.java:256) [org.eclipse.osgi.jar:?]
+	at org.osgi.util.tracker.AbstractTracked.track(AbstractTracked.java:229) [org.eclipse.osgi.jar:?]
+	at org.osgi.util.tracker.ServiceTracker$Tracked.serviceChanged(ServiceTracker.java:903) [org.eclipse.osgi.jar:?]
+	at org.eclipse.osgi.internal.serviceregistry.FilteredServiceListener.doServiceChanged(FilteredServiceListener.java:114) [org.eclipse.osgi.jar:?]
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistry._serviceChanged(ServiceRegistry.java:987) [org.eclipse.osgi.jar:?]
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistry.publishServiceEventPrivileged(ServiceRegistry.java:969) [org.eclipse.osgi.jar:?]
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistry.publishServiceEvent(ServiceRegistry.java:853) [org.eclipse.osgi.jar:?]
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistrationImpl.register(ServiceRegistrationImpl.java:126) [org.eclipse.osgi.jar:?]
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistry.registerService(ServiceRegistry.java:227) [org.eclipse.osgi.jar:?]
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.registerService(BundleContextImpl.java:461) [org.eclipse.osgi.jar:?]
+	at org.apache.felix.scr.impl.manager.AbstractComponentManager$3.register(AbstractComponentManager.java:906) [bundleFile:?]
+	at org.apache.felix.scr.impl.manager.AbstractComponentManager$3.register(AbstractComponentManager.java:892) [bundleFile:?]
+	at org.apache.felix.scr.impl.manager.RegistrationManager.changeRegistration(RegistrationManager.java:128) [bundleFile:?]
+	at org.apache.felix.scr.impl.manager.AbstractComponentManager.registerService(AbstractComponentManager.java:962) [bundleFile:?]
+	at org.apache.felix.scr.impl.manager.AbstractComponentManager.activateInternal(AbstractComponentManager.java:732) [bundleFile:?]
+	at org.apache.felix.scr.impl.manager.AbstractComponentManager.enableInternal(AbstractComponentManager.java:666) [bundleFile:?]
+	at org.apache.felix.scr.impl.manager.AbstractComponentManager.enable(AbstractComponentManager.java:432) [bundleFile:?]
+	at org.apache.felix.scr.impl.manager.ConfigurableComponentHolder.enableComponents(ConfigurableComponentHolder.java:665) [bundleFile:?]
+	at org.apache.felix.scr.impl.BundleComponentActivator.initialEnable(BundleComponentActivator.java:336) [bundleFile:?]
+	at org.apache.felix.scr.impl.Activator.loadComponents(Activator.java:469) [bundleFile:?]
+	at org.apache.felix.scr.impl.Activator.access$400(Activator.java:55) [bundleFile:?]
+	at org.apache.felix.scr.impl.Activator$ScrExtension.start(Activator.java:351) [bundleFile:?]
+	at org.apache.felix.scr.impl.AbstractExtender.createExtension(AbstractExtender.java:196) [bundleFile:?]
+	at org.apache.felix.scr.impl.AbstractExtender.modifiedBundle(AbstractExtender.java:169) [bundleFile:?]
+	at org.apache.felix.scr.impl.AbstractExtender.modifiedBundle(AbstractExtender.java:49) [bundleFile:?]
+	at org.osgi.util.tracker.BundleTracker$Tracked.customizerModified(BundleTracker.java:488) [org.eclipse.osgi.jar:?]
+	at org.osgi.util.tracker.BundleTracker$Tracked.customizerModified(BundleTracker.java:1) [org.eclipse.osgi.jar:?]
+	at org.osgi.util.tracker.AbstractTracked.track(AbstractTracked.java:232) [org.eclipse.osgi.jar:?]
+	at org.osgi.util.tracker.BundleTracker$Tracked.bundleChanged(BundleTracker.java:450) [org.eclipse.osgi.jar:?]
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.dispatchEvent(BundleContextImpl.java:890) [org.eclipse.osgi.jar:?]
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230) [org.eclipse.osgi.jar:?]
+	at org.eclipse.osgi.framework.eventmgr.ListenerQueue.dispatchEventSynchronous(ListenerQueue.java:148) [org.eclipse.osgi.jar:?]
+	at org.eclipse.osgi.internal.framework.EquinoxEventPublisher.publishBundleEventPrivileged(EquinoxEventPublisher.java:230) [org.eclipse.osgi.jar:?]
+	at org.eclipse.osgi.internal.framework.EquinoxEventPublisher.publishBundleEvent(EquinoxEventPublisher.java:137) [org.eclipse.osgi.jar:?]
+	at org.eclipse.osgi.internal.framework.EquinoxEventPublisher.publishBundleEvent(EquinoxEventPublisher.java:129) [org.eclipse.osgi.jar:?]
+	at org.eclipse.osgi.internal.framework.EquinoxContainerAdaptor.publishModuleEvent(EquinoxContainerAdaptor.java:191) [org.eclipse.osgi.jar:?]
+	at org.eclipse.osgi.container.Module.publishEvent(Module.java:476) [org.eclipse.osgi.jar:?]
+	at org.eclipse.osgi.container.Module.start(Module.java:467) [org.eclipse.osgi.jar:?]
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.start(EquinoxBundle.java:426) [org.eclipse.osgi.jar:?]
+	at com.liferay.portal.file.install.internal.DirectoryWatcher._startBundle(DirectoryWatcher.java:971) [bundleFile:?]
+	at com.liferay.portal.file.install.internal.DirectoryWatcher._startBundles(DirectoryWatcher.java:1004) [bundleFile:?]
+	at com.liferay.portal.file.install.internal.DirectoryWatcher._process(DirectoryWatcher.java:843) [bundleFile:?]
+	at com.liferay.portal.file.install.internal.DirectoryWatcher.run(DirectoryWatcher.java:298) [bundleFile:?]
+Caused by: java.lang.ClassNotFoundException: com.liferay.saml.helper.RelayStateHelper cannot be found by bms.com.liferay.saml.web_5.0.68
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClassInternal(BundleLoader.java:450) ~[org.eclipse.osgi.jar:?]
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:412) ~[org.eclipse.osgi.jar:?]
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:404) ~[org.eclipse.osgi.jar:?]
+	at org.eclipse.osgi.internal.loader.ModuleClassLoader.loadClass(ModuleClassLoader.java:151) ~[org.eclipse.osgi.jar:?]
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:526) ~[?:?]
+	... 72 more
+2025-06-17 21:38:25.725 ERROR [fileinstall-directory-watcher][ROOT:47] bundle bms.com.liferay.saml.web:5.0.68 (1475)[com.liferay.saml.web.internal.struts.AssertionConsumerServiceAction(12288)] : Field [_webSsoProfile] not found; Component will fail
+2025-06-17 21:38:25.727 ERROR [fileinstall-directory-watcher][ROOT:47] bundle bms.com.liferay.saml.web:5.0.68 (1475)[com.liferay.saml.web.internal.struts.AssertionConsumerServiceAction(12288)] : Field [_webSsoProfile] not found
+2025-06-17 21:38:25.728 ERROR [fileinstall-directory-watcher][ROOT:47] bundle bms.com.liferay.saml.web:5.0.68 (1475)[com.liferay.saml.web.internal.struts.AssertionConsumerServiceAction(12288)] : Field [_samlProviderConfigurationHelper] not found
+2025-06-17 21:38:25.729 ERROR [fileinstall-directory-watcher][ROOT:47] bundle bms.com.liferay.saml.web:5.0.68 (1475)[com.liferay.saml.web.internal.struts.AssertionConsumerServiceAction(12288)] : Field [_relayStateHelper] not found
+2025-06-17 21:38:25.730 ERROR [fileinstall-directory-watcher][ROOT:47] bundle bms.com.liferay.saml.web:5.0.68 (1475)[com.liferay.saml.web.internal.struts.AssertionConsumerServiceAction(12288)] : Field [_portal] not found
+2025-06-17 21:38:25.739 INFO  [fileinstall-directory-watcher][BundleStartStopLogger:68] STARTED bms.com.liferay.saml.web_5.0.68 [1475]
+2025-06-17 21:38:25.731 WARN  [Framework Event Dispatcher: Equinox Container: aa23ebe4-2379-44c9-8adf-2849f7b40b6b][Framework:53] FrameworkEvent WARNING
+org.osgi.framework.ServiceException: org.apache.felix.scr.impl.manager.SingleComponentManager.getService() returned a null service object
+	at org.eclipse.osgi.internal.serviceregistry.ServiceFactoryUse.factoryGetService(ServiceFactoryUse.java:228) ~[org.eclipse.osgi.jar:?]
+	at org.eclipse.osgi.internal.serviceregistry.ServiceFactoryUse.getService(ServiceFactoryUse.java:111) ~[org.eclipse.osgi.jar:?]
+	at org.eclipse.osgi.internal.serviceregistry.ServiceConsumer$2.getService(ServiceConsumer.java:45) ~[org.eclipse.osgi.jar:?]
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistrationImpl.getService(ServiceRegistrationImpl.java:520) ~[org.eclipse.osgi.jar:?]
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistry.getService(ServiceRegistry.java:463) ~[org.eclipse.osgi.jar:?]
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.getService(BundleContextImpl.java:616) ~[org.eclipse.osgi.jar:?]
+	at com.liferay.portal.struts.model.ModuleConfig$1.addingService(ModuleConfig.java:79) ~[portal-impl.jar:?]
+	at com.liferay.portal.struts.model.ModuleConfig$1.addingService(ModuleConfig.java:72) ~[portal-impl.jar:?]
+	at com.liferay.osgi.service.tracker.collections.internal.map.ServiceTrackerMapImpl$DefaultEmitter.emit(ServiceTrackerMapImpl.java:200) ~[com.liferay.osgi.service.tracker.collections.jar:?]
+	at com.liferay.osgi.service.tracker.collections.map.PropertyServiceReferenceMapper.map(PropertyServiceReferenceMapper.java:41) ~[com.liferay.osgi.service.tracker.collections.jar:?]
+	at com.liferay.osgi.service.tracker.collections.internal.map.ServiceTrackerMapImpl$ServiceReferenceServiceTrackerCustomizer.addingService(ServiceTrackerMapImpl.java:256) ~[com.liferay.osgi.service.tracker.collections.jar:?]
+	at com.liferay.osgi.service.tracker.collections.internal.map.ServiceTrackerMapImpl$ServiceReferenceServiceTrackerCustomizer.addingService(ServiceTrackerMapImpl.java:244) ~[com.liferay.osgi.service.tracker.collections.jar:?]
+	at org.osgi.util.tracker.ServiceTracker$Tracked.customizerAdding(ServiceTracker.java:943) ~[org.eclipse.osgi.jar:?]
+	at org.osgi.util.tracker.ServiceTracker$Tracked.customizerAdding(ServiceTracker.java:1) ~[org.eclipse.osgi.jar:?]
+	at org.osgi.util.tracker.AbstractTracked.trackAdding(AbstractTracked.java:256) ~[org.eclipse.osgi.jar:?]
+	at org.osgi.util.tracker.AbstractTracked.track(AbstractTracked.java:229) ~[org.eclipse.osgi.jar:?]
+	at org.osgi.util.tracker.ServiceTracker$Tracked.serviceChanged(ServiceTracker.java:903) ~[org.eclipse.osgi.jar:?]
+	at org.eclipse.osgi.internal.serviceregistry.FilteredServiceListener.doServiceChanged(FilteredServiceListener.java:114) ~[org.eclipse.osgi.jar:?]
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistry._serviceChanged(ServiceRegistry.java:987) ~[org.eclipse.osgi.jar:?]
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistry.publishServiceEventPrivileged(ServiceRegistry.java:969) ~[org.eclipse.osgi.jar:?]
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistry.publishServiceEvent(ServiceRegistry.java:853) ~[org.eclipse.osgi.jar:?]
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistrationImpl.register(ServiceRegistrationImpl.java:126) ~[org.eclipse.osgi.jar:?]
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistry.registerService(ServiceRegistry.java:227) ~[org.eclipse.osgi.jar:?]
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.registerService(BundleContextImpl.java:461) ~[org.eclipse.osgi.jar:?]
+	at org.apache.felix.scr.impl.manager.AbstractComponentManager$3.register(AbstractComponentManager.java:906) ~[?:?]
+	at org.apache.felix.scr.impl.manager.AbstractComponentManager$3.register(AbstractComponentManager.java:892) ~[?:?]
+	at org.apache.felix.scr.impl.manager.RegistrationManager.changeRegistration(RegistrationManager.java:128) ~[?:?]
+	at org.apache.felix.scr.impl.manager.AbstractComponentManager.registerService(AbstractComponentManager.java:962) ~[?:?]
+	at org.apache.felix.scr.impl.manager.AbstractComponentManager.activateInternal(AbstractComponentManager.java:732) ~[?:?]
+	at org.apache.felix.scr.impl.manager.AbstractComponentManager.enableInternal(AbstractComponentManager.java:666) ~[?:?]
+	at org.apache.felix.scr.impl.manager.AbstractComponentManager.enable(AbstractComponentManager.java:432) ~[?:?]
+	at org.apache.felix.scr.impl.manager.ConfigurableComponentHolder.enableComponents(ConfigurableComponentHolder.java:665) ~[?:?]
+	at org.apache.felix.scr.impl.BundleComponentActivator.initialEnable(BundleComponentActivator.java:336) ~[?:?]
+	at org.apache.felix.scr.impl.Activator.loadComponents(Activator.java:469) ~[?:?]
+	at org.apache.felix.scr.impl.Activator.access$400(Activator.java:55) ~[?:?]
+	at org.apache.felix.scr.impl.Activator$ScrExtension.start(Activator.java:351) ~[?:?]
+	at org.apache.felix.scr.impl.AbstractExtender.createExtension(AbstractExtender.java:196) ~[?:?]
+	at org.apache.felix.scr.impl.AbstractExtender.modifiedBundle(AbstractExtender.java:169) ~[?:?]
+	at org.apache.felix.scr.impl.AbstractExtender.modifiedBundle(AbstractExtender.java:49) ~[?:?]
+	at org.osgi.util.tracker.BundleTracker$Tracked.customizerModified(BundleTracker.java:488) ~[org.eclipse.osgi.jar:?]
+	at org.osgi.util.tracker.BundleTracker$Tracked.customizerModified(BundleTracker.java:1) ~[org.eclipse.osgi.jar:?]
+	at org.osgi.util.tracker.AbstractTracked.track(AbstractTracked.java:232) ~[org.eclipse.osgi.jar:?]
+	at org.osgi.util.tracker.BundleTracker$Tracked.bundleChanged(BundleTracker.java:450) ~[org.eclipse.osgi.jar:?]
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.dispatchEvent(BundleContextImpl.java:890) ~[org.eclipse.osgi.jar:?]
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230) ~[org.eclipse.osgi.jar:?]
+	at org.eclipse.osgi.framework.eventmgr.ListenerQueue.dispatchEventSynchronous(ListenerQueue.java:148) ~[org.eclipse.osgi.jar:?]
+	at org.eclipse.osgi.internal.framework.EquinoxEventPublisher.publishBundleEventPrivileged(EquinoxEventPublisher.java:230) ~[org.eclipse.osgi.jar:?]
+	at org.eclipse.osgi.internal.framework.EquinoxEventPublisher.publishBundleEvent(EquinoxEventPublisher.java:137) ~[org.eclipse.osgi.jar:?]
+	at org.eclipse.osgi.internal.framework.EquinoxEventPublisher.publishBundleEvent(EquinoxEventPublisher.java:129) ~[org.eclipse.osgi.jar:?]
+	at org.eclipse.osgi.internal.framework.EquinoxContainerAdaptor.publishModuleEvent(EquinoxContainerAdaptor.java:191) ~[org.eclipse.osgi.jar:?]
+	at org.eclipse.osgi.container.Module.publishEvent(Module.java:476) ~[org.eclipse.osgi.jar:?]
+	at org.eclipse.osgi.container.Module.start(Module.java:467) ~[org.eclipse.osgi.jar:?]
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.start(EquinoxBundle.java:426) ~[org.eclipse.osgi.jar:?]
+	at com.liferay.portal.file.install.internal.DirectoryWatcher._startBundle(DirectoryWatcher.java:971) ~[?:?]
+	at com.liferay.portal.file.install.internal.DirectoryWatcher._startBundles(DirectoryWatcher.java:1004) ~[?:?]
+	at com.liferay.portal.file.install.internal.DirectoryWatcher._process(DirectoryWatcher.java:843) ~[?:?]
+	at com.liferay.portal.file.install.internal.DirectoryWatcher.run(DirectoryWatcher.java:298) ~[?:?]
+2025-06-17 21:38:25.753 INFO  [fileinstall-directory-watcher][BundleStartStopLogger:68] STARTED bms.com.liferay.saml.admin.rest.impl_1.0.23 [1468]
+2025-06-17 21:38:25.754 INFO  [fileinstall-directory-watcher][BundleStartStopLogger:68] STARTED bms.com.liferay.saml.admin.rest.api_1.1.1 [1465]
+2025-06-17 21:38:25.757 INFO  [fileinstall-directory-watcher][BundleStartStopLogger:68] STARTED bms.com.liferay.saml.api_10.0.1 [1469]
+2025-06-17 21:44:15.687 INFO  [main][PortalContextLoaderListener:114] JVM arguments: --add-opens=java.base/java.lang=ALL-UNNAMED --add-opens=java.base/java.lang.invoke=ALL-UNNAMED --add-opens=java.base/java.lang.reflect=ALL-UNNAMED --add-opens=java.base/java.net=ALL-UNNAMED --add-opens=java.base/sun.net.www.protocol.http=ALL-UNNAMED --add-opens=java.base/sun.net.www.protocol.https=ALL-UNNAMED --add-opens=java.base/sun.util.calendar=ALL-UNNAMED --add-opens=jdk.zipfs/jdk.nio.zipfs=ALL-UNNAMED --add-opens=java.base/java.lang=ALL-UNNAMED --add-opens=java.base/java.lang.invoke=ALL-UNNAMED --add-opens=java.base/java.lang.reflect=ALL-UNNAMED --add-opens=java.base/java.io=ALL-UNNAMED --add-opens=java.base/java.util=ALL-UNNAMED --add-opens=java.base/java.util.concurrent=ALL-UNNAMED --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED -Djava.util.logging.config.file=/opt/liferay/tomcat/conf/logging.properties -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager -Djdk.tls.ephemeralDHKeySize=2048 -Djava.protocol.handler.pkgs=org.apache.catalina.webresources -Dsun.io.useCanonCaches=false -Dorg.apache.catalina.security.SecurityListener.UMASK=0027 -Dfile.encoding=UTF-8 -Djava.net.preferIPv4Stack=true -Duser.timezone=GMT -Xms2560m -Xmx2560m -XX:MaxNewSize=1536m -XX:MaxMetaspaceSize=768m -XX:MetaspaceSize=768m -XX:NewSize=1536m -XX:SurvivorRatio=7 -javaagent:/opt/liferay/tomcat/../glowroot/glowroot.jar -Dglowroot.enabled=true -Xms6g -Xmx6g -Djdk.util.zip.disableZip64ExtraFieldValidation=true -Dignore.endorsed.dirs= -Dcatalina.base=/opt/liferay/tomcat -Dcatalina.home=/opt/liferay/tomcat -Djava.io.tmpdir=/opt/liferay/tomcat/temp
+2025-06-17 21:44:26.100 INFO  [SystemExecutorServiceUtil-1][DataSourceFactoryImpl:472] Successfully acquired JDBC connection
+2025-06-17 21:44:26.459 WARN  [SystemExecutorServiceUtil-1][DialectDetector:73] Liferay is configured to use Hypersonic as its database. Do NOT use Hypersonic in production. Hypersonic is an embedded database useful for development and demonstration purposes. The database settings can be changed in portal-ext.properties.
+2025-06-17 21:44:26.460 INFO  [SystemExecutorServiceUtil-1][DialectDetector:134] Using dialect com.liferay.portal.dao.orm.hibernate.HSQLDialect for HSQL Database Engine 2.7
+2025-06-17 21:44:26.599 INFO  [SystemExecutorServiceUtil-1][DBInitUtil:109] Create tables and populate with default data
+2025-06-17 21:44:29.600 INFO  [main][ModuleFrameworkImpl:1355] Starting initial bundles
+2025-06-17 21:44:31.035 INFO  [main][InterpolationConfigurationPlugin:109] Configured directory for secrets: /opt/liferay/osgi/configs
+2025-06-17 21:44:31.533 INFO  [SystemExecutorServiceUtil-8][BundleBlacklist:176] Stopping blacklisted bundle com.liferay.saml.api_10.0.0 [305]
+2025-06-17 21:44:31.540 INFO  [SystemExecutorServiceUtil-8][BundleBlacklist:176] Stopping blacklisted bundle com.liferay.saml.web_5.0.79 [477]
+2025-06-17 21:44:31.556 INFO  [SystemExecutorServiceUtil-8][BundleBlacklist:176] Stopping blacklisted bundle com.liferay.saml.opensaml.integration_6.2.22 [1222]
+2025-06-17 21:44:31.619 INFO  [SystemExecutorServiceUtil-8][BundleBlacklist:176] Stopping blacklisted bundle com.liferay.saml.admin.rest.impl_1.0.22 [1272]
+2025-06-17 21:44:31.629 INFO  [SystemExecutorServiceUtil-8][BundleBlacklist:176] Stopping blacklisted bundle com.liferay.saml.impl_5.0.52 [1314]
+2025-06-17 21:44:31.658 INFO  [SystemExecutorServiceUtil-8][BundleBlacklist:176] Stopping blacklisted bundle com.liferay.saml.admin.rest.api_1.1.5 [1332]
+2025-06-17 21:44:31.749 INFO  [main][ModuleFrameworkImpl:1645] Started initial bundles
+2025-06-17 21:44:31.750 INFO  [main][ModuleFrameworkImpl:1690] Starting dynamic bundles
+2025-06-17 21:44:31.780 INFO  [main][BundleBlacklist:176] Stopping blacklisted bundle com.liferay.saml.admin.rest.api_1.1.5 [1462]
+2025-06-17 21:44:31.791 INFO  [main][BundleBlacklist:176] Stopping blacklisted bundle com.liferay.saml.admin.rest.impl_1.0.22 [1463]
+2025-06-17 21:44:31.799 INFO  [main][BundleBlacklist:176] Stopping blacklisted bundle com.liferay.saml.api_10.0.0 [1464]
+2025-06-17 21:44:31.806 INFO  [main][BundleBlacklist:176] Stopping blacklisted bundle com.liferay.saml.impl_5.0.52 [1465]
+2025-06-17 21:44:31.911 INFO  [main][BundleBlacklist:176] Stopping blacklisted bundle com.liferay.saml.opensaml.integration_6.2.22 [1466]
+2025-06-17 21:44:31.932 INFO  [main][BundleBlacklist:176] Stopping blacklisted bundle com.liferay.saml.web_5.0.79 [1467]
+2025-06-17 21:44:34.846 WARN  [Start Level: Equinox Container: 87b30adb-3fc6-449d-aed9-c48f7c5647c9][SidecarManager:70] Liferay automatically starts a child process of Elasticsearch named sidecar for convenient development and demonstration purposes. Do NOT use sidecar in production. Refer to the documentation for details on the limitations of sidecar and instructions on configuring a remote Elasticsearch connection in the Control Panel.
+2025-06-17 21:44:41.128 INFO  [main][ModuleFrameworkImpl:1713] Started dynamic bundles
+2025-06-17 21:44:41.129 INFO  [main][ModuleFrameworkImpl:1720] Starting web bundles
+2025-06-17 21:44:43.312 INFO  [main][BundleBlacklist:176] Stopping blacklisted bundle com.liferay.saml.admin.rest.api_1.1.5 [1477]
+2025-06-17 21:44:43.321 INFO  [main][BundleBlacklist:176] Stopping blacklisted bundle com.liferay.saml.admin.rest.impl_1.0.22 [1478]
+2025-06-17 21:44:43.328 INFO  [main][BundleBlacklist:176] Stopping blacklisted bundle com.liferay.saml.api_10.0.0 [1479]
+2025-06-17 21:44:43.337 INFO  [main][BundleBlacklist:176] Stopping blacklisted bundle com.liferay.saml.impl_5.0.52 [1480]
+2025-06-17 21:44:43.404 INFO  [main][BundleBlacklist:176] Stopping blacklisted bundle com.liferay.saml.opensaml.integration_6.2.22 [1481]
+2025-06-17 21:44:43.415 INFO  [main][BundleBlacklist:176] Stopping blacklisted bundle com.liferay.saml.web_5.0.79 [1482]
+2025-06-17 21:44:43.420 INFO  [main][ModuleFrameworkImpl:1774] Started web bundles
+2025-06-17 21:44:43.421 INFO  [main][ModuleFrameworkImpl:283] Navigate to Control Panel > System > Gogo Shell and enter "lb" to see all bundles
+2025-06-17 21:44:45.422 INFO  [main][StartupHelperUtil:100] There are no patches installed
+2025-06-17 21:44:45.650 INFO  [main][LicenseManager:-1] Failed to find directory /opt/liferay/data/license
+2025-06-17 21:44:45.651 INFO  [main][LicenseManager:-1] No binary licenses found
+2025-06-17 21:44:46.239 INFO  [main][AutoDeployDir:152] Auto deploy scanner started for /opt/liferay/deploy
+2025-06-17 21:44:46.880 INFO  [SystemExecutorServiceUtil-2][Sidecar:100] Sidecar Elasticsearch 7.17.26 liferay_sidecar started at 127.0.0.1:9201
+2025-06-17 21:44:58.919 INFO  [main][VerifyProcess:65] Verifying com.liferay.portal.security.service.access.policy.internal.verify.SAPServiceVerifyProcess
+2025-06-17 21:44:58.920 INFO  [main][LoggingTimer:74] Starting com.liferay.portal.security.service.access.policy.internal.verify.SAPServiceVerifyProcess#verifyDefaultSAPEntry
+2025-06-17 21:44:58.959 INFO  [main][LoggingTimer:35] Completed com.liferay.portal.security.service.access.policy.internal.verify.SAPServiceVerifyProcess#verifyDefaultSAPEntry in 39 ms
+2025-06-17 21:44:58.962 INFO  [main][VerifyProcess:78] Completed verification process com.liferay.portal.security.service.access.policy.internal.verify.SAPServiceVerifyProcess in 45 ms
+2025-06-17 21:44:58.968 INFO  [main][VerifyProcess:65] Verifying com.liferay.search.experiences.internal.verify.SXPServiceVerifyProcess
+2025-06-17 21:44:59.240 INFO  [com.liferay.portal.kernel.deploy.auto.AutoDeployScanner][AutoDeployDir:212] Processing trial-dxp-license-1744886699000.xml
+2025-06-17 21:44:59.735 INFO  [main][VerifyProcess:78] Completed verification process com.liferay.search.experiences.internal.verify.SXPServiceVerifyProcess in 768 ms
+2025-06-17 21:44:59.742 INFO  [main][VerifyProcess:65] Verifying com.liferay.portal.search.tuning.synonyms.web.internal.verify.SynonymSetsDatabaseImporterVerifyProcess
+2025-06-17 21:45:00.098 INFO  [main][VerifyProcess:78] Completed verification process com.liferay.portal.search.tuning.synonyms.web.internal.verify.SynonymSetsDatabaseImporterVerifyProcess in 356 ms
+2025-06-17 21:45:03.669 INFO  [fileinstall-directory-watcher][BaseAutoDeployListener:34] Copying themes for /opt/liferay/tomcat/temp/20250617214503629SHKGPIKC/admin-theme.war
+2025-06-17 21:45:04.389 INFO  [fileinstall-directory-watcher][BaseAutoDeployListener:41] Themes for /opt/liferay/tomcat/temp/20250617214503629SHKGPIKC/admin-theme.war copied successfully
+2025-06-17 21:45:06.134 INFO  [fileinstall-directory-watcher][BaseAutoDeployListener:34] Copying themes for /opt/liferay/tomcat/temp/20250617214506128THRQWHAM/classic-theme.war
+2025-06-17 21:45:06.873 INFO  [fileinstall-directory-watcher][BaseAutoDeployListener:41] Themes for /opt/liferay/tomcat/temp/20250617214506128THRQWHAM/classic-theme.war copied successfully
+2025-06-17 21:45:08.113 INFO  [fileinstall-directory-watcher][BaseAutoDeployListener:34] Copying themes for /opt/liferay/tomcat/temp/20250617214508107HMYNBQZF/dialect-theme.war
+2025-06-17 21:45:08.904 INFO  [fileinstall-directory-watcher][BaseAutoDeployListener:41] Themes for /opt/liferay/tomcat/temp/20250617214508107HMYNBQZF/dialect-theme.war copied successfully
+2025-06-17 21:45:10.209 INFO  [fileinstall-directory-watcher][BaseAutoDeployListener:34] Copying themes for /opt/liferay/tomcat/temp/20250617214510189NQAOFICG/minium-theme.war
+2025-06-17 21:45:11.129 INFO  [fileinstall-directory-watcher][BaseAutoDeployListener:41] Themes for /opt/liferay/tomcat/temp/20250617214510189NQAOFICG/minium-theme.war copied successfully
+2025-06-17 21:45:12.633 INFO  [fileinstall-directory-watcher][BaseAutoDeployListener:34] Copying themes for /opt/liferay/tomcat/temp/20250617214512620XGFUCKJQ/speedwell-theme.war
+2025-06-17 21:45:13.478 INFO  [fileinstall-directory-watcher][BaseAutoDeployListener:41] Themes for /opt/liferay/tomcat/temp/20250617214512620XGFUCKJQ/speedwell-theme.war copied successfully
+2025-06-17 21:45:20.002 INFO  [fileinstall-directory-watcher][LicenseManager:-1] DXP Development license validation passed
+2025-06-17 21:45:20.003 INFO  [fileinstall-directory-watcher][LicenseManager:-1] License registered for DXP Development

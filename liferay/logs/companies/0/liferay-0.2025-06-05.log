@@ -1,0 +1,297 @@
+2025-06-05 22:09:46.292 INFO  [main][PortalContextLoaderListener:114] JVM arguments: --add-opens=java.base/java.lang=ALL-UNNAMED --add-opens=java.base/java.lang.invoke=ALL-UNNAMED --add-opens=java.base/java.lang.reflect=ALL-UNNAMED --add-opens=java.base/java.net=ALL-UNNAMED --add-opens=java.base/sun.net.www.protocol.http=ALL-UNNAMED --add-opens=java.base/sun.net.www.protocol.https=ALL-UNNAMED --add-opens=java.base/sun.util.calendar=ALL-UNNAMED --add-opens=jdk.zipfs/jdk.nio.zipfs=ALL-UNNAMED --add-opens=java.base/java.lang=ALL-UNNAMED --add-opens=java.base/java.lang.invoke=ALL-UNNAMED --add-opens=java.base/java.lang.reflect=ALL-UNNAMED --add-opens=java.base/java.io=ALL-UNNAMED --add-opens=java.base/java.util=ALL-UNNAMED --add-opens=java.base/java.util.concurrent=ALL-UNNAMED --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED -Djava.util.logging.config.file=/opt/liferay/tomcat/conf/logging.properties -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager -Djdk.tls.ephemeralDHKeySize=2048 -Djava.protocol.handler.pkgs=org.apache.catalina.webresources -Dsun.io.useCanonCaches=false -Dorg.apache.catalina.security.SecurityListener.UMASK=0027 -Dfile.encoding=UTF-8 -Djava.net.preferIPv4Stack=true -Duser.timezone=GMT -Xms2560m -Xmx2560m -XX:MaxNewSize=1536m -XX:MaxMetaspaceSize=768m -XX:MetaspaceSize=768m -XX:NewSize=1536m -XX:SurvivorRatio=7 -javaagent:/opt/liferay/tomcat/../glowroot/glowroot.jar -Dglowroot.enabled=true -Xms6g -Xmx6g -Djdk.util.zip.disableZip64ExtraFieldValidation=true -Dignore.endorsed.dirs= -Dcatalina.base=/opt/liferay/tomcat -Dcatalina.home=/opt/liferay/tomcat -Djava.io.tmpdir=/opt/liferay/tomcat/temp
+2025-06-05 22:09:46.851 INFO  [SystemExecutorServiceUtil-1][DataSourceFactoryImpl:475] Successfully acquired JDBC connection
+2025-06-05 22:09:46.884 INFO  [SystemExecutorServiceUtil-1][DataSourceFactoryImpl:442] Rewrite JDBC URL from jdbc:mysql://database/lportal?characterEncoding=UTF-8&dontTrackOpenResources=true&holdResultsOpenOverStatementClose=true&serverTimezone=GMT&useFastDateParsing=false&useUnicode=true to jdbc:mysql://database/lportal?cachePrepStmts=true&characterEncoding=UTF-8&dontTrackOpenResources=true&holdResultsOpenOverStatementClose=true&prepStmtCacheSize=1000&prepStmtCacheSqlLimit=2048&rewriteBatchedStatements=true&serverTimezone=GMT&useFastDateParsing=false&useLocalSessionState=true&useLocalTransactionState=true&useUnicode=true
+2025-06-05 22:09:47.319 INFO  [SystemExecutorServiceUtil-1][DialectDetector:134] Using dialect org.hibernate.dialect.MySQL8Dialect for MySQL 8.0
+2025-06-05 22:09:49.275 INFO  [main][ModuleFrameworkImpl:1374] Starting initial bundles
+2025-06-05 22:09:49.920 INFO  [main][InterpolationConfigurationPlugin:109] Configured directory for secrets: /opt/liferay/osgi/configs
+2025-06-05 22:09:50.178 INFO  [main][ModuleFrameworkImpl:1664] Started initial bundles
+2025-06-05 22:09:50.179 INFO  [main][ModuleFrameworkImpl:1709] Starting dynamic bundles
+2025-06-05 22:10:02.212 INFO  [main][ModuleFrameworkImpl:1732] Started dynamic bundles
+2025-06-05 22:10:02.213 INFO  [main][ModuleFrameworkImpl:1739] Starting web bundles
+2025-06-05 22:10:03.520 INFO  [main][ModuleFrameworkImpl:1793] Started web bundles
+2025-06-05 22:10:03.520 INFO  [main][ModuleFrameworkImpl:284] Navigate to Control Panel > System > Gogo Shell and enter "lb" to see all bundles
+2025-06-05 22:10:03.552 INFO  [main][LoggingTimer:74] Starting com.liferay.portal.verify.VerifyProperties#verifySystemProperties
+2025-06-05 22:10:03.552 INFO  [main][LoggingTimer:35] Completed com.liferay.portal.verify.VerifyProperties#verifySystemProperties in 0 ms
+2025-06-05 22:10:03.552 INFO  [main][LoggingTimer:74] Starting com.liferay.portal.verify.VerifyProperties#verifyPortalProperties
+2025-06-05 22:10:03.563 INFO  [main][LoggingTimer:35] Completed com.liferay.portal.verify.VerifyProperties#verifyPortalProperties in 11 ms
+2025-06-05 22:10:04.719 INFO  [main][StartupHelperUtil:100] There are no patches installed
+2025-06-05 22:10:04.791 INFO  [main][LicenseManager:-1] DXP Development license validation passed
+2025-06-05 22:10:05.302 INFO  [main][AutoDeployDir:152] Auto deploy scanner started for /opt/liferay/deploy
+2025-06-05 22:10:18.959 INFO  [main][UpgradeRecorder:156] No pending upgrades to run
+2025-06-05 22:10:18.959 INFO  [main][UpgradeReport:97] Upgrade report was not generated because no upgrade processes were executed
+2025-06-05 22:10:23.681 INFO  [fileinstall-directory-watcher][BaseAutoDeployListener:34] Copying themes for /opt/liferay/tomcat/temp/20250605221023639BWXQLBXV/admin-theme.war
+2025-06-05 22:10:24.176 INFO  [fileinstall-directory-watcher][BaseAutoDeployListener:41] Themes for /opt/liferay/tomcat/temp/20250605221023639BWXQLBXV/admin-theme.war copied successfully
+2025-06-05 22:10:25.108 INFO  [fileinstall-directory-watcher][BaseAutoDeployListener:34] Copying themes for /opt/liferay/tomcat/temp/20250605221025104EUCPPIVF/classic-theme.war
+2025-06-05 22:10:25.456 INFO  [fileinstall-directory-watcher][BaseAutoDeployListener:41] Themes for /opt/liferay/tomcat/temp/20250605221025104EUCPPIVF/classic-theme.war copied successfully
+2025-06-05 22:10:26.155 INFO  [fileinstall-directory-watcher][BaseAutoDeployListener:34] Copying themes for /opt/liferay/tomcat/temp/20250605221026150MQZQZXXG/dialect-theme.war
+2025-06-05 22:10:26.490 INFO  [fileinstall-directory-watcher][BaseAutoDeployListener:41] Themes for /opt/liferay/tomcat/temp/20250605221026150MQZQZXXG/dialect-theme.war copied successfully
+2025-06-05 22:10:27.175 INFO  [fileinstall-directory-watcher][BaseAutoDeployListener:34] Copying themes for /opt/liferay/tomcat/temp/20250605221027169GHFPCGVT/minium-theme.war
+2025-06-05 22:10:27.545 INFO  [fileinstall-directory-watcher][BaseAutoDeployListener:41] Themes for /opt/liferay/tomcat/temp/20250605221027169GHFPCGVT/minium-theme.war copied successfully
+2025-06-05 22:10:28.328 INFO  [fileinstall-directory-watcher][BaseAutoDeployListener:34] Copying themes for /opt/liferay/tomcat/temp/20250605221028322TJAPOBZW/speedwell-theme.war
+2025-06-05 22:10:28.678 INFO  [fileinstall-directory-watcher][BaseAutoDeployListener:41] Themes for /opt/liferay/tomcat/temp/20250605221028322TJAPOBZW/speedwell-theme.war copied successfully
+2025-06-05 22:10:29.502 INFO  [fileinstall-directory-watcher][BundleStartStopLogger:68] STARTED speedwell-theme_4.0.95 [1474]
+2025-06-05 22:10:29.534 INFO  [fileinstall-directory-watcher][BundleStartStopLogger:68] STARTED dialect-theme_5.0.94 [1472]
+2025-06-05 22:10:29.564 INFO  [fileinstall-directory-watcher][BundleStartStopLogger:68] STARTED minium-theme_5.0.101 [1473]
+2025-06-05 22:10:29.598 INFO  [fileinstall-directory-watcher][BundleStartStopLogger:68] STARTED classic-theme_5.0.108 [1471]
+2025-06-05 22:10:29.635 INFO  [fileinstall-directory-watcher][BundleStartStopLogger:68] STARTED admin-theme_5.0.94 [1470]
+2025-06-05 22:14:43.713 WARN  [http-nio-8080-exec-2][code_jsp:163] {code="500", msg="", uri=/}
+java.lang.RuntimeException: Invalid host name liferay.local.io
+	at com.liferay.portal.servlet.filters.validhostname.ValidHostNameFilter.doFilterTry(ValidHostNameFilter.java:31) ~[portal-impl.jar:?]
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDirectCallFilter(InvokerFilterChain.java:187) ~[portal-kernel.jar:?]
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:92) ~[portal-kernel.jar:?]
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilter.doFilter(InvokerFilter.java:114) ~[portal-kernel.jar:?]
+	at com.liferay.shielded.container.internal.proxy.FilterWrapper.doFilter(FilterWrapper.java:69) ~[com.liferay.shielded.container.impl.jar:?]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:168) ~[catalina.jar:9.0.104]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:144) ~[catalina.jar:9.0.104]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:168) ~[catalina.jar:9.0.104]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[catalina.jar:9.0.104]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482) ~[catalina.jar:9.0.104]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130) ~[catalina.jar:9.0.104]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[catalina.jar:9.0.104]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[catalina.jar:9.0.104]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:346) ~[catalina.jar:9.0.104]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397) ~[tomcat-coyote.jar:9.0.104]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-coyote.jar:9.0.104]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:935) ~[tomcat-coyote.jar:9.0.104]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1792) ~[tomcat-coyote.jar:9.0.104]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-coyote.jar:9.0.104]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1189) ~[org.apache.tomcat-util.jar:9.0.104]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:658) ~[org.apache.tomcat-util.jar:9.0.104]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63) ~[org.apache.tomcat-util.jar:9.0.104]
+	at java.lang.Thread.run(Thread.java:1583) [?:?]
+2025-06-05 22:14:43.774 WARN  [http-nio-8080-exec-2][PortalImpl:5455] Set the property "virtual.hosts.valid.hosts" in portal.properties to allow "liferay.local.io" as a domain
+2025-06-05 22:15:12.801 WARN  [http-nio-8080-exec-2][code_jsp:163] {code="500", msg="", uri=/}
+java.lang.RuntimeException: Invalid host name liferay.local.io
+	at com.liferay.portal.servlet.filters.validhostname.ValidHostNameFilter.doFilterTry(ValidHostNameFilter.java:31) ~[portal-impl.jar:?]
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDirectCallFilter(InvokerFilterChain.java:187) ~[portal-kernel.jar:?]
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:92) ~[portal-kernel.jar:?]
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilter.doFilter(InvokerFilter.java:114) ~[portal-kernel.jar:?]
+	at com.liferay.shielded.container.internal.proxy.FilterWrapper.doFilter(FilterWrapper.java:69) ~[com.liferay.shielded.container.impl.jar:?]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:168) ~[catalina.jar:9.0.104]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:144) ~[catalina.jar:9.0.104]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:168) ~[catalina.jar:9.0.104]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[catalina.jar:9.0.104]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482) ~[catalina.jar:9.0.104]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130) ~[catalina.jar:9.0.104]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[catalina.jar:9.0.104]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[catalina.jar:9.0.104]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:346) ~[catalina.jar:9.0.104]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397) ~[tomcat-coyote.jar:9.0.104]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-coyote.jar:9.0.104]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:935) ~[tomcat-coyote.jar:9.0.104]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1792) ~[tomcat-coyote.jar:9.0.104]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-coyote.jar:9.0.104]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1189) ~[org.apache.tomcat-util.jar:9.0.104]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:658) ~[org.apache.tomcat-util.jar:9.0.104]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63) ~[org.apache.tomcat-util.jar:9.0.104]
+	at java.lang.Thread.run(Thread.java:1583) [?:?]
+2025-06-05 22:15:12.803 WARN  [http-nio-8080-exec-2][PortalImpl:5455] Set the property "virtual.hosts.valid.hosts" in portal.properties to allow "liferay.local.io" as a domain
+2025-06-05 23:07:13.612 INFO  [main][PortalContextLoaderListener:114] JVM arguments: --add-opens=java.base/java.lang=ALL-UNNAMED --add-opens=java.base/java.lang.invoke=ALL-UNNAMED --add-opens=java.base/java.lang.reflect=ALL-UNNAMED --add-opens=java.base/java.net=ALL-UNNAMED --add-opens=java.base/sun.net.www.protocol.http=ALL-UNNAMED --add-opens=java.base/sun.net.www.protocol.https=ALL-UNNAMED --add-opens=java.base/sun.util.calendar=ALL-UNNAMED --add-opens=jdk.zipfs/jdk.nio.zipfs=ALL-UNNAMED --add-opens=java.base/java.lang=ALL-UNNAMED --add-opens=java.base/java.lang.invoke=ALL-UNNAMED --add-opens=java.base/java.lang.reflect=ALL-UNNAMED --add-opens=java.base/java.io=ALL-UNNAMED --add-opens=java.base/java.util=ALL-UNNAMED --add-opens=java.base/java.util.concurrent=ALL-UNNAMED --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED -Djava.util.logging.config.file=/opt/liferay/tomcat/conf/logging.properties -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager -Djdk.tls.ephemeralDHKeySize=2048 -Djava.protocol.handler.pkgs=org.apache.catalina.webresources -Dsun.io.useCanonCaches=false -Dorg.apache.catalina.security.SecurityListener.UMASK=0027 -Dfile.encoding=UTF-8 -Djava.net.preferIPv4Stack=true -Duser.timezone=GMT -Xms2560m -Xmx2560m -XX:MaxNewSize=1536m -XX:MaxMetaspaceSize=768m -XX:MetaspaceSize=768m -XX:NewSize=1536m -XX:SurvivorRatio=7 -javaagent:/opt/liferay/tomcat/../glowroot/glowroot.jar -Dglowroot.enabled=true -Xms6g -Xmx6g -Djdk.util.zip.disableZip64ExtraFieldValidation=true -Dignore.endorsed.dirs= -Dcatalina.base=/opt/liferay/tomcat -Dcatalina.home=/opt/liferay/tomcat -Djava.io.tmpdir=/opt/liferay/tomcat/temp
+2025-06-05 23:07:14.290 INFO  [SystemExecutorServiceUtil-1][DataSourceFactoryImpl:475] Successfully acquired JDBC connection
+2025-06-05 23:07:14.322 INFO  [SystemExecutorServiceUtil-1][DataSourceFactoryImpl:442] Rewrite JDBC URL from jdbc:mysql://database/lportal?characterEncoding=UTF-8&dontTrackOpenResources=true&holdResultsOpenOverStatementClose=true&serverTimezone=GMT&useFastDateParsing=false&useUnicode=true to jdbc:mysql://database/lportal?cachePrepStmts=true&characterEncoding=UTF-8&dontTrackOpenResources=true&holdResultsOpenOverStatementClose=true&prepStmtCacheSize=1000&prepStmtCacheSqlLimit=2048&rewriteBatchedStatements=true&serverTimezone=GMT&useFastDateParsing=false&useLocalSessionState=true&useLocalTransactionState=true&useUnicode=true
+2025-06-05 23:07:14.656 INFO  [SystemExecutorServiceUtil-1][DialectDetector:134] Using dialect org.hibernate.dialect.MySQL8Dialect for MySQL 8.0
+2025-06-05 23:07:16.488 INFO  [main][ModuleFrameworkImpl:1374] Starting initial bundles
+2025-06-05 23:07:16.949 INFO  [main][InterpolationConfigurationPlugin:109] Configured directory for secrets: /opt/liferay/osgi/configs
+2025-06-05 23:07:17.261 INFO  [main][ModuleFrameworkImpl:1664] Started initial bundles
+2025-06-05 23:07:17.261 INFO  [main][ModuleFrameworkImpl:1709] Starting dynamic bundles
+2025-06-05 23:07:27.128 INFO  [main][ModuleFrameworkImpl:1732] Started dynamic bundles
+2025-06-05 23:07:27.128 INFO  [main][ModuleFrameworkImpl:1739] Starting web bundles
+2025-06-05 23:07:28.160 INFO  [main][ModuleFrameworkImpl:1793] Started web bundles
+2025-06-05 23:07:28.160 INFO  [main][ModuleFrameworkImpl:284] Navigate to Control Panel > System > Gogo Shell and enter "lb" to see all bundles
+2025-06-05 23:07:28.182 INFO  [main][LoggingTimer:74] Starting com.liferay.portal.verify.VerifyProperties#verifySystemProperties
+2025-06-05 23:07:28.183 INFO  [main][LoggingTimer:35] Completed com.liferay.portal.verify.VerifyProperties#verifySystemProperties in 0 ms
+2025-06-05 23:07:28.183 INFO  [main][LoggingTimer:74] Starting com.liferay.portal.verify.VerifyProperties#verifyPortalProperties
+2025-06-05 23:07:28.194 INFO  [main][LoggingTimer:35] Completed com.liferay.portal.verify.VerifyProperties#verifyPortalProperties in 11 ms
+2025-06-05 23:07:29.387 INFO  [main][StartupHelperUtil:100] There are no patches installed
+2025-06-05 23:07:29.444 INFO  [main][LicenseManager:-1] Failed to find directory /opt/liferay/data/license
+2025-06-05 23:07:29.445 INFO  [main][LicenseManager:-1] No binary licenses found
+2025-06-05 23:07:30.027 INFO  [main][AutoDeployDir:152] Auto deploy scanner started for /opt/liferay/deploy
+2025-06-05 23:07:43.028 INFO  [com.liferay.portal.kernel.deploy.auto.AutoDeployScanner][AutoDeployDir:212] Processing trial-dxp-license-1748377451000.xml
+2025-06-05 23:07:43.476 INFO  [main][UpgradeRecorder:159] Major upgrade finished with result unresolved
+2025-06-05 23:07:43.477 INFO  [main][UpgradeReport:106] Starting upgrade report generation
+2025-06-05 23:07:46.177 INFO  [main][UpgradeReport:959] Upgrade report generated in /opt/liferay/reports/upgrade_report.txt
+2025-06-05 23:07:46.178 INFO  [main][UpgradeReport:959] Upgrade report generated in /opt/liferay/reports/upgrade_report_diagnostics.txt
+2025-06-05 23:07:48.282 INFO  [fileinstall-directory-watcher][LicenseManager:-1] DXP Development license validation passed
+2025-06-05 23:07:48.284 INFO  [fileinstall-directory-watcher][LicenseManager:-1] License registered for DXP Development
+2025-06-05 23:07:48.323 INFO  [fileinstall-directory-watcher][BaseAutoDeployListener:34] Copying themes for /opt/liferay/tomcat/temp/20250605230748287ETYSHLRQ/admin-theme.war
+2025-06-05 23:07:48.902 INFO  [fileinstall-directory-watcher][BaseAutoDeployListener:41] Themes for /opt/liferay/tomcat/temp/20250605230748287ETYSHLRQ/admin-theme.war copied successfully
+2025-06-05 23:07:49.932 INFO  [fileinstall-directory-watcher][BaseAutoDeployListener:34] Copying themes for /opt/liferay/tomcat/temp/20250605230749929SAOTBANE/classic-theme.war
+2025-06-05 23:07:50.286 INFO  [fileinstall-directory-watcher][BaseAutoDeployListener:41] Themes for /opt/liferay/tomcat/temp/20250605230749929SAOTBANE/classic-theme.war copied successfully
+2025-06-05 23:07:51.038 INFO  [fileinstall-directory-watcher][BaseAutoDeployListener:34] Copying themes for /opt/liferay/tomcat/temp/20250605230751034LPSKAYAY/dialect-theme.war
+2025-06-05 23:07:51.434 INFO  [fileinstall-directory-watcher][BaseAutoDeployListener:41] Themes for /opt/liferay/tomcat/temp/20250605230751034LPSKAYAY/dialect-theme.war copied successfully
+2025-06-05 23:07:52.165 INFO  [fileinstall-directory-watcher][BaseAutoDeployListener:34] Copying themes for /opt/liferay/tomcat/temp/20250605230752160KWHPHORZ/minium-theme.war
+2025-06-05 23:07:52.599 INFO  [fileinstall-directory-watcher][BaseAutoDeployListener:41] Themes for /opt/liferay/tomcat/temp/20250605230752160KWHPHORZ/minium-theme.war copied successfully
+2025-06-05 23:07:53.435 INFO  [fileinstall-directory-watcher][BaseAutoDeployListener:34] Copying themes for /opt/liferay/tomcat/temp/20250605230753428FQOBTIMM/speedwell-theme.war
+2025-06-05 23:07:53.829 INFO  [fileinstall-directory-watcher][BaseAutoDeployListener:41] Themes for /opt/liferay/tomcat/temp/20250605230753428FQOBTIMM/speedwell-theme.war copied successfully
+2025-06-05 23:07:54.716 INFO  [fileinstall-directory-watcher][BundleStartStopLogger:68] STARTED dialect-theme_5.0.94 [1472]
+2025-06-05 23:07:54.746 INFO  [fileinstall-directory-watcher][BundleStartStopLogger:68] STARTED admin-theme_5.0.94 [1470]
+2025-06-05 23:07:54.826 INFO  [fileinstall-directory-watcher][BundleStartStopLogger:68] STARTED speedwell-theme_4.0.95 [1474]
+2025-06-05 23:07:54.853 INFO  [fileinstall-directory-watcher][BundleStartStopLogger:68] STARTED minium-theme_5.0.101 [1473]
+2025-06-05 23:07:54.880 INFO  [fileinstall-directory-watcher][BundleStartStopLogger:68] STARTED classic-theme_5.0.108 [1471]
+2025-06-05 23:07:56.350 WARN  [http-nio-8080-exec-2][code_jsp:163] {code="500", msg="", uri=/}
+java.lang.RuntimeException: Invalid host name host.docker.internal
+	at com.liferay.portal.servlet.filters.validhostname.ValidHostNameFilter.doFilterTry(ValidHostNameFilter.java:31) ~[portal-impl.jar:?]
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDirectCallFilter(InvokerFilterChain.java:187) ~[portal-kernel.jar:?]
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:92) ~[portal-kernel.jar:?]
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilter.doFilter(InvokerFilter.java:114) ~[portal-kernel.jar:?]
+	at com.liferay.shielded.container.internal.proxy.FilterWrapper.doFilter(FilterWrapper.java:69) ~[com.liferay.shielded.container.impl.jar:?]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:168) ~[catalina.jar:9.0.104]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:144) ~[catalina.jar:9.0.104]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:168) ~[catalina.jar:9.0.104]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[catalina.jar:9.0.104]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482) ~[catalina.jar:9.0.104]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130) ~[catalina.jar:9.0.104]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[catalina.jar:9.0.104]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[catalina.jar:9.0.104]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:346) ~[catalina.jar:9.0.104]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397) ~[tomcat-coyote.jar:9.0.104]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-coyote.jar:9.0.104]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:935) ~[tomcat-coyote.jar:9.0.104]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1792) ~[tomcat-coyote.jar:9.0.104]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-coyote.jar:9.0.104]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1189) ~[org.apache.tomcat-util.jar:9.0.104]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:658) ~[org.apache.tomcat-util.jar:9.0.104]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63) ~[org.apache.tomcat-util.jar:9.0.104]
+	at java.lang.Thread.run(Thread.java:1583) [?:?]
+2025-06-05 23:07:56.427 WARN  [http-nio-8080-exec-2][PortalImpl:5455] Set the property "virtual.hosts.valid.hosts" in portal.properties to allow "host.docker.internal" as a domain
+2025-06-05 23:10:37.583 WARN  [http-nio-8080-exec-10][code_jsp:163] {code="404", msg="A class com.liferay.portal.kernel.exception.NoSuchLayoutException error occurred while processing your request", uri=/o/headless-admin-list-type/v1.0/list-type-definitions}
+2025-06-05 23:10:37.593 WARN  [http-nio-8080-exec-10][PortalImpl:6097] Unable to redirect to missing URI: /c/portal/status
+2025-06-05 23:16:11.161 INFO  [main][PortalContextLoaderListener:114] JVM arguments: --add-opens=java.base/java.lang=ALL-UNNAMED --add-opens=java.base/java.lang.invoke=ALL-UNNAMED --add-opens=java.base/java.lang.reflect=ALL-UNNAMED --add-opens=java.base/java.net=ALL-UNNAMED --add-opens=java.base/sun.net.www.protocol.http=ALL-UNNAMED --add-opens=java.base/sun.net.www.protocol.https=ALL-UNNAMED --add-opens=java.base/sun.util.calendar=ALL-UNNAMED --add-opens=jdk.zipfs/jdk.nio.zipfs=ALL-UNNAMED --add-opens=java.base/java.lang=ALL-UNNAMED --add-opens=java.base/java.lang.invoke=ALL-UNNAMED --add-opens=java.base/java.lang.reflect=ALL-UNNAMED --add-opens=java.base/java.io=ALL-UNNAMED --add-opens=java.base/java.util=ALL-UNNAMED --add-opens=java.base/java.util.concurrent=ALL-UNNAMED --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED -Djava.util.logging.config.file=/opt/liferay/tomcat/conf/logging.properties -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager -Djdk.tls.ephemeralDHKeySize=2048 -Djava.protocol.handler.pkgs=org.apache.catalina.webresources -Dsun.io.useCanonCaches=false -Dorg.apache.catalina.security.SecurityListener.UMASK=0027 -Dfile.encoding=UTF-8 -Djava.net.preferIPv4Stack=true -Duser.timezone=GMT -Xms2560m -Xmx2560m -XX:MaxNewSize=1536m -XX:MaxMetaspaceSize=768m -XX:MetaspaceSize=768m -XX:NewSize=1536m -XX:SurvivorRatio=7 -javaagent:/opt/liferay/tomcat/../glowroot/glowroot.jar -Dglowroot.enabled=true -Xms6g -Xmx6g -Djdk.util.zip.disableZip64ExtraFieldValidation=true -Dignore.endorsed.dirs= -Dcatalina.base=/opt/liferay/tomcat -Dcatalina.home=/opt/liferay/tomcat -Djava.io.tmpdir=/opt/liferay/tomcat/temp
+2025-06-05 23:16:12.069 INFO  [SystemExecutorServiceUtil-1][DataSourceFactoryImpl:475] Successfully acquired JDBC connection
+2025-06-05 23:16:12.130 INFO  [SystemExecutorServiceUtil-1][DataSourceFactoryImpl:442] Rewrite JDBC URL from jdbc:mysql://database/lportal?characterEncoding=UTF-8&dontTrackOpenResources=true&holdResultsOpenOverStatementClose=true&serverTimezone=GMT&useFastDateParsing=false&useUnicode=true to jdbc:mysql://database/lportal?cachePrepStmts=true&characterEncoding=UTF-8&dontTrackOpenResources=true&holdResultsOpenOverStatementClose=true&prepStmtCacheSize=1000&prepStmtCacheSqlLimit=2048&rewriteBatchedStatements=true&serverTimezone=GMT&useFastDateParsing=false&useLocalSessionState=true&useLocalTransactionState=true&useUnicode=true
+2025-06-05 23:16:12.621 INFO  [SystemExecutorServiceUtil-1][DialectDetector:134] Using dialect org.hibernate.dialect.MySQL8Dialect for MySQL 8.0
+2025-06-05 23:16:12.785 INFO  [SystemExecutorServiceUtil-1][DBInitUtil:109] Create tables and populate with default data
+2025-06-05 23:16:35.824 INFO  [main][ModuleFrameworkImpl:1374] Starting initial bundles
+2025-06-05 23:16:36.277 INFO  [main][InterpolationConfigurationPlugin:109] Configured directory for secrets: /opt/liferay/osgi/configs
+2025-06-05 23:16:36.661 INFO  [main][ModuleFrameworkImpl:1664] Started initial bundles
+2025-06-05 23:16:36.661 INFO  [main][ModuleFrameworkImpl:1709] Starting dynamic bundles
+2025-06-05 23:16:45.947 INFO  [main][ModuleFrameworkImpl:1732] Started dynamic bundles
+2025-06-05 23:16:45.947 INFO  [main][ModuleFrameworkImpl:1739] Starting web bundles
+2025-06-05 23:16:46.868 INFO  [main][ModuleFrameworkImpl:1793] Started web bundles
+2025-06-05 23:16:46.868 INFO  [main][ModuleFrameworkImpl:284] Navigate to Control Panel > System > Gogo Shell and enter "lb" to see all bundles
+2025-06-05 23:16:46.888 INFO  [main][LoggingTimer:74] Starting com.liferay.portal.verify.VerifyProperties#verifySystemProperties
+2025-06-05 23:16:46.889 INFO  [main][LoggingTimer:35] Completed com.liferay.portal.verify.VerifyProperties#verifySystemProperties in 1 ms
+2025-06-05 23:16:46.889 INFO  [main][LoggingTimer:74] Starting com.liferay.portal.verify.VerifyProperties#verifyPortalProperties
+2025-06-05 23:16:46.902 INFO  [main][LoggingTimer:35] Completed com.liferay.portal.verify.VerifyProperties#verifyPortalProperties in 13 ms
+2025-06-05 23:16:51.564 INFO  [main][StartupHelperUtil:100] There are no patches installed
+2025-06-05 23:16:51.694 INFO  [main][LicenseManager:-1] Failed to find directory /opt/liferay/data/license
+2025-06-05 23:16:51.694 INFO  [main][LicenseManager:-1] No binary licenses found
+2025-06-05 23:16:52.103 INFO  [main][AutoDeployDir:152] Auto deploy scanner started for /opt/liferay/deploy
+2025-06-05 23:17:05.103 INFO  [com.liferay.portal.kernel.deploy.auto.AutoDeployScanner][AutoDeployDir:212] Processing trial-dxp-license-1748377451000.xml
+2025-06-05 23:18:51.468 INFO  [main][UpgradeRecorder:159] Major upgrade finished with result success
+2025-06-05 23:18:56.031 INFO  [main][VerifyProcess:65] Verifying com.liferay.commerce.product.internal.verify.CommerceProductServiceVerifyProcess
+2025-06-05 23:18:56.032 INFO  [main][LoggingTimer:74] Starting com.liferay.commerce.product.internal.verify.CommerceProductServiceVerifyProcess#verifyCPMeasurementUnits
+2025-06-05 23:18:56.200 INFO  [main][LoggingTimer:35] Completed com.liferay.commerce.product.internal.verify.CommerceProductServiceVerifyProcess#verifyCPMeasurementUnits in 168 ms
+2025-06-05 23:18:56.201 INFO  [main][VerifyProcess:80] Completed verification process com.liferay.commerce.product.internal.verify.CommerceProductServiceVerifyProcess in 170 ms
+2025-06-05 23:18:56.213 INFO  [main][VerifyProcess:65] Verifying com.liferay.portal.search.tuning.synonyms.web.internal.verify.SynonymSetsDatabaseImporterVerifyProcess
+2025-06-05 23:18:56.476 INFO  [main][VerifyProcess:80] Completed verification process com.liferay.portal.search.tuning.synonyms.web.internal.verify.SynonymSetsDatabaseImporterVerifyProcess in 263 ms
+2025-06-05 23:18:56.497 INFO  [main][VerifyProcess:65] Verifying com.liferay.portal.security.service.access.policy.internal.verify.SAPServiceVerifyProcess
+2025-06-05 23:18:56.498 INFO  [main][LoggingTimer:74] Starting com.liferay.portal.security.service.access.policy.internal.verify.SAPServiceVerifyProcess#verifyDefaultSAPEntry
+2025-06-05 23:18:56.522 INFO  [main][LoggingTimer:35] Completed com.liferay.portal.security.service.access.policy.internal.verify.SAPServiceVerifyProcess#verifyDefaultSAPEntry in 25 ms
+2025-06-05 23:18:56.523 INFO  [main][VerifyProcess:80] Completed verification process com.liferay.portal.security.service.access.policy.internal.verify.SAPServiceVerifyProcess in 26 ms
+2025-06-05 23:18:56.533 INFO  [main][VerifyProcess:65] Verifying com.liferay.search.experiences.internal.verify.SXPServiceVerifyProcess
+2025-06-05 23:19:01.129 INFO  [main][VerifyProcess:80] Completed verification process com.liferay.search.experiences.internal.verify.SXPServiceVerifyProcess in 4596 ms
+2025-06-05 23:19:01.188 INFO  [main][VerifyProcess:65] Verifying com.liferay.commerce.price.list.internal.verify.CommercePriceListServiceVerifyProcess
+2025-06-05 23:19:01.189 INFO  [main][LoggingTimer:74] Starting com.liferay.commerce.price.list.internal.verify.CommercePriceListServiceVerifyProcess#verifyBasePriceLists
+2025-06-05 23:19:01.196 INFO  [main][LoggingTimer:35] Completed com.liferay.commerce.price.list.internal.verify.CommercePriceListServiceVerifyProcess#verifyBasePriceLists in 7 ms
+2025-06-05 23:19:01.196 INFO  [main][VerifyProcess:80] Completed verification process com.liferay.commerce.price.list.internal.verify.CommercePriceListServiceVerifyProcess in 8 ms
+2025-06-05 23:19:01.229 INFO  [main][VerifyProcess:65] Verifying com.liferay.commerce.internal.verify.CommerceAccountServiceVerifyProcess
+2025-06-05 23:19:01.229 INFO  [main][LoggingTimer:74] Starting com.liferay.commerce.internal.verify.CommerceAccountServiceVerifyProcess#verifyAccountRoles
+2025-06-05 23:19:01.328 INFO  [main][LoggingTimer:35] Completed com.liferay.commerce.internal.verify.CommerceAccountServiceVerifyProcess#verifyAccountRoles in 99 ms
+2025-06-05 23:19:01.329 INFO  [main][LoggingTimer:74] Starting com.liferay.commerce.internal.verify.CommerceAccountServiceVerifyProcess#verifyAccountGroup
+2025-06-05 23:19:01.333 INFO  [main][LoggingTimer:35] Completed com.liferay.commerce.internal.verify.CommerceAccountServiceVerifyProcess#verifyAccountGroup in 5 ms
+2025-06-05 23:19:01.333 INFO  [main][VerifyProcess:80] Completed verification process com.liferay.commerce.internal.verify.CommerceAccountServiceVerifyProcess in 105 ms
+2025-06-05 23:19:01.373 INFO  [main][VerifyProcess:65] Verifying com.liferay.portal.search.tuning.rankings.web.internal.verify.RankingsDatabaseImporterVerifyProcess
+2025-06-05 23:19:01.741 INFO  [main][VerifyProcess:80] Completed verification process com.liferay.portal.search.tuning.rankings.web.internal.verify.RankingsDatabaseImporterVerifyProcess in 368 ms
+2025-06-05 23:19:01.762 INFO  [main][VerifyProcess:65] Verifying com.liferay.adaptive.media.document.library.thumbnails.internal.verify.DocumentLibraryThumbnailsConfigurationVerifyProcess
+2025-06-05 23:19:01.822 INFO  [main][VerifyProcess:80] Completed verification process com.liferay.adaptive.media.document.library.thumbnails.internal.verify.DocumentLibraryThumbnailsConfigurationVerifyProcess in 60 ms
+2025-06-05 23:19:02.307 INFO  [fileinstall-directory-watcher][LicenseManager:-1] DXP Development license validation passed
+2025-06-05 23:19:02.307 INFO  [fileinstall-directory-watcher][LicenseManager:-1] License registered for DXP Development
+2025-06-05 23:19:02.336 INFO  [fileinstall-directory-watcher][BaseAutoDeployListener:34] Copying themes for /opt/liferay/tomcat/temp/20250605231902311JSIWEIVZ/admin-theme.war
+2025-06-05 23:19:02.853 INFO  [fileinstall-directory-watcher][BaseAutoDeployListener:41] Themes for /opt/liferay/tomcat/temp/20250605231902311JSIWEIVZ/admin-theme.war copied successfully
+2025-06-05 23:19:03.771 INFO  [fileinstall-directory-watcher][BaseAutoDeployListener:34] Copying themes for /opt/liferay/tomcat/temp/20250605231903763HBGHLODC/classic-theme.war
+2025-06-05 23:19:04.125 INFO  [fileinstall-directory-watcher][BaseAutoDeployListener:41] Themes for /opt/liferay/tomcat/temp/20250605231903763HBGHLODC/classic-theme.war copied successfully
+2025-06-05 23:19:04.961 INFO  [fileinstall-directory-watcher][BaseAutoDeployListener:34] Copying themes for /opt/liferay/tomcat/temp/20250605231904951KBXJZFBW/dialect-theme.war
+2025-06-05 23:19:05.709 INFO  [fileinstall-directory-watcher][BaseAutoDeployListener:41] Themes for /opt/liferay/tomcat/temp/20250605231904951KBXJZFBW/dialect-theme.war copied successfully
+2025-06-05 23:19:07.005 INFO  [fileinstall-directory-watcher][BaseAutoDeployListener:34] Copying themes for /opt/liferay/tomcat/temp/20250605231906995TXYRUCKY/minium-theme.war
+2025-06-05 23:19:07.642 INFO  [fileinstall-directory-watcher][BaseAutoDeployListener:41] Themes for /opt/liferay/tomcat/temp/20250605231906995TXYRUCKY/minium-theme.war copied successfully
+2025-06-05 23:19:09.054 INFO  [fileinstall-directory-watcher][BaseAutoDeployListener:34] Copying themes for /opt/liferay/tomcat/temp/20250605231909040XVNOBHJR/speedwell-theme.war
+2025-06-05 23:19:09.988 INFO  [fileinstall-directory-watcher][BaseAutoDeployListener:41] Themes for /opt/liferay/tomcat/temp/20250605231909040XVNOBHJR/speedwell-theme.war copied successfully
+2025-06-05 23:19:11.145 INFO  [fileinstall-directory-watcher][BundleStartStopLogger:68] STARTED admin-theme_5.0.94 [1470]
+2025-06-05 23:19:11.216 INFO  [fileinstall-directory-watcher][BundleStartStopLogger:68] STARTED dialect-theme_5.0.94 [1472]
+2025-06-05 23:19:11.256 INFO  [fileinstall-directory-watcher][BundleStartStopLogger:68] STARTED minium-theme_5.0.101 [1473]
+2025-06-05 23:19:11.304 INFO  [fileinstall-directory-watcher][BundleStartStopLogger:68] STARTED classic-theme_5.0.108 [1471]
+2025-06-05 23:19:11.353 INFO  [fileinstall-directory-watcher][BundleStartStopLogger:68] STARTED speedwell-theme_4.0.95 [1474]
+2025-06-10 20:09:43.668 WARN  [PersistedQuartzSchedulerEngineInstance_QuartzSchedulerThread][PoolBase:184] HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@3298e47e (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2025-06-10 20:09:40.645 WARN  [HikariPool-1 housekeeper][HikariPool:788] HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=53s219ms197µs529ns).
+2025-06-10 20:10:34.441 WARN  [HikariPool-1 housekeeper][HikariPool:788] HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m10s706ms498µs206ns).
+2025-06-10 20:11:01.871 ERROR [PersistedQuartzSchedulerEngineInstance_QuartzSchedulerThread][ErrorLogger:2361] An error occurred while scanning for the next triggers to fire.
+org.quartz.JobPersistenceException: Couldn't acquire next trigger: HikariPool-1 - Connection is not available, request timed out after 108705ms.
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport.acquireNextTrigger(JobStoreSupport.java:2827) ~[bundleFile:?]
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport$41.execute(JobStoreSupport.java:2755) ~[bundleFile:?]
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport.executeInNonManagedTXLock(JobStoreSupport.java:3798) ~[bundleFile:?]
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport.acquireNextTriggers(JobStoreSupport.java:2751) ~[bundleFile:?]
+	at org.quartz.core.QuartzSchedulerThread.run(QuartzSchedulerThread.java:264) [bundleFile:?]
+Caused by: java.sql.SQLTransientConnectionException: HikariPool-1 - Connection is not available, request timed out after 108705ms.
+	at com.zaxxer.hikari.pool.HikariPool.createTimeoutException(HikariPool.java:696) ~[hikaricp.jar:?]
+	at com.zaxxer.hikari.pool.HikariPool.getConnection(HikariPool.java:197) ~[hikaricp.jar:?]
+	at com.zaxxer.hikari.pool.HikariPool.getConnection(HikariPool.java:162) ~[hikaricp.jar:?]
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:128) ~[hikaricp.jar:?]
+	at org.springframework.jdbc.datasource.LazyConnectionDataSourceProxy$LazyConnectionInvocationHandler.getTargetConnection(LazyConnectionDataSourceProxy.java:405) ~[spring-jdbc.jar:5.3.39]
+	at org.springframework.jdbc.datasource.LazyConnectionDataSourceProxy$LazyConnectionInvocationHandler.invoke(LazyConnectionDataSourceProxy.java:378) ~[spring-jdbc.jar:5.3.39]
+	at jdk.proxy3.$Proxy85.prepareStatement(Unknown Source) ~[?:?]
+	at jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:580) ~[?:?]
+	at org.quartz.impl.jdbcjobstore.AttributeRestoringConnectionInvocationHandler.invoke(AttributeRestoringConnectionInvocationHandler.java:73) ~[?:?]
+	at jdk.proxy3.$Proxy1179.prepareStatement(Unknown Source) ~[?:?]
+	at org.quartz.impl.jdbcjobstore.StdJDBCDelegate.selectTriggerToAcquire(StdJDBCDelegate.java:2557) ~[bundleFile:?]
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport.acquireNextTrigger(JobStoreSupport.java:2778) ~[bundleFile:?]
+	... 4 more
+Caused by: java.sql.SQLNonTransientConnectionException: No operations allowed after connection closed.
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:110) ~[mysql-connector-java-8.0.21.jar:8.0.21]
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97) ~[mysql-connector-java-8.0.21.jar:8.0.21]
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:89) ~[mysql-connector-java-8.0.21.jar:8.0.21]
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:63) ~[mysql-connector-java-8.0.21.jar:8.0.21]
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:73) ~[mysql-connector-java-8.0.21.jar:8.0.21]
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:73) ~[mysql-connector-java-8.0.21.jar:8.0.21]
+	at com.mysql.cj.jdbc.ConnectionImpl.setNetworkTimeout(ConnectionImpl.java:2490) ~[mysql-connector-java-8.0.21.jar:8.0.21]
+	at com.zaxxer.hikari.pool.PoolBase.setNetworkTimeout(PoolBase.java:566) ~[hikaricp.jar:?]
+	at com.zaxxer.hikari.pool.PoolBase.isConnectionAlive(PoolBase.java:173) ~[hikaricp.jar:?]
+	at com.zaxxer.hikari.pool.HikariPool.getConnection(HikariPool.java:186) ~[hikaricp.jar:?]
+	at com.zaxxer.hikari.pool.HikariPool.getConnection(HikariPool.java:162) ~[hikaricp.jar:?]
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:128) ~[hikaricp.jar:?]
+	at org.springframework.jdbc.datasource.LazyConnectionDataSourceProxy$LazyConnectionInvocationHandler.getTargetConnection(LazyConnectionDataSourceProxy.java:405) ~[spring-jdbc.jar:5.3.39]
+	at org.springframework.jdbc.datasource.LazyConnectionDataSourceProxy$LazyConnectionInvocationHandler.invoke(LazyConnectionDataSourceProxy.java:378) ~[spring-jdbc.jar:5.3.39]
+	at jdk.proxy3.$Proxy85.prepareStatement(Unknown Source) ~[?:?]
+	at jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:580) ~[?:?]
+	at org.quartz.impl.jdbcjobstore.AttributeRestoringConnectionInvocationHandler.invoke(AttributeRestoringConnectionInvocationHandler.java:73) ~[?:?]
+	at jdk.proxy3.$Proxy1179.prepareStatement(Unknown Source) ~[?:?]
+	at org.quartz.impl.jdbcjobstore.StdJDBCDelegate.selectTriggerToAcquire(StdJDBCDelegate.java:2557) ~[bundleFile:?]
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport.acquireNextTrigger(JobStoreSupport.java:2778) ~[bundleFile:?]
+	... 4 more
+Caused by: com.mysql.cj.exceptions.ConnectionIsClosedException: No operations allowed after connection closed.
+	at jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62) ~[?:?]
+	at java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502) ~[?:?]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:486) ~[?:?]
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:61) ~[mysql-connector-java-8.0.21.jar:8.0.21]
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:105) ~[mysql-connector-java-8.0.21.jar:8.0.21]
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:151) ~[mysql-connector-java-8.0.21.jar:8.0.21]
+	at com.mysql.cj.NativeSession.checkClosed(NativeSession.java:1171) ~[mysql-connector-java-8.0.21.jar:8.0.21]
+	at com.mysql.cj.jdbc.ConnectionImpl.checkClosed(ConnectionImpl.java:576) ~[mysql-connector-java-8.0.21.jar:8.0.21]
+	at com.mysql.cj.jdbc.ConnectionImpl.setNetworkTimeout(ConnectionImpl.java:2486) ~[mysql-connector-java-8.0.21.jar:8.0.21]
+	at com.zaxxer.hikari.pool.PoolBase.setNetworkTimeout(PoolBase.java:566) ~[hikaricp.jar:?]
+	at com.zaxxer.hikari.pool.PoolBase.isConnectionAlive(PoolBase.java:173) ~[hikaricp.jar:?]
+	at com.zaxxer.hikari.pool.HikariPool.getConnection(HikariPool.java:186) ~[hikaricp.jar:?]
+	at com.zaxxer.hikari.pool.HikariPool.getConnection(HikariPool.java:162) ~[hikaricp.jar:?]
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:128) ~[hikaricp.jar:?]
+	at org.springframework.jdbc.datasource.LazyConnectionDataSourceProxy$LazyConnectionInvocationHandler.getTargetConnection(LazyConnectionDataSourceProxy.java:405) ~[spring-jdbc.jar:5.3.39]
+	at org.springframework.jdbc.datasource.LazyConnectionDataSourceProxy$LazyConnectionInvocationHandler.invoke(LazyConnectionDataSourceProxy.java:378) ~[spring-jdbc.jar:5.3.39]
+	at jdk.proxy3.$Proxy85.prepareStatement(Unknown Source) ~[?:?]
+	at jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:580) ~[?:?]
+	at org.quartz.impl.jdbcjobstore.AttributeRestoringConnectionInvocationHandler.invoke(AttributeRestoringConnectionInvocationHandler.java:73) ~[?:?]
+	at jdk.proxy3.$Proxy1179.prepareStatement(Unknown Source) ~[?:?]
+	at org.quartz.impl.jdbcjobstore.StdJDBCDelegate.selectTriggerToAcquire(StdJDBCDelegate.java:2557) ~[bundleFile:?]
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport.acquireNextTrigger(JobStoreSupport.java:2778) ~[bundleFile:?]
+	... 4 more

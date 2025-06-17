@@ -1,0 +1,714 @@
+2025-06-02 19:29:43.614 INFO  [http-nio-8080-exec-7][BundleSiteInitializer:532] Initializing com.liferay.site.initializer.welcome for group 34276
+2025-06-02 19:29:43.617 INFO  [http-nio-8080-exec-7][BundleSiteInitializer:5661] Invoking addOrUpdateDataDefinitions took 1 ms
+2025-06-02 19:29:43.617 INFO  [http-nio-8080-exec-7][BundleSiteInitializer:5661] Invoking setPLOEntries took 0 ms
+2025-06-02 19:29:43.618 INFO  [http-nio-8080-exec-7][BundleSiteInitializer:5661] Invoking addOrUpdateExpandoColumns took 0 ms
+2025-06-02 19:29:43.618 INFO  [http-nio-8080-exec-7][BundleSiteInitializer:5661] Invoking addStyleBookEntries took 0 ms
+2025-06-02 19:29:43.618 INFO  [http-nio-8080-exec-7][BundleSiteInitializer:5661] Invoking addOrUpdateSAPEntries took 0 ms
+2025-06-02 19:29:43.618 INFO  [http-nio-8080-exec-7][BundleSiteInitializer:5661] Invoking addOrUpdateDepotEntries took 0 ms
+2025-06-02 19:29:43.618 INFO  [http-nio-8080-exec-7][BundleSiteInitializer:5661] Invoking addOrUpdateUserGroups took 0 ms
+2025-06-02 19:29:43.618 INFO  [http-nio-8080-exec-7][BundleSiteInitializer:5661] Invoking addOrUpdateObjectFolders took 0 ms
+2025-06-02 19:29:43.618 INFO  [http-nio-8080-exec-7][BundleSiteInitializer:5661] Invoking addSiteSettings took 0 ms
+2025-06-02 19:29:43.619 INFO  [http-nio-8080-exec-7][BundleSiteInitializer:5661] Invoking addOrUpdateRoles took 1 ms
+2025-06-02 19:29:43.619 INFO  [http-nio-8080-exec-7][BundleSiteInitializer:5661] Invoking addOrUpdateOrganizations took 0 ms
+2025-06-02 19:29:43.619 INFO  [http-nio-8080-exec-7][BundleSiteInitializer:5661] Invoking addOrUpdateListTypeDefinitions took 0 ms
+2025-06-02 19:29:43.619 INFO  [http-nio-8080-exec-7][BundleSiteInitializer:5661] Invoking addOrUpdateDDMStructures took 0 ms
+2025-06-02 19:29:43.619 INFO  [http-nio-8080-exec-7][BundleSiteInitializer:5661] Invoking addAccountGroups took 0 ms
+2025-06-02 19:29:43.619 INFO  [http-nio-8080-exec-7][BundleSiteInitializer:5661] Invoking addOrUpdateKnowledgeBaseArticles took 0 ms
+2025-06-02 19:29:43.620 INFO  [http-nio-8080-exec-7][BundleSiteInitializer:5661] Invoking addAccounts took 0 ms
+2025-06-02 19:29:43.620 INFO  [http-nio-8080-exec-7][BundleSiteInitializer:5661] Invoking addKeywords took 0 ms
+2025-06-02 19:29:43.620 INFO  [http-nio-8080-exec-7][BundleSiteInitializer:5661] Invoking addAccountGroupAssignments took 0 ms
+2025-06-02 19:29:43.620 INFO  [http-nio-8080-exec-7][BundleSiteInitializer:5661] Invoking addWorkflowDefinitions took 0 ms
+2025-06-02 19:29:43.620 INFO  [http-nio-8080-exec-7][BundleSiteInitializer:5661] Invoking addSiteConfiguration took 0 ms
+2025-06-02 19:29:43.620 INFO  [http-nio-8080-exec-7][BundleSiteInitializer:5661] Invoking addOrUpdateTaxonomyVocabularies took 0 ms
+2025-06-02 19:29:43.620 INFO  [http-nio-8080-exec-7][BundleSiteInitializer:5661] Invoking addAccountsOrganizations took 0 ms
+2025-06-02 19:29:43.877 INFO  [http-nio-8080-exec-7][BundleSiteInitializer:5661] Invoking addOrUpdateDocuments took 256 ms
+2025-06-02 19:29:43.877 INFO  [http-nio-8080-exec-7][BundleSiteInitializer:5661] Invoking addOrUpdateClientExtensionEntries took 0 ms
+2025-06-02 19:29:43.943 INFO  [http-nio-8080-exec-7][BundleSiteInitializer:5661] Invoking addOrUpdateLayouts took 66 ms
+2025-06-02 19:29:43.943 INFO  [http-nio-8080-exec-7][BundleSiteInitializer:5661] Invoking addOrUpdateSXPBlueprint took 0 ms
+2025-06-02 19:29:43.943 INFO  [http-nio-8080-exec-7][BundleSiteInitializer:5661] Invoking addUserAccounts took 0 ms
+2025-06-02 19:29:43.943 INFO  [http-nio-8080-exec-7][BundleSiteInitializer:5661] Invoking addPortletSettings took 0 ms
+2025-06-02 19:29:43.943 INFO  [http-nio-8080-exec-7][BundleSiteInitializer:5661] Invoking addOrUpdateBlogPostings took 0 ms
+2025-06-02 19:29:43.944 INFO  [http-nio-8080-exec-7][BundleSiteInitializer:5661] Invoking addObjectDefinitions took 1 ms
+2025-06-02 19:29:43.944 INFO  [http-nio-8080-exec-7][BundleSiteInitializer:5661] Invoking addOrUpdateAssetLinkEntries took 0 ms
+2025-06-02 19:29:43.945 INFO  [http-nio-8080-exec-7][BundleSiteInitializer:5661] Invoking updateLayoutSets took 1 ms
+2025-06-02 19:29:43.945 INFO  [http-nio-8080-exec-7][BundleSiteInitializer:5661] Invoking addFragmentEntries took 0 ms
+2025-06-02 19:29:43.945 INFO  [http-nio-8080-exec-7][BundleSiteInitializer:5661] Invoking addOrUpdateSegmentsEntries took 0 ms
+2025-06-02 19:29:43.946 INFO  [http-nio-8080-exec-7][BundleSiteInitializer:5661] Invoking addUserRoles took 0 ms
+2025-06-02 19:29:43.946 INFO  [http-nio-8080-exec-7][BundleSiteInitializer:5661] Invoking addOrUpdateObjectRelationships took 0 ms
+2025-06-02 19:29:43.946 INFO  [http-nio-8080-exec-7][BundleSiteInitializer:5661] Invoking addRolesAssignments took 0 ms
+2025-06-02 19:29:43.946 INFO  [http-nio-8080-exec-7][BundleSiteInitializer:5661] Invoking addOrUpdateObjectFields took 0 ms
+2025-06-02 19:29:43.946 INFO  [http-nio-8080-exec-7][BundleSiteInitializer:5661] Invoking publishObjectDefinitions took 0 ms
+2025-06-02 19:29:43.946 INFO  [http-nio-8080-exec-7][BundleSiteInitializer:5661] Invoking addOrUpdateAccountEntryRestrictions took 0 ms
+2025-06-02 19:29:43.946 INFO  [http-nio-8080-exec-7][BundleSiteInitializer:5661] Invoking addAssetListEntries took 0 ms
+2025-06-02 19:29:43.946 INFO  [http-nio-8080-exec-7][BundleSiteInitializer:5661] Invoking addOrUpdateObjectActions took 0 ms
+2025-06-02 19:29:43.958 INFO  [http-nio-8080-exec-7][BundleSiteInitializer:5661] Invoking addOrUpdateDDMTemplates took 12 ms
+2025-06-02 19:29:43.958 INFO  [http-nio-8080-exec-7][BundleSiteInitializer:5661] Invoking addOrUpdateNotificationTemplates took 0 ms
+2025-06-02 19:29:43.958 INFO  [http-nio-8080-exec-7][BundleSiteInitializer:5661] Invoking addOrUpdateObjectEntries took 0 ms
+2025-06-02 19:29:43.958 INFO  [http-nio-8080-exec-7][BundleSiteInitializer:5661] Invoking addOrUpdateJournalArticles took 0 ms
+2025-06-02 19:29:43.958 INFO  [http-nio-8080-exec-7][BundleSiteInitializer:5661] Invoking addCPDefinitions took 0 ms
+2025-06-02 19:29:44.397 INFO  [http-nio-8080-exec-7][BundleSiteInitializer:5661] Invoking addLayoutUtilityPageEntries took 439 ms
+2025-06-02 19:29:44.397 INFO  [http-nio-8080-exec-7][BundleSiteInitializer:5661] Invoking addLayoutPageTemplates took 0 ms
+2025-06-02 19:29:44.435 INFO  [http-nio-8080-exec-7][BundleSiteInitializer:5661] Invoking addOrUpdateLayoutsContent took 37 ms
+2025-06-02 19:29:44.435 INFO  [http-nio-8080-exec-7][BundleSiteInitializer:5661] Invoking addSegmentsExperiences took 0 ms
+2025-06-02 19:29:44.435 INFO  [http-nio-8080-exec-7][BundleSiteInitializer:5661] Invoking addExpandoValues took 0 ms
+2025-06-02 19:29:44.436 INFO  [http-nio-8080-exec-7][BundleSiteInitializer:5661] Invoking addOrUpdateResourcePermissions took 0 ms
+2025-06-02 19:29:44.436 INFO  [http-nio-8080-exec-7][BundleSiteInitializer:550] Initialized com.liferay.site.initializer.welcome for group 34276 in 822 ms
+2025-06-02 19:29:46.104 INFO  [http-nio-8080-exec-7][BundleSiteInitializer:532] Initializing com.liferay.site.initializer.cms for group 34268
+2025-06-02 19:29:46.105 INFO  [http-nio-8080-exec-7][BundleSiteInitializer:5661] Invoking addOrUpdateUserGroups took 0 ms
+2025-06-02 19:29:46.132 INFO  [http-nio-8080-exec-7][BundleSiteInitializer:5661] Invoking addOrUpdateDepotEntries took 27 ms
+2025-06-02 19:29:46.132 INFO  [http-nio-8080-exec-7][BundleSiteInitializer:5661] Invoking addOrUpdateSAPEntries took 0 ms
+2025-06-02 19:29:46.132 INFO  [http-nio-8080-exec-7][BundleSiteInitializer:5661] Invoking addOrUpdateListTypeDefinitions took 0 ms
+2025-06-02 19:29:46.133 INFO  [http-nio-8080-exec-7][BundleSiteInitializer:5661] Invoking addAccountGroups took 0 ms
+2025-06-02 19:29:46.133 INFO  [http-nio-8080-exec-7][BundleSiteInitializer:5661] Invoking setPLOEntries took 0 ms
+2025-06-02 19:29:46.133 INFO  [http-nio-8080-exec-7][BundleSiteInitializer:5661] Invoking addOrUpdateDataDefinitions took 0 ms
+2025-06-02 19:29:46.133 INFO  [http-nio-8080-exec-7][BundleSiteInitializer:5661] Invoking addKeywords took 0 ms
+2025-06-02 19:29:46.133 INFO  [http-nio-8080-exec-7][BundleSiteInitializer:5661] Invoking addOrUpdateDDMStructures took 0 ms
+2025-06-02 19:29:46.133 INFO  [http-nio-8080-exec-7][BundleSiteInitializer:5661] Invoking addStyleBookEntries took 0 ms
+2025-06-02 19:29:46.134 INFO  [http-nio-8080-exec-7][BundleSiteInitializer:5661] Invoking addSiteSettings took 0 ms
+2025-06-02 19:29:46.134 INFO  [http-nio-8080-exec-7][BundleSiteInitializer:5661] Invoking addOrUpdateExpandoColumns took 0 ms
+2025-06-02 19:29:46.134 INFO  [http-nio-8080-exec-7][BundleSiteInitializer:5661] Invoking addOrUpdateTaxonomyVocabularies took 0 ms
+2025-06-02 19:29:46.134 INFO  [http-nio-8080-exec-7][BundleSiteInitializer:5661] Invoking addOrUpdateObjectFolders took 0 ms
+2025-06-02 19:29:46.135 INFO  [http-nio-8080-exec-7][BundleSiteInitializer:5661] Invoking addOrUpdateRoles took 1 ms
+2025-06-02 19:29:46.136 INFO  [http-nio-8080-exec-7][BundleSiteInitializer:5661] Invoking addOrUpdateKnowledgeBaseArticles took 0 ms
+2025-06-02 19:29:46.136 INFO  [http-nio-8080-exec-7][BundleSiteInitializer:5661] Invoking addOrUpdateOrganizations took 0 ms
+2025-06-02 19:29:46.140 INFO  [http-nio-8080-exec-7][BundleSiteInitializer:5661] Invoking addSiteConfiguration took 4 ms
+2025-06-02 19:29:46.140 INFO  [http-nio-8080-exec-7][BundleSiteInitializer:5661] Invoking addPortletSettings took 0 ms
+2025-06-02 19:29:46.873 INFO  [http-nio-8080-exec-7][BundleSiteInitializer:5661] Invoking addOrUpdateLayouts took 732 ms
+2025-06-02 19:29:46.873 INFO  [http-nio-8080-exec-7][BundleSiteInitializer:5661] Invoking addAccounts took 0 ms
+2025-06-02 19:29:46.874 INFO  [http-nio-8080-exec-7][BundleSiteInitializer:5661] Invoking addOrUpdateSXPBlueprint took 1 ms
+2025-06-02 19:29:46.874 INFO  [http-nio-8080-exec-7][BundleSiteInitializer:5661] Invoking addWorkflowDefinitions took 0 ms
+2025-06-02 19:29:46.874 INFO  [http-nio-8080-exec-7][BundleSiteInitializer:5661] Invoking addOrUpdateDocuments took 0 ms
+2025-06-02 19:29:46.874 INFO  [http-nio-8080-exec-7][BundleSiteInitializer:5661] Invoking addOrUpdateBlogPostings took 0 ms
+2025-06-02 19:29:46.874 INFO  [http-nio-8080-exec-7][BundleSiteInitializer:5661] Invoking addOrUpdateAssetLinkEntries took 0 ms
+2025-06-02 19:29:46.874 INFO  [http-nio-8080-exec-7][BundleSiteInitializer:5661] Invoking addOrUpdateClientExtensionEntries took 0 ms
+2025-06-02 19:29:46.874 INFO  [http-nio-8080-exec-7][BundleSiteInitializer:5661] Invoking addUserAccounts took 0 ms
+2025-06-02 19:29:46.874 INFO  [http-nio-8080-exec-7][BundleSiteInitializer:5661] Invoking addAccountsOrganizations took 0 ms
+2025-06-02 19:29:46.876 INFO  [http-nio-8080-exec-7][BundleSiteInitializer:5661] Invoking addObjectDefinitions took 2 ms
+2025-06-02 19:29:46.878 INFO  [http-nio-8080-exec-7][BundleSiteInitializer:5661] Invoking updateLayoutSets took 1 ms
+2025-06-02 19:29:46.955 INFO  [http-nio-8080-exec-7][BundleSiteInitializer:5661] Invoking addFragmentEntries took 77 ms
+2025-06-02 19:29:46.955 INFO  [http-nio-8080-exec-7][BundleSiteInitializer:5661] Invoking addAccountGroupAssignments took 0 ms
+2025-06-02 19:29:46.955 INFO  [http-nio-8080-exec-7][BundleSiteInitializer:5661] Invoking addRolesAssignments took 0 ms
+2025-06-02 19:29:46.955 INFO  [http-nio-8080-exec-7][BundleSiteInitializer:5661] Invoking addOrUpdateSegmentsEntries took 0 ms
+2025-06-02 19:29:46.956 INFO  [http-nio-8080-exec-7][BundleSiteInitializer:5661] Invoking addUserRoles took 0 ms
+2025-06-02 19:29:46.956 INFO  [http-nio-8080-exec-7][BundleSiteInitializer:5661] Invoking addOrUpdateObjectRelationships took 0 ms
+2025-06-02 19:29:46.956 INFO  [http-nio-8080-exec-7][BundleSiteInitializer:5661] Invoking addOrUpdateObjectFields took 0 ms
+2025-06-02 19:29:46.956 INFO  [http-nio-8080-exec-7][BundleSiteInitializer:5661] Invoking publishObjectDefinitions took 0 ms
+2025-06-02 19:29:46.956 INFO  [http-nio-8080-exec-7][BundleSiteInitializer:5661] Invoking addOrUpdateAccountEntryRestrictions took 0 ms
+2025-06-02 19:29:46.962 INFO  [http-nio-8080-exec-7][BundleSiteInitializer:5661] Invoking addOrUpdateDDMTemplates took 5 ms
+2025-06-02 19:29:46.962 INFO  [http-nio-8080-exec-7][BundleSiteInitializer:5661] Invoking addOrUpdateJournalArticles took 0 ms
+2025-06-02 19:29:46.962 INFO  [http-nio-8080-exec-7][BundleSiteInitializer:5661] Invoking addOrUpdateObjectActions took 0 ms
+2025-06-02 19:29:46.962 INFO  [http-nio-8080-exec-7][BundleSiteInitializer:5661] Invoking addAssetListEntries took 0 ms
+2025-06-02 19:29:46.963 INFO  [http-nio-8080-exec-7][BundleSiteInitializer:5661] Invoking addOrUpdateObjectEntries took 1 ms
+2025-06-02 19:29:46.963 INFO  [http-nio-8080-exec-7][BundleSiteInitializer:5661] Invoking addOrUpdateNotificationTemplates took 0 ms
+2025-06-02 19:29:46.963 INFO  [http-nio-8080-exec-7][BundleSiteInitializer:5661] Invoking addCPDefinitions took 0 ms
+2025-06-02 19:29:47.376 INFO  [http-nio-8080-exec-7][BundleSiteInitializer:5661] Invoking addLayoutPageTemplates took 413 ms
+2025-06-02 19:29:47.376 INFO  [http-nio-8080-exec-7][BundleSiteInitializer:5661] Invoking addLayoutUtilityPageEntries took 0 ms
+2025-06-02 19:29:47.671 INFO  [http-nio-8080-exec-7][BundleSiteInitializer:5661] Invoking addOrUpdateLayoutsContent took 295 ms
+2025-06-02 19:29:47.671 INFO  [http-nio-8080-exec-7][BundleSiteInitializer:5661] Invoking addExpandoValues took 0 ms
+2025-06-02 19:29:47.671 INFO  [http-nio-8080-exec-7][BundleSiteInitializer:5661] Invoking addSegmentsExperiences took 0 ms
+2025-06-02 19:29:47.671 INFO  [http-nio-8080-exec-7][BundleSiteInitializer:5661] Invoking addOrUpdateResourcePermissions took 0 ms
+2025-06-02 19:29:47.671 INFO  [http-nio-8080-exec-7][BundleSiteInitializer:550] Initialized com.liferay.site.initializer.cms for group 34268 in 1567 ms
+2025-06-02 19:29:47.917 INFO  [http-nio-8080-exec-7][BatchEngineImportTaskExecutorImpl:96] Started batch engine import task 4
+2025-06-02 19:29:49.664 INFO  [http-nio-8080-exec-7][BatchEngineImportTaskExecutorImpl:177] Finished batch engine import task 4 in 1747ms
+2025-06-02 19:29:49.676 INFO  [http-nio-8080-exec-7][BatchEngineImportTaskExecutorImpl:96] Started batch engine import task 5
+2025-06-02 19:29:49.706 INFO  [http-nio-8080-exec-7][BatchEngineImportTaskExecutorImpl:177] Finished batch engine import task 5 in 30ms
+2025-06-02 19:29:49.723 INFO  [http-nio-8080-exec-7][BatchEngineImportTaskExecutorImpl:96] Started batch engine import task 6
+2025-06-02 19:29:49.926 ERROR [http-nio-8080-exec-7][BatchEngineImportTaskExecutorImpl:158] Unable to update batch engine import task {"mvccVersion": 1, "uuid": "9d185239-5d82-32b8-5aec-4b46b22d6a9f", "externalReferenceCode": "9d185239-5d82-32b8-5aec-4b46b22d6a9f", "batchEngineImportTaskId": 6, "companyId": 69591625160564, "userId": 34536, "createDate": "Mon Jun 02 19:29:49 GMT 2025", "modifiedDate": "Mon Jun 02 19:29:47 GMT 2025", "batchSize": 100, "callbackURL": "", "className": "com.liferay.object.admin.rest.dto.v1_0.ObjectDefinition", "contentType": "JSON", "endTime": "null", "errorMessage": "", "executeStatus": "STARTED", "fieldNameMapping": "null", "importStrategy": 2, "operation": "CREATE", "parameters": "{containsHeaders=true, updateStrategy=UPDATE, createStrategy=UPSERT, featureFlag=LPD-17564, importStrategy=ON_ERROR_FAIL}", "processedItemsCount": 0, "startTime": "Mon Jun 02 19:29:49 GMT 2025", "taskItemDelegateName": "DEFAULT", "totalItemsCount": 5}
+com.liferay.portal.kernel.exception.ResourceActionsException: Portlet com_liferay_object_web_internal_object_definitions_portlet_ObjectDefinitionsPortlet_Z7P5 cannot be assigned to both com.liferay.object#32255 and com.liferay.object#36209 as root model resources. See LPS-135983.
+	at com.liferay.portal.security.permission.ResourceActionsImpl._readModelResources(ResourceActionsImpl.java:1179) ~[portal-impl.jar:?]
+	at com.liferay.portal.security.permission.ResourceActionsImpl.populateModelResources(ResourceActionsImpl.java:496) ~[portal-impl.jar:?]
+	at com.liferay.object.internal.security.permission.resource.util.ObjectDefinitionResourcePermissionUtil.populateResourceActions(ObjectDefinitionResourcePermissionUtil.java:65) ~[?:?]
+	at com.liferay.object.internal.deployer.ObjectDefinitionDeployerImpl._deploy(ObjectDefinitionDeployerImpl.java:258) ~[?:?]
+	at com.liferay.object.internal.deployer.ObjectDefinitionDeployerImpl.deploy(ObjectDefinitionDeployerImpl.java:231) ~[?:?]
+	at com.liferay.object.service.impl.ObjectDefinitionLocalServiceImpl.lambda$deployObjectDefinition$3(ObjectDefinitionLocalServiceImpl.java:724) ~[?:?]
+	at java.util.concurrent.ConcurrentHashMap.computeIfAbsent(ConcurrentHashMap.java:1708) ~[?:?]
+	at com.liferay.object.service.impl.ObjectDefinitionLocalServiceImpl.deployObjectDefinition(ObjectDefinitionLocalServiceImpl.java:721) ~[?:?]
+	at com.liferay.object.service.impl.ObjectDefinitionLocalServiceImpl._publishObjectDefinition(ObjectDefinitionLocalServiceImpl.java:2156) ~[?:?]
+	at com.liferay.object.service.impl.ObjectDefinitionLocalServiceImpl.publishSystemObjectDefinition(ObjectDefinitionLocalServiceImpl.java:969) ~[?:?]
+	at jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:580) ~[?:?]
+	at com.liferay.portal.spring.aop.AopMethodInvocationImpl.proceed(AopMethodInvocationImpl.java:41) ~[portal-impl.jar:?]
+	at com.liferay.portal.spring.transaction.TransactionInterceptor.invoke(TransactionInterceptor.java:60) ~[portal-impl.jar:?]
+	at com.liferay.portal.spring.aop.AopMethodInvocationImpl.proceed(AopMethodInvocationImpl.java:48) ~[portal-impl.jar:?]
+	at com.liferay.portal.kernel.aop.ChainableMethodAdvice.invoke(ChainableMethodAdvice.java:55) ~[portal-kernel.jar:?]
+	at com.liferay.portal.spring.aop.AopMethodInvocationImpl.proceed(AopMethodInvocationImpl.java:48) ~[portal-impl.jar:?]
+	at com.liferay.change.tracking.internal.aop.CTTransactionAdvice.invoke(CTTransactionAdvice.java:70) ~[?:?]
+	at com.liferay.portal.spring.aop.AopMethodInvocationImpl.proceed(AopMethodInvocationImpl.java:48) ~[portal-impl.jar:?]
+	at com.liferay.portal.spring.aop.AopInvocationHandler.invoke(AopInvocationHandler.java:40) ~[portal-impl.jar:?]
+	at jdk.proxy338.$Proxy1304.publishSystemObjectDefinition(Unknown Source) ~[?:?]
+	at com.liferay.object.service.impl.ObjectDefinitionServiceImpl.publishSystemObjectDefinition(ObjectDefinitionServiceImpl.java:254) ~[?:?]
+	at jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:580) ~[?:?]
+	at com.liferay.portal.spring.aop.AopMethodInvocationImpl.proceed(AopMethodInvocationImpl.java:41) ~[portal-impl.jar:?]
+	at com.liferay.portal.spring.transaction.TransactionInterceptor.invoke(TransactionInterceptor.java:60) ~[portal-impl.jar:?]
+	at com.liferay.portal.spring.aop.AopMethodInvocationImpl.proceed(AopMethodInvocationImpl.java:48) ~[portal-impl.jar:?]
+	at com.liferay.portal.kernel.aop.ChainableMethodAdvice.invoke(ChainableMethodAdvice.java:55) ~[portal-kernel.jar:?]
+	at com.liferay.portal.spring.aop.AopMethodInvocationImpl.proceed(AopMethodInvocationImpl.java:48) ~[portal-impl.jar:?]
+	at com.liferay.change.tracking.internal.aop.CTTransactionAdvice.invoke(CTTransactionAdvice.java:70) ~[?:?]
+	at com.liferay.portal.spring.aop.AopMethodInvocationImpl.proceed(AopMethodInvocationImpl.java:48) ~[portal-impl.jar:?]
+	at com.liferay.portal.spring.aop.AopInvocationHandler.invoke(AopInvocationHandler.java:40) ~[portal-impl.jar:?]
+	at jdk.proxy338.$Proxy1325.publishSystemObjectDefinition(Unknown Source) ~[?:?]
+	at com.liferay.object.admin.rest.internal.resource.v1_0.ObjectDefinitionResourceImpl.postObjectDefinitionPublish(ObjectDefinitionResourceImpl.java:467) ~[?:?]
+	at com.liferay.object.admin.rest.internal.resource.v1_0.ObjectDefinitionResourceImpl.postObjectDefinition(ObjectDefinitionResourceImpl.java:442) ~[?:?]
+	at com.liferay.object.admin.rest.internal.resource.v1_0.ObjectDefinitionResourceImpl.putObjectDefinitionByExternalReferenceCode(ObjectDefinitionResourceImpl.java:852) ~[?:?]
+	at com.liferay.object.admin.rest.internal.resource.v1_0.BaseObjectDefinitionResourceImpl.lambda$create$2(BaseObjectDefinitionResourceImpl.java:789) ~[?:?]
+	at com.liferay.batch.engine.internal.strategy.BaseBatchEngineImportStrategy.lambda$apply$0(BaseBatchEngineImportStrategy.java:60) ~[?:?]
+	at com.liferay.batch.engine.internal.strategy.OnErrorFailBatchEngineImportStrategy.importItem(OnErrorFailBatchEngineImportStrategy.java:37) ~[?:?]
+	at com.liferay.batch.engine.internal.strategy.BaseBatchEngineImportStrategy.apply(BaseBatchEngineImportStrategy.java:47) ~[?:?]
+	at com.liferay.object.admin.rest.internal.resource.v1_0.BaseObjectDefinitionResourceImpl.create(BaseObjectDefinitionResourceImpl.java:802) ~[?:?]
+	at com.liferay.portal.vulcan.internal.batch.engine.VulcanBatchEngineTaskItemDelegateAdaptor.create(VulcanBatchEngineTaskItemDelegateAdaptor.java:60) ~[?:?]
+	at com.liferay.batch.engine.internal.item.BatchEngineTaskItemDelegateExecutor.saveItems(BatchEngineTaskItemDelegateExecutor.java:79) ~[?:?]
+	at com.liferay.batch.engine.internal.BatchEngineImportTaskExecutorImpl._commitItems(BatchEngineImportTaskExecutorImpl.java:214) ~[?:?]
+	at com.liferay.batch.engine.internal.BatchEngineImportTaskExecutorImpl._importItems(BatchEngineImportTaskExecutorImpl.java:396) ~[?:?]
+	at com.liferay.batch.engine.internal.BatchEngineImportTaskExecutorImpl.lambda$execute$0(BatchEngineImportTaskExecutorImpl.java:149) ~[?:?]
+	at com.liferay.batch.engine.internal.BatchEngineTaskExecutorUtil.execute(BatchEngineTaskExecutorUtil.java:51) ~[?:?]
+	at com.liferay.batch.engine.internal.BatchEngineImportTaskExecutorImpl.execute(BatchEngineImportTaskExecutorImpl.java:147) ~[?:?]
+	at com.liferay.batch.engine.internal.unit.BatchEngineUnitProcessorImpl._execute(BatchEngineUnitProcessorImpl.java:241) ~[?:?]
+	at com.liferay.batch.engine.internal.unit.BatchEngineUnitProcessorImpl$1.addingService(BatchEngineUnitProcessorImpl.java:178) ~[?:?]
+	at org.osgi.util.tracker.ServiceTracker$Tracked.customizerAdding(ServiceTracker.java:943) ~[org.eclipse.osgi.jar:?]
+	at org.osgi.util.tracker.ServiceTracker$Tracked.customizerAdding(ServiceTracker.java:1) ~[org.eclipse.osgi.jar:?]
+	at org.osgi.util.tracker.AbstractTracked.trackAdding(AbstractTracked.java:256) ~[org.eclipse.osgi.jar:?]
+	at org.osgi.util.tracker.AbstractTracked.trackInitial(AbstractTracked.java:183) ~[org.eclipse.osgi.jar:?]
+	at org.osgi.util.tracker.ServiceTracker.open(ServiceTracker.java:321) ~[org.eclipse.osgi.jar:?]
+	at org.osgi.util.tracker.ServiceTracker.open(ServiceTracker.java:264) ~[org.eclipse.osgi.jar:?]
+	at java.util.concurrent.CompletableFuture.uniRunNow(CompletableFuture.java:819) ~[?:?]
+	at java.util.concurrent.CompletableFuture.uniRunStage(CompletableFuture.java:803) ~[?:?]
+	at java.util.concurrent.CompletableFuture.thenRun(CompletableFuture.java:2227) ~[?:?]
+	at com.liferay.batch.engine.internal.unit.BatchEngineUnitProcessorImpl.processBatchEngineUnits(BatchEngineUnitProcessorImpl.java:113) ~[?:?]
+	at com.liferay.batch.engine.internal.unit.MultiCompanyBatchEngineUnitProcessor._processBatchEngineUnits(MultiCompanyBatchEngineUnitProcessor.java:83) ~[?:?]
+	at com.liferay.batch.engine.internal.unit.MultiCompanyBatchEngineUnitProcessor.processBatchEngineUnits(MultiCompanyBatchEngineUnitProcessor.java:38) ~[?:?]
+	at com.liferay.batch.engine.internal.instance.lifecycle.MultiCompanyBatchEngineUnitPortalInstanceLifecycleListener.portalInstanceRegistered(MultiCompanyBatchEngineUnitPortalInstanceLifecycleListener.java:31) ~[?:?]
+	at com.liferay.portal.instance.lifecycle.internal.PortalInstanceLifecycleListenerManagerImpl.lambda$registerCompany$1(PortalInstanceLifecycleListenerManagerImpl.java:192) ~[?:?]
+	at com.liferay.portal.instance.lifecycle.internal.PortalInstanceLifecycleListenerManagerImpl._runIfNeeded(PortalInstanceLifecycleListenerManagerImpl.java:296) ~[?:?]
+	at com.liferay.portal.instance.lifecycle.internal.PortalInstanceLifecycleListenerManagerImpl.registerCompany(PortalInstanceLifecycleListenerManagerImpl.java:174) ~[?:?]
+	at com.liferay.portal.instance.lifecycle.internal.PortalInstanceLifecycleListenerManagerImpl.registerCompany(PortalInstanceLifecycleListenerManagerImpl.java:98) ~[?:?]
+	at jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:580) ~[?:?]
+	at com.liferay.portal.spring.aop.AopMethodInvocationImpl.proceed(AopMethodInvocationImpl.java:41) ~[portal-impl.jar:?]
+	at com.liferay.portal.spring.transaction.TransactionInterceptor.invoke(TransactionInterceptor.java:60) ~[portal-impl.jar:?]
+	at com.liferay.portal.spring.aop.AopMethodInvocationImpl.proceed(AopMethodInvocationImpl.java:48) ~[portal-impl.jar:?]
+	at com.liferay.change.tracking.internal.aop.CTTransactionAdvice.invoke(CTTransactionAdvice.java:70) ~[?:?]
+	at com.liferay.portal.spring.aop.AopMethodInvocationImpl.proceed(AopMethodInvocationImpl.java:48) ~[portal-impl.jar:?]
+	at com.liferay.portal.spring.aop.AopInvocationHandler.invoke(AopInvocationHandler.java:40) ~[portal-impl.jar:?]
+	at jdk.proxy33.$Proxy335.registerCompany(Unknown Source) ~[?:?]
+	at com.liferay.portal.service.impl.CompanyLocalServiceImpl.registerCompany(CompanyLocalServiceImpl.java:1750) ~[portal-impl.jar:?]
+	at com.liferay.portal.service.impl.CompanyLocalServiceImpl.lambda$_checkCompany$19(CompanyLocalServiceImpl.java:2365) ~[portal-impl.jar:?]
+	at com.liferay.portal.kernel.transaction.TransactionCommitCallbackUtil$1.doCommitted(TransactionCommitCallbackUtil.java:34) ~[portal-kernel.jar:?]
+	at com.liferay.portal.kernel.transaction.NewTransactionLifecycleListener.committed(NewTransactionLifecycleListener.java:20) ~[portal-kernel.jar:?]
+	at com.liferay.portal.kernel.transaction.TransactionLifecycleManager.fireTransactionCommittedEvent(TransactionLifecycleManager.java:25) ~[portal-kernel.jar:?]
+	at com.liferay.portal.spring.transaction.DefaultTransactionExecutor.commit(DefaultTransactionExecutor.java:43) ~[portal-impl.jar:?]
+	at com.liferay.portal.spring.transaction.TransactionInterceptor.invoke(TransactionInterceptor.java:68) ~[portal-impl.jar:?]
+	at com.liferay.portal.spring.aop.AopMethodInvocationImpl.proceed(AopMethodInvocationImpl.java:48) ~[portal-impl.jar:?]
+	at com.liferay.portal.kernel.aop.ChainableMethodAdvice.invoke(ChainableMethodAdvice.java:55) ~[portal-kernel.jar:?]
+	at com.liferay.portal.spring.aop.AopMethodInvocationImpl.proceed(AopMethodInvocationImpl.java:48) ~[portal-impl.jar:?]
+	at com.liferay.change.tracking.internal.aop.CTTransactionAdvice.invoke(CTTransactionAdvice.java:70) ~[?:?]
+	at com.liferay.portal.spring.aop.AopMethodInvocationImpl.proceed(AopMethodInvocationImpl.java:48) ~[portal-impl.jar:?]
+	at com.liferay.portal.spring.aop.AopInvocationHandler.invoke(AopInvocationHandler.java:40) ~[portal-impl.jar:?]
+	at jdk.proxy3.$Proxy212.addCompany(Unknown Source) ~[?:?]
+	at com.liferay.portal.instances.web.internal.portlet.action.AddInstanceMVCActionCommand.lambda$_addInstance$0(AddInstanceMVCActionCommand.java:136) ~[bundleFile:?]
+	at com.liferay.portal.util.PortalInstances.addCompany(PortalInstances.java:67) ~[portal-impl.jar:?]
+	at com.liferay.portal.instances.web.internal.portlet.action.AddInstanceMVCActionCommand._addInstance(AddInstanceMVCActionCommand.java:134) ~[bundleFile:?]
+	at com.liferay.portal.instances.web.internal.portlet.action.AddInstanceMVCActionCommand.doProcessAction(AddInstanceMVCActionCommand.java:54) ~[bundleFile:?]
+	at com.liferay.portal.kernel.portlet.bridges.mvc.BaseMVCActionCommand.processAction(BaseMVCActionCommand.java:48) ~[portal-kernel.jar:?]
+	at com.liferay.portal.kernel.portlet.bridges.mvc.MVCPortlet.callActionMethod(MVCPortlet.java:393) ~[portal-kernel.jar:?]
+	at com.liferay.portal.kernel.portlet.LiferayPortlet.processAction(LiferayPortlet.java:75) ~[portal-kernel.jar:?]
+	at com.liferay.portal.kernel.portlet.bridges.mvc.MVCPortlet.processAction(MVCPortlet.java:247) ~[portal-kernel.jar:?]
+	at com.liferay.portlet.internal.FilterChainImpl.doFilter(FilterChainImpl.java:68) ~[portal-impl.jar:?]
+	at com.liferay.portal.kernel.portlet.PortletFilterUtil.doFilter(PortletFilterUtil.java:41) ~[portal-kernel.jar:?]
+	at com.liferay.portal.kernel.servlet.PortletServlet.service(PortletServlet.java:105) ~[portal-kernel.jar:?]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:623) ~[servlet-api.jar:4.0.FR]
+	at org.eclipse.equinox.http.servlet.internal.registration.EndpointRegistration.service(EndpointRegistration.java:147) ~[?:?]
+	at org.eclipse.equinox.http.servlet.internal.servlet.ResponseStateHandler.processRequest(ResponseStateHandler.java:63) ~[?:?]
+	at org.eclipse.equinox.http.servlet.internal.context.DispatchTargets.doDispatch(DispatchTargets.java:120) ~[?:?]
+	at org.eclipse.equinox.http.servlet.internal.servlet.RequestDispatcherAdaptor.include(RequestDispatcherAdaptor.java:48) ~[?:?]
+	at com.liferay.portlet.internal.InvokerPortletImpl.invoke(InvokerPortletImpl.java:562) ~[portal-impl.jar:?]
+	at com.liferay.portlet.internal.InvokerPortletImpl.invokeAction(InvokerPortletImpl.java:602) ~[portal-impl.jar:?]
+	at com.liferay.portlet.internal.InvokerPortletImpl.processAction(InvokerPortletImpl.java:280) ~[portal-impl.jar:?]
+	at com.liferay.portlet.internal.PortletContainerImpl._processAction(PortletContainerImpl.java:495) ~[portal-impl.jar:?]
+	at com.liferay.portlet.internal.PortletContainerImpl.lambda$processAction$0(PortletContainerImpl.java:139) ~[portal-impl.jar:?]
+	at com.liferay.portlet.internal.PortletContainerImpl._preserveGroupIds(PortletContainerImpl.java:402) ~[portal-impl.jar:?]
+	at com.liferay.portlet.internal.PortletContainerImpl.processAction(PortletContainerImpl.java:132) ~[portal-impl.jar:?]
+	at com.liferay.portlet.SecurityPortletContainerWrapper.processAction(SecurityPortletContainerWrapper.java:73) ~[portal-impl.jar:?]
+	at com.liferay.portlet.RestrictPortletContainerWrapper.processAction(RestrictPortletContainerWrapper.java:63) ~[portal-impl.jar:?]
+	at com.liferay.portal.kernel.portlet.PortletContainerUtil.processAction(PortletContainerUtil.java:108) ~[portal-kernel.jar:?]
+	at com.liferay.portal.action.LayoutAction.processLayout(LayoutAction.java:361) ~[portal-impl.jar:?]
+	at com.liferay.portal.action.LayoutAction.execute(LayoutAction.java:165) ~[portal-impl.jar:?]
+	at com.liferay.portal.struts.PortalRequestProcessor._process(PortalRequestProcessor.java:406) ~[portal-impl.jar:?]
+	at com.liferay.portal.struts.PortalRequestProcessor.process(PortalRequestProcessor.java:172) ~[portal-impl.jar:?]
+	at com.liferay.portal.internal.servlet.MainServlet.doPost(MainServlet.java:203) ~[portal-impl.jar:?]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:555) ~[servlet-api.jar:4.0.FR]
+	at com.liferay.portal.internal.servlet.MainServlet.service(MainServlet.java:580) ~[portal-impl.jar:?]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:623) ~[servlet-api.jar:4.0.FR]
+	at com.liferay.shielded.container.internal.proxy.ServletWrapper.service(ServletWrapper.java:103) ~[com.liferay.shielded.container.impl.jar:?]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:199) ~[catalina.jar:9.0.104]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:144) ~[catalina.jar:9.0.104]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-websocket.jar:9.0.104]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:168) ~[catalina.jar:9.0.104]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:144) ~[catalina.jar:9.0.104]
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:117) ~[portal-kernel.jar:?]
+	at com.liferay.portal.kernel.servlet.BaseFilter.processFilter(BaseFilter.java:152) ~[portal-kernel.jar:?]
+	at com.liferay.change.tracking.internal.servlet.filter.CTCollectionPreviewFilter.processFilter(CTCollectionPreviewFilter.java:57) ~[?:?]
+	at com.liferay.portal.kernel.servlet.BaseFilter.doFilter(BaseFilter.java:42) ~[portal-kernel.jar:?]
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDoFilter(InvokerFilterChain.java:204) ~[portal-kernel.jar:?]
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:109) ~[portal-kernel.jar:?]
+	at com.liferay.portal.kernel.servlet.BaseFilter.processFilter(BaseFilter.java:152) ~[portal-kernel.jar:?]
+	at com.liferay.portal.upload.servlet.request.filter.internal.UploadServletRequestFilter.processFilter(UploadServletRequestFilter.java:103) ~[?:?]
+	at com.liferay.portal.kernel.servlet.BaseFilter.doFilter(BaseFilter.java:42) ~[portal-kernel.jar:?]
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDoFilter(InvokerFilterChain.java:204) ~[portal-kernel.jar:?]
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:109) ~[portal-kernel.jar:?]
+	at com.liferay.portal.remote.cors.internal.servlet.filter.PortalCORSServletFilter.processFilter(PortalCORSServletFilter.java:155) ~[?:?]
+	at com.liferay.portal.kernel.servlet.BaseFilter.doFilter(BaseFilter.java:42) ~[portal-kernel.jar:?]
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDoFilter(InvokerFilterChain.java:204) ~[portal-kernel.jar:?]
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:109) ~[portal-kernel.jar:?]
+	at com.liferay.portal.servlet.filters.password.modified.PasswordModifiedFilter.processFilter(PasswordModifiedFilter.java:47) ~[portal-impl.jar:?]
+	at com.liferay.portal.kernel.servlet.BaseFilter.doFilter(BaseFilter.java:42) ~[portal-kernel.jar:?]
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDoFilter(InvokerFilterChain.java:204) ~[portal-kernel.jar:?]
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:109) ~[portal-kernel.jar:?]
+	at com.liferay.portal.servlet.filters.lockout.LockoutFilter.processFilter(LockoutFilter.java:49) ~[portal-impl.jar:?]
+	at com.liferay.portal.kernel.servlet.BaseFilter.doFilter(BaseFilter.java:42) ~[portal-kernel.jar:?]
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDoFilter(InvokerFilterChain.java:204) ~[portal-kernel.jar:?]
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:109) ~[portal-kernel.jar:?]
+	at com.liferay.portal.kernel.servlet.BaseFilter.processFilter(BaseFilter.java:152) ~[portal-kernel.jar:?]
+	at com.liferay.portal.servlet.filters.secure.BaseAuthFilter.processFilter(BaseAuthFilter.java:341) ~[portal-impl.jar:?]
+	at com.liferay.portal.kernel.servlet.BaseFilter.doFilter(BaseFilter.java:42) ~[portal-kernel.jar:?]
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDoFilter(InvokerFilterChain.java:204) ~[portal-kernel.jar:?]
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:109) ~[portal-kernel.jar:?]
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilter.doFilter(InvokerFilter.java:114) ~[portal-kernel.jar:?]
+	at com.liferay.shielded.container.internal.proxy.FilterWrapper.doFilter(FilterWrapper.java:69) ~[com.liferay.shielded.container.impl.jar:?]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:168) ~[catalina.jar:9.0.104]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:144) ~[catalina.jar:9.0.104]
+	at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:621) ~[catalina.jar:9.0.104]
+	at org.apache.catalina.core.ApplicationDispatcher.processRequest(ApplicationDispatcher.java:401) ~[catalina.jar:9.0.104]
+	at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:340) ~[catalina.jar:9.0.104]
+	at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:285) ~[catalina.jar:9.0.104]
+	at com.liferay.friendly.url.internal.servlet.FriendlyURLServlet.service(FriendlyURLServlet.java:570) ~[?:?]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:623) ~[servlet-api.jar:4.0.FR]
+	at com.liferay.portal.servlet.ServletAdapter.service(ServletAdapter.java:89) ~[portal-impl.jar:?]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:623) ~[servlet-api.jar:4.0.FR]
+	at com.liferay.shielded.container.internal.proxy.ServletWrapper.service(ServletWrapper.java:103) ~[com.liferay.shielded.container.impl.jar:?]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:199) ~[catalina.jar:9.0.104]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:144) ~[catalina.jar:9.0.104]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-websocket.jar:9.0.104]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:168) ~[catalina.jar:9.0.104]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:144) ~[catalina.jar:9.0.104]
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:117) ~[portal-kernel.jar:?]
+	at com.liferay.portal.kernel.servlet.BaseFilter.processFilter(BaseFilter.java:152) ~[portal-kernel.jar:?]
+	at com.liferay.change.tracking.internal.servlet.filter.CTCollectionPreviewFilter.processFilter(CTCollectionPreviewFilter.java:57) ~[?:?]
+	at com.liferay.portal.kernel.servlet.BaseFilter.doFilter(BaseFilter.java:42) ~[portal-kernel.jar:?]
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDoFilter(InvokerFilterChain.java:204) ~[portal-kernel.jar:?]
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:109) ~[portal-kernel.jar:?]
+	at com.liferay.portal.kernel.servlet.BaseFilter.processFilter(BaseFilter.java:152) ~[portal-kernel.jar:?]
+	at com.liferay.portal.upload.servlet.request.filter.internal.UploadServletRequestFilter.processFilter(UploadServletRequestFilter.java:103) ~[?:?]
+	at com.liferay.portal.kernel.servlet.BaseFilter.doFilter(BaseFilter.java:42) ~[portal-kernel.jar:?]
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDoFilter(InvokerFilterChain.java:204) ~[portal-kernel.jar:?]
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:109) ~[portal-kernel.jar:?]
+	at com.liferay.portal.remote.cors.internal.servlet.filter.PortalCORSServletFilter.processFilter(PortalCORSServletFilter.java:155) ~[?:?]
+	at com.liferay.portal.kernel.servlet.BaseFilter.doFilter(BaseFilter.java:42) ~[portal-kernel.jar:?]
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDoFilter(InvokerFilterChain.java:204) ~[portal-kernel.jar:?]
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:109) ~[portal-kernel.jar:?]
+	at com.liferay.portal.kernel.servlet.BaseFilter.processFilter(BaseFilter.java:152) ~[portal-kernel.jar:?]
+	at com.liferay.portal.i18n.filter.internal.I18nFilter.processFilter(I18nFilter.java:398) ~[?:?]
+	at com.liferay.portal.kernel.servlet.BaseFilter.doFilter(BaseFilter.java:42) ~[portal-kernel.jar:?]
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDoFilter(InvokerFilterChain.java:204) ~[portal-kernel.jar:?]
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:109) ~[portal-kernel.jar:?]
+	at com.liferay.portal.servlet.filters.password.modified.PasswordModifiedFilter.processFilter(PasswordModifiedFilter.java:47) ~[portal-impl.jar:?]
+	at com.liferay.portal.kernel.servlet.BaseFilter.doFilter(BaseFilter.java:42) ~[portal-kernel.jar:?]
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDoFilter(InvokerFilterChain.java:204) ~[portal-kernel.jar:?]
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:109) ~[portal-kernel.jar:?]
+	at com.liferay.portal.servlet.filters.lockout.LockoutFilter.processFilter(LockoutFilter.java:49) ~[portal-impl.jar:?]
+	at com.liferay.portal.kernel.servlet.BaseFilter.doFilter(BaseFilter.java:42) ~[portal-kernel.jar:?]
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDoFilter(InvokerFilterChain.java:204) ~[portal-kernel.jar:?]
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:109) ~[portal-kernel.jar:?]
+	at com.liferay.portal.kernel.servlet.BaseFilter.processFilter(BaseFilter.java:152) ~[portal-kernel.jar:?]
+	at com.liferay.portal.servlet.filters.secure.BaseAuthFilter.processFilter(BaseAuthFilter.java:341) ~[portal-impl.jar:?]
+	at com.liferay.portal.kernel.servlet.BaseFilter.doFilter(BaseFilter.java:42) ~[portal-kernel.jar:?]
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDoFilter(InvokerFilterChain.java:204) ~[portal-kernel.jar:?]
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:109) ~[portal-kernel.jar:?]
+	at com.liferay.portal.kernel.servlet.BaseFilter.processFilter(BaseFilter.java:152) ~[portal-kernel.jar:?]
+	at com.liferay.portal.servlet.filters.autologin.AutoLoginFilter.processFilter(AutoLoginFilter.java:258) ~[portal-impl.jar:?]
+	at com.liferay.portal.kernel.servlet.BaseFilter.doFilter(BaseFilter.java:42) ~[portal-kernel.jar:?]
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDoFilter(InvokerFilterChain.java:204) ~[portal-kernel.jar:?]
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:109) ~[portal-kernel.jar:?]
+	at com.liferay.portal.kernel.servlet.BaseFilter.processFilter(BaseFilter.java:152) ~[portal-kernel.jar:?]
+	at com.liferay.portal.servlet.filters.virtualhost.VirtualHostFilter.processFilter(VirtualHostFilter.java:247) ~[portal-impl.jar:?]
+	at com.liferay.portal.kernel.servlet.BaseFilter.doFilter(BaseFilter.java:42) ~[portal-kernel.jar:?]
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDoFilter(InvokerFilterChain.java:204) ~[portal-kernel.jar:?]
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:109) ~[portal-kernel.jar:?]
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDirectCallFilter(InvokerFilterChain.java:189) ~[portal-kernel.jar:?]
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:92) ~[portal-kernel.jar:?]
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDirectCallFilter(InvokerFilterChain.java:189) ~[portal-kernel.jar:?]
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:92) ~[portal-kernel.jar:?]
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDirectCallFilter(InvokerFilterChain.java:168) ~[portal-kernel.jar:?]
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:92) ~[portal-kernel.jar:?]
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDirectCallFilter(InvokerFilterChain.java:189) ~[portal-kernel.jar:?]
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:92) ~[portal-kernel.jar:?]
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilter.doFilter(InvokerFilter.java:114) ~[portal-kernel.jar:?]
+	at com.liferay.shielded.container.internal.proxy.FilterWrapper.doFilter(FilterWrapper.java:69) ~[com.liferay.shielded.container.impl.jar:?]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:168) ~[catalina.jar:9.0.104]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:144) ~[catalina.jar:9.0.104]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:168) ~[catalina.jar:9.0.104]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[catalina.jar:9.0.104]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482) ~[catalina.jar:9.0.104]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130) ~[catalina.jar:9.0.104]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[catalina.jar:9.0.104]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[catalina.jar:9.0.104]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:346) ~[catalina.jar:9.0.104]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397) ~[tomcat-coyote.jar:9.0.104]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-coyote.jar:9.0.104]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:935) ~[tomcat-coyote.jar:9.0.104]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1792) ~[tomcat-coyote.jar:9.0.104]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-coyote.jar:9.0.104]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1189) ~[org.apache.tomcat-util.jar:9.0.104]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:658) ~[org.apache.tomcat-util.jar:9.0.104]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63) ~[org.apache.tomcat-util.jar:9.0.104]
+	at java.lang.Thread.run(Thread.java:1583) [?:?]
+2025-06-02 19:29:49.940 INFO  [http-nio-8080-exec-7][BatchEngineImportTaskExecutorImpl:177] Finished batch engine import task 6 in 217ms
+2025-06-02 19:34:42.546 INFO  [http-nio-8080-exec-7][BundleSiteInitializer:532] Initializing com.liferay.site.initializer.welcome for group 36913
+2025-06-02 19:34:42.547 INFO  [http-nio-8080-exec-7][BundleSiteInitializer:5661] Invoking addSiteSettings took 0 ms
+2025-06-02 19:34:42.547 INFO  [http-nio-8080-exec-7][BundleSiteInitializer:5661] Invoking addOrUpdateDDMStructures took 0 ms
+2025-06-02 19:34:42.547 INFO  [http-nio-8080-exec-7][BundleSiteInitializer:5661] Invoking addOrUpdateExpandoColumns took 0 ms
+2025-06-02 19:34:42.547 INFO  [http-nio-8080-exec-7][BundleSiteInitializer:5661] Invoking addOrUpdateTaxonomyVocabularies took 0 ms
+2025-06-02 19:34:42.547 INFO  [http-nio-8080-exec-7][BundleSiteInitializer:5661] Invoking addOrUpdateUserGroups took 0 ms
+2025-06-02 19:34:42.547 INFO  [http-nio-8080-exec-7][BundleSiteInitializer:5661] Invoking setPLOEntries took 0 ms
+2025-06-02 19:34:42.547 INFO  [http-nio-8080-exec-7][BundleSiteInitializer:5661] Invoking addOrUpdateSXPBlueprint took 0 ms
+2025-06-02 19:34:42.547 INFO  [http-nio-8080-exec-7][BundleSiteInitializer:5661] Invoking addOrUpdateListTypeDefinitions took 0 ms
+2025-06-02 19:34:42.547 INFO  [http-nio-8080-exec-7][BundleSiteInitializer:5661] Invoking addOrUpdateDepotEntries took 0 ms
+2025-06-02 19:34:42.549 INFO  [http-nio-8080-exec-7][BundleSiteInitializer:5661] Invoking addOrUpdateRoles took 2 ms
+2025-06-02 19:34:42.549 INFO  [http-nio-8080-exec-7][BundleSiteInitializer:5661] Invoking addOrUpdateSAPEntries took 0 ms
+2025-06-02 19:34:42.637 INFO  [http-nio-8080-exec-7][BundleSiteInitializer:5661] Invoking addOrUpdateLayouts took 88 ms
+2025-06-02 19:34:42.638 INFO  [http-nio-8080-exec-7][BundleSiteInitializer:5661] Invoking addOrUpdateObjectFolders took 0 ms
+2025-06-02 19:34:42.639 INFO  [http-nio-8080-exec-7][BundleSiteInitializer:5661] Invoking addOrUpdateDataDefinitions took 1 ms
+2025-06-02 19:34:42.640 INFO  [http-nio-8080-exec-7][BundleSiteInitializer:5661] Invoking addKeywords took 0 ms
+2025-06-02 19:34:42.640 INFO  [http-nio-8080-exec-7][BundleSiteInitializer:5661] Invoking addOrUpdateKnowledgeBaseArticles took 0 ms
+2025-06-02 19:34:42.640 INFO  [http-nio-8080-exec-7][BundleSiteInitializer:5661] Invoking addAccountGroups took 0 ms
+2025-06-02 19:34:42.884 INFO  [http-nio-8080-exec-7][BundleSiteInitializer:5661] Invoking addOrUpdateDocuments took 244 ms
+2025-06-02 19:34:42.884 INFO  [http-nio-8080-exec-7][BundleSiteInitializer:5661] Invoking addPortletSettings took 0 ms
+2025-06-02 19:34:42.884 INFO  [http-nio-8080-exec-7][BundleSiteInitializer:5661] Invoking addStyleBookEntries took 0 ms
+2025-06-02 19:34:42.884 INFO  [http-nio-8080-exec-7][BundleSiteInitializer:5661] Invoking addOrUpdateOrganizations took 0 ms
+2025-06-02 19:34:42.884 INFO  [http-nio-8080-exec-7][BundleSiteInitializer:5661] Invoking addOrUpdateBlogPostings took 0 ms
+2025-06-02 19:34:42.884 INFO  [http-nio-8080-exec-7][BundleSiteInitializer:5661] Invoking addAccounts took 0 ms
+2025-06-02 19:34:42.884 INFO  [http-nio-8080-exec-7][BundleSiteInitializer:5661] Invoking addWorkflowDefinitions took 0 ms
+2025-06-02 19:34:42.885 INFO  [http-nio-8080-exec-7][BundleSiteInitializer:5661] Invoking addSiteConfiguration took 0 ms
+2025-06-02 19:34:42.887 INFO  [http-nio-8080-exec-7][BundleSiteInitializer:5661] Invoking updateLayoutSets took 2 ms
+2025-06-02 19:34:42.887 INFO  [http-nio-8080-exec-7][BundleSiteInitializer:5661] Invoking addFragmentEntries took 0 ms
+2025-06-02 19:34:42.887 INFO  [http-nio-8080-exec-7][BundleSiteInitializer:5661] Invoking addOrUpdateClientExtensionEntries took 0 ms
+2025-06-02 19:34:42.887 INFO  [http-nio-8080-exec-7][BundleSiteInitializer:5661] Invoking addOrUpdateAssetLinkEntries took 0 ms
+2025-06-02 19:34:42.887 INFO  [http-nio-8080-exec-7][BundleSiteInitializer:5661] Invoking addAccountGroupAssignments took 0 ms
+2025-06-02 19:34:42.887 INFO  [http-nio-8080-exec-7][BundleSiteInitializer:5661] Invoking addAccountsOrganizations took 0 ms
+2025-06-02 19:34:42.887 INFO  [http-nio-8080-exec-7][BundleSiteInitializer:5661] Invoking addUserAccounts took 0 ms
+2025-06-02 19:34:42.887 INFO  [http-nio-8080-exec-7][BundleSiteInitializer:5661] Invoking addUserRoles took 0 ms
+2025-06-02 19:34:42.888 INFO  [http-nio-8080-exec-7][BundleSiteInitializer:5661] Invoking addOrUpdateSegmentsEntries took 0 ms
+2025-06-02 19:34:42.888 INFO  [http-nio-8080-exec-7][BundleSiteInitializer:5661] Invoking addRolesAssignments took 0 ms
+2025-06-02 19:34:42.890 INFO  [http-nio-8080-exec-7][BundleSiteInitializer:5661] Invoking addObjectDefinitions took 1 ms
+2025-06-02 19:34:42.890 INFO  [http-nio-8080-exec-7][BundleSiteInitializer:5661] Invoking addOrUpdateObjectRelationships took 0 ms
+2025-06-02 19:34:42.890 INFO  [http-nio-8080-exec-7][BundleSiteInitializer:5661] Invoking addOrUpdateObjectFields took 0 ms
+2025-06-02 19:34:42.890 INFO  [http-nio-8080-exec-7][BundleSiteInitializer:5661] Invoking publishObjectDefinitions took 0 ms
+2025-06-02 19:34:42.890 INFO  [http-nio-8080-exec-7][BundleSiteInitializer:5661] Invoking addOrUpdateNotificationTemplates took 0 ms
+2025-06-02 19:34:42.890 INFO  [http-nio-8080-exec-7][BundleSiteInitializer:5661] Invoking addOrUpdateAccountEntryRestrictions took 0 ms
+2025-06-02 19:34:42.890 INFO  [http-nio-8080-exec-7][BundleSiteInitializer:5661] Invoking addAssetListEntries took 0 ms
+2025-06-02 19:34:42.901 INFO  [http-nio-8080-exec-7][BundleSiteInitializer:5661] Invoking addOrUpdateDDMTemplates took 11 ms
+2025-06-02 19:34:42.901 INFO  [http-nio-8080-exec-7][BundleSiteInitializer:5661] Invoking addOrUpdateJournalArticles took 0 ms
+2025-06-02 19:34:42.901 INFO  [http-nio-8080-exec-7][BundleSiteInitializer:5661] Invoking addOrUpdateObjectActions took 0 ms
+2025-06-02 19:34:42.902 INFO  [http-nio-8080-exec-7][BundleSiteInitializer:5661] Invoking addOrUpdateObjectEntries took 0 ms
+2025-06-02 19:34:42.902 INFO  [http-nio-8080-exec-7][BundleSiteInitializer:5661] Invoking addCPDefinitions took 0 ms
+2025-06-02 19:34:42.902 INFO  [http-nio-8080-exec-7][BundleSiteInitializer:5661] Invoking addLayoutPageTemplates took 0 ms
+2025-06-02 19:34:42.930 INFO  [http-nio-8080-exec-7][BundleSiteInitializer:5661] Invoking addOrUpdateLayoutsContent took 28 ms
+2025-06-02 19:34:42.930 INFO  [http-nio-8080-exec-7][BundleSiteInitializer:5661] Invoking addSegmentsExperiences took 0 ms
+2025-06-02 19:34:42.930 INFO  [http-nio-8080-exec-7][BundleSiteInitializer:5661] Invoking addExpandoValues took 0 ms
+2025-06-02 19:34:43.534 INFO  [http-nio-8080-exec-7][BundleSiteInitializer:5661] Invoking addLayoutUtilityPageEntries took 604 ms
+2025-06-02 19:34:43.534 INFO  [http-nio-8080-exec-7][BundleSiteInitializer:5661] Invoking addOrUpdateResourcePermissions took 0 ms
+2025-06-02 19:34:43.535 INFO  [http-nio-8080-exec-7][BundleSiteInitializer:550] Initialized com.liferay.site.initializer.welcome for group 36913 in 988 ms
+2025-06-02 19:35:01.645 INFO  [http-nio-8080-exec-6][BundleSiteInitializer:532] Initializing com.liferay.site.initializer.welcome for group 37160
+2025-06-02 19:35:01.646 INFO  [http-nio-8080-exec-6][BundleSiteInitializer:5661] Invoking addOrUpdateDDMStructures took 0 ms
+2025-06-02 19:35:01.646 INFO  [http-nio-8080-exec-6][BundleSiteInitializer:5661] Invoking addSiteSettings took 0 ms
+2025-06-02 19:35:01.646 INFO  [http-nio-8080-exec-6][BundleSiteInitializer:5661] Invoking addOrUpdateExpandoColumns took 0 ms
+2025-06-02 19:35:01.646 INFO  [http-nio-8080-exec-6][BundleSiteInitializer:5661] Invoking addOrUpdateOrganizations took 0 ms
+2025-06-02 19:35:01.646 INFO  [http-nio-8080-exec-6][BundleSiteInitializer:5661] Invoking addOrUpdateTaxonomyVocabularies took 0 ms
+2025-06-02 19:35:01.646 INFO  [http-nio-8080-exec-6][BundleSiteInitializer:5661] Invoking addOrUpdateDepotEntries took 0 ms
+2025-06-02 19:35:01.646 INFO  [http-nio-8080-exec-6][BundleSiteInitializer:5661] Invoking addKeywords took 0 ms
+2025-06-02 19:35:01.646 INFO  [http-nio-8080-exec-6][BundleSiteInitializer:5661] Invoking addOrUpdateSAPEntries took 0 ms
+2025-06-02 19:35:01.646 INFO  [http-nio-8080-exec-6][BundleSiteInitializer:5661] Invoking addPortletSettings took 0 ms
+2025-06-02 19:35:01.647 INFO  [http-nio-8080-exec-6][BundleSiteInitializer:5661] Invoking addOrUpdateListTypeDefinitions took 0 ms
+2025-06-02 19:35:01.647 INFO  [http-nio-8080-exec-6][BundleSiteInitializer:5661] Invoking addOrUpdateRoles took 0 ms
+2025-06-02 19:35:01.647 INFO  [http-nio-8080-exec-6][BundleSiteInitializer:5661] Invoking addOrUpdateKnowledgeBaseArticles took 0 ms
+2025-06-02 19:35:01.647 INFO  [http-nio-8080-exec-6][BundleSiteInitializer:5661] Invoking addOrUpdateDataDefinitions took 0 ms
+2025-06-02 19:35:01.647 INFO  [http-nio-8080-exec-6][BundleSiteInitializer:5661] Invoking addOrUpdateObjectFolders took 0 ms
+2025-06-02 19:35:01.647 INFO  [http-nio-8080-exec-6][BundleSiteInitializer:5661] Invoking addAccounts took 0 ms
+2025-06-02 19:35:01.647 INFO  [http-nio-8080-exec-6][BundleSiteInitializer:5661] Invoking addAccountsOrganizations took 0 ms
+2025-06-02 19:35:01.648 INFO  [http-nio-8080-exec-6][BundleSiteInitializer:5661] Invoking addSiteConfiguration took 0 ms
+2025-06-02 19:35:01.648 INFO  [http-nio-8080-exec-6][BundleSiteInitializer:5661] Invoking addAccountGroups took 0 ms
+2025-06-02 19:35:01.648 INFO  [http-nio-8080-exec-6][BundleSiteInitializer:5661] Invoking addOrUpdateUserGroups took 0 ms
+2025-06-02 19:35:01.648 INFO  [http-nio-8080-exec-6][BundleSiteInitializer:5661] Invoking addStyleBookEntries took 0 ms
+2025-06-02 19:35:01.648 INFO  [http-nio-8080-exec-6][BundleSiteInitializer:5661] Invoking addWorkflowDefinitions took 0 ms
+2025-06-02 19:35:01.648 INFO  [http-nio-8080-exec-6][BundleSiteInitializer:5661] Invoking setPLOEntries took 0 ms
+2025-06-02 19:35:01.648 INFO  [http-nio-8080-exec-6][BundleSiteInitializer:5661] Invoking addOrUpdateSXPBlueprint took 0 ms
+2025-06-02 19:35:01.797 INFO  [http-nio-8080-exec-6][BundleSiteInitializer:5661] Invoking addOrUpdateDocuments took 149 ms
+2025-06-02 19:35:01.798 INFO  [http-nio-8080-exec-6][BundleSiteInitializer:5661] Invoking addAccountGroupAssignments took 1 ms
+2025-06-02 19:35:01.899 INFO  [http-nio-8080-exec-6][BundleSiteInitializer:5661] Invoking addOrUpdateLayouts took 101 ms
+2025-06-02 19:35:01.904 INFO  [http-nio-8080-exec-6][BundleSiteInitializer:5661] Invoking updateLayoutSets took 4 ms
+2025-06-02 19:35:01.904 INFO  [http-nio-8080-exec-6][BundleSiteInitializer:5661] Invoking addOrUpdateBlogPostings took 0 ms
+2025-06-02 19:35:01.904 INFO  [http-nio-8080-exec-6][BundleSiteInitializer:5661] Invoking addOrUpdateAssetLinkEntries took 0 ms
+2025-06-02 19:35:01.904 INFO  [http-nio-8080-exec-6][BundleSiteInitializer:5661] Invoking addUserAccounts took 0 ms
+2025-06-02 19:35:01.904 INFO  [http-nio-8080-exec-6][BundleSiteInitializer:5661] Invoking addOrUpdateClientExtensionEntries took 0 ms
+2025-06-02 19:35:01.905 INFO  [http-nio-8080-exec-6][BundleSiteInitializer:5661] Invoking addOrUpdateSegmentsEntries took 0 ms
+2025-06-02 19:35:01.905 INFO  [http-nio-8080-exec-6][BundleSiteInitializer:5661] Invoking addRolesAssignments took 0 ms
+2025-06-02 19:35:01.905 INFO  [http-nio-8080-exec-6][BundleSiteInitializer:5661] Invoking addUserRoles took 0 ms
+2025-06-02 19:35:01.905 INFO  [http-nio-8080-exec-6][BundleSiteInitializer:5661] Invoking addFragmentEntries took 0 ms
+2025-06-02 19:35:01.906 INFO  [http-nio-8080-exec-6][BundleSiteInitializer:5661] Invoking addObjectDefinitions took 0 ms
+2025-06-02 19:35:01.906 INFO  [http-nio-8080-exec-6][BundleSiteInitializer:5661] Invoking addOrUpdateObjectRelationships took 0 ms
+2025-06-02 19:35:01.907 INFO  [http-nio-8080-exec-6][BundleSiteInitializer:5661] Invoking addOrUpdateObjectFields took 1 ms
+2025-06-02 19:35:01.907 INFO  [http-nio-8080-exec-6][BundleSiteInitializer:5661] Invoking publishObjectDefinitions took 0 ms
+2025-06-02 19:35:01.907 INFO  [http-nio-8080-exec-6][BundleSiteInitializer:5661] Invoking addOrUpdateNotificationTemplates took 0 ms
+2025-06-02 19:35:01.907 INFO  [http-nio-8080-exec-6][BundleSiteInitializer:5661] Invoking addAssetListEntries took 0 ms
+2025-06-02 19:35:01.908 INFO  [http-nio-8080-exec-6][BundleSiteInitializer:5661] Invoking addOrUpdateDDMTemplates took 1 ms
+2025-06-02 19:35:01.908 INFO  [http-nio-8080-exec-6][BundleSiteInitializer:5661] Invoking addOrUpdateAccountEntryRestrictions took 0 ms
+2025-06-02 19:35:01.908 INFO  [http-nio-8080-exec-6][BundleSiteInitializer:5661] Invoking addOrUpdateObjectActions took 0 ms
+2025-06-02 19:35:01.908 INFO  [http-nio-8080-exec-6][BundleSiteInitializer:5661] Invoking addOrUpdateJournalArticles took 0 ms
+2025-06-02 19:35:01.908 INFO  [http-nio-8080-exec-6][BundleSiteInitializer:5661] Invoking addOrUpdateObjectEntries took 0 ms
+2025-06-02 19:35:01.909 INFO  [http-nio-8080-exec-6][BundleSiteInitializer:5661] Invoking addCPDefinitions took 0 ms
+2025-06-02 19:35:01.909 INFO  [http-nio-8080-exec-6][BundleSiteInitializer:5661] Invoking addLayoutPageTemplates took 0 ms
+2025-06-02 19:35:01.948 INFO  [http-nio-8080-exec-6][BundleSiteInitializer:5661] Invoking addOrUpdateLayoutsContent took 39 ms
+2025-06-02 19:35:01.948 INFO  [http-nio-8080-exec-6][BundleSiteInitializer:5661] Invoking addSegmentsExperiences took 0 ms
+2025-06-02 19:35:02.707 INFO  [http-nio-8080-exec-6][BundleSiteInitializer:5661] Invoking addLayoutUtilityPageEntries took 759 ms
+2025-06-02 19:35:02.708 INFO  [http-nio-8080-exec-6][BundleSiteInitializer:5661] Invoking addExpandoValues took 0 ms
+2025-06-02 19:35:02.708 INFO  [http-nio-8080-exec-6][BundleSiteInitializer:5661] Invoking addOrUpdateResourcePermissions took 0 ms
+2025-06-02 19:35:02.708 INFO  [http-nio-8080-exec-6][BundleSiteInitializer:550] Initialized com.liferay.site.initializer.welcome for group 37160 in 1063 ms
+2025-06-02 19:35:26.971 INFO  [http-nio-8080-exec-10][BundleSiteInitializer:532] Initializing com.liferay.site.initializer.welcome for group 37412
+2025-06-02 19:35:26.972 INFO  [http-nio-8080-exec-10][BundleSiteInitializer:5661] Invoking setPLOEntries took 0 ms
+2025-06-02 19:35:26.972 INFO  [http-nio-8080-exec-10][BundleSiteInitializer:5661] Invoking addSiteSettings took 0 ms
+2025-06-02 19:35:26.972 INFO  [http-nio-8080-exec-10][BundleSiteInitializer:5661] Invoking addOrUpdateSAPEntries took 0 ms
+2025-06-02 19:35:26.972 INFO  [http-nio-8080-exec-10][BundleSiteInitializer:5661] Invoking addOrUpdateObjectFolders took 0 ms
+2025-06-02 19:35:26.972 INFO  [http-nio-8080-exec-10][BundleSiteInitializer:5661] Invoking addStyleBookEntries took 0 ms
+2025-06-02 19:35:26.972 INFO  [http-nio-8080-exec-10][BundleSiteInitializer:5661] Invoking addOrUpdateUserGroups took 0 ms
+2025-06-02 19:35:26.973 INFO  [http-nio-8080-exec-10][BundleSiteInitializer:5661] Invoking addOrUpdateDepotEntries took 0 ms
+2025-06-02 19:35:26.973 INFO  [http-nio-8080-exec-10][BundleSiteInitializer:5661] Invoking addOrUpdateDDMStructures took 0 ms
+2025-06-02 19:35:26.973 INFO  [http-nio-8080-exec-10][BundleSiteInitializer:5661] Invoking addAccountGroups took 0 ms
+2025-06-02 19:35:26.973 INFO  [http-nio-8080-exec-10][BundleSiteInitializer:5661] Invoking addOrUpdateRoles took 0 ms
+2025-06-02 19:35:27.068 INFO  [http-nio-8080-exec-10][BundleSiteInitializer:5661] Invoking addOrUpdateLayouts took 95 ms
+2025-06-02 19:35:27.068 INFO  [http-nio-8080-exec-10][BundleSiteInitializer:5661] Invoking addOrUpdateListTypeDefinitions took 0 ms
+2025-06-02 19:35:27.069 INFO  [http-nio-8080-exec-10][BundleSiteInitializer:5661] Invoking addKeywords took 0 ms
+2025-06-02 19:35:27.070 INFO  [http-nio-8080-exec-10][BundleSiteInitializer:5661] Invoking addOrUpdateDataDefinitions took 1 ms
+2025-06-02 19:35:27.071 INFO  [http-nio-8080-exec-10][BundleSiteInitializer:5661] Invoking addOrUpdateExpandoColumns took 0 ms
+2025-06-02 19:35:27.071 INFO  [http-nio-8080-exec-10][BundleSiteInitializer:5661] Invoking addWorkflowDefinitions took 0 ms
+2025-06-02 19:35:27.072 INFO  [http-nio-8080-exec-10][BundleSiteInitializer:5661] Invoking addOrUpdateKnowledgeBaseArticles took 0 ms
+2025-06-02 19:35:27.072 INFO  [http-nio-8080-exec-10][BundleSiteInitializer:5661] Invoking addSiteConfiguration took 0 ms
+2025-06-02 19:35:27.076 INFO  [http-nio-8080-exec-10][BundleSiteInitializer:5661] Invoking updateLayoutSets took 4 ms
+2025-06-02 19:35:27.076 INFO  [http-nio-8080-exec-10][BundleSiteInitializer:5661] Invoking addOrUpdateTaxonomyVocabularies took 0 ms
+2025-06-02 19:35:27.076 INFO  [http-nio-8080-exec-10][BundleSiteInitializer:5661] Invoking addOrUpdateOrganizations took 0 ms
+2025-06-02 19:35:27.344 INFO  [http-nio-8080-exec-10][BundleSiteInitializer:5661] Invoking addOrUpdateDocuments took 267 ms
+2025-06-02 19:35:27.344 INFO  [http-nio-8080-exec-10][BundleSiteInitializer:5661] Invoking addOrUpdateClientExtensionEntries took 0 ms
+2025-06-02 19:35:27.345 INFO  [http-nio-8080-exec-10][BundleSiteInitializer:5661] Invoking addFragmentEntries took 0 ms
+2025-06-02 19:35:27.345 INFO  [http-nio-8080-exec-10][BundleSiteInitializer:5661] Invoking addAccounts took 0 ms
+2025-06-02 19:35:27.345 INFO  [http-nio-8080-exec-10][BundleSiteInitializer:5661] Invoking addOrUpdateBlogPostings took 0 ms
+2025-06-02 19:35:27.345 INFO  [http-nio-8080-exec-10][BundleSiteInitializer:5661] Invoking addAccountsOrganizations took 0 ms
+2025-06-02 19:35:27.345 INFO  [http-nio-8080-exec-10][BundleSiteInitializer:5661] Invoking addAccountGroupAssignments took 0 ms
+2025-06-02 19:35:27.345 INFO  [http-nio-8080-exec-10][BundleSiteInitializer:5661] Invoking addOrUpdateSXPBlueprint took 0 ms
+2025-06-02 19:35:27.346 INFO  [http-nio-8080-exec-10][BundleSiteInitializer:5661] Invoking addPortletSettings took 0 ms
+2025-06-02 19:35:27.346 INFO  [http-nio-8080-exec-10][BundleSiteInitializer:5661] Invoking addOrUpdateAssetLinkEntries took 0 ms
+2025-06-02 19:35:27.346 INFO  [http-nio-8080-exec-10][BundleSiteInitializer:5661] Invoking addUserAccounts took 0 ms
+2025-06-02 19:35:27.346 INFO  [http-nio-8080-exec-10][BundleSiteInitializer:5661] Invoking addRolesAssignments took 0 ms
+2025-06-02 19:35:27.346 INFO  [http-nio-8080-exec-10][BundleSiteInitializer:5661] Invoking addOrUpdateSegmentsEntries took 0 ms
+2025-06-02 19:35:27.346 INFO  [http-nio-8080-exec-10][BundleSiteInitializer:5661] Invoking addObjectDefinitions took 0 ms
+2025-06-02 19:35:27.347 INFO  [http-nio-8080-exec-10][BundleSiteInitializer:5661] Invoking addUserRoles took 0 ms
+2025-06-02 19:35:27.347 INFO  [http-nio-8080-exec-10][BundleSiteInitializer:5661] Invoking addOrUpdateObjectRelationships took 0 ms
+2025-06-02 19:35:27.347 INFO  [http-nio-8080-exec-10][BundleSiteInitializer:5661] Invoking addOrUpdateObjectFields took 0 ms
+2025-06-02 19:35:27.347 INFO  [http-nio-8080-exec-10][BundleSiteInitializer:5661] Invoking publishObjectDefinitions took 0 ms
+2025-06-02 19:35:27.348 INFO  [http-nio-8080-exec-10][BundleSiteInitializer:5661] Invoking addOrUpdateDDMTemplates took 1 ms
+2025-06-02 19:35:27.349 INFO  [http-nio-8080-exec-10][BundleSiteInitializer:5661] Invoking addOrUpdateJournalArticles took 0 ms
+2025-06-02 19:35:27.349 INFO  [http-nio-8080-exec-10][BundleSiteInitializer:5661] Invoking addAssetListEntries took 0 ms
+2025-06-02 19:35:27.349 INFO  [http-nio-8080-exec-10][BundleSiteInitializer:5661] Invoking addOrUpdateNotificationTemplates took 0 ms
+2025-06-02 19:35:27.349 INFO  [http-nio-8080-exec-10][BundleSiteInitializer:5661] Invoking addOrUpdateAccountEntryRestrictions took 0 ms
+2025-06-02 19:35:27.349 INFO  [http-nio-8080-exec-10][BundleSiteInitializer:5661] Invoking addOrUpdateObjectActions took 0 ms
+2025-06-02 19:35:27.350 INFO  [http-nio-8080-exec-10][BundleSiteInitializer:5661] Invoking addOrUpdateObjectEntries took 0 ms
+2025-06-02 19:35:27.350 INFO  [http-nio-8080-exec-10][BundleSiteInitializer:5661] Invoking addCPDefinitions took 0 ms
+2025-06-02 19:35:27.350 INFO  [http-nio-8080-exec-10][BundleSiteInitializer:5661] Invoking addLayoutPageTemplates took 0 ms
+2025-06-02 19:35:27.409 INFO  [http-nio-8080-exec-10][BundleSiteInitializer:5661] Invoking addOrUpdateLayoutsContent took 59 ms
+2025-06-02 19:35:28.157 INFO  [http-nio-8080-exec-10][BundleSiteInitializer:5661] Invoking addLayoutUtilityPageEntries took 748 ms
+2025-06-02 19:35:28.158 INFO  [http-nio-8080-exec-10][BundleSiteInitializer:5661] Invoking addSegmentsExperiences took 0 ms
+2025-06-02 19:35:28.158 INFO  [http-nio-8080-exec-10][BundleSiteInitializer:5661] Invoking addOrUpdateResourcePermissions took 0 ms
+2025-06-02 19:35:28.158 INFO  [http-nio-8080-exec-10][BundleSiteInitializer:5661] Invoking addExpandoValues took 0 ms
+2025-06-02 19:35:28.158 INFO  [http-nio-8080-exec-10][BundleSiteInitializer:550] Initialized com.liferay.site.initializer.welcome for group 37412 in 1188 ms
+2025-06-02 19:36:31.031 WARN  [liferay/mail-2][MailMessageListener:123] Email test@domain.invalid will be ignored because it is included in mail.send.blacklist
+2025-06-02 19:36:31.031 WARN  [liferay/mail-2][MailMessageListener:49] Skipping email because the sender is not specified
+2025-06-02 19:36:41.323 WARN  [liferay/mail-3][MailMessageListener:123] Email test@domain.invalid will be ignored because it is included in mail.send.blacklist
+2025-06-02 19:36:41.323 WARN  [liferay/mail-3][MailMessageListener:49] Skipping email because the sender is not specified
+2025-06-02 20:13:46.223 ERROR [http-nio-8080-exec-2][WebApplicationExceptionMapper:29] HTTP 405 Method Not Allowed
+javax.ws.rs.ClientErrorException: HTTP 405 Method Not Allowed
+	at org.apache.cxf.jaxrs.utils.SpecExceptions.toHttpException(SpecExceptions.java:117) ~[bundleFile:3.5.11]
+	at org.apache.cxf.jaxrs.utils.ExceptionUtils.toHttpException(ExceptionUtils.java:168) ~[bundleFile:3.5.11]
+	at org.apache.cxf.jaxrs.utils.JAXRSUtils.findTargetMethod(JAXRSUtils.java:673) ~[bundleFile:3.5.11]
+	at org.apache.cxf.jaxrs.interceptor.JAXRSInInterceptor.processRequest(JAXRSInInterceptor.java:182) ~[bundleFile:3.5.11]
+	at org.apache.cxf.jaxrs.interceptor.JAXRSInInterceptor.handleMessage(JAXRSInInterceptor.java:79) ~[bundleFile:3.5.11]
+	at org.apache.cxf.phase.PhaseInterceptorChain.doIntercept(PhaseInterceptorChain.java:307) ~[bundleFile:3.5.11]
+	at org.apache.cxf.transport.ChainInitiationObserver.onMessage(ChainInitiationObserver.java:121) ~[bundleFile:3.5.11]
+	at org.apache.cxf.transport.http.AbstractHTTPDestination.invoke(AbstractHTTPDestination.java:267) ~[bundleFile:3.5.11]
+	at org.apache.cxf.transport.servlet.ServletController.invokeDestination(ServletController.java:234) ~[bundleFile:3.5.11]
+	at org.apache.cxf.transport.servlet.ServletController.invoke(ServletController.java:208) ~[bundleFile:3.5.11]
+	at org.apache.cxf.transport.servlet.ServletController.invoke(ServletController.java:160) ~[bundleFile:3.5.11]
+	at org.apache.cxf.transport.servlet.CXFNonSpringServlet.invoke(CXFNonSpringServlet.java:225) ~[bundleFile:3.5.11]
+	at org.apache.cxf.transport.servlet.AbstractHTTPServlet.handleRequest(AbstractHTTPServlet.java:304) ~[bundleFile:3.5.11]
+	at org.apache.cxf.transport.servlet.AbstractHTTPServlet.doGet(AbstractHTTPServlet.java:222) ~[bundleFile:3.5.11]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:529) ~[servlet-api.jar:4.0.FR]
+	at org.apache.cxf.transport.servlet.AbstractHTTPServlet.service(AbstractHTTPServlet.java:279) ~[bundleFile:3.5.11]
+	at org.eclipse.equinox.http.servlet.internal.registration.EndpointRegistration.service(EndpointRegistration.java:147) ~[?:?]
+	at org.eclipse.equinox.http.servlet.internal.servlet.FilterChainImpl.doFilter(FilterChainImpl.java:50) ~[?:?]
+	at com.liferay.portal.security.auth.verifier.internal.tracker.AuthVerifierFilterTracker$RemoteAccessFilter.doFilter(AuthVerifierFilterTracker.java:213) ~[?:?]
+	at org.eclipse.equinox.http.servlet.internal.registration.FilterRegistration.doFilter(FilterRegistration.java:120) ~[?:?]
+	at org.eclipse.equinox.http.servlet.internal.servlet.FilterChainImpl.doFilter(FilterChainImpl.java:45) ~[?:?]
+	at com.liferay.portal.security.auth.verifier.internal.tracker.AuthVerifierFilterTracker$AuditFilter.doFilter(AuthVerifierFilterTracker.java:182) ~[?:?]
+	at org.eclipse.equinox.http.servlet.internal.registration.FilterRegistration.doFilter(FilterRegistration.java:120) ~[?:?]
+	at org.eclipse.equinox.http.servlet.internal.servlet.FilterChainImpl.doFilter(FilterChainImpl.java:45) ~[?:?]
+	at com.liferay.portal.kernel.servlet.BaseFilter.processFilter(BaseFilter.java:152) ~[portal-kernel.jar:?]
+	at com.liferay.portal.servlet.filters.authverifier.AuthVerifierFilter.processFilter(AuthVerifierFilter.java:203) ~[portal-impl.jar:?]
+	at com.liferay.portal.kernel.servlet.BaseFilter.doFilter(BaseFilter.java:42) ~[portal-kernel.jar:?]
+	at org.eclipse.equinox.http.servlet.internal.registration.FilterRegistration.doFilter(FilterRegistration.java:120) ~[?:?]
+	at org.eclipse.equinox.http.servlet.internal.servlet.FilterChainImpl.doFilter(FilterChainImpl.java:45) ~[?:?]
+	at org.eclipse.equinox.http.servlet.internal.servlet.ResponseStateHandler.processRequest(ResponseStateHandler.java:71) ~[?:?]
+	at org.eclipse.equinox.http.servlet.internal.context.DispatchTargets.doDispatch(DispatchTargets.java:120) ~[?:?]
+	at com.liferay.portal.osgi.web.http.servlet.internal.servlet.HttpServletEndpointServlet.service(HttpServletEndpointServlet.java:64) ~[?:?]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:623) ~[servlet-api.jar:4.0.FR]
+	at com.liferay.portal.module.framework.ModuleFrameworkServletAdapter.service(ModuleFrameworkServletAdapter.java:45) ~[portal-impl.jar:?]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:623) ~[servlet-api.jar:4.0.FR]
+	at com.liferay.shielded.container.internal.proxy.ServletWrapper.service(ServletWrapper.java:103) ~[com.liferay.shielded.container.impl.jar:?]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:199) ~[catalina.jar:9.0.104]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:144) ~[catalina.jar:9.0.104]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-websocket.jar:9.0.104]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:168) ~[catalina.jar:9.0.104]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:144) ~[catalina.jar:9.0.104]
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:117) ~[portal-kernel.jar:?]
+	at com.liferay.portal.kernel.servlet.BaseFilter.processFilter(BaseFilter.java:152) ~[portal-kernel.jar:?]
+	at com.liferay.change.tracking.internal.servlet.filter.CTCollectionPreviewFilter.processFilter(CTCollectionPreviewFilter.java:57) ~[?:?]
+	at com.liferay.portal.kernel.servlet.BaseFilter.doFilter(BaseFilter.java:42) ~[portal-kernel.jar:?]
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDoFilter(InvokerFilterChain.java:204) ~[portal-kernel.jar:?]
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:109) ~[portal-kernel.jar:?]
+	at com.liferay.portal.servlet.filters.password.modified.PasswordModifiedFilter.processFilter(PasswordModifiedFilter.java:47) ~[portal-impl.jar:?]
+	at com.liferay.portal.kernel.servlet.BaseFilter.doFilter(BaseFilter.java:42) ~[portal-kernel.jar:?]
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDoFilter(InvokerFilterChain.java:204) ~[portal-kernel.jar:?]
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:109) ~[portal-kernel.jar:?]
+	at com.liferay.portal.servlet.filters.lockout.LockoutFilter.processFilter(LockoutFilter.java:49) ~[portal-impl.jar:?]
+	at com.liferay.portal.kernel.servlet.BaseFilter.doFilter(BaseFilter.java:42) ~[portal-kernel.jar:?]
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDoFilter(InvokerFilterChain.java:204) ~[portal-kernel.jar:?]
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:109) ~[portal-kernel.jar:?]
+	at com.liferay.portal.kernel.servlet.BaseFilter.processFilter(BaseFilter.java:152) ~[portal-kernel.jar:?]
+	at com.liferay.portal.servlet.filters.virtualhost.VirtualHostFilter.processFilter(VirtualHostFilter.java:247) ~[portal-impl.jar:?]
+	at com.liferay.portal.kernel.servlet.BaseFilter.doFilter(BaseFilter.java:42) ~[portal-kernel.jar:?]
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDoFilter(InvokerFilterChain.java:204) ~[portal-kernel.jar:?]
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:109) ~[portal-kernel.jar:?]
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDirectCallFilter(InvokerFilterChain.java:189) ~[portal-kernel.jar:?]
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:92) ~[portal-kernel.jar:?]
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDirectCallFilter(InvokerFilterChain.java:189) ~[portal-kernel.jar:?]
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:92) ~[portal-kernel.jar:?]
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDirectCallFilter(InvokerFilterChain.java:168) ~[portal-kernel.jar:?]
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:92) ~[portal-kernel.jar:?]
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDirectCallFilter(InvokerFilterChain.java:189) ~[portal-kernel.jar:?]
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:92) ~[portal-kernel.jar:?]
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilter.doFilter(InvokerFilter.java:114) ~[portal-kernel.jar:?]
+	at com.liferay.shielded.container.internal.proxy.FilterWrapper.doFilter(FilterWrapper.java:69) ~[com.liferay.shielded.container.impl.jar:?]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:168) ~[catalina.jar:9.0.104]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:144) ~[catalina.jar:9.0.104]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:168) ~[catalina.jar:9.0.104]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[catalina.jar:9.0.104]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482) ~[catalina.jar:9.0.104]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130) ~[catalina.jar:9.0.104]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[catalina.jar:9.0.104]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[catalina.jar:9.0.104]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:346) ~[catalina.jar:9.0.104]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397) ~[tomcat-coyote.jar:9.0.104]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-coyote.jar:9.0.104]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:935) ~[tomcat-coyote.jar:9.0.104]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1792) ~[tomcat-coyote.jar:9.0.104]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-coyote.jar:9.0.104]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1189) ~[org.apache.tomcat-util.jar:9.0.104]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:658) ~[org.apache.tomcat-util.jar:9.0.104]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63) ~[org.apache.tomcat-util.jar:9.0.104]
+	at java.lang.Thread.run(Thread.java:1583) [?:?]
+2025-06-02 20:13:50.259 ERROR [http-nio-8080-exec-8][WebApplicationExceptionMapper:29] HTTP 405 Method Not Allowed
+javax.ws.rs.ClientErrorException: HTTP 405 Method Not Allowed
+	at org.apache.cxf.jaxrs.utils.SpecExceptions.toHttpException(SpecExceptions.java:117) ~[bundleFile:3.5.11]
+	at org.apache.cxf.jaxrs.utils.ExceptionUtils.toHttpException(ExceptionUtils.java:168) ~[bundleFile:3.5.11]
+	at org.apache.cxf.jaxrs.utils.JAXRSUtils.findTargetMethod(JAXRSUtils.java:673) ~[bundleFile:3.5.11]
+	at org.apache.cxf.jaxrs.interceptor.JAXRSInInterceptor.processRequest(JAXRSInInterceptor.java:182) ~[bundleFile:3.5.11]
+	at org.apache.cxf.jaxrs.interceptor.JAXRSInInterceptor.handleMessage(JAXRSInInterceptor.java:79) ~[bundleFile:3.5.11]
+	at org.apache.cxf.phase.PhaseInterceptorChain.doIntercept(PhaseInterceptorChain.java:307) ~[bundleFile:3.5.11]
+	at org.apache.cxf.transport.ChainInitiationObserver.onMessage(ChainInitiationObserver.java:121) ~[bundleFile:3.5.11]
+	at org.apache.cxf.transport.http.AbstractHTTPDestination.invoke(AbstractHTTPDestination.java:267) ~[bundleFile:3.5.11]
+	at org.apache.cxf.transport.servlet.ServletController.invokeDestination(ServletController.java:234) ~[bundleFile:3.5.11]
+	at org.apache.cxf.transport.servlet.ServletController.invoke(ServletController.java:208) ~[bundleFile:3.5.11]
+	at org.apache.cxf.transport.servlet.ServletController.invoke(ServletController.java:160) ~[bundleFile:3.5.11]
+	at org.apache.cxf.transport.servlet.CXFNonSpringServlet.invoke(CXFNonSpringServlet.java:225) ~[bundleFile:3.5.11]
+	at org.apache.cxf.transport.servlet.AbstractHTTPServlet.handleRequest(AbstractHTTPServlet.java:304) ~[bundleFile:3.5.11]
+	at org.apache.cxf.transport.servlet.AbstractHTTPServlet.doGet(AbstractHTTPServlet.java:222) ~[bundleFile:3.5.11]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:529) ~[servlet-api.jar:4.0.FR]
+	at org.apache.cxf.transport.servlet.AbstractHTTPServlet.service(AbstractHTTPServlet.java:279) ~[bundleFile:3.5.11]
+	at org.eclipse.equinox.http.servlet.internal.registration.EndpointRegistration.service(EndpointRegistration.java:147) ~[?:?]
+	at org.eclipse.equinox.http.servlet.internal.servlet.FilterChainImpl.doFilter(FilterChainImpl.java:50) ~[?:?]
+	at com.liferay.portal.security.auth.verifier.internal.tracker.AuthVerifierFilterTracker$RemoteAccessFilter.doFilter(AuthVerifierFilterTracker.java:213) ~[?:?]
+	at org.eclipse.equinox.http.servlet.internal.registration.FilterRegistration.doFilter(FilterRegistration.java:120) ~[?:?]
+	at org.eclipse.equinox.http.servlet.internal.servlet.FilterChainImpl.doFilter(FilterChainImpl.java:45) ~[?:?]
+	at com.liferay.portal.security.auth.verifier.internal.tracker.AuthVerifierFilterTracker$AuditFilter.doFilter(AuthVerifierFilterTracker.java:182) ~[?:?]
+	at org.eclipse.equinox.http.servlet.internal.registration.FilterRegistration.doFilter(FilterRegistration.java:120) ~[?:?]
+	at org.eclipse.equinox.http.servlet.internal.servlet.FilterChainImpl.doFilter(FilterChainImpl.java:45) ~[?:?]
+	at com.liferay.portal.kernel.servlet.BaseFilter.processFilter(BaseFilter.java:152) ~[portal-kernel.jar:?]
+	at com.liferay.portal.servlet.filters.authverifier.AuthVerifierFilter.processFilter(AuthVerifierFilter.java:203) ~[portal-impl.jar:?]
+	at com.liferay.portal.kernel.servlet.BaseFilter.doFilter(BaseFilter.java:42) ~[portal-kernel.jar:?]
+	at org.eclipse.equinox.http.servlet.internal.registration.FilterRegistration.doFilter(FilterRegistration.java:120) ~[?:?]
+	at org.eclipse.equinox.http.servlet.internal.servlet.FilterChainImpl.doFilter(FilterChainImpl.java:45) ~[?:?]
+	at org.eclipse.equinox.http.servlet.internal.servlet.ResponseStateHandler.processRequest(ResponseStateHandler.java:71) ~[?:?]
+	at org.eclipse.equinox.http.servlet.internal.context.DispatchTargets.doDispatch(DispatchTargets.java:120) ~[?:?]
+	at com.liferay.portal.osgi.web.http.servlet.internal.servlet.HttpServletEndpointServlet.service(HttpServletEndpointServlet.java:64) ~[?:?]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:623) ~[servlet-api.jar:4.0.FR]
+	at com.liferay.portal.module.framework.ModuleFrameworkServletAdapter.service(ModuleFrameworkServletAdapter.java:45) ~[portal-impl.jar:?]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:623) ~[servlet-api.jar:4.0.FR]
+	at com.liferay.shielded.container.internal.proxy.ServletWrapper.service(ServletWrapper.java:103) ~[com.liferay.shielded.container.impl.jar:?]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:199) ~[catalina.jar:9.0.104]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:144) ~[catalina.jar:9.0.104]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-websocket.jar:9.0.104]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:168) ~[catalina.jar:9.0.104]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:144) ~[catalina.jar:9.0.104]
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:117) ~[portal-kernel.jar:?]
+	at com.liferay.portal.kernel.servlet.BaseFilter.processFilter(BaseFilter.java:152) ~[portal-kernel.jar:?]
+	at com.liferay.change.tracking.internal.servlet.filter.CTCollectionPreviewFilter.processFilter(CTCollectionPreviewFilter.java:57) ~[?:?]
+	at com.liferay.portal.kernel.servlet.BaseFilter.doFilter(BaseFilter.java:42) ~[portal-kernel.jar:?]
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDoFilter(InvokerFilterChain.java:204) ~[portal-kernel.jar:?]
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:109) ~[portal-kernel.jar:?]
+	at com.liferay.portal.servlet.filters.password.modified.PasswordModifiedFilter.processFilter(PasswordModifiedFilter.java:47) ~[portal-impl.jar:?]
+	at com.liferay.portal.kernel.servlet.BaseFilter.doFilter(BaseFilter.java:42) ~[portal-kernel.jar:?]
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDoFilter(InvokerFilterChain.java:204) ~[portal-kernel.jar:?]
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:109) ~[portal-kernel.jar:?]
+	at com.liferay.portal.servlet.filters.lockout.LockoutFilter.processFilter(LockoutFilter.java:49) ~[portal-impl.jar:?]
+	at com.liferay.portal.kernel.servlet.BaseFilter.doFilter(BaseFilter.java:42) ~[portal-kernel.jar:?]
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDoFilter(InvokerFilterChain.java:204) ~[portal-kernel.jar:?]
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:109) ~[portal-kernel.jar:?]
+	at com.liferay.portal.kernel.servlet.BaseFilter.processFilter(BaseFilter.java:152) ~[portal-kernel.jar:?]
+	at com.liferay.portal.servlet.filters.virtualhost.VirtualHostFilter.processFilter(VirtualHostFilter.java:247) ~[portal-impl.jar:?]
+	at com.liferay.portal.kernel.servlet.BaseFilter.doFilter(BaseFilter.java:42) ~[portal-kernel.jar:?]
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDoFilter(InvokerFilterChain.java:204) ~[portal-kernel.jar:?]
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:109) ~[portal-kernel.jar:?]
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDirectCallFilter(InvokerFilterChain.java:189) ~[portal-kernel.jar:?]
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:92) ~[portal-kernel.jar:?]
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDirectCallFilter(InvokerFilterChain.java:189) ~[portal-kernel.jar:?]
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:92) ~[portal-kernel.jar:?]
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDirectCallFilter(InvokerFilterChain.java:168) ~[portal-kernel.jar:?]
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:92) ~[portal-kernel.jar:?]
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDirectCallFilter(InvokerFilterChain.java:189) ~[portal-kernel.jar:?]
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:92) ~[portal-kernel.jar:?]
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilter.doFilter(InvokerFilter.java:114) ~[portal-kernel.jar:?]
+	at com.liferay.shielded.container.internal.proxy.FilterWrapper.doFilter(FilterWrapper.java:69) ~[com.liferay.shielded.container.impl.jar:?]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:168) ~[catalina.jar:9.0.104]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:144) ~[catalina.jar:9.0.104]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:168) ~[catalina.jar:9.0.104]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[catalina.jar:9.0.104]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482) ~[catalina.jar:9.0.104]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130) ~[catalina.jar:9.0.104]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[catalina.jar:9.0.104]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[catalina.jar:9.0.104]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:346) ~[catalina.jar:9.0.104]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397) ~[tomcat-coyote.jar:9.0.104]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-coyote.jar:9.0.104]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:935) ~[tomcat-coyote.jar:9.0.104]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1792) ~[tomcat-coyote.jar:9.0.104]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-coyote.jar:9.0.104]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1189) ~[org.apache.tomcat-util.jar:9.0.104]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:658) ~[org.apache.tomcat-util.jar:9.0.104]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63) ~[org.apache.tomcat-util.jar:9.0.104]
+	at java.lang.Thread.run(Thread.java:1583) [?:?]

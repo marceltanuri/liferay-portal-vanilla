@@ -1,0 +1,1721 @@
+<log4j:event logger="com.liferay.portal.vulcan.internal.jaxrs.exception.mapper.WebApplicationExceptionMapper" timestamp="1748984573825" level="ERROR" thread="http-nio-8080-exec-2">
+<log4j:message><![CDATA[HTTP 415 Unsupported Media Type]]></log4j:message>
+<log4j:throwable><![CDATA[javax.ws.rs.ClientErrorException: HTTP 415 Unsupported Media Type
+	at org.apache.cxf.jaxrs.utils.SpecExceptions.toHttpException(SpecExceptions.java:117)
+	at org.apache.cxf.jaxrs.utils.ExceptionUtils.toHttpException(ExceptionUtils.java:168)
+	at org.apache.cxf.jaxrs.utils.JAXRSUtils.findTargetMethod(JAXRSUtils.java:673)
+	at org.apache.cxf.jaxrs.interceptor.JAXRSInInterceptor.processRequest(JAXRSInInterceptor.java:182)
+	at org.apache.cxf.jaxrs.interceptor.JAXRSInInterceptor.handleMessage(JAXRSInInterceptor.java:79)
+	at org.apache.cxf.phase.PhaseInterceptorChain.doIntercept(PhaseInterceptorChain.java:307)
+	at org.apache.cxf.transport.ChainInitiationObserver.onMessage(ChainInitiationObserver.java:121)
+	at org.apache.cxf.transport.http.AbstractHTTPDestination.invoke(AbstractHTTPDestination.java:267)
+	at org.apache.cxf.transport.servlet.ServletController.invokeDestination(ServletController.java:234)
+	at org.apache.cxf.transport.servlet.ServletController.invoke(ServletController.java:208)
+	at org.apache.cxf.transport.servlet.ServletController.invoke(ServletController.java:160)
+	at org.apache.cxf.transport.servlet.CXFNonSpringServlet.invoke(CXFNonSpringServlet.java:225)
+	at org.apache.cxf.transport.servlet.AbstractHTTPServlet.handleRequest(AbstractHTTPServlet.java:304)
+	at org.apache.cxf.transport.servlet.AbstractHTTPServlet.doPost(AbstractHTTPServlet.java:217)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:555)
+	at org.apache.cxf.transport.servlet.AbstractHTTPServlet.service(AbstractHTTPServlet.java:279)
+	at org.eclipse.equinox.http.servlet.internal.registration.EndpointRegistration.service(EndpointRegistration.java:147)
+	at org.eclipse.equinox.http.servlet.internal.servlet.FilterChainImpl.doFilter(FilterChainImpl.java:50)
+	at com.liferay.portal.security.auth.verifier.internal.tracker.AuthVerifierFilterTracker$RemoteAccessFilter.doFilter(AuthVerifierFilterTracker.java:213)
+	at org.eclipse.equinox.http.servlet.internal.registration.FilterRegistration.doFilter(FilterRegistration.java:120)
+	at org.eclipse.equinox.http.servlet.internal.servlet.FilterChainImpl.doFilter(FilterChainImpl.java:45)
+	at com.liferay.portal.security.auth.verifier.internal.tracker.AuthVerifierFilterTracker$AuditFilter.doFilter(AuthVerifierFilterTracker.java:182)
+	at org.eclipse.equinox.http.servlet.internal.registration.FilterRegistration.doFilter(FilterRegistration.java:120)
+	at org.eclipse.equinox.http.servlet.internal.servlet.FilterChainImpl.doFilter(FilterChainImpl.java:45)
+	at com.liferay.portal.kernel.servlet.BaseFilter.processFilter(BaseFilter.java:152)
+	at com.liferay.portal.servlet.filters.authverifier.AuthVerifierFilter.processFilter(AuthVerifierFilter.java:203)
+	at com.liferay.portal.kernel.servlet.BaseFilter.doFilter(BaseFilter.java:42)
+	at org.eclipse.equinox.http.servlet.internal.registration.FilterRegistration.doFilter(FilterRegistration.java:120)
+	at org.eclipse.equinox.http.servlet.internal.servlet.FilterChainImpl.doFilter(FilterChainImpl.java:45)
+	at org.eclipse.equinox.http.servlet.internal.servlet.ResponseStateHandler.processRequest(ResponseStateHandler.java:71)
+	at org.eclipse.equinox.http.servlet.internal.context.DispatchTargets.doDispatch(DispatchTargets.java:120)
+	at com.liferay.portal.osgi.web.http.servlet.internal.servlet.HttpServletEndpointServlet.service(HttpServletEndpointServlet.java:64)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+	at com.liferay.portal.module.framework.ModuleFrameworkServletAdapter.service(ModuleFrameworkServletAdapter.java:45)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+	at com.liferay.shielded.container.internal.proxy.ServletWrapper.service(ServletWrapper.java:103)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:199)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:144)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:168)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:144)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:117)
+	at com.liferay.portal.kernel.servlet.BaseFilter.processFilter(BaseFilter.java:152)
+	at com.liferay.change.tracking.internal.servlet.filter.CTCollectionPreviewFilter.processFilter(CTCollectionPreviewFilter.java:57)
+	at com.liferay.portal.kernel.servlet.BaseFilter.doFilter(BaseFilter.java:42)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDoFilter(InvokerFilterChain.java:204)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:109)
+	at com.liferay.portal.servlet.filters.password.modified.PasswordModifiedFilter.processFilter(PasswordModifiedFilter.java:47)
+	at com.liferay.portal.kernel.servlet.BaseFilter.doFilter(BaseFilter.java:42)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDoFilter(InvokerFilterChain.java:204)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:109)
+	at com.liferay.portal.servlet.filters.lockout.LockoutFilter.processFilter(LockoutFilter.java:49)
+	at com.liferay.portal.kernel.servlet.BaseFilter.doFilter(BaseFilter.java:42)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDoFilter(InvokerFilterChain.java:204)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:109)
+	at com.liferay.portal.kernel.servlet.BaseFilter.processFilter(BaseFilter.java:152)
+	at com.liferay.portal.servlet.filters.virtualhost.VirtualHostFilter.processFilter(VirtualHostFilter.java:247)
+	at com.liferay.portal.kernel.servlet.BaseFilter.doFilter(BaseFilter.java:42)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDoFilter(InvokerFilterChain.java:204)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:109)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDirectCallFilter(InvokerFilterChain.java:189)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:92)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDirectCallFilter(InvokerFilterChain.java:189)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:92)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDirectCallFilter(InvokerFilterChain.java:168)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:92)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDirectCallFilter(InvokerFilterChain.java:189)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:92)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilter.doFilter(InvokerFilter.java:114)
+	at com.liferay.shielded.container.internal.proxy.FilterWrapper.doFilter(FilterWrapper.java:69)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:168)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:144)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:168)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:346)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:935)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1792)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1189)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:658)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+]]></log4j:throwable>
+<log4j:locationInfo class="com.liferay.portal.vulcan.internal.jaxrs.exception.mapper.WebApplicationExceptionMapper" method="getProblem" file="WebApplicationExceptionMapper.java" line="29"/>
+</log4j:event>
+
+<log4j:event logger="org.wso2.charon3.core.protocol.endpoints.AbstractResourceManager" timestamp="1748985290031" level="ERROR" thread="http-nio-8080-exec-5">
+<log4j:message><![CDATA[Unable to provision a portal group for group-test2]]></log4j:message>
+<log4j:throwable><![CDATA[org.wso2.charon3.core.exceptions.CharonException: Unable to provision a portal group for group-test2
+	at com.liferay.scim.rest.internal.manager.UserManagerImpl._addOrUpdateGroup(UserManagerImpl.java:498)
+	at com.liferay.scim.rest.internal.manager.UserManagerImpl.createGroup(UserManagerImpl.java:115)
+	at org.wso2.charon3.core.protocol.endpoints.GroupResourceManager.create(GroupResourceManager.java:157)
+	at com.liferay.scim.rest.internal.resource.v1_0.GroupResourceImpl.postV2Group(GroupResourceImpl.java:86)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.apache.cxf.service.invoker.AbstractInvoker.performInvocation(AbstractInvoker.java:179)
+	at org.apache.cxf.service.invoker.AbstractInvoker.invoke(AbstractInvoker.java:96)
+	at org.apache.cxf.jaxrs.JAXRSInvoker.invoke(JAXRSInvoker.java:201)
+	at org.apache.cxf.jaxrs.JAXRSInvoker.invoke(JAXRSInvoker.java:104)
+	at org.apache.cxf.interceptor.ServiceInvokerInterceptor$1.run(ServiceInvokerInterceptor.java:59)
+	at org.apache.cxf.interceptor.ServiceInvokerInterceptor.handleMessage(ServiceInvokerInterceptor.java:96)
+	at org.apache.cxf.phase.PhaseInterceptorChain.doIntercept(PhaseInterceptorChain.java:307)
+	at org.apache.cxf.transport.ChainInitiationObserver.onMessage(ChainInitiationObserver.java:121)
+	at org.apache.cxf.transport.http.AbstractHTTPDestination.invoke(AbstractHTTPDestination.java:267)
+	at org.apache.cxf.transport.servlet.ServletController.invokeDestination(ServletController.java:234)
+	at org.apache.cxf.transport.servlet.ServletController.invoke(ServletController.java:208)
+	at org.apache.cxf.transport.servlet.ServletController.invoke(ServletController.java:160)
+	at org.apache.cxf.transport.servlet.CXFNonSpringServlet.invoke(CXFNonSpringServlet.java:225)
+	at org.apache.cxf.transport.servlet.AbstractHTTPServlet.handleRequest(AbstractHTTPServlet.java:304)
+	at org.apache.cxf.transport.servlet.AbstractHTTPServlet.doPost(AbstractHTTPServlet.java:217)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:555)
+	at org.apache.cxf.transport.servlet.AbstractHTTPServlet.service(AbstractHTTPServlet.java:279)
+	at org.eclipse.equinox.http.servlet.internal.registration.EndpointRegistration.service(EndpointRegistration.java:147)
+	at org.eclipse.equinox.http.servlet.internal.servlet.FilterChainImpl.doFilter(FilterChainImpl.java:50)
+	at com.liferay.portal.security.auth.verifier.internal.tracker.AuthVerifierFilterTracker$RemoteAccessFilter.doFilter(AuthVerifierFilterTracker.java:213)
+	at org.eclipse.equinox.http.servlet.internal.registration.FilterRegistration.doFilter(FilterRegistration.java:120)
+	at org.eclipse.equinox.http.servlet.internal.servlet.FilterChainImpl.doFilter(FilterChainImpl.java:45)
+	at com.liferay.portal.security.auth.verifier.internal.tracker.AuthVerifierFilterTracker$AuditFilter.doFilter(AuthVerifierFilterTracker.java:182)
+	at org.eclipse.equinox.http.servlet.internal.registration.FilterRegistration.doFilter(FilterRegistration.java:120)
+	at org.eclipse.equinox.http.servlet.internal.servlet.FilterChainImpl.doFilter(FilterChainImpl.java:45)
+	at com.liferay.portal.kernel.servlet.BaseFilter.processFilter(BaseFilter.java:152)
+	at com.liferay.portal.servlet.filters.authverifier.AuthVerifierFilter.processFilter(AuthVerifierFilter.java:203)
+	at com.liferay.portal.kernel.servlet.BaseFilter.doFilter(BaseFilter.java:42)
+	at org.eclipse.equinox.http.servlet.internal.registration.FilterRegistration.doFilter(FilterRegistration.java:120)
+	at org.eclipse.equinox.http.servlet.internal.servlet.FilterChainImpl.doFilter(FilterChainImpl.java:45)
+	at org.eclipse.equinox.http.servlet.internal.servlet.ResponseStateHandler.processRequest(ResponseStateHandler.java:71)
+	at org.eclipse.equinox.http.servlet.internal.context.DispatchTargets.doDispatch(DispatchTargets.java:120)
+	at com.liferay.portal.osgi.web.http.servlet.internal.servlet.HttpServletEndpointServlet.service(HttpServletEndpointServlet.java:64)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+	at com.liferay.portal.module.framework.ModuleFrameworkServletAdapter.service(ModuleFrameworkServletAdapter.java:45)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+	at com.liferay.shielded.container.internal.proxy.ServletWrapper.service(ServletWrapper.java:103)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:199)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:144)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:168)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:144)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:117)
+	at com.liferay.portal.kernel.servlet.BaseFilter.processFilter(BaseFilter.java:152)
+	at com.liferay.change.tracking.internal.servlet.filter.CTCollectionPreviewFilter.processFilter(CTCollectionPreviewFilter.java:57)
+	at com.liferay.portal.kernel.servlet.BaseFilter.doFilter(BaseFilter.java:42)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDoFilter(InvokerFilterChain.java:204)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:109)
+	at com.liferay.portal.servlet.filters.password.modified.PasswordModifiedFilter.processFilter(PasswordModifiedFilter.java:47)
+	at com.liferay.portal.kernel.servlet.BaseFilter.doFilter(BaseFilter.java:42)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDoFilter(InvokerFilterChain.java:204)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:109)
+	at com.liferay.portal.servlet.filters.lockout.LockoutFilter.processFilter(LockoutFilter.java:49)
+	at com.liferay.portal.kernel.servlet.BaseFilter.doFilter(BaseFilter.java:42)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDoFilter(InvokerFilterChain.java:204)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:109)
+	at com.liferay.portal.kernel.servlet.BaseFilter.processFilter(BaseFilter.java:152)
+	at com.liferay.portal.servlet.filters.virtualhost.VirtualHostFilter.processFilter(VirtualHostFilter.java:247)
+	at com.liferay.portal.kernel.servlet.BaseFilter.doFilter(BaseFilter.java:42)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDoFilter(InvokerFilterChain.java:204)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:109)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDirectCallFilter(InvokerFilterChain.java:189)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:92)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDirectCallFilter(InvokerFilterChain.java:189)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:92)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDirectCallFilter(InvokerFilterChain.java:168)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:92)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDirectCallFilter(InvokerFilterChain.java:189)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:92)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilter.doFilter(InvokerFilter.java:114)
+	at com.liferay.shielded.container.internal.proxy.FilterWrapper.doFilter(FilterWrapper.java:69)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:168)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:144)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:168)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:346)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:935)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1792)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1189)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:658)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: com.liferay.portal.kernel.exception.DuplicateUserGroupException: {name=group-test2}
+	at com.liferay.portal.service.impl.UserGroupLocalServiceImpl.validate(UserGroupLocalServiceImpl.java:1430)
+	at com.liferay.portal.service.impl.UserGroupLocalServiceImpl.addUserGroup(UserGroupLocalServiceImpl.java:288)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at com.liferay.portal.spring.aop.AopMethodInvocationImpl.proceed(AopMethodInvocationImpl.java:41)
+	at com.liferay.portal.spring.transaction.TransactionInterceptor.invoke(TransactionInterceptor.java:60)
+	at com.liferay.portal.spring.aop.AopMethodInvocationImpl.proceed(AopMethodInvocationImpl.java:48)
+	at com.liferay.portal.service.ServiceContextAdvice.invoke(ServiceContextAdvice.java:51)
+	at com.liferay.portal.spring.aop.AopMethodInvocationImpl.proceed(AopMethodInvocationImpl.java:48)
+	at com.liferay.portal.spring.aop.AopInvocationHandler.invoke(AopInvocationHandler.java:40)
+	at jdk.proxy3/jdk.proxy3.$Proxy140.addUserGroup(Unknown Source)
+	at com.liferay.portal.service.impl.UserGroupServiceImpl.addUserGroup(UserGroupServiceImpl.java:134)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at com.liferay.portal.spring.aop.AopMethodInvocationImpl.proceed(AopMethodInvocationImpl.java:41)
+	at com.liferay.portal.spring.transaction.TransactionInterceptor.invoke(TransactionInterceptor.java:60)
+	at com.liferay.portal.spring.aop.AopMethodInvocationImpl.proceed(AopMethodInvocationImpl.java:48)
+	at com.liferay.portal.service.ServiceContextAdvice.invoke(ServiceContextAdvice.java:51)
+	at com.liferay.portal.spring.aop.AopMethodInvocationImpl.proceed(AopMethodInvocationImpl.java:48)
+	at com.liferay.portal.kernel.aop.ChainableMethodAdvice.invoke(ChainableMethodAdvice.java:55)
+	at com.liferay.portal.spring.aop.AopMethodInvocationImpl.proceed(AopMethodInvocationImpl.java:48)
+	at com.liferay.portal.spring.aop.AopInvocationHandler.invoke(AopInvocationHandler.java:40)
+	at jdk.proxy3/jdk.proxy3.$Proxy256.addUserGroup(Unknown Source)
+	at com.liferay.scim.rest.internal.manager.UserManagerImpl._addOrUpdateUserGroup(UserManagerImpl.java:580)
+	at com.liferay.scim.rest.internal.manager.UserManagerImpl.lambda$_addOrUpdateGroup$5(UserManagerImpl.java:483)
+	at com.liferay.portal.spring.transaction.DefaultTransactionExecutor.execute(DefaultTransactionExecutor.java:71)
+	at com.liferay.portal.spring.transaction.TransactionInvokerImpl.invoke(TransactionInvokerImpl.java:30)
+	at com.liferay.portal.kernel.transaction.TransactionInvokerUtil.invoke(TransactionInvokerUtil.java:19)
+	at com.liferay.scim.rest.internal.manager.UserManagerImpl._addOrUpdateGroup(UserManagerImpl.java:480)
+	... 94 more
+]]></log4j:throwable>
+<log4j:locationInfo class="org.wso2.charon3.core.protocol.endpoints.AbstractResourceManager" method="encodeSCIMException" file="AbstractResourceManager.java" line="105"/>
+</log4j:event>
+
+<log4j:event logger="com.liferay.portal.vulcan.internal.jaxrs.exception.mapper.WebApplicationExceptionMapper" timestamp="1748985781391" level="ERROR" thread="http-nio-8080-exec-3">
+<log4j:message><![CDATA[HTTP 405 Method Not Allowed]]></log4j:message>
+<log4j:throwable><![CDATA[javax.ws.rs.ClientErrorException: HTTP 405 Method Not Allowed
+	at org.apache.cxf.jaxrs.utils.SpecExceptions.toHttpException(SpecExceptions.java:117)
+	at org.apache.cxf.jaxrs.utils.ExceptionUtils.toHttpException(ExceptionUtils.java:168)
+	at org.apache.cxf.jaxrs.utils.JAXRSUtils.findTargetMethod(JAXRSUtils.java:673)
+	at org.apache.cxf.jaxrs.interceptor.JAXRSInInterceptor.processRequest(JAXRSInInterceptor.java:182)
+	at org.apache.cxf.jaxrs.interceptor.JAXRSInInterceptor.handleMessage(JAXRSInInterceptor.java:79)
+	at org.apache.cxf.phase.PhaseInterceptorChain.doIntercept(PhaseInterceptorChain.java:307)
+	at org.apache.cxf.transport.ChainInitiationObserver.onMessage(ChainInitiationObserver.java:121)
+	at org.apache.cxf.transport.http.AbstractHTTPDestination.invoke(AbstractHTTPDestination.java:267)
+	at org.apache.cxf.transport.servlet.ServletController.invokeDestination(ServletController.java:234)
+	at org.apache.cxf.transport.servlet.ServletController.invoke(ServletController.java:208)
+	at org.apache.cxf.transport.servlet.ServletController.invoke(ServletController.java:160)
+	at org.apache.cxf.transport.servlet.CXFNonSpringServlet.invoke(CXFNonSpringServlet.java:225)
+	at org.apache.cxf.transport.servlet.AbstractHTTPServlet.handleRequest(AbstractHTTPServlet.java:304)
+	at org.apache.cxf.transport.servlet.AbstractHTTPServlet.doPost(AbstractHTTPServlet.java:217)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:555)
+	at org.apache.cxf.transport.servlet.AbstractHTTPServlet.service(AbstractHTTPServlet.java:279)
+	at org.eclipse.equinox.http.servlet.internal.registration.EndpointRegistration.service(EndpointRegistration.java:147)
+	at org.eclipse.equinox.http.servlet.internal.servlet.FilterChainImpl.doFilter(FilterChainImpl.java:50)
+	at com.liferay.portal.security.auth.verifier.internal.tracker.AuthVerifierFilterTracker$RemoteAccessFilter.doFilter(AuthVerifierFilterTracker.java:213)
+	at org.eclipse.equinox.http.servlet.internal.registration.FilterRegistration.doFilter(FilterRegistration.java:120)
+	at org.eclipse.equinox.http.servlet.internal.servlet.FilterChainImpl.doFilter(FilterChainImpl.java:45)
+	at com.liferay.portal.security.auth.verifier.internal.tracker.AuthVerifierFilterTracker$AuditFilter.doFilter(AuthVerifierFilterTracker.java:182)
+	at org.eclipse.equinox.http.servlet.internal.registration.FilterRegistration.doFilter(FilterRegistration.java:120)
+	at org.eclipse.equinox.http.servlet.internal.servlet.FilterChainImpl.doFilter(FilterChainImpl.java:45)
+	at com.liferay.portal.kernel.servlet.BaseFilter.processFilter(BaseFilter.java:152)
+	at com.liferay.portal.servlet.filters.authverifier.AuthVerifierFilter.processFilter(AuthVerifierFilter.java:203)
+	at com.liferay.portal.kernel.servlet.BaseFilter.doFilter(BaseFilter.java:42)
+	at org.eclipse.equinox.http.servlet.internal.registration.FilterRegistration.doFilter(FilterRegistration.java:120)
+	at org.eclipse.equinox.http.servlet.internal.servlet.FilterChainImpl.doFilter(FilterChainImpl.java:45)
+	at org.eclipse.equinox.http.servlet.internal.servlet.ResponseStateHandler.processRequest(ResponseStateHandler.java:71)
+	at org.eclipse.equinox.http.servlet.internal.context.DispatchTargets.doDispatch(DispatchTargets.java:120)
+	at com.liferay.portal.osgi.web.http.servlet.internal.servlet.HttpServletEndpointServlet.service(HttpServletEndpointServlet.java:64)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+	at com.liferay.portal.module.framework.ModuleFrameworkServletAdapter.service(ModuleFrameworkServletAdapter.java:45)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+	at com.liferay.shielded.container.internal.proxy.ServletWrapper.service(ServletWrapper.java:103)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:199)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:144)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:168)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:144)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:117)
+	at com.liferay.portal.kernel.servlet.BaseFilter.processFilter(BaseFilter.java:152)
+	at com.liferay.change.tracking.internal.servlet.filter.CTCollectionPreviewFilter.processFilter(CTCollectionPreviewFilter.java:57)
+	at com.liferay.portal.kernel.servlet.BaseFilter.doFilter(BaseFilter.java:42)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDoFilter(InvokerFilterChain.java:204)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:109)
+	at com.liferay.portal.servlet.filters.password.modified.PasswordModifiedFilter.processFilter(PasswordModifiedFilter.java:47)
+	at com.liferay.portal.kernel.servlet.BaseFilter.doFilter(BaseFilter.java:42)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDoFilter(InvokerFilterChain.java:204)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:109)
+	at com.liferay.portal.servlet.filters.lockout.LockoutFilter.processFilter(LockoutFilter.java:49)
+	at com.liferay.portal.kernel.servlet.BaseFilter.doFilter(BaseFilter.java:42)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDoFilter(InvokerFilterChain.java:204)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:109)
+	at com.liferay.portal.kernel.servlet.BaseFilter.processFilter(BaseFilter.java:152)
+	at com.liferay.portal.servlet.filters.virtualhost.VirtualHostFilter.processFilter(VirtualHostFilter.java:247)
+	at com.liferay.portal.kernel.servlet.BaseFilter.doFilter(BaseFilter.java:42)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDoFilter(InvokerFilterChain.java:204)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:109)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDirectCallFilter(InvokerFilterChain.java:189)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:92)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDirectCallFilter(InvokerFilterChain.java:189)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:92)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDirectCallFilter(InvokerFilterChain.java:168)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:92)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDirectCallFilter(InvokerFilterChain.java:189)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:92)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilter.doFilter(InvokerFilter.java:114)
+	at com.liferay.shielded.container.internal.proxy.FilterWrapper.doFilter(FilterWrapper.java:69)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:168)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:144)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:168)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:346)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:935)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1792)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1189)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:658)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+]]></log4j:throwable>
+<log4j:locationInfo class="com.liferay.portal.vulcan.internal.jaxrs.exception.mapper.WebApplicationExceptionMapper" method="getProblem" file="WebApplicationExceptionMapper.java" line="29"/>
+</log4j:event>
+
+<log4j:event logger="com.liferay.mail.messaging.internal.MailMessageListener" timestamp="1748986946348" level="WARN" thread="liferay/mail-3">
+<log4j:message><![CDATA[Email test@domain.invalid will be ignored because it is included in mail.send.blacklist]]></log4j:message>
+<log4j:locationInfo class="com.liferay.mail.messaging.internal.MailMessageListener" method="filterInternetAddress" file="MailMessageListener.java" line="123"/>
+</log4j:event>
+
+<log4j:event logger="com.liferay.mail.messaging.internal.MailMessageListener" timestamp="1748986946349" level="WARN" thread="liferay/mail-3">
+<log4j:message><![CDATA[Skipping email because the sender is not specified]]></log4j:message>
+<log4j:locationInfo class="com.liferay.mail.messaging.internal.MailMessageListener" method="doMailMessage" file="MailMessageListener.java" line="49"/>
+</log4j:event>
+
+<log4j:event logger="com.liferay.mail.messaging.internal.MailMessageListener" timestamp="1748987009133" level="WARN" thread="liferay/mail-3">
+<log4j:message><![CDATA[Email test@domain.invalid will be ignored because it is included in mail.send.blacklist]]></log4j:message>
+<log4j:locationInfo class="com.liferay.mail.messaging.internal.MailMessageListener" method="filterInternetAddress" file="MailMessageListener.java" line="123"/>
+</log4j:event>
+
+<log4j:event logger="com.liferay.mail.messaging.internal.MailMessageListener" timestamp="1748987009134" level="WARN" thread="liferay/mail-3">
+<log4j:message><![CDATA[Skipping email because the sender is not specified]]></log4j:message>
+<log4j:locationInfo class="com.liferay.mail.messaging.internal.MailMessageListener" method="doMailMessage" file="MailMessageListener.java" line="49"/>
+</log4j:event>
+
+<log4j:event logger="portal_web.docroot.html.portal.extend_session_jsp" timestamp="1748987655611" level="WARN" thread="http-nio-8080-exec-2">
+<log4j:message><![CDATA[Unable to extend the HTTP session]]></log4j:message>
+<log4j:locationInfo class="org.apache.jsp.html.portal.extend_005fsession_jsp" method="_jspService" file="extend_005fsession_jsp.java" line="575"/>
+</log4j:event>
+
+<log4j:event logger="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" timestamp="1748987664826" level="INFO" thread="http-nio-8080-exec-10">
+<log4j:message><![CDATA[Initializing com.liferay.site.initializer.welcome for group 37789]]></log4j:message>
+<log4j:locationInfo class="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" method="initialize" file="BundleSiteInitializer.java" line="532"/>
+</log4j:event>
+
+<log4j:event logger="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" timestamp="1748987664832" level="INFO" thread="http-nio-8080-exec-10">
+<log4j:message><![CDATA[Invoking addSiteSettings took 0 ms]]></log4j:message>
+<log4j:locationInfo class="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" method="_initialize" file="BundleSiteInitializer.java" line="5661"/>
+</log4j:event>
+
+<log4j:event logger="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" timestamp="1748987664832" level="INFO" thread="http-nio-8080-exec-10">
+<log4j:message><![CDATA[Invoking addOrUpdateUserGroups took 0 ms]]></log4j:message>
+<log4j:locationInfo class="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" method="_initialize" file="BundleSiteInitializer.java" line="5661"/>
+</log4j:event>
+
+<log4j:event logger="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" timestamp="1748987664832" level="INFO" thread="http-nio-8080-exec-10">
+<log4j:message><![CDATA[Invoking addOrUpdateDepotEntries took 0 ms]]></log4j:message>
+<log4j:locationInfo class="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" method="_initialize" file="BundleSiteInitializer.java" line="5661"/>
+</log4j:event>
+
+<log4j:event logger="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" timestamp="1748987664832" level="INFO" thread="http-nio-8080-exec-10">
+<log4j:message><![CDATA[Invoking addStyleBookEntries took 0 ms]]></log4j:message>
+<log4j:locationInfo class="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" method="_initialize" file="BundleSiteInitializer.java" line="5661"/>
+</log4j:event>
+
+<log4j:event logger="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" timestamp="1748987664832" level="INFO" thread="http-nio-8080-exec-10">
+<log4j:message><![CDATA[Invoking addOrUpdateExpandoColumns took 0 ms]]></log4j:message>
+<log4j:locationInfo class="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" method="_initialize" file="BundleSiteInitializer.java" line="5661"/>
+</log4j:event>
+
+<log4j:event logger="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" timestamp="1748987664833" level="INFO" thread="http-nio-8080-exec-10">
+<log4j:message><![CDATA[Invoking addAccountGroups took 0 ms]]></log4j:message>
+<log4j:locationInfo class="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" method="_initialize" file="BundleSiteInitializer.java" line="5661"/>
+</log4j:event>
+
+<log4j:event logger="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" timestamp="1748987664835" level="INFO" thread="http-nio-8080-exec-10">
+<log4j:message><![CDATA[Invoking addOrUpdateRoles took 2 ms]]></log4j:message>
+<log4j:locationInfo class="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" method="_initialize" file="BundleSiteInitializer.java" line="5661"/>
+</log4j:event>
+
+<log4j:event logger="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" timestamp="1748987664836" level="INFO" thread="http-nio-8080-exec-10">
+<log4j:message><![CDATA[Invoking addOrUpdateObjectFolders took 0 ms]]></log4j:message>
+<log4j:locationInfo class="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" method="_initialize" file="BundleSiteInitializer.java" line="5661"/>
+</log4j:event>
+
+<log4j:event logger="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" timestamp="1748987664836" level="INFO" thread="http-nio-8080-exec-10">
+<log4j:message><![CDATA[Invoking addAccounts took 0 ms]]></log4j:message>
+<log4j:locationInfo class="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" method="_initialize" file="BundleSiteInitializer.java" line="5661"/>
+</log4j:event>
+
+<log4j:event logger="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" timestamp="1748987664836" level="INFO" thread="http-nio-8080-exec-10">
+<log4j:message><![CDATA[Invoking setPLOEntries took 0 ms]]></log4j:message>
+<log4j:locationInfo class="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" method="_initialize" file="BundleSiteInitializer.java" line="5661"/>
+</log4j:event>
+
+<log4j:event logger="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" timestamp="1748987664837" level="INFO" thread="http-nio-8080-exec-10">
+<log4j:message><![CDATA[Invoking addOrUpdateDataDefinitions took 1 ms]]></log4j:message>
+<log4j:locationInfo class="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" method="_initialize" file="BundleSiteInitializer.java" line="5661"/>
+</log4j:event>
+
+<log4j:event logger="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" timestamp="1748987664949" level="INFO" thread="http-nio-8080-exec-10">
+<log4j:message><![CDATA[Invoking addOrUpdateLayouts took 112 ms]]></log4j:message>
+<log4j:locationInfo class="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" method="_initialize" file="BundleSiteInitializer.java" line="5661"/>
+</log4j:event>
+
+<log4j:event logger="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" timestamp="1748987664950" level="INFO" thread="http-nio-8080-exec-10">
+<log4j:message><![CDATA[Invoking addWorkflowDefinitions took 0 ms]]></log4j:message>
+<log4j:locationInfo class="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" method="_initialize" file="BundleSiteInitializer.java" line="5661"/>
+</log4j:event>
+
+<log4j:event logger="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" timestamp="1748987664950" level="INFO" thread="http-nio-8080-exec-10">
+<log4j:message><![CDATA[Invoking addOrUpdateSAPEntries took 0 ms]]></log4j:message>
+<log4j:locationInfo class="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" method="_initialize" file="BundleSiteInitializer.java" line="5661"/>
+</log4j:event>
+
+<log4j:event logger="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" timestamp="1748987664950" level="INFO" thread="http-nio-8080-exec-10">
+<log4j:message><![CDATA[Invoking addOrUpdateDDMStructures took 0 ms]]></log4j:message>
+<log4j:locationInfo class="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" method="_initialize" file="BundleSiteInitializer.java" line="5661"/>
+</log4j:event>
+
+<log4j:event logger="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" timestamp="1748987664950" level="INFO" thread="http-nio-8080-exec-10">
+<log4j:message><![CDATA[Invoking addOrUpdateListTypeDefinitions took 0 ms]]></log4j:message>
+<log4j:locationInfo class="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" method="_initialize" file="BundleSiteInitializer.java" line="5661"/>
+</log4j:event>
+
+<log4j:event logger="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" timestamp="1748987664950" level="INFO" thread="http-nio-8080-exec-10">
+<log4j:message><![CDATA[Invoking addAccountGroupAssignments took 0 ms]]></log4j:message>
+<log4j:locationInfo class="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" method="_initialize" file="BundleSiteInitializer.java" line="5661"/>
+</log4j:event>
+
+<log4j:event logger="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" timestamp="1748987664950" level="INFO" thread="http-nio-8080-exec-10">
+<log4j:message><![CDATA[Invoking addKeywords took 0 ms]]></log4j:message>
+<log4j:locationInfo class="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" method="_initialize" file="BundleSiteInitializer.java" line="5661"/>
+</log4j:event>
+
+<log4j:event logger="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" timestamp="1748987664950" level="INFO" thread="http-nio-8080-exec-10">
+<log4j:message><![CDATA[Invoking addOrUpdateOrganizations took 0 ms]]></log4j:message>
+<log4j:locationInfo class="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" method="_initialize" file="BundleSiteInitializer.java" line="5661"/>
+</log4j:event>
+
+<log4j:event logger="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" timestamp="1748987664951" level="INFO" thread="http-nio-8080-exec-10">
+<log4j:message><![CDATA[Invoking addOrUpdateKnowledgeBaseArticles took 0 ms]]></log4j:message>
+<log4j:locationInfo class="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" method="_initialize" file="BundleSiteInitializer.java" line="5661"/>
+</log4j:event>
+
+<log4j:event logger="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" timestamp="1748987664951" level="INFO" thread="http-nio-8080-exec-10">
+<log4j:message><![CDATA[Invoking addSiteConfiguration took 0 ms]]></log4j:message>
+<log4j:locationInfo class="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" method="_initialize" file="BundleSiteInitializer.java" line="5661"/>
+</log4j:event>
+
+<log4j:event logger="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" timestamp="1748987664951" level="INFO" thread="http-nio-8080-exec-10">
+<log4j:message><![CDATA[Invoking addOrUpdateTaxonomyVocabularies took 0 ms]]></log4j:message>
+<log4j:locationInfo class="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" method="_initialize" file="BundleSiteInitializer.java" line="5661"/>
+</log4j:event>
+
+<log4j:event logger="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" timestamp="1748987664952" level="INFO" thread="http-nio-8080-exec-10">
+<log4j:message><![CDATA[Invoking updateLayoutSets took 1 ms]]></log4j:message>
+<log4j:locationInfo class="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" method="_initialize" file="BundleSiteInitializer.java" line="5661"/>
+</log4j:event>
+
+<log4j:event logger="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" timestamp="1748987664953" level="INFO" thread="http-nio-8080-exec-10">
+<log4j:message><![CDATA[Invoking addAccountsOrganizations took 0 ms]]></log4j:message>
+<log4j:locationInfo class="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" method="_initialize" file="BundleSiteInitializer.java" line="5661"/>
+</log4j:event>
+
+<log4j:event logger="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" timestamp="1748987664953" level="INFO" thread="http-nio-8080-exec-10">
+<log4j:message><![CDATA[Invoking addOrUpdateSXPBlueprint took 0 ms]]></log4j:message>
+<log4j:locationInfo class="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" method="_initialize" file="BundleSiteInitializer.java" line="5661"/>
+</log4j:event>
+
+<log4j:event logger="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" timestamp="1748987664953" level="INFO" thread="http-nio-8080-exec-10">
+<log4j:message><![CDATA[Invoking addPortletSettings took 0 ms]]></log4j:message>
+<log4j:locationInfo class="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" method="_initialize" file="BundleSiteInitializer.java" line="5661"/>
+</log4j:event>
+
+<log4j:event logger="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" timestamp="1748987665581" level="INFO" thread="http-nio-8080-exec-10">
+<log4j:message><![CDATA[Invoking addOrUpdateDocuments took 628 ms]]></log4j:message>
+<log4j:locationInfo class="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" method="_initialize" file="BundleSiteInitializer.java" line="5661"/>
+</log4j:event>
+
+<log4j:event logger="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" timestamp="1748987665581" level="INFO" thread="http-nio-8080-exec-10">
+<log4j:message><![CDATA[Invoking addOrUpdateBlogPostings took 0 ms]]></log4j:message>
+<log4j:locationInfo class="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" method="_initialize" file="BundleSiteInitializer.java" line="5661"/>
+</log4j:event>
+
+<log4j:event logger="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" timestamp="1748987665582" level="INFO" thread="http-nio-8080-exec-10">
+<log4j:message><![CDATA[Invoking addUserAccounts took 0 ms]]></log4j:message>
+<log4j:locationInfo class="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" method="_initialize" file="BundleSiteInitializer.java" line="5661"/>
+</log4j:event>
+
+<log4j:event logger="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" timestamp="1748987665582" level="INFO" thread="http-nio-8080-exec-10">
+<log4j:message><![CDATA[Invoking addFragmentEntries took 0 ms]]></log4j:message>
+<log4j:locationInfo class="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" method="_initialize" file="BundleSiteInitializer.java" line="5661"/>
+</log4j:event>
+
+<log4j:event logger="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" timestamp="1748987665582" level="INFO" thread="http-nio-8080-exec-10">
+<log4j:message><![CDATA[Invoking addOrUpdateSegmentsEntries took 0 ms]]></log4j:message>
+<log4j:locationInfo class="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" method="_initialize" file="BundleSiteInitializer.java" line="5661"/>
+</log4j:event>
+
+<log4j:event logger="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" timestamp="1748987665582" level="INFO" thread="http-nio-8080-exec-10">
+<log4j:message><![CDATA[Invoking addRolesAssignments took 0 ms]]></log4j:message>
+<log4j:locationInfo class="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" method="_initialize" file="BundleSiteInitializer.java" line="5661"/>
+</log4j:event>
+
+<log4j:event logger="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" timestamp="1748987665582" level="INFO" thread="http-nio-8080-exec-10">
+<log4j:message><![CDATA[Invoking addOrUpdateClientExtensionEntries took 0 ms]]></log4j:message>
+<log4j:locationInfo class="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" method="_initialize" file="BundleSiteInitializer.java" line="5661"/>
+</log4j:event>
+
+<log4j:event logger="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" timestamp="1748987665582" level="INFO" thread="http-nio-8080-exec-10">
+<log4j:message><![CDATA[Invoking addOrUpdateAssetLinkEntries took 0 ms]]></log4j:message>
+<log4j:locationInfo class="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" method="_initialize" file="BundleSiteInitializer.java" line="5661"/>
+</log4j:event>
+
+<log4j:event logger="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" timestamp="1748987665583" level="INFO" thread="http-nio-8080-exec-10">
+<log4j:message><![CDATA[Invoking addObjectDefinitions took 1 ms]]></log4j:message>
+<log4j:locationInfo class="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" method="_initialize" file="BundleSiteInitializer.java" line="5661"/>
+</log4j:event>
+
+<log4j:event logger="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" timestamp="1748987665583" level="INFO" thread="http-nio-8080-exec-10">
+<log4j:message><![CDATA[Invoking addUserRoles took 0 ms]]></log4j:message>
+<log4j:locationInfo class="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" method="_initialize" file="BundleSiteInitializer.java" line="5661"/>
+</log4j:event>
+
+<log4j:event logger="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" timestamp="1748987665584" level="INFO" thread="http-nio-8080-exec-10">
+<log4j:message><![CDATA[Invoking addOrUpdateObjectRelationships took 0 ms]]></log4j:message>
+<log4j:locationInfo class="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" method="_initialize" file="BundleSiteInitializer.java" line="5661"/>
+</log4j:event>
+
+<log4j:event logger="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" timestamp="1748987665584" level="INFO" thread="http-nio-8080-exec-10">
+<log4j:message><![CDATA[Invoking addOrUpdateObjectFields took 0 ms]]></log4j:message>
+<log4j:locationInfo class="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" method="_initialize" file="BundleSiteInitializer.java" line="5661"/>
+</log4j:event>
+
+<log4j:event logger="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" timestamp="1748987665584" level="INFO" thread="http-nio-8080-exec-10">
+<log4j:message><![CDATA[Invoking publishObjectDefinitions took 0 ms]]></log4j:message>
+<log4j:locationInfo class="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" method="_initialize" file="BundleSiteInitializer.java" line="5661"/>
+</log4j:event>
+
+<log4j:event logger="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" timestamp="1748987665604" level="INFO" thread="http-nio-8080-exec-10">
+<log4j:message><![CDATA[Invoking addOrUpdateDDMTemplates took 20 ms]]></log4j:message>
+<log4j:locationInfo class="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" method="_initialize" file="BundleSiteInitializer.java" line="5661"/>
+</log4j:event>
+
+<log4j:event logger="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" timestamp="1748987665604" level="INFO" thread="http-nio-8080-exec-10">
+<log4j:message><![CDATA[Invoking addAssetListEntries took 0 ms]]></log4j:message>
+<log4j:locationInfo class="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" method="_initialize" file="BundleSiteInitializer.java" line="5661"/>
+</log4j:event>
+
+<log4j:event logger="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" timestamp="1748987665605" level="INFO" thread="http-nio-8080-exec-10">
+<log4j:message><![CDATA[Invoking addOrUpdateJournalArticles took 0 ms]]></log4j:message>
+<log4j:locationInfo class="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" method="_initialize" file="BundleSiteInitializer.java" line="5661"/>
+</log4j:event>
+
+<log4j:event logger="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" timestamp="1748987665605" level="INFO" thread="http-nio-8080-exec-10">
+<log4j:message><![CDATA[Invoking addOrUpdateAccountEntryRestrictions took 0 ms]]></log4j:message>
+<log4j:locationInfo class="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" method="_initialize" file="BundleSiteInitializer.java" line="5661"/>
+</log4j:event>
+
+<log4j:event logger="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" timestamp="1748987665605" level="INFO" thread="http-nio-8080-exec-10">
+<log4j:message><![CDATA[Invoking addOrUpdateObjectActions took 0 ms]]></log4j:message>
+<log4j:locationInfo class="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" method="_initialize" file="BundleSiteInitializer.java" line="5661"/>
+</log4j:event>
+
+<log4j:event logger="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" timestamp="1748987665605" level="INFO" thread="http-nio-8080-exec-10">
+<log4j:message><![CDATA[Invoking addOrUpdateNotificationTemplates took 0 ms]]></log4j:message>
+<log4j:locationInfo class="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" method="_initialize" file="BundleSiteInitializer.java" line="5661"/>
+</log4j:event>
+
+<log4j:event logger="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" timestamp="1748987665605" level="INFO" thread="http-nio-8080-exec-10">
+<log4j:message><![CDATA[Invoking addOrUpdateObjectEntries took 0 ms]]></log4j:message>
+<log4j:locationInfo class="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" method="_initialize" file="BundleSiteInitializer.java" line="5661"/>
+</log4j:event>
+
+<log4j:event logger="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" timestamp="1748987665605" level="INFO" thread="http-nio-8080-exec-10">
+<log4j:message><![CDATA[Invoking addCPDefinitions took 0 ms]]></log4j:message>
+<log4j:locationInfo class="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" method="_initialize" file="BundleSiteInitializer.java" line="5661"/>
+</log4j:event>
+
+<log4j:event logger="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" timestamp="1748987666191" level="INFO" thread="http-nio-8080-exec-10">
+<log4j:message><![CDATA[Invoking addLayoutUtilityPageEntries took 586 ms]]></log4j:message>
+<log4j:locationInfo class="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" method="_initialize" file="BundleSiteInitializer.java" line="5661"/>
+</log4j:event>
+
+<log4j:event logger="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" timestamp="1748987666191" level="INFO" thread="http-nio-8080-exec-10">
+<log4j:message><![CDATA[Invoking addLayoutPageTemplates took 0 ms]]></log4j:message>
+<log4j:locationInfo class="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" method="_initialize" file="BundleSiteInitializer.java" line="5661"/>
+</log4j:event>
+
+<log4j:event logger="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" timestamp="1748987666235" level="INFO" thread="http-nio-8080-exec-10">
+<log4j:message><![CDATA[Invoking addOrUpdateLayoutsContent took 43 ms]]></log4j:message>
+<log4j:locationInfo class="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" method="_initialize" file="BundleSiteInitializer.java" line="5661"/>
+</log4j:event>
+
+<log4j:event logger="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" timestamp="1748987666236" level="INFO" thread="http-nio-8080-exec-10">
+<log4j:message><![CDATA[Invoking addExpandoValues took 1 ms]]></log4j:message>
+<log4j:locationInfo class="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" method="_initialize" file="BundleSiteInitializer.java" line="5661"/>
+</log4j:event>
+
+<log4j:event logger="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" timestamp="1748987666236" level="INFO" thread="http-nio-8080-exec-10">
+<log4j:message><![CDATA[Invoking addSegmentsExperiences took 0 ms]]></log4j:message>
+<log4j:locationInfo class="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" method="_initialize" file="BundleSiteInitializer.java" line="5661"/>
+</log4j:event>
+
+<log4j:event logger="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" timestamp="1748987666236" level="INFO" thread="http-nio-8080-exec-10">
+<log4j:message><![CDATA[Invoking addOrUpdateResourcePermissions took 0 ms]]></log4j:message>
+<log4j:locationInfo class="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" method="_initialize" file="BundleSiteInitializer.java" line="5661"/>
+</log4j:event>
+
+<log4j:event logger="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" timestamp="1748987666236" level="INFO" thread="http-nio-8080-exec-10">
+<log4j:message><![CDATA[Initialized com.liferay.site.initializer.welcome for group 37789 in 1410 ms]]></log4j:message>
+<log4j:locationInfo class="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" method="initialize" file="BundleSiteInitializer.java" line="550"/>
+</log4j:event>
+
+<log4j:event logger="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" timestamp="1748987669804" level="INFO" thread="http-nio-8080-exec-10">
+<log4j:message><![CDATA[Initializing com.liferay.site.initializer.cms for group 37781]]></log4j:message>
+<log4j:locationInfo class="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" method="initialize" file="BundleSiteInitializer.java" line="532"/>
+</log4j:event>
+
+<log4j:event logger="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" timestamp="1748987669805" level="INFO" thread="http-nio-8080-exec-10">
+<log4j:message><![CDATA[Invoking addAccountGroups took 0 ms]]></log4j:message>
+<log4j:locationInfo class="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" method="_initialize" file="BundleSiteInitializer.java" line="5661"/>
+</log4j:event>
+
+<log4j:event logger="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" timestamp="1748987669805" level="INFO" thread="http-nio-8080-exec-10">
+<log4j:message><![CDATA[Invoking addOrUpdateObjectFolders took 0 ms]]></log4j:message>
+<log4j:locationInfo class="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" method="_initialize" file="BundleSiteInitializer.java" line="5661"/>
+</log4j:event>
+
+<log4j:event logger="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" timestamp="1748987669805" level="INFO" thread="http-nio-8080-exec-10">
+<log4j:message><![CDATA[Invoking addOrUpdateSAPEntries took 0 ms]]></log4j:message>
+<log4j:locationInfo class="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" method="_initialize" file="BundleSiteInitializer.java" line="5661"/>
+</log4j:event>
+
+<log4j:event logger="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" timestamp="1748987669805" level="INFO" thread="http-nio-8080-exec-10">
+<log4j:message><![CDATA[Invoking addOrUpdateUserGroups took 0 ms]]></log4j:message>
+<log4j:locationInfo class="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" method="_initialize" file="BundleSiteInitializer.java" line="5661"/>
+</log4j:event>
+
+<log4j:event logger="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" timestamp="1748987669806" level="INFO" thread="http-nio-8080-exec-10">
+<log4j:message><![CDATA[Invoking setPLOEntries took 0 ms]]></log4j:message>
+<log4j:locationInfo class="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" method="_initialize" file="BundleSiteInitializer.java" line="5661"/>
+</log4j:event>
+
+<log4j:event logger="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" timestamp="1748987669806" level="INFO" thread="http-nio-8080-exec-10">
+<log4j:message><![CDATA[Invoking addStyleBookEntries took 0 ms]]></log4j:message>
+<log4j:locationInfo class="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" method="_initialize" file="BundleSiteInitializer.java" line="5661"/>
+</log4j:event>
+
+<log4j:event logger="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" timestamp="1748987669806" level="INFO" thread="http-nio-8080-exec-10">
+<log4j:message><![CDATA[Invoking addOrUpdateExpandoColumns took 0 ms]]></log4j:message>
+<log4j:locationInfo class="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" method="_initialize" file="BundleSiteInitializer.java" line="5661"/>
+</log4j:event>
+
+<log4j:event logger="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" timestamp="1748987669806" level="INFO" thread="http-nio-8080-exec-10">
+<log4j:message><![CDATA[Invoking addSiteSettings took 0 ms]]></log4j:message>
+<log4j:locationInfo class="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" method="_initialize" file="BundleSiteInitializer.java" line="5661"/>
+</log4j:event>
+
+<log4j:event logger="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" timestamp="1748987669806" level="INFO" thread="http-nio-8080-exec-10">
+<log4j:message><![CDATA[Invoking addAccounts took 0 ms]]></log4j:message>
+<log4j:locationInfo class="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" method="_initialize" file="BundleSiteInitializer.java" line="5661"/>
+</log4j:event>
+
+<log4j:event logger="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" timestamp="1748987669806" level="INFO" thread="http-nio-8080-exec-10">
+<log4j:message><![CDATA[Invoking addOrUpdateListTypeDefinitions took 0 ms]]></log4j:message>
+<log4j:locationInfo class="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" method="_initialize" file="BundleSiteInitializer.java" line="5661"/>
+</log4j:event>
+
+<log4j:event logger="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" timestamp="1748987669809" level="INFO" thread="http-nio-8080-exec-10">
+<log4j:message><![CDATA[Invoking addOrUpdateRoles took 2 ms]]></log4j:message>
+<log4j:locationInfo class="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" method="_initialize" file="BundleSiteInitializer.java" line="5661"/>
+</log4j:event>
+
+<log4j:event logger="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" timestamp="1748987669809" level="INFO" thread="http-nio-8080-exec-10">
+<log4j:message><![CDATA[Invoking addOrUpdateDDMStructures took 0 ms]]></log4j:message>
+<log4j:locationInfo class="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" method="_initialize" file="BundleSiteInitializer.java" line="5661"/>
+</log4j:event>
+
+<log4j:event logger="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" timestamp="1748987669809" level="INFO" thread="http-nio-8080-exec-10">
+<log4j:message><![CDATA[Invoking addOrUpdateDataDefinitions took 0 ms]]></log4j:message>
+<log4j:locationInfo class="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" method="_initialize" file="BundleSiteInitializer.java" line="5661"/>
+</log4j:event>
+
+<log4j:event logger="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" timestamp="1748987669873" level="INFO" thread="http-nio-8080-exec-10">
+<log4j:message><![CDATA[Invoking addOrUpdateDepotEntries took 64 ms]]></log4j:message>
+<log4j:locationInfo class="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" method="_initialize" file="BundleSiteInitializer.java" line="5661"/>
+</log4j:event>
+
+<log4j:event logger="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" timestamp="1748987669873" level="INFO" thread="http-nio-8080-exec-10">
+<log4j:message><![CDATA[Invoking addWorkflowDefinitions took 0 ms]]></log4j:message>
+<log4j:locationInfo class="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" method="_initialize" file="BundleSiteInitializer.java" line="5661"/>
+</log4j:event>
+
+<log4j:event logger="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" timestamp="1748987669874" level="INFO" thread="http-nio-8080-exec-10">
+<log4j:message><![CDATA[Invoking addOrUpdateTaxonomyVocabularies took 0 ms]]></log4j:message>
+<log4j:locationInfo class="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" method="_initialize" file="BundleSiteInitializer.java" line="5661"/>
+</log4j:event>
+
+<log4j:event logger="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" timestamp="1748987669878" level="INFO" thread="http-nio-8080-exec-10">
+<log4j:message><![CDATA[Invoking addSiteConfiguration took 4 ms]]></log4j:message>
+<log4j:locationInfo class="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" method="_initialize" file="BundleSiteInitializer.java" line="5661"/>
+</log4j:event>
+
+<log4j:event logger="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" timestamp="1748987669878" level="INFO" thread="http-nio-8080-exec-10">
+<log4j:message><![CDATA[Invoking addOrUpdateSXPBlueprint took 0 ms]]></log4j:message>
+<log4j:locationInfo class="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" method="_initialize" file="BundleSiteInitializer.java" line="5661"/>
+</log4j:event>
+
+<log4j:event logger="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" timestamp="1748987669878" level="INFO" thread="http-nio-8080-exec-10">
+<log4j:message><![CDATA[Invoking addOrUpdateOrganizations took 0 ms]]></log4j:message>
+<log4j:locationInfo class="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" method="_initialize" file="BundleSiteInitializer.java" line="5661"/>
+</log4j:event>
+
+<log4j:event logger="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" timestamp="1748987671404" level="INFO" thread="http-nio-8080-exec-10">
+<log4j:message><![CDATA[Invoking addOrUpdateLayouts took 1526 ms]]></log4j:message>
+<log4j:locationInfo class="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" method="_initialize" file="BundleSiteInitializer.java" line="5661"/>
+</log4j:event>
+
+<log4j:event logger="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" timestamp="1748987671404" level="INFO" thread="http-nio-8080-exec-10">
+<log4j:message><![CDATA[Invoking addAccountGroupAssignments took 0 ms]]></log4j:message>
+<log4j:locationInfo class="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" method="_initialize" file="BundleSiteInitializer.java" line="5661"/>
+</log4j:event>
+
+<log4j:event logger="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" timestamp="1748987671404" level="INFO" thread="http-nio-8080-exec-10">
+<log4j:message><![CDATA[Invoking addAccountsOrganizations took 0 ms]]></log4j:message>
+<log4j:locationInfo class="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" method="_initialize" file="BundleSiteInitializer.java" line="5661"/>
+</log4j:event>
+
+<log4j:event logger="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" timestamp="1748987671405" level="INFO" thread="http-nio-8080-exec-10">
+<log4j:message><![CDATA[Invoking addOrUpdateKnowledgeBaseArticles took 0 ms]]></log4j:message>
+<log4j:locationInfo class="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" method="_initialize" file="BundleSiteInitializer.java" line="5661"/>
+</log4j:event>
+
+<log4j:event logger="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" timestamp="1748987671405" level="INFO" thread="http-nio-8080-exec-10">
+<log4j:message><![CDATA[Invoking addKeywords took 0 ms]]></log4j:message>
+<log4j:locationInfo class="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" method="_initialize" file="BundleSiteInitializer.java" line="5661"/>
+</log4j:event>
+
+<log4j:event logger="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" timestamp="1748987671405" level="INFO" thread="http-nio-8080-exec-10">
+<log4j:message><![CDATA[Invoking addOrUpdateDocuments took 0 ms]]></log4j:message>
+<log4j:locationInfo class="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" method="_initialize" file="BundleSiteInitializer.java" line="5661"/>
+</log4j:event>
+
+<log4j:event logger="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" timestamp="1748987671405" level="INFO" thread="http-nio-8080-exec-10">
+<log4j:message><![CDATA[Invoking addPortletSettings took 0 ms]]></log4j:message>
+<log4j:locationInfo class="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" method="_initialize" file="BundleSiteInitializer.java" line="5661"/>
+</log4j:event>
+
+<log4j:event logger="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" timestamp="1748987671406" level="INFO" thread="http-nio-8080-exec-10">
+<log4j:message><![CDATA[Invoking updateLayoutSets took 1 ms]]></log4j:message>
+<log4j:locationInfo class="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" method="_initialize" file="BundleSiteInitializer.java" line="5661"/>
+</log4j:event>
+
+<log4j:event logger="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" timestamp="1748987671406" level="INFO" thread="http-nio-8080-exec-10">
+<log4j:message><![CDATA[Invoking addOrUpdateBlogPostings took 0 ms]]></log4j:message>
+<log4j:locationInfo class="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" method="_initialize" file="BundleSiteInitializer.java" line="5661"/>
+</log4j:event>
+
+<log4j:event logger="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" timestamp="1748987671406" level="INFO" thread="http-nio-8080-exec-10">
+<log4j:message><![CDATA[Invoking addOrUpdateAssetLinkEntries took 0 ms]]></log4j:message>
+<log4j:locationInfo class="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" method="_initialize" file="BundleSiteInitializer.java" line="5661"/>
+</log4j:event>
+
+<log4j:event logger="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" timestamp="1748987671406" level="INFO" thread="http-nio-8080-exec-10">
+<log4j:message><![CDATA[Invoking addUserAccounts took 0 ms]]></log4j:message>
+<log4j:locationInfo class="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" method="_initialize" file="BundleSiteInitializer.java" line="5661"/>
+</log4j:event>
+
+<log4j:event logger="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" timestamp="1748987671562" level="INFO" thread="http-nio-8080-exec-10">
+<log4j:message><![CDATA[Invoking addFragmentEntries took 156 ms]]></log4j:message>
+<log4j:locationInfo class="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" method="_initialize" file="BundleSiteInitializer.java" line="5661"/>
+</log4j:event>
+
+<log4j:event logger="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" timestamp="1748987671562" level="INFO" thread="http-nio-8080-exec-10">
+<log4j:message><![CDATA[Invoking addOrUpdateClientExtensionEntries took 0 ms]]></log4j:message>
+<log4j:locationInfo class="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" method="_initialize" file="BundleSiteInitializer.java" line="5661"/>
+</log4j:event>
+
+<log4j:event logger="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" timestamp="1748987671564" level="INFO" thread="http-nio-8080-exec-10">
+<log4j:message><![CDATA[Invoking addObjectDefinitions took 2 ms]]></log4j:message>
+<log4j:locationInfo class="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" method="_initialize" file="BundleSiteInitializer.java" line="5661"/>
+</log4j:event>
+
+<log4j:event logger="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" timestamp="1748987671564" level="INFO" thread="http-nio-8080-exec-10">
+<log4j:message><![CDATA[Invoking addRolesAssignments took 0 ms]]></log4j:message>
+<log4j:locationInfo class="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" method="_initialize" file="BundleSiteInitializer.java" line="5661"/>
+</log4j:event>
+
+<log4j:event logger="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" timestamp="1748987671564" level="INFO" thread="http-nio-8080-exec-10">
+<log4j:message><![CDATA[Invoking addOrUpdateSegmentsEntries took 0 ms]]></log4j:message>
+<log4j:locationInfo class="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" method="_initialize" file="BundleSiteInitializer.java" line="5661"/>
+</log4j:event>
+
+<log4j:event logger="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" timestamp="1748987671564" level="INFO" thread="http-nio-8080-exec-10">
+<log4j:message><![CDATA[Invoking addUserRoles took 0 ms]]></log4j:message>
+<log4j:locationInfo class="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" method="_initialize" file="BundleSiteInitializer.java" line="5661"/>
+</log4j:event>
+
+<log4j:event logger="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" timestamp="1748987671565" level="INFO" thread="http-nio-8080-exec-10">
+<log4j:message><![CDATA[Invoking addOrUpdateObjectRelationships took 0 ms]]></log4j:message>
+<log4j:locationInfo class="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" method="_initialize" file="BundleSiteInitializer.java" line="5661"/>
+</log4j:event>
+
+<log4j:event logger="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" timestamp="1748987671565" level="INFO" thread="http-nio-8080-exec-10">
+<log4j:message><![CDATA[Invoking addOrUpdateObjectFields took 0 ms]]></log4j:message>
+<log4j:locationInfo class="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" method="_initialize" file="BundleSiteInitializer.java" line="5661"/>
+</log4j:event>
+
+<log4j:event logger="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" timestamp="1748987671565" level="INFO" thread="http-nio-8080-exec-10">
+<log4j:message><![CDATA[Invoking publishObjectDefinitions took 0 ms]]></log4j:message>
+<log4j:locationInfo class="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" method="_initialize" file="BundleSiteInitializer.java" line="5661"/>
+</log4j:event>
+
+<log4j:event logger="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" timestamp="1748987671565" level="INFO" thread="http-nio-8080-exec-10">
+<log4j:message><![CDATA[Invoking addOrUpdateAccountEntryRestrictions took 0 ms]]></log4j:message>
+<log4j:locationInfo class="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" method="_initialize" file="BundleSiteInitializer.java" line="5661"/>
+</log4j:event>
+
+<log4j:event logger="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" timestamp="1748987671565" level="INFO" thread="http-nio-8080-exec-10">
+<log4j:message><![CDATA[Invoking addOrUpdateNotificationTemplates took 0 ms]]></log4j:message>
+<log4j:locationInfo class="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" method="_initialize" file="BundleSiteInitializer.java" line="5661"/>
+</log4j:event>
+
+<log4j:event logger="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" timestamp="1748987671565" level="INFO" thread="http-nio-8080-exec-10">
+<log4j:message><![CDATA[Invoking addAssetListEntries took 0 ms]]></log4j:message>
+<log4j:locationInfo class="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" method="_initialize" file="BundleSiteInitializer.java" line="5661"/>
+</log4j:event>
+
+<log4j:event logger="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" timestamp="1748987671573" level="INFO" thread="http-nio-8080-exec-10">
+<log4j:message><![CDATA[Invoking addOrUpdateDDMTemplates took 8 ms]]></log4j:message>
+<log4j:locationInfo class="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" method="_initialize" file="BundleSiteInitializer.java" line="5661"/>
+</log4j:event>
+
+<log4j:event logger="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" timestamp="1748987671573" level="INFO" thread="http-nio-8080-exec-10">
+<log4j:message><![CDATA[Invoking addOrUpdateObjectActions took 0 ms]]></log4j:message>
+<log4j:locationInfo class="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" method="_initialize" file="BundleSiteInitializer.java" line="5661"/>
+</log4j:event>
+
+<log4j:event logger="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" timestamp="1748987671573" level="INFO" thread="http-nio-8080-exec-10">
+<log4j:message><![CDATA[Invoking addOrUpdateJournalArticles took 0 ms]]></log4j:message>
+<log4j:locationInfo class="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" method="_initialize" file="BundleSiteInitializer.java" line="5661"/>
+</log4j:event>
+
+<log4j:event logger="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" timestamp="1748987671573" level="INFO" thread="http-nio-8080-exec-10">
+<log4j:message><![CDATA[Invoking addOrUpdateObjectEntries took 0 ms]]></log4j:message>
+<log4j:locationInfo class="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" method="_initialize" file="BundleSiteInitializer.java" line="5661"/>
+</log4j:event>
+
+<log4j:event logger="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" timestamp="1748987671574" level="INFO" thread="http-nio-8080-exec-10">
+<log4j:message><![CDATA[Invoking addCPDefinitions took 0 ms]]></log4j:message>
+<log4j:locationInfo class="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" method="_initialize" file="BundleSiteInitializer.java" line="5661"/>
+</log4j:event>
+
+<log4j:event logger="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" timestamp="1748987672384" level="INFO" thread="http-nio-8080-exec-10">
+<log4j:message><![CDATA[Invoking addLayoutPageTemplates took 810 ms]]></log4j:message>
+<log4j:locationInfo class="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" method="_initialize" file="BundleSiteInitializer.java" line="5661"/>
+</log4j:event>
+
+<log4j:event logger="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" timestamp="1748987672385" level="INFO" thread="http-nio-8080-exec-10">
+<log4j:message><![CDATA[Invoking addLayoutUtilityPageEntries took 0 ms]]></log4j:message>
+<log4j:locationInfo class="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" method="_initialize" file="BundleSiteInitializer.java" line="5661"/>
+</log4j:event>
+
+<log4j:event logger="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" timestamp="1748987672858" level="INFO" thread="http-nio-8080-exec-10">
+<log4j:message><![CDATA[Invoking addOrUpdateLayoutsContent took 472 ms]]></log4j:message>
+<log4j:locationInfo class="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" method="_initialize" file="BundleSiteInitializer.java" line="5661"/>
+</log4j:event>
+
+<log4j:event logger="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" timestamp="1748987672858" level="INFO" thread="http-nio-8080-exec-10">
+<log4j:message><![CDATA[Invoking addSegmentsExperiences took 0 ms]]></log4j:message>
+<log4j:locationInfo class="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" method="_initialize" file="BundleSiteInitializer.java" line="5661"/>
+</log4j:event>
+
+<log4j:event logger="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" timestamp="1748987672858" level="INFO" thread="http-nio-8080-exec-10">
+<log4j:message><![CDATA[Invoking addExpandoValues took 0 ms]]></log4j:message>
+<log4j:locationInfo class="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" method="_initialize" file="BundleSiteInitializer.java" line="5661"/>
+</log4j:event>
+
+<log4j:event logger="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" timestamp="1748987672858" level="INFO" thread="http-nio-8080-exec-10">
+<log4j:message><![CDATA[Invoking addOrUpdateResourcePermissions took 0 ms]]></log4j:message>
+<log4j:locationInfo class="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" method="_initialize" file="BundleSiteInitializer.java" line="5661"/>
+</log4j:event>
+
+<log4j:event logger="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" timestamp="1748987672858" level="INFO" thread="http-nio-8080-exec-10">
+<log4j:message><![CDATA[Initialized com.liferay.site.initializer.cms for group 37781 in 3054 ms]]></log4j:message>
+<log4j:locationInfo class="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" method="initialize" file="BundleSiteInitializer.java" line="550"/>
+</log4j:event>
+
+<log4j:event logger="com.liferay.batch.engine.internal.BatchEngineImportTaskExecutorImpl" timestamp="1748987673364" level="INFO" thread="http-nio-8080-exec-10">
+<log4j:message><![CDATA[Started batch engine import task 7]]></log4j:message>
+<log4j:locationInfo class="com.liferay.batch.engine.internal.BatchEngineImportTaskExecutorImpl" method="execute" file="BatchEngineImportTaskExecutorImpl.java" line="96"/>
+</log4j:event>
+
+<log4j:event logger="com.liferay.batch.engine.internal.BatchEngineImportTaskExecutorImpl" timestamp="1748987675256" level="INFO" thread="http-nio-8080-exec-10">
+<log4j:message><![CDATA[Finished batch engine import task 7 in 1892ms]]></log4j:message>
+<log4j:locationInfo class="com.liferay.batch.engine.internal.BatchEngineImportTaskExecutorImpl" method="execute" file="BatchEngineImportTaskExecutorImpl.java" line="177"/>
+</log4j:event>
+
+<log4j:event logger="com.liferay.batch.engine.internal.BatchEngineImportTaskExecutorImpl" timestamp="1748987675270" level="INFO" thread="http-nio-8080-exec-10">
+<log4j:message><![CDATA[Started batch engine import task 8]]></log4j:message>
+<log4j:locationInfo class="com.liferay.batch.engine.internal.BatchEngineImportTaskExecutorImpl" method="execute" file="BatchEngineImportTaskExecutorImpl.java" line="96"/>
+</log4j:event>
+
+<log4j:event logger="com.liferay.batch.engine.internal.BatchEngineImportTaskExecutorImpl" timestamp="1748987675306" level="INFO" thread="http-nio-8080-exec-10">
+<log4j:message><![CDATA[Finished batch engine import task 8 in 35ms]]></log4j:message>
+<log4j:locationInfo class="com.liferay.batch.engine.internal.BatchEngineImportTaskExecutorImpl" method="execute" file="BatchEngineImportTaskExecutorImpl.java" line="177"/>
+</log4j:event>
+
+<log4j:event logger="com.liferay.batch.engine.internal.BatchEngineImportTaskExecutorImpl" timestamp="1748987675323" level="INFO" thread="http-nio-8080-exec-10">
+<log4j:message><![CDATA[Started batch engine import task 9]]></log4j:message>
+<log4j:locationInfo class="com.liferay.batch.engine.internal.BatchEngineImportTaskExecutorImpl" method="execute" file="BatchEngineImportTaskExecutorImpl.java" line="96"/>
+</log4j:event>
+
+<log4j:event logger="com.liferay.batch.engine.internal.BatchEngineImportTaskExecutorImpl" timestamp="1748987675565" level="ERROR" thread="http-nio-8080-exec-10">
+<log4j:message><![CDATA[Unable to update batch engine import task {"mvccVersion": 1, "uuid": "8c61d8a5-214b-9325-2932-058d1b4b3b12", "externalReferenceCode": "8c61d8a5-214b-9325-2932-058d1b4b3b12", "batchEngineImportTaskId": 9, "companyId": 54804599542518, "userId": 38048, "createDate": "Tue Jun 03 21:54:35 GMT 2025", "modifiedDate": "Tue Jun 03 21:54:32 GMT 2025", "batchSize": 100, "callbackURL": "", "className": "com.liferay.object.admin.rest.dto.v1_0.ObjectDefinition", "contentType": "JSON", "endTime": "null", "errorMessage": "", "executeStatus": "STARTED", "fieldNameMapping": "null", "importStrategy": 2, "operation": "CREATE", "parameters": "{containsHeaders=true, updateStrategy=UPDATE, createStrategy=UPSERT, featureFlag=LPD-17564, importStrategy=ON_ERROR_FAIL}", "processedItemsCount": 0, "startTime": "Tue Jun 03 21:54:35 GMT 2025", "taskItemDelegateName": "DEFAULT", "totalItemsCount": 5}]]></log4j:message>
+<log4j:throwable><![CDATA[com.liferay.portal.kernel.exception.ResourceActionsException: Portlet com_liferay_object_web_internal_object_definitions_portlet_ObjectDefinitionsPortlet_Z7P5 cannot be assigned to both com.liferay.object#32255 and com.liferay.object#39760 as root model resources. See LPS-135983.
+	at com.liferay.portal.security.permission.ResourceActionsImpl._readModelResources(ResourceActionsImpl.java:1179)
+	at com.liferay.portal.security.permission.ResourceActionsImpl.populateModelResources(ResourceActionsImpl.java:496)
+	at com.liferay.object.internal.security.permission.resource.util.ObjectDefinitionResourcePermissionUtil.populateResourceActions(ObjectDefinitionResourcePermissionUtil.java:65)
+	at com.liferay.object.internal.deployer.ObjectDefinitionDeployerImpl._deploy(ObjectDefinitionDeployerImpl.java:258)
+	at com.liferay.object.internal.deployer.ObjectDefinitionDeployerImpl.deploy(ObjectDefinitionDeployerImpl.java:231)
+	at com.liferay.object.service.impl.ObjectDefinitionLocalServiceImpl.lambda$deployObjectDefinition$3(ObjectDefinitionLocalServiceImpl.java:724)
+	at java.base/java.util.concurrent.ConcurrentHashMap.computeIfAbsent(ConcurrentHashMap.java:1740)
+	at com.liferay.object.service.impl.ObjectDefinitionLocalServiceImpl.deployObjectDefinition(ObjectDefinitionLocalServiceImpl.java:721)
+	at com.liferay.object.service.impl.ObjectDefinitionLocalServiceImpl._publishObjectDefinition(ObjectDefinitionLocalServiceImpl.java:2156)
+	at com.liferay.object.service.impl.ObjectDefinitionLocalServiceImpl.publishSystemObjectDefinition(ObjectDefinitionLocalServiceImpl.java:969)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at com.liferay.portal.spring.aop.AopMethodInvocationImpl.proceed(AopMethodInvocationImpl.java:41)
+	at com.liferay.portal.spring.transaction.TransactionInterceptor.invoke(TransactionInterceptor.java:60)
+	at com.liferay.portal.spring.aop.AopMethodInvocationImpl.proceed(AopMethodInvocationImpl.java:48)
+	at com.liferay.portal.kernel.aop.ChainableMethodAdvice.invoke(ChainableMethodAdvice.java:55)
+	at com.liferay.portal.spring.aop.AopMethodInvocationImpl.proceed(AopMethodInvocationImpl.java:48)
+	at com.liferay.change.tracking.internal.aop.CTTransactionAdvice.invoke(CTTransactionAdvice.java:70)
+	at com.liferay.portal.spring.aop.AopMethodInvocationImpl.proceed(AopMethodInvocationImpl.java:48)
+	at com.liferay.portal.spring.aop.AopInvocationHandler.invoke(AopInvocationHandler.java:40)
+	at jdk.proxy338/jdk.proxy338.$Proxy1304.publishSystemObjectDefinition(Unknown Source)
+	at com.liferay.object.service.impl.ObjectDefinitionServiceImpl.publishSystemObjectDefinition(ObjectDefinitionServiceImpl.java:254)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at com.liferay.portal.spring.aop.AopMethodInvocationImpl.proceed(AopMethodInvocationImpl.java:41)
+	at com.liferay.portal.spring.transaction.TransactionInterceptor.invoke(TransactionInterceptor.java:60)
+	at com.liferay.portal.spring.aop.AopMethodInvocationImpl.proceed(AopMethodInvocationImpl.java:48)
+	at com.liferay.portal.kernel.aop.ChainableMethodAdvice.invoke(ChainableMethodAdvice.java:55)
+	at com.liferay.portal.spring.aop.AopMethodInvocationImpl.proceed(AopMethodInvocationImpl.java:48)
+	at com.liferay.change.tracking.internal.aop.CTTransactionAdvice.invoke(CTTransactionAdvice.java:70)
+	at com.liferay.portal.spring.aop.AopMethodInvocationImpl.proceed(AopMethodInvocationImpl.java:48)
+	at com.liferay.portal.spring.aop.AopInvocationHandler.invoke(AopInvocationHandler.java:40)
+	at jdk.proxy338/jdk.proxy338.$Proxy1325.publishSystemObjectDefinition(Unknown Source)
+	at com.liferay.object.admin.rest.internal.resource.v1_0.ObjectDefinitionResourceImpl.postObjectDefinitionPublish(ObjectDefinitionResourceImpl.java:467)
+	at com.liferay.object.admin.rest.internal.resource.v1_0.ObjectDefinitionResourceImpl.postObjectDefinition(ObjectDefinitionResourceImpl.java:442)
+	at com.liferay.object.admin.rest.internal.resource.v1_0.ObjectDefinitionResourceImpl.putObjectDefinitionByExternalReferenceCode(ObjectDefinitionResourceImpl.java:852)
+	at com.liferay.object.admin.rest.internal.resource.v1_0.BaseObjectDefinitionResourceImpl.lambda$create$2(BaseObjectDefinitionResourceImpl.java:789)
+	at com.liferay.batch.engine.internal.strategy.BaseBatchEngineImportStrategy.lambda$apply$0(BaseBatchEngineImportStrategy.java:60)
+	at com.liferay.batch.engine.internal.strategy.OnErrorFailBatchEngineImportStrategy.importItem(OnErrorFailBatchEngineImportStrategy.java:37)
+	at com.liferay.batch.engine.internal.strategy.BaseBatchEngineImportStrategy.apply(BaseBatchEngineImportStrategy.java:47)
+	at com.liferay.object.admin.rest.internal.resource.v1_0.BaseObjectDefinitionResourceImpl.create(BaseObjectDefinitionResourceImpl.java:802)
+	at com.liferay.portal.vulcan.internal.batch.engine.VulcanBatchEngineTaskItemDelegateAdaptor.create(VulcanBatchEngineTaskItemDelegateAdaptor.java:60)
+	at com.liferay.batch.engine.internal.item.BatchEngineTaskItemDelegateExecutor.saveItems(BatchEngineTaskItemDelegateExecutor.java:79)
+	at com.liferay.batch.engine.internal.BatchEngineImportTaskExecutorImpl._commitItems(BatchEngineImportTaskExecutorImpl.java:214)
+	at com.liferay.batch.engine.internal.BatchEngineImportTaskExecutorImpl._importItems(BatchEngineImportTaskExecutorImpl.java:396)
+	at com.liferay.batch.engine.internal.BatchEngineImportTaskExecutorImpl.lambda$execute$0(BatchEngineImportTaskExecutorImpl.java:149)
+	at com.liferay.batch.engine.internal.BatchEngineTaskExecutorUtil.execute(BatchEngineTaskExecutorUtil.java:51)
+	at com.liferay.batch.engine.internal.BatchEngineImportTaskExecutorImpl.execute(BatchEngineImportTaskExecutorImpl.java:147)
+	at com.liferay.batch.engine.internal.unit.BatchEngineUnitProcessorImpl._execute(BatchEngineUnitProcessorImpl.java:241)
+	at com.liferay.batch.engine.internal.unit.BatchEngineUnitProcessorImpl$1.addingService(BatchEngineUnitProcessorImpl.java:178)
+	at org.osgi.util.tracker.ServiceTracker$Tracked.customizerAdding(ServiceTracker.java:943)
+	at org.osgi.util.tracker.ServiceTracker$Tracked.customizerAdding(ServiceTracker.java:1)
+	at org.osgi.util.tracker.AbstractTracked.trackAdding(AbstractTracked.java:256)
+	at org.osgi.util.tracker.AbstractTracked.trackInitial(AbstractTracked.java:183)
+	at org.osgi.util.tracker.ServiceTracker.open(ServiceTracker.java:321)
+	at org.osgi.util.tracker.ServiceTracker.open(ServiceTracker.java:264)
+	at java.base/java.util.concurrent.CompletableFuture.uniRunNow(CompletableFuture.java:819)
+	at java.base/java.util.concurrent.CompletableFuture.uniRunStage(CompletableFuture.java:803)
+	at java.base/java.util.concurrent.CompletableFuture.thenRun(CompletableFuture.java:2227)
+	at com.liferay.batch.engine.internal.unit.BatchEngineUnitProcessorImpl.processBatchEngineUnits(BatchEngineUnitProcessorImpl.java:113)
+	at com.liferay.batch.engine.internal.unit.MultiCompanyBatchEngineUnitProcessor._processBatchEngineUnits(MultiCompanyBatchEngineUnitProcessor.java:83)
+	at com.liferay.batch.engine.internal.unit.MultiCompanyBatchEngineUnitProcessor.processBatchEngineUnits(MultiCompanyBatchEngineUnitProcessor.java:38)
+	at com.liferay.batch.engine.internal.instance.lifecycle.MultiCompanyBatchEngineUnitPortalInstanceLifecycleListener.portalInstanceRegistered(MultiCompanyBatchEngineUnitPortalInstanceLifecycleListener.java:31)
+	at com.liferay.portal.instance.lifecycle.internal.PortalInstanceLifecycleListenerManagerImpl.lambda$registerCompany$1(PortalInstanceLifecycleListenerManagerImpl.java:192)
+	at com.liferay.portal.instance.lifecycle.internal.PortalInstanceLifecycleListenerManagerImpl._runIfNeeded(PortalInstanceLifecycleListenerManagerImpl.java:296)
+	at com.liferay.portal.instance.lifecycle.internal.PortalInstanceLifecycleListenerManagerImpl.registerCompany(PortalInstanceLifecycleListenerManagerImpl.java:174)
+	at com.liferay.portal.instance.lifecycle.internal.PortalInstanceLifecycleListenerManagerImpl.registerCompany(PortalInstanceLifecycleListenerManagerImpl.java:98)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at com.liferay.portal.spring.aop.AopMethodInvocationImpl.proceed(AopMethodInvocationImpl.java:41)
+	at com.liferay.portal.spring.transaction.TransactionInterceptor.invoke(TransactionInterceptor.java:60)
+	at com.liferay.portal.spring.aop.AopMethodInvocationImpl.proceed(AopMethodInvocationImpl.java:48)
+	at com.liferay.change.tracking.internal.aop.CTTransactionAdvice.invoke(CTTransactionAdvice.java:70)
+	at com.liferay.portal.spring.aop.AopMethodInvocationImpl.proceed(AopMethodInvocationImpl.java:48)
+	at com.liferay.portal.spring.aop.AopInvocationHandler.invoke(AopInvocationHandler.java:40)
+	at jdk.proxy33/jdk.proxy33.$Proxy335.registerCompany(Unknown Source)
+	at com.liferay.portal.service.impl.CompanyLocalServiceImpl.registerCompany(CompanyLocalServiceImpl.java:1750)
+	at com.liferay.portal.service.impl.CompanyLocalServiceImpl.lambda$_checkCompany$19(CompanyLocalServiceImpl.java:2365)
+	at com.liferay.portal.kernel.transaction.TransactionCommitCallbackUtil$1.doCommitted(TransactionCommitCallbackUtil.java:34)
+	at com.liferay.portal.kernel.transaction.NewTransactionLifecycleListener.committed(NewTransactionLifecycleListener.java:20)
+	at com.liferay.portal.kernel.transaction.TransactionLifecycleManager.fireTransactionCommittedEvent(TransactionLifecycleManager.java:25)
+	at com.liferay.portal.spring.transaction.DefaultTransactionExecutor.commit(DefaultTransactionExecutor.java:43)
+	at com.liferay.portal.spring.transaction.TransactionInterceptor.invoke(TransactionInterceptor.java:68)
+	at com.liferay.portal.spring.aop.AopMethodInvocationImpl.proceed(AopMethodInvocationImpl.java:48)
+	at com.liferay.portal.kernel.aop.ChainableMethodAdvice.invoke(ChainableMethodAdvice.java:55)
+	at com.liferay.portal.spring.aop.AopMethodInvocationImpl.proceed(AopMethodInvocationImpl.java:48)
+	at com.liferay.change.tracking.internal.aop.CTTransactionAdvice.invoke(CTTransactionAdvice.java:70)
+	at com.liferay.portal.spring.aop.AopMethodInvocationImpl.proceed(AopMethodInvocationImpl.java:48)
+	at com.liferay.portal.spring.aop.AopInvocationHandler.invoke(AopInvocationHandler.java:40)
+	at jdk.proxy3/jdk.proxy3.$Proxy212.addCompany(Unknown Source)
+	at com.liferay.portal.instances.web.internal.portlet.action.AddInstanceMVCActionCommand.lambda$_addInstance$0(AddInstanceMVCActionCommand.java:136)
+	at com.liferay.portal.util.PortalInstances.addCompany(PortalInstances.java:67)
+	at com.liferay.portal.instances.web.internal.portlet.action.AddInstanceMVCActionCommand._addInstance(AddInstanceMVCActionCommand.java:134)
+	at com.liferay.portal.instances.web.internal.portlet.action.AddInstanceMVCActionCommand.doProcessAction(AddInstanceMVCActionCommand.java:54)
+	at com.liferay.portal.kernel.portlet.bridges.mvc.BaseMVCActionCommand.processAction(BaseMVCActionCommand.java:48)
+	at com.liferay.portal.kernel.portlet.bridges.mvc.MVCPortlet.callActionMethod(MVCPortlet.java:393)
+	at com.liferay.portal.kernel.portlet.LiferayPortlet.processAction(LiferayPortlet.java:75)
+	at com.liferay.portal.kernel.portlet.bridges.mvc.MVCPortlet.processAction(MVCPortlet.java:247)
+	at com.liferay.portlet.internal.FilterChainImpl.doFilter(FilterChainImpl.java:68)
+	at com.liferay.portal.kernel.portlet.PortletFilterUtil.doFilter(PortletFilterUtil.java:41)
+	at com.liferay.portal.kernel.servlet.PortletServlet.service(PortletServlet.java:105)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+	at org.eclipse.equinox.http.servlet.internal.registration.EndpointRegistration.service(EndpointRegistration.java:147)
+	at org.eclipse.equinox.http.servlet.internal.servlet.ResponseStateHandler.processRequest(ResponseStateHandler.java:63)
+	at org.eclipse.equinox.http.servlet.internal.context.DispatchTargets.doDispatch(DispatchTargets.java:120)
+	at org.eclipse.equinox.http.servlet.internal.servlet.RequestDispatcherAdaptor.include(RequestDispatcherAdaptor.java:48)
+	at com.liferay.portlet.internal.InvokerPortletImpl.invoke(InvokerPortletImpl.java:562)
+	at com.liferay.portlet.internal.InvokerPortletImpl.invokeAction(InvokerPortletImpl.java:602)
+	at com.liferay.portlet.internal.InvokerPortletImpl.processAction(InvokerPortletImpl.java:280)
+	at com.liferay.portlet.internal.PortletContainerImpl._processAction(PortletContainerImpl.java:495)
+	at com.liferay.portlet.internal.PortletContainerImpl.lambda$processAction$0(PortletContainerImpl.java:139)
+	at com.liferay.portlet.internal.PortletContainerImpl._preserveGroupIds(PortletContainerImpl.java:402)
+	at com.liferay.portlet.internal.PortletContainerImpl.processAction(PortletContainerImpl.java:132)
+	at com.liferay.portlet.SecurityPortletContainerWrapper.processAction(SecurityPortletContainerWrapper.java:73)
+	at com.liferay.portlet.RestrictPortletContainerWrapper.processAction(RestrictPortletContainerWrapper.java:63)
+	at com.liferay.portal.kernel.portlet.PortletContainerUtil.processAction(PortletContainerUtil.java:108)
+	at com.liferay.portal.action.LayoutAction.processLayout(LayoutAction.java:361)
+	at com.liferay.portal.action.LayoutAction.execute(LayoutAction.java:165)
+	at com.liferay.portal.struts.PortalRequestProcessor._process(PortalRequestProcessor.java:406)
+	at com.liferay.portal.struts.PortalRequestProcessor.process(PortalRequestProcessor.java:172)
+	at com.liferay.portal.internal.servlet.MainServlet.doPost(MainServlet.java:203)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:555)
+	at com.liferay.portal.internal.servlet.MainServlet.service(MainServlet.java:580)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+	at com.liferay.shielded.container.internal.proxy.ServletWrapper.service(ServletWrapper.java:103)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:199)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:144)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:168)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:144)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:117)
+	at com.liferay.portal.kernel.servlet.BaseFilter.processFilter(BaseFilter.java:152)
+	at com.liferay.change.tracking.internal.servlet.filter.CTCollectionPreviewFilter.processFilter(CTCollectionPreviewFilter.java:57)
+	at com.liferay.portal.kernel.servlet.BaseFilter.doFilter(BaseFilter.java:42)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDoFilter(InvokerFilterChain.java:204)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:109)
+	at com.liferay.portal.kernel.servlet.BaseFilter.processFilter(BaseFilter.java:152)
+	at com.liferay.portal.upload.servlet.request.filter.internal.UploadServletRequestFilter.processFilter(UploadServletRequestFilter.java:103)
+	at com.liferay.portal.kernel.servlet.BaseFilter.doFilter(BaseFilter.java:42)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDoFilter(InvokerFilterChain.java:204)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:109)
+	at com.liferay.portal.remote.cors.internal.servlet.filter.PortalCORSServletFilter.processFilter(PortalCORSServletFilter.java:155)
+	at com.liferay.portal.kernel.servlet.BaseFilter.doFilter(BaseFilter.java:42)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDoFilter(InvokerFilterChain.java:204)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:109)
+	at com.liferay.portal.servlet.filters.password.modified.PasswordModifiedFilter.processFilter(PasswordModifiedFilter.java:47)
+	at com.liferay.portal.kernel.servlet.BaseFilter.doFilter(BaseFilter.java:42)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDoFilter(InvokerFilterChain.java:204)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:109)
+	at com.liferay.portal.servlet.filters.lockout.LockoutFilter.processFilter(LockoutFilter.java:49)
+	at com.liferay.portal.kernel.servlet.BaseFilter.doFilter(BaseFilter.java:42)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDoFilter(InvokerFilterChain.java:204)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:109)
+	at com.liferay.portal.kernel.servlet.BaseFilter.processFilter(BaseFilter.java:152)
+	at com.liferay.portal.servlet.filters.secure.BaseAuthFilter.processFilter(BaseAuthFilter.java:341)
+	at com.liferay.portal.kernel.servlet.BaseFilter.doFilter(BaseFilter.java:42)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDoFilter(InvokerFilterChain.java:204)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:109)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilter.doFilter(InvokerFilter.java:114)
+	at com.liferay.shielded.container.internal.proxy.FilterWrapper.doFilter(FilterWrapper.java:69)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:168)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:144)
+	at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:621)
+	at org.apache.catalina.core.ApplicationDispatcher.processRequest(ApplicationDispatcher.java:401)
+	at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:340)
+	at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:285)
+	at com.liferay.friendly.url.internal.servlet.FriendlyURLServlet.service(FriendlyURLServlet.java:570)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+	at com.liferay.portal.servlet.ServletAdapter.service(ServletAdapter.java:89)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+	at com.liferay.shielded.container.internal.proxy.ServletWrapper.service(ServletWrapper.java:103)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:199)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:144)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:168)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:144)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:117)
+	at com.liferay.portal.kernel.servlet.BaseFilter.processFilter(BaseFilter.java:152)
+	at com.liferay.change.tracking.internal.servlet.filter.CTCollectionPreviewFilter.processFilter(CTCollectionPreviewFilter.java:57)
+	at com.liferay.portal.kernel.servlet.BaseFilter.doFilter(BaseFilter.java:42)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDoFilter(InvokerFilterChain.java:204)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:109)
+	at com.liferay.portal.kernel.servlet.BaseFilter.processFilter(BaseFilter.java:152)
+	at com.liferay.portal.upload.servlet.request.filter.internal.UploadServletRequestFilter.processFilter(UploadServletRequestFilter.java:103)
+	at com.liferay.portal.kernel.servlet.BaseFilter.doFilter(BaseFilter.java:42)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDoFilter(InvokerFilterChain.java:204)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:109)
+	at com.liferay.portal.remote.cors.internal.servlet.filter.PortalCORSServletFilter.processFilter(PortalCORSServletFilter.java:155)
+	at com.liferay.portal.kernel.servlet.BaseFilter.doFilter(BaseFilter.java:42)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDoFilter(InvokerFilterChain.java:204)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:109)
+	at com.liferay.portal.kernel.servlet.BaseFilter.processFilter(BaseFilter.java:152)
+	at com.liferay.portal.i18n.filter.internal.I18nFilter.processFilter(I18nFilter.java:398)
+	at com.liferay.portal.kernel.servlet.BaseFilter.doFilter(BaseFilter.java:42)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDoFilter(InvokerFilterChain.java:204)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:109)
+	at com.liferay.portal.servlet.filters.password.modified.PasswordModifiedFilter.processFilter(PasswordModifiedFilter.java:47)
+	at com.liferay.portal.kernel.servlet.BaseFilter.doFilter(BaseFilter.java:42)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDoFilter(InvokerFilterChain.java:204)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:109)
+	at com.liferay.portal.servlet.filters.lockout.LockoutFilter.processFilter(LockoutFilter.java:49)
+	at com.liferay.portal.kernel.servlet.BaseFilter.doFilter(BaseFilter.java:42)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDoFilter(InvokerFilterChain.java:204)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:109)
+	at com.liferay.portal.kernel.servlet.BaseFilter.processFilter(BaseFilter.java:152)
+	at com.liferay.portal.servlet.filters.secure.BaseAuthFilter.processFilter(BaseAuthFilter.java:341)
+	at com.liferay.portal.kernel.servlet.BaseFilter.doFilter(BaseFilter.java:42)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDoFilter(InvokerFilterChain.java:204)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:109)
+	at com.liferay.portal.kernel.servlet.BaseFilter.processFilter(BaseFilter.java:152)
+	at com.liferay.portal.servlet.filters.autologin.AutoLoginFilter.processFilter(AutoLoginFilter.java:258)
+	at com.liferay.portal.kernel.servlet.BaseFilter.doFilter(BaseFilter.java:42)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDoFilter(InvokerFilterChain.java:204)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:109)
+	at com.liferay.portal.kernel.servlet.BaseFilter.processFilter(BaseFilter.java:152)
+	at com.liferay.portal.servlet.filters.virtualhost.VirtualHostFilter.processFilter(VirtualHostFilter.java:247)
+	at com.liferay.portal.kernel.servlet.BaseFilter.doFilter(BaseFilter.java:42)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDoFilter(InvokerFilterChain.java:204)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:109)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDirectCallFilter(InvokerFilterChain.java:189)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:92)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDirectCallFilter(InvokerFilterChain.java:189)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:92)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDirectCallFilter(InvokerFilterChain.java:168)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:92)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDirectCallFilter(InvokerFilterChain.java:189)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:92)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilter.doFilter(InvokerFilter.java:114)
+	at com.liferay.shielded.container.internal.proxy.FilterWrapper.doFilter(FilterWrapper.java:69)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:168)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:144)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:168)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:346)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:935)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1792)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1189)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:658)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+]]></log4j:throwable>
+<log4j:locationInfo class="com.liferay.batch.engine.internal.BatchEngineImportTaskExecutorImpl" method="execute" file="BatchEngineImportTaskExecutorImpl.java" line="158"/>
+</log4j:event>
+
+<log4j:event logger="com.liferay.batch.engine.internal.BatchEngineImportTaskExecutorImpl" timestamp="1748987675580" level="INFO" thread="http-nio-8080-exec-10">
+<log4j:message><![CDATA[Finished batch engine import task 9 in 257ms]]></log4j:message>
+<log4j:locationInfo class="com.liferay.batch.engine.internal.BatchEngineImportTaskExecutorImpl" method="execute" file="BatchEngineImportTaskExecutorImpl.java" line="177"/>
+</log4j:event>
+
+<log4j:event logger="com.zaxxer.hikari.pool.PoolBase" timestamp="1748987683054" level="WARN" thread="liferay/adaptive_media_processor-7">
+<log4j:message><![CDATA[HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@3576473c (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.]]></log4j:message>
+<log4j:locationInfo class="com.zaxxer.hikari.pool.PoolBase" method="isConnectionAlive" file="PoolBase.java" line="184"/>
+</log4j:event>
+
+<log4j:event logger="com.zaxxer.hikari.pool.PoolBase" timestamp="1748987683057" level="WARN" thread="liferay/adaptive_media_processor-13">
+<log4j:message><![CDATA[HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@2a3d7f39 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.]]></log4j:message>
+<log4j:locationInfo class="com.zaxxer.hikari.pool.PoolBase" method="isConnectionAlive" file="PoolBase.java" line="184"/>
+</log4j:event>
+
+<log4j:event logger="com.zaxxer.hikari.pool.PoolBase" timestamp="1748987683057" level="WARN" thread="http-nio-8080-exec-10">
+<log4j:message><![CDATA[HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@46b6cfea (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.]]></log4j:message>
+<log4j:locationInfo class="com.zaxxer.hikari.pool.PoolBase" method="isConnectionAlive" file="PoolBase.java" line="184"/>
+</log4j:event>
+
+<log4j:event logger="com.liferay.mail.messaging.internal.MailMessageListener" timestamp="1748987774528" level="WARN" thread="liferay/mail-3">
+<log4j:message><![CDATA[Email test@domain.invalid will be ignored because it is included in mail.send.blacklist]]></log4j:message>
+<log4j:locationInfo class="com.liferay.mail.messaging.internal.MailMessageListener" method="filterInternetAddress" file="MailMessageListener.java" line="123"/>
+</log4j:event>
+
+<log4j:event logger="com.liferay.mail.messaging.internal.MailMessageListener" timestamp="1748987774529" level="WARN" thread="liferay/mail-3">
+<log4j:message><![CDATA[Skipping email because the sender is not specified]]></log4j:message>
+<log4j:locationInfo class="com.liferay.mail.messaging.internal.MailMessageListener" method="doMailMessage" file="MailMessageListener.java" line="49"/>
+</log4j:event>
+
+<log4j:event logger="com.liferay.mail.messaging.internal.MailMessageListener" timestamp="1748987779574" level="WARN" thread="liferay/mail-3">
+<log4j:message><![CDATA[Email test@domain.invalid will be ignored because it is included in mail.send.blacklist]]></log4j:message>
+<log4j:locationInfo class="com.liferay.mail.messaging.internal.MailMessageListener" method="filterInternetAddress" file="MailMessageListener.java" line="123"/>
+</log4j:event>
+
+<log4j:event logger="com.liferay.mail.messaging.internal.MailMessageListener" timestamp="1748987779574" level="WARN" thread="liferay/mail-3">
+<log4j:message><![CDATA[Skipping email because the sender is not specified]]></log4j:message>
+<log4j:locationInfo class="com.liferay.mail.messaging.internal.MailMessageListener" method="doMailMessage" file="MailMessageListener.java" line="49"/>
+</log4j:event>
+
+<log4j:event logger="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" timestamp="1748987798980" level="INFO" thread="http-nio-8080-exec-1">
+<log4j:message><![CDATA[Initializing com.liferay.site.initializer.welcome for group 40212]]></log4j:message>
+<log4j:locationInfo class="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" method="initialize" file="BundleSiteInitializer.java" line="532"/>
+</log4j:event>
+
+<log4j:event logger="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" timestamp="1748987798981" level="INFO" thread="http-nio-8080-exec-1">
+<log4j:message><![CDATA[Invoking addOrUpdateUserGroups took 0 ms]]></log4j:message>
+<log4j:locationInfo class="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" method="_initialize" file="BundleSiteInitializer.java" line="5661"/>
+</log4j:event>
+
+<log4j:event logger="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" timestamp="1748987798981" level="INFO" thread="http-nio-8080-exec-1">
+<log4j:message><![CDATA[Invoking addSiteSettings took 0 ms]]></log4j:message>
+<log4j:locationInfo class="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" method="_initialize" file="BundleSiteInitializer.java" line="5661"/>
+</log4j:event>
+
+<log4j:event logger="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" timestamp="1748987798983" level="INFO" thread="http-nio-8080-exec-1">
+<log4j:message><![CDATA[Invoking addOrUpdateRoles took 2 ms]]></log4j:message>
+<log4j:locationInfo class="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" method="_initialize" file="BundleSiteInitializer.java" line="5661"/>
+</log4j:event>
+
+<log4j:event logger="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" timestamp="1748987798984" level="INFO" thread="http-nio-8080-exec-1">
+<log4j:message><![CDATA[Invoking addOrUpdateSAPEntries took 0 ms]]></log4j:message>
+<log4j:locationInfo class="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" method="_initialize" file="BundleSiteInitializer.java" line="5661"/>
+</log4j:event>
+
+<log4j:event logger="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" timestamp="1748987798984" level="INFO" thread="http-nio-8080-exec-1">
+<log4j:message><![CDATA[Invoking addOrUpdateExpandoColumns took 0 ms]]></log4j:message>
+<log4j:locationInfo class="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" method="_initialize" file="BundleSiteInitializer.java" line="5661"/>
+</log4j:event>
+
+<log4j:event logger="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" timestamp="1748987798986" level="INFO" thread="http-nio-8080-exec-1">
+<log4j:message><![CDATA[Invoking addOrUpdateDataDefinitions took 2 ms]]></log4j:message>
+<log4j:locationInfo class="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" method="_initialize" file="BundleSiteInitializer.java" line="5661"/>
+</log4j:event>
+
+<log4j:event logger="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" timestamp="1748987798987" level="INFO" thread="http-nio-8080-exec-1">
+<log4j:message><![CDATA[Invoking addWorkflowDefinitions took 0 ms]]></log4j:message>
+<log4j:locationInfo class="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" method="_initialize" file="BundleSiteInitializer.java" line="5661"/>
+</log4j:event>
+
+<log4j:event logger="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" timestamp="1748987798987" level="INFO" thread="http-nio-8080-exec-1">
+<log4j:message><![CDATA[Invoking addOrUpdateListTypeDefinitions took 0 ms]]></log4j:message>
+<log4j:locationInfo class="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" method="_initialize" file="BundleSiteInitializer.java" line="5661"/>
+</log4j:event>
+
+<log4j:event logger="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" timestamp="1748987798987" level="INFO" thread="http-nio-8080-exec-1">
+<log4j:message><![CDATA[Invoking addStyleBookEntries took 0 ms]]></log4j:message>
+<log4j:locationInfo class="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" method="_initialize" file="BundleSiteInitializer.java" line="5661"/>
+</log4j:event>
+
+<log4j:event logger="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" timestamp="1748987798988" level="INFO" thread="http-nio-8080-exec-1">
+<log4j:message><![CDATA[Invoking addOrUpdateObjectFolders took 0 ms]]></log4j:message>
+<log4j:locationInfo class="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" method="_initialize" file="BundleSiteInitializer.java" line="5661"/>
+</log4j:event>
+
+<log4j:event logger="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" timestamp="1748987798988" level="INFO" thread="http-nio-8080-exec-1">
+<log4j:message><![CDATA[Invoking setPLOEntries took 0 ms]]></log4j:message>
+<log4j:locationInfo class="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" method="_initialize" file="BundleSiteInitializer.java" line="5661"/>
+</log4j:event>
+
+<log4j:event logger="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" timestamp="1748987798988" level="INFO" thread="http-nio-8080-exec-1">
+<log4j:message><![CDATA[Invoking addSiteConfiguration took 0 ms]]></log4j:message>
+<log4j:locationInfo class="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" method="_initialize" file="BundleSiteInitializer.java" line="5661"/>
+</log4j:event>
+
+<log4j:event logger="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" timestamp="1748987798988" level="INFO" thread="http-nio-8080-exec-1">
+<log4j:message><![CDATA[Invoking addAccountGroups took 0 ms]]></log4j:message>
+<log4j:locationInfo class="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" method="_initialize" file="BundleSiteInitializer.java" line="5661"/>
+</log4j:event>
+
+<log4j:event logger="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" timestamp="1748987798988" level="INFO" thread="http-nio-8080-exec-1">
+<log4j:message><![CDATA[Invoking addAccounts took 0 ms]]></log4j:message>
+<log4j:locationInfo class="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" method="_initialize" file="BundleSiteInitializer.java" line="5661"/>
+</log4j:event>
+
+<log4j:event logger="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" timestamp="1748987799033" level="INFO" thread="http-nio-8080-exec-1">
+<log4j:message><![CDATA[Invoking addOrUpdateLayouts took 45 ms]]></log4j:message>
+<log4j:locationInfo class="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" method="_initialize" file="BundleSiteInitializer.java" line="5661"/>
+</log4j:event>
+
+<log4j:event logger="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" timestamp="1748987799033" level="INFO" thread="http-nio-8080-exec-1">
+<log4j:message><![CDATA[Invoking addOrUpdateDepotEntries took 0 ms]]></log4j:message>
+<log4j:locationInfo class="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" method="_initialize" file="BundleSiteInitializer.java" line="5661"/>
+</log4j:event>
+
+<log4j:event logger="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" timestamp="1748987799033" level="INFO" thread="http-nio-8080-exec-1">
+<log4j:message><![CDATA[Invoking addOrUpdateDDMStructures took 0 ms]]></log4j:message>
+<log4j:locationInfo class="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" method="_initialize" file="BundleSiteInitializer.java" line="5661"/>
+</log4j:event>
+
+<log4j:event logger="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" timestamp="1748987799033" level="INFO" thread="http-nio-8080-exec-1">
+<log4j:message><![CDATA[Invoking addOrUpdateTaxonomyVocabularies took 0 ms]]></log4j:message>
+<log4j:locationInfo class="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" method="_initialize" file="BundleSiteInitializer.java" line="5661"/>
+</log4j:event>
+
+<log4j:event logger="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" timestamp="1748987799033" level="INFO" thread="http-nio-8080-exec-1">
+<log4j:message><![CDATA[Invoking addKeywords took 0 ms]]></log4j:message>
+<log4j:locationInfo class="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" method="_initialize" file="BundleSiteInitializer.java" line="5661"/>
+</log4j:event>
+
+<log4j:event logger="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" timestamp="1748987799033" level="INFO" thread="http-nio-8080-exec-1">
+<log4j:message><![CDATA[Invoking addOrUpdateKnowledgeBaseArticles took 0 ms]]></log4j:message>
+<log4j:locationInfo class="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" method="_initialize" file="BundleSiteInitializer.java" line="5661"/>
+</log4j:event>
+
+<log4j:event logger="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" timestamp="1748987799265" level="INFO" thread="http-nio-8080-exec-1">
+<log4j:message><![CDATA[Invoking addOrUpdateDocuments took 232 ms]]></log4j:message>
+<log4j:locationInfo class="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" method="_initialize" file="BundleSiteInitializer.java" line="5661"/>
+</log4j:event>
+
+<log4j:event logger="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" timestamp="1748987799266" level="INFO" thread="http-nio-8080-exec-1">
+<log4j:message><![CDATA[Invoking addOrUpdateOrganizations took 0 ms]]></log4j:message>
+<log4j:locationInfo class="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" method="_initialize" file="BundleSiteInitializer.java" line="5661"/>
+</log4j:event>
+
+<log4j:event logger="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" timestamp="1748987799268" level="INFO" thread="http-nio-8080-exec-1">
+<log4j:message><![CDATA[Invoking updateLayoutSets took 2 ms]]></log4j:message>
+<log4j:locationInfo class="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" method="_initialize" file="BundleSiteInitializer.java" line="5661"/>
+</log4j:event>
+
+<log4j:event logger="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" timestamp="1748987799268" level="INFO" thread="http-nio-8080-exec-1">
+<log4j:message><![CDATA[Invoking addAccountsOrganizations took 0 ms]]></log4j:message>
+<log4j:locationInfo class="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" method="_initialize" file="BundleSiteInitializer.java" line="5661"/>
+</log4j:event>
+
+<log4j:event logger="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" timestamp="1748987799268" level="INFO" thread="http-nio-8080-exec-1">
+<log4j:message><![CDATA[Invoking addOrUpdateClientExtensionEntries took 0 ms]]></log4j:message>
+<log4j:locationInfo class="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" method="_initialize" file="BundleSiteInitializer.java" line="5661"/>
+</log4j:event>
+
+<log4j:event logger="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" timestamp="1748987799268" level="INFO" thread="http-nio-8080-exec-1">
+<log4j:message><![CDATA[Invoking addUserAccounts took 0 ms]]></log4j:message>
+<log4j:locationInfo class="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" method="_initialize" file="BundleSiteInitializer.java" line="5661"/>
+</log4j:event>
+
+<log4j:event logger="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" timestamp="1748987799268" level="INFO" thread="http-nio-8080-exec-1">
+<log4j:message><![CDATA[Invoking addOrUpdateSegmentsEntries took 0 ms]]></log4j:message>
+<log4j:locationInfo class="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" method="_initialize" file="BundleSiteInitializer.java" line="5661"/>
+</log4j:event>
+
+<log4j:event logger="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" timestamp="1748987799268" level="INFO" thread="http-nio-8080-exec-1">
+<log4j:message><![CDATA[Invoking addOrUpdateBlogPostings took 0 ms]]></log4j:message>
+<log4j:locationInfo class="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" method="_initialize" file="BundleSiteInitializer.java" line="5661"/>
+</log4j:event>
+
+<log4j:event logger="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" timestamp="1748987799269" level="INFO" thread="http-nio-8080-exec-1">
+<log4j:message><![CDATA[Invoking addAccountGroupAssignments took 0 ms]]></log4j:message>
+<log4j:locationInfo class="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" method="_initialize" file="BundleSiteInitializer.java" line="5661"/>
+</log4j:event>
+
+<log4j:event logger="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" timestamp="1748987799269" level="INFO" thread="http-nio-8080-exec-1">
+<log4j:message><![CDATA[Invoking addOrUpdateSXPBlueprint took 0 ms]]></log4j:message>
+<log4j:locationInfo class="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" method="_initialize" file="BundleSiteInitializer.java" line="5661"/>
+</log4j:event>
+
+<log4j:event logger="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" timestamp="1748987799269" level="INFO" thread="http-nio-8080-exec-1">
+<log4j:message><![CDATA[Invoking addPortletSettings took 0 ms]]></log4j:message>
+<log4j:locationInfo class="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" method="_initialize" file="BundleSiteInitializer.java" line="5661"/>
+</log4j:event>
+
+<log4j:event logger="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" timestamp="1748987799270" level="INFO" thread="http-nio-8080-exec-1">
+<log4j:message><![CDATA[Invoking addObjectDefinitions took 1 ms]]></log4j:message>
+<log4j:locationInfo class="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" method="_initialize" file="BundleSiteInitializer.java" line="5661"/>
+</log4j:event>
+
+<log4j:event logger="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" timestamp="1748987799270" level="INFO" thread="http-nio-8080-exec-1">
+<log4j:message><![CDATA[Invoking addOrUpdateAssetLinkEntries took 0 ms]]></log4j:message>
+<log4j:locationInfo class="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" method="_initialize" file="BundleSiteInitializer.java" line="5661"/>
+</log4j:event>
+
+<log4j:event logger="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" timestamp="1748987799270" level="INFO" thread="http-nio-8080-exec-1">
+<log4j:message><![CDATA[Invoking addFragmentEntries took 0 ms]]></log4j:message>
+<log4j:locationInfo class="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" method="_initialize" file="BundleSiteInitializer.java" line="5661"/>
+</log4j:event>
+
+<log4j:event logger="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" timestamp="1748987799270" level="INFO" thread="http-nio-8080-exec-1">
+<log4j:message><![CDATA[Invoking addRolesAssignments took 0 ms]]></log4j:message>
+<log4j:locationInfo class="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" method="_initialize" file="BundleSiteInitializer.java" line="5661"/>
+</log4j:event>
+
+<log4j:event logger="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" timestamp="1748987799270" level="INFO" thread="http-nio-8080-exec-1">
+<log4j:message><![CDATA[Invoking addUserRoles took 0 ms]]></log4j:message>
+<log4j:locationInfo class="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" method="_initialize" file="BundleSiteInitializer.java" line="5661"/>
+</log4j:event>
+
+<log4j:event logger="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" timestamp="1748987799270" level="INFO" thread="http-nio-8080-exec-1">
+<log4j:message><![CDATA[Invoking addOrUpdateObjectRelationships took 0 ms]]></log4j:message>
+<log4j:locationInfo class="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" method="_initialize" file="BundleSiteInitializer.java" line="5661"/>
+</log4j:event>
+
+<log4j:event logger="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" timestamp="1748987799270" level="INFO" thread="http-nio-8080-exec-1">
+<log4j:message><![CDATA[Invoking addOrUpdateObjectFields took 0 ms]]></log4j:message>
+<log4j:locationInfo class="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" method="_initialize" file="BundleSiteInitializer.java" line="5661"/>
+</log4j:event>
+
+<log4j:event logger="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" timestamp="1748987799270" level="INFO" thread="http-nio-8080-exec-1">
+<log4j:message><![CDATA[Invoking publishObjectDefinitions took 0 ms]]></log4j:message>
+<log4j:locationInfo class="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" method="_initialize" file="BundleSiteInitializer.java" line="5661"/>
+</log4j:event>
+
+<log4j:event logger="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" timestamp="1748987799270" level="INFO" thread="http-nio-8080-exec-1">
+<log4j:message><![CDATA[Invoking addOrUpdateNotificationTemplates took 0 ms]]></log4j:message>
+<log4j:locationInfo class="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" method="_initialize" file="BundleSiteInitializer.java" line="5661"/>
+</log4j:event>
+
+<log4j:event logger="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" timestamp="1748987799270" level="INFO" thread="http-nio-8080-exec-1">
+<log4j:message><![CDATA[Invoking addAssetListEntries took 0 ms]]></log4j:message>
+<log4j:locationInfo class="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" method="_initialize" file="BundleSiteInitializer.java" line="5661"/>
+</log4j:event>
+
+<log4j:event logger="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" timestamp="1748987799270" level="INFO" thread="http-nio-8080-exec-1">
+<log4j:message><![CDATA[Invoking addOrUpdateAccountEntryRestrictions took 0 ms]]></log4j:message>
+<log4j:locationInfo class="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" method="_initialize" file="BundleSiteInitializer.java" line="5661"/>
+</log4j:event>
+
+<log4j:event logger="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" timestamp="1748987799298" level="INFO" thread="http-nio-8080-exec-1">
+<log4j:message><![CDATA[Invoking addOrUpdateDDMTemplates took 28 ms]]></log4j:message>
+<log4j:locationInfo class="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" method="_initialize" file="BundleSiteInitializer.java" line="5661"/>
+</log4j:event>
+
+<log4j:event logger="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" timestamp="1748987799299" level="INFO" thread="http-nio-8080-exec-1">
+<log4j:message><![CDATA[Invoking addOrUpdateObjectActions took 0 ms]]></log4j:message>
+<log4j:locationInfo class="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" method="_initialize" file="BundleSiteInitializer.java" line="5661"/>
+</log4j:event>
+
+<log4j:event logger="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" timestamp="1748987799299" level="INFO" thread="http-nio-8080-exec-1">
+<log4j:message><![CDATA[Invoking addOrUpdateJournalArticles took 0 ms]]></log4j:message>
+<log4j:locationInfo class="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" method="_initialize" file="BundleSiteInitializer.java" line="5661"/>
+</log4j:event>
+
+<log4j:event logger="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" timestamp="1748987799299" level="INFO" thread="http-nio-8080-exec-1">
+<log4j:message><![CDATA[Invoking addOrUpdateObjectEntries took 0 ms]]></log4j:message>
+<log4j:locationInfo class="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" method="_initialize" file="BundleSiteInitializer.java" line="5661"/>
+</log4j:event>
+
+<log4j:event logger="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" timestamp="1748987799299" level="INFO" thread="http-nio-8080-exec-1">
+<log4j:message><![CDATA[Invoking addCPDefinitions took 0 ms]]></log4j:message>
+<log4j:locationInfo class="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" method="_initialize" file="BundleSiteInitializer.java" line="5661"/>
+</log4j:event>
+
+<log4j:event logger="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" timestamp="1748987799299" level="INFO" thread="http-nio-8080-exec-1">
+<log4j:message><![CDATA[Invoking addLayoutPageTemplates took 0 ms]]></log4j:message>
+<log4j:locationInfo class="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" method="_initialize" file="BundleSiteInitializer.java" line="5661"/>
+</log4j:event>
+
+<log4j:event logger="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" timestamp="1748987799336" level="INFO" thread="http-nio-8080-exec-1">
+<log4j:message><![CDATA[Invoking addOrUpdateLayoutsContent took 37 ms]]></log4j:message>
+<log4j:locationInfo class="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" method="_initialize" file="BundleSiteInitializer.java" line="5661"/>
+</log4j:event>
+
+<log4j:event logger="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" timestamp="1748987799875" level="INFO" thread="http-nio-8080-exec-1">
+<log4j:message><![CDATA[Invoking addLayoutUtilityPageEntries took 539 ms]]></log4j:message>
+<log4j:locationInfo class="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" method="_initialize" file="BundleSiteInitializer.java" line="5661"/>
+</log4j:event>
+
+<log4j:event logger="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" timestamp="1748987799876" level="INFO" thread="http-nio-8080-exec-1">
+<log4j:message><![CDATA[Invoking addSegmentsExperiences took 0 ms]]></log4j:message>
+<log4j:locationInfo class="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" method="_initialize" file="BundleSiteInitializer.java" line="5661"/>
+</log4j:event>
+
+<log4j:event logger="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" timestamp="1748987799876" level="INFO" thread="http-nio-8080-exec-1">
+<log4j:message><![CDATA[Invoking addExpandoValues took 0 ms]]></log4j:message>
+<log4j:locationInfo class="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" method="_initialize" file="BundleSiteInitializer.java" line="5661"/>
+</log4j:event>
+
+<log4j:event logger="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" timestamp="1748987799876" level="INFO" thread="http-nio-8080-exec-1">
+<log4j:message><![CDATA[Invoking addOrUpdateResourcePermissions took 0 ms]]></log4j:message>
+<log4j:locationInfo class="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" method="_initialize" file="BundleSiteInitializer.java" line="5661"/>
+</log4j:event>
+
+<log4j:event logger="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" timestamp="1748987799876" level="INFO" thread="http-nio-8080-exec-1">
+<log4j:message><![CDATA[Initialized com.liferay.site.initializer.welcome for group 40212 in 896 ms]]></log4j:message>
+<log4j:locationInfo class="com.liferay.site.initializer.extender.internal.BundleSiteInitializer" method="initialize" file="BundleSiteInitializer.java" line="550"/>
+</log4j:event>
+
+<log4j:event logger="portal_web.docroot.html.portal.extend_session_jsp" timestamp="1748988105612" level="WARN" thread="http-nio-8080-exec-7">
+<log4j:message><![CDATA[Unable to extend the HTTP session]]></log4j:message>
+<log4j:locationInfo class="org.apache.jsp.html.portal.extend_005fsession_jsp" method="_jspService" file="extend_005fsession_jsp.java" line="575"/>
+</log4j:event>
+
+<log4j:event logger="com.liferay.portal.kernel.deploy.auto.AutoDeployDir" timestamp="1748989229674" level="INFO" thread="com.liferay.portal.kernel.deploy.auto.AutoDeployScanner">
+<log4j:message><![CDATA[Processing mu.site.content.setup-1.0.0.jar]]></log4j:message>
+<log4j:locationInfo class="com.liferay.portal.kernel.deploy.auto.AutoDeployDir" method="processFile" file="AutoDeployDir.java" line="212"/>
+</log4j:event>
+
+<log4j:event logger="com.liferay.portal.file.install.internal.DirectoryWatcher" timestamp="1748989238908" level="ERROR" thread="fileinstall-directory-watcher">
+<log4j:message><![CDATA[Unable to start bundle: file:/opt/liferay/osgi/portal/com.liferay.saml.persistence.service.jar]]></log4j:message>
+<log4j:throwable><![CDATA[org.osgi.framework.BundleException: Could not resolve module: com.liferay.saml.persistence.service [1241]_  Unresolved requirement: Import-Package: com.liferay.saml.runtime.configuration; version="6.0.0"_ [Sanitized]
+	at org.eclipse.osgi.container.Module.start(Module.java:444)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.start(EquinoxBundle.java:426)
+	at com.liferay.portal.file.install.internal.DirectoryWatcher._startBundle(DirectoryWatcher.java:971)
+	at com.liferay.portal.file.install.internal.DirectoryWatcher._startBundles(DirectoryWatcher.java:1004)
+	at com.liferay.portal.file.install.internal.DirectoryWatcher._startAllBundles(DirectoryWatcher.java:945)
+	at com.liferay.portal.file.install.internal.DirectoryWatcher._process(DirectoryWatcher.java:838)
+	at com.liferay.portal.file.install.internal.DirectoryWatcher.run(DirectoryWatcher.java:298)
+]]></log4j:throwable>
+<log4j:locationInfo class="com.liferay.portal.file.install.internal.DirectoryWatcher" method="_startBundle" file="DirectoryWatcher.java" line="988"/>
+</log4j:event>
+
+<log4j:event logger="com.liferay.portal.file.install.internal.DirectoryWatcher" timestamp="1748989238913" level="ERROR" thread="fileinstall-directory-watcher">
+<log4j:message><![CDATA[Unable to start bundle: file:/opt/liferay/osgi/portal/com.liferay.saml.addon.keep.alive.web.jar]]></log4j:message>
+<log4j:throwable><![CDATA[org.osgi.framework.BundleException: Could not resolve module: com.liferay.saml.addon.keep.alive.web [1233]_  Unresolved requirement: Import-Package: com.liferay.saml.runtime.configuration; version="6.0.0"_ [Sanitized]
+	at org.eclipse.osgi.container.Module.start(Module.java:444)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.start(EquinoxBundle.java:426)
+	at com.liferay.portal.file.install.internal.DirectoryWatcher._startBundle(DirectoryWatcher.java:971)
+	at com.liferay.portal.file.install.internal.DirectoryWatcher._startBundles(DirectoryWatcher.java:1004)
+	at com.liferay.portal.file.install.internal.DirectoryWatcher._startAllBundles(DirectoryWatcher.java:945)
+	at com.liferay.portal.file.install.internal.DirectoryWatcher._process(DirectoryWatcher.java:838)
+	at com.liferay.portal.file.install.internal.DirectoryWatcher.run(DirectoryWatcher.java:298)
+]]></log4j:throwable>
+<log4j:locationInfo class="com.liferay.portal.file.install.internal.DirectoryWatcher" method="_startBundle" file="DirectoryWatcher.java" line="988"/>
+</log4j:event>
+
+<log4j:event logger="com.liferay.portal.bootstrap.log.BundleStartStopLogger" timestamp="1748989238926" level="INFO" thread="fileinstall-directory-watcher">
+<log4j:message><![CDATA[STARTED mu.site.content.setup_1.0.0 [1487]]]></log4j:message>
+<log4j:locationInfo class="com.liferay.portal.bootstrap.log.BundleStartStopLogger" method="bundleChanged" file="BundleStartStopLogger.java" line="68"/>
+</log4j:event>
+
+<log4j:event logger="com.tsa.content.setup.v1_0_1.SetRoleResourcePermissionsUpgradeProcess" timestamp="1748989376026" level="WARN" thread="pipe-tsa:applyPermissions liferay.uat.io">
+<log4j:message><![CDATA[Could not find DDMStructure with key: SALVATION ARMY NEWS]]></log4j:message>
+<log4j:locationInfo class="com.tsa.content.setup.v1_0_1.SetRoleResourcePermissionsUpgradeProcess" method="_setUserNewsStructurePermissions" file="SetRoleResourcePermissionsUpgradeProcess.java" line="218"/>
+</log4j:event>
+
+<log4j:event logger="com.liferay.mail.messaging.internal.MailMessageListener" timestamp="1748989968024" level="WARN" thread="liferay/mail-3">
+<log4j:message><![CDATA[Email test@domain.invalid will be ignored because it is included in mail.send.blacklist]]></log4j:message>
+<log4j:locationInfo class="com.liferay.mail.messaging.internal.MailMessageListener" method="filterInternetAddress" file="MailMessageListener.java" line="123"/>
+</log4j:event>
+
+<log4j:event logger="com.liferay.mail.messaging.internal.MailMessageListener" timestamp="1748989968024" level="WARN" thread="liferay/mail-3">
+<log4j:message><![CDATA[Skipping email because the sender is not specified]]></log4j:message>
+<log4j:locationInfo class="com.liferay.mail.messaging.internal.MailMessageListener" method="doMailMessage" file="MailMessageListener.java" line="49"/>
+</log4j:event>
+
+<log4j:event logger="com.liferay.mail.messaging.internal.MailMessageListener" timestamp="1748989990897" level="WARN" thread="liferay/mail-3">
+<log4j:message><![CDATA[Email test@domain.invalid will be ignored because it is included in mail.send.blacklist]]></log4j:message>
+<log4j:locationInfo class="com.liferay.mail.messaging.internal.MailMessageListener" method="filterInternetAddress" file="MailMessageListener.java" line="123"/>
+</log4j:event>
+
+<log4j:event logger="com.liferay.mail.messaging.internal.MailMessageListener" timestamp="1748989990898" level="WARN" thread="liferay/mail-3">
+<log4j:message><![CDATA[Skipping email because the sender is not specified]]></log4j:message>
+<log4j:locationInfo class="com.liferay.mail.messaging.internal.MailMessageListener" method="doMailMessage" file="MailMessageListener.java" line="49"/>
+</log4j:event>
+
+<log4j:event logger="com.liferay.portal.util.PortalImpl" timestamp="1748990926853" level="WARN" thread="http-nio-8080-exec-3">
+<log4j:message><![CDATA[Unable to redirect to missing URI: /c/portal/status]]></log4j:message>
+<log4j:locationInfo class="com.liferay.portal.util.PortalImpl" method="sendError" file="PortalImpl.java" line="6097"/>
+</log4j:event>
+
+<log4j:event logger="portal_web.docroot.errors.code_jsp" timestamp="1748990926980" level="WARN" thread="http-nio-8080-exec-3">
+<log4j:message><![CDATA[{code="404", msg="A class com.liferay.portal.kernel.exception.NoSuchLayoutException error occurred while processing your request", uri=/c/portal/session_click}]]></log4j:message>
+<log4j:locationInfo class="org.apache.jsp.errors.code_jsp" method="_jspService" file="code_jsp.java" line="163"/>
+</log4j:event>
+
+<log4j:event logger="com.liferay.portal.util.PortalImpl" timestamp="1748990929479" level="WARN" thread="http-nio-8080-exec-2">
+<log4j:message><![CDATA[Unable to redirect to missing URI: /c/portal/status]]></log4j:message>
+<log4j:locationInfo class="com.liferay.portal.util.PortalImpl" method="sendError" file="PortalImpl.java" line="6097"/>
+</log4j:event>
+
+<log4j:event logger="portal_web.docroot.errors.code_jsp" timestamp="1748990929481" level="WARN" thread="http-nio-8080-exec-2">
+<log4j:message><![CDATA[{code="404", msg="A class com.liferay.portal.kernel.exception.NoSuchLayoutException error occurred while processing your request", uri=/c/portal/session_click}]]></log4j:message>
+<log4j:locationInfo class="org.apache.jsp.errors.code_jsp" method="_jspService" file="code_jsp.java" line="163"/>
+</log4j:event>
+
+<log4j:event logger="com.liferay.portal.kernel.deploy.auto.AutoDeployDir" timestamp="1748991243042" level="INFO" thread="com.liferay.portal.kernel.deploy.auto.AutoDeployScanner">
+<log4j:message><![CDATA[Processing mu.site.content.setup-1.0.0.jar]]></log4j:message>
+<log4j:locationInfo class="com.liferay.portal.kernel.deploy.auto.AutoDeployDir" method="processFile" file="AutoDeployDir.java" line="212"/>
+</log4j:event>
+
+<log4j:event logger="com.liferay.portal.bootstrap.log.BundleStartStopLogger" timestamp="1748991250054" level="INFO" thread="fileinstall-directory-watcher">
+<log4j:message><![CDATA[STOPPED mu.site.content.setup_1.0.0 [1487]]]></log4j:message>
+<log4j:locationInfo class="com.liferay.portal.bootstrap.log.BundleStartStopLogger" method="bundleChanged" file="BundleStartStopLogger.java" line="71"/>
+</log4j:event>
+
+<log4j:event logger="com.liferay.portal.bootstrap.log.BundleStartStopLogger" timestamp="1748991250108" level="INFO" thread="Refresh Thread: Equinox Container: fd6b55a1-eeb4-40c3-8f30-88add5d0e89a">
+<log4j:message><![CDATA[STARTED mu.site.content.setup_1.0.0 [1487]]]></log4j:message>
+<log4j:locationInfo class="com.liferay.portal.bootstrap.log.BundleStartStopLogger" method="bundleChanged" file="BundleStartStopLogger.java" line="68"/>
+</log4j:event>
+
+<log4j:event logger="com.liferay.portal.file.install.internal.DirectoryWatcher" timestamp="1748991250115" level="ERROR" thread="fileinstall-directory-watcher">
+<log4j:message><![CDATA[Unable to start bundle: file:/opt/liferay/osgi/portal/com.liferay.saml.persistence.service.jar]]></log4j:message>
+<log4j:throwable><![CDATA[org.osgi.framework.BundleException: Could not resolve module: com.liferay.saml.persistence.service [1241]_  Unresolved requirement: Import-Package: com.liferay.saml.runtime.configuration; version="6.0.0"_ [Sanitized]
+	at org.eclipse.osgi.container.Module.start(Module.java:444)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.start(EquinoxBundle.java:426)
+	at com.liferay.portal.file.install.internal.DirectoryWatcher._startBundle(DirectoryWatcher.java:971)
+	at com.liferay.portal.file.install.internal.DirectoryWatcher._startBundles(DirectoryWatcher.java:1004)
+	at com.liferay.portal.file.install.internal.DirectoryWatcher._startAllBundles(DirectoryWatcher.java:945)
+	at com.liferay.portal.file.install.internal.DirectoryWatcher._process(DirectoryWatcher.java:838)
+	at com.liferay.portal.file.install.internal.DirectoryWatcher.run(DirectoryWatcher.java:298)
+]]></log4j:throwable>
+<log4j:locationInfo class="com.liferay.portal.file.install.internal.DirectoryWatcher" method="_startBundle" file="DirectoryWatcher.java" line="988"/>
+</log4j:event>
+
+<log4j:event logger="com.liferay.portal.file.install.internal.DirectoryWatcher" timestamp="1748991250119" level="ERROR" thread="fileinstall-directory-watcher">
+<log4j:message><![CDATA[Unable to start bundle: file:/opt/liferay/osgi/portal/com.liferay.saml.addon.keep.alive.web.jar]]></log4j:message>
+<log4j:throwable><![CDATA[org.osgi.framework.BundleException: Could not resolve module: com.liferay.saml.addon.keep.alive.web [1233]_  Unresolved requirement: Import-Package: com.liferay.saml.runtime.configuration; version="6.0.0"_ [Sanitized]
+	at org.eclipse.osgi.container.Module.start(Module.java:444)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.start(EquinoxBundle.java:426)
+	at com.liferay.portal.file.install.internal.DirectoryWatcher._startBundle(DirectoryWatcher.java:971)
+	at com.liferay.portal.file.install.internal.DirectoryWatcher._startBundles(DirectoryWatcher.java:1004)
+	at com.liferay.portal.file.install.internal.DirectoryWatcher._startAllBundles(DirectoryWatcher.java:945)
+	at com.liferay.portal.file.install.internal.DirectoryWatcher._process(DirectoryWatcher.java:838)
+	at com.liferay.portal.file.install.internal.DirectoryWatcher.run(DirectoryWatcher.java:298)
+]]></log4j:throwable>
+<log4j:locationInfo class="com.liferay.portal.file.install.internal.DirectoryWatcher" method="_startBundle" file="DirectoryWatcher.java" line="988"/>
+</log4j:event>
+
+<log4j:event logger="portal_web.docroot.html.portal.extend_session_jsp" timestamp="1748991292621" level="WARN" thread="http-nio-8080-exec-5">
+<log4j:message><![CDATA[Unable to extend the HTTP session]]></log4j:message>
+<log4j:locationInfo class="org.apache.jsp.html.portal.extend_005fsession_jsp" method="_jspService" file="extend_005fsession_jsp.java" line="575"/>
+</log4j:event>
+
+<log4j:event logger="com.liferay.portal.kernel.deploy.auto.AutoDeployDir" timestamp="1748991324059" level="INFO" thread="com.liferay.portal.kernel.deploy.auto.AutoDeployScanner">
+<log4j:message><![CDATA[Processing mu.site.content.setup-1.0.0.jar]]></log4j:message>
+<log4j:locationInfo class="com.liferay.portal.kernel.deploy.auto.AutoDeployDir" method="processFile" file="AutoDeployDir.java" line="212"/>
+</log4j:event>
+
+<log4j:event logger="com.liferay.portal.bootstrap.log.BundleStartStopLogger" timestamp="1748991330356" level="INFO" thread="fileinstall-directory-watcher">
+<log4j:message><![CDATA[STOPPED mu.site.content.setup_1.0.0 [1487]]]></log4j:message>
+<log4j:locationInfo class="com.liferay.portal.bootstrap.log.BundleStartStopLogger" method="bundleChanged" file="BundleStartStopLogger.java" line="71"/>
+</log4j:event>
+
+<log4j:event logger="com.liferay.portal.bootstrap.log.BundleStartStopLogger" timestamp="1748991330417" level="INFO" thread="Refresh Thread: Equinox Container: fd6b55a1-eeb4-40c3-8f30-88add5d0e89a">
+<log4j:message><![CDATA[STARTED mu.site.content.setup_1.0.0 [1487]]]></log4j:message>
+<log4j:locationInfo class="com.liferay.portal.bootstrap.log.BundleStartStopLogger" method="bundleChanged" file="BundleStartStopLogger.java" line="68"/>
+</log4j:event>
+
+<log4j:event logger="com.liferay.portal.file.install.internal.DirectoryWatcher" timestamp="1748991330422" level="ERROR" thread="fileinstall-directory-watcher">
+<log4j:message><![CDATA[Unable to start bundle: file:/opt/liferay/osgi/portal/com.liferay.saml.persistence.service.jar]]></log4j:message>
+<log4j:throwable><![CDATA[org.osgi.framework.BundleException: Could not resolve module: com.liferay.saml.persistence.service [1241]_  Unresolved requirement: Import-Package: com.liferay.saml.runtime.configuration; version="6.0.0"_ [Sanitized]
+	at org.eclipse.osgi.container.Module.start(Module.java:444)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.start(EquinoxBundle.java:426)
+	at com.liferay.portal.file.install.internal.DirectoryWatcher._startBundle(DirectoryWatcher.java:971)
+	at com.liferay.portal.file.install.internal.DirectoryWatcher._startBundles(DirectoryWatcher.java:1004)
+	at com.liferay.portal.file.install.internal.DirectoryWatcher._startAllBundles(DirectoryWatcher.java:945)
+	at com.liferay.portal.file.install.internal.DirectoryWatcher._process(DirectoryWatcher.java:838)
+	at com.liferay.portal.file.install.internal.DirectoryWatcher.run(DirectoryWatcher.java:298)
+]]></log4j:throwable>
+<log4j:locationInfo class="com.liferay.portal.file.install.internal.DirectoryWatcher" method="_startBundle" file="DirectoryWatcher.java" line="988"/>
+</log4j:event>
+
+<log4j:event logger="com.liferay.portal.file.install.internal.DirectoryWatcher" timestamp="1748991330427" level="ERROR" thread="fileinstall-directory-watcher">
+<log4j:message><![CDATA[Unable to start bundle: file:/opt/liferay/osgi/portal/com.liferay.saml.addon.keep.alive.web.jar]]></log4j:message>
+<log4j:throwable><![CDATA[org.osgi.framework.BundleException: Could not resolve module: com.liferay.saml.addon.keep.alive.web [1233]_  Unresolved requirement: Import-Package: com.liferay.saml.runtime.configuration; version="6.0.0"_ [Sanitized]
+	at org.eclipse.osgi.container.Module.start(Module.java:444)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.start(EquinoxBundle.java:426)
+	at com.liferay.portal.file.install.internal.DirectoryWatcher._startBundle(DirectoryWatcher.java:971)
+	at com.liferay.portal.file.install.internal.DirectoryWatcher._startBundles(DirectoryWatcher.java:1004)
+	at com.liferay.portal.file.install.internal.DirectoryWatcher._startAllBundles(DirectoryWatcher.java:945)
+	at com.liferay.portal.file.install.internal.DirectoryWatcher._process(DirectoryWatcher.java:838)
+	at com.liferay.portal.file.install.internal.DirectoryWatcher.run(DirectoryWatcher.java:298)
+]]></log4j:throwable>
+<log4j:locationInfo class="com.liferay.portal.file.install.internal.DirectoryWatcher" method="_startBundle" file="DirectoryWatcher.java" line="988"/>
+</log4j:event>
+
+<log4j:event logger="com.tsa.content.setup.v1_0_1.SetRoleResourcePermissionsUpgradeProcess" timestamp="1748991462699" level="WARN" thread="pipe-tsa:applyPermissions liferay.uat.io">
+<log4j:message><![CDATA[Could not find DDMStructure with key: SALVATION ARMY NEWS]]></log4j:message>
+<log4j:locationInfo class="com.tsa.content.setup.v1_0_1.SetRoleResourcePermissionsUpgradeProcess" method="_setUserNewsStructurePermissions" file="SetRoleResourcePermissionsUpgradeProcess.java" line="200"/>
+</log4j:event>
+
+<log4j:event logger="portal_web.docroot.html.portal.extend_session_jsp" timestamp="1748991712624" level="WARN" thread="http-nio-8080-exec-4">
+<log4j:message><![CDATA[Unable to extend the HTTP session]]></log4j:message>
+<log4j:locationInfo class="org.apache.jsp.html.portal.extend_005fsession_jsp" method="_jspService" file="extend_005fsession_jsp.java" line="575"/>
+</log4j:event>
+
+<log4j:event logger="portal_web.docroot.html.portal.extend_session_jsp" timestamp="1748992192622" level="WARN" thread="http-nio-8080-exec-9">
+<log4j:message><![CDATA[Unable to extend the HTTP session]]></log4j:message>
+<log4j:locationInfo class="org.apache.jsp.html.portal.extend_005fsession_jsp" method="_jspService" file="extend_005fsession_jsp.java" line="575"/>
+</log4j:event>
+
+<log4j:event logger="portal_web.docroot.html.portal.extend_session_jsp" timestamp="1748992612627" level="WARN" thread="http-nio-8080-exec-2">
+<log4j:message><![CDATA[Unable to extend the HTTP session]]></log4j:message>
+<log4j:locationInfo class="org.apache.jsp.html.portal.extend_005fsession_jsp" method="_jspService" file="extend_005fsession_jsp.java" line="575"/>
+</log4j:event>
+
+<log4j:event logger="portal_web.docroot.html.portal.extend_session_jsp" timestamp="1748993092619" level="WARN" thread="http-nio-8080-exec-9">
+<log4j:message><![CDATA[Unable to extend the HTTP session]]></log4j:message>
+<log4j:locationInfo class="org.apache.jsp.html.portal.extend_005fsession_jsp" method="_jspService" file="extend_005fsession_jsp.java" line="575"/>
+</log4j:event>
+
+<log4j:event logger="portal_web.docroot.html.portal.extend_session_jsp" timestamp="1748993512627" level="WARN" thread="http-nio-8080-exec-7">
+<log4j:message><![CDATA[Unable to extend the HTTP session]]></log4j:message>
+<log4j:locationInfo class="org.apache.jsp.html.portal.extend_005fsession_jsp" method="_jspService" file="extend_005fsession_jsp.java" line="575"/>
+</log4j:event>
+
+<log4j:event logger="portal_web.docroot.html.portal.extend_session_jsp" timestamp="1748993992622" level="WARN" thread="http-nio-8080-exec-6">
+<log4j:message><![CDATA[Unable to extend the HTTP session]]></log4j:message>
+<log4j:locationInfo class="org.apache.jsp.html.portal.extend_005fsession_jsp" method="_jspService" file="extend_005fsession_jsp.java" line="575"/>
+</log4j:event>
+
+<log4j:event logger="portal_web.docroot.html.portal.extend_session_jsp" timestamp="1748994412621" level="WARN" thread="http-nio-8080-exec-6">
+<log4j:message><![CDATA[Unable to extend the HTTP session]]></log4j:message>
+<log4j:locationInfo class="org.apache.jsp.html.portal.extend_005fsession_jsp" method="_jspService" file="extend_005fsession_jsp.java" line="575"/>
+</log4j:event>
+
+<log4j:event logger="portal_web.docroot.html.portal.extend_session_jsp" timestamp="1748994892614" level="WARN" thread="http-nio-8080-exec-4">
+<log4j:message><![CDATA[Unable to extend the HTTP session]]></log4j:message>
+<log4j:locationInfo class="org.apache.jsp.html.portal.extend_005fsession_jsp" method="_jspService" file="extend_005fsession_jsp.java" line="575"/>
+</log4j:event>
+
+<log4j:event logger="com.tsa.content.setup.v1_0_1.SetRoleResourcePermissionsUpgradeProcess" timestamp="1748994989425" level="WARN" thread="pipe-tsa:applyPermissions liferay.uat.io">
+<log4j:message><![CDATA[Could not find DDMStructure with key: SALVATION ARMY NEWS]]></log4j:message>
+<log4j:locationInfo class="com.tsa.content.setup.v1_0_1.SetRoleResourcePermissionsUpgradeProcess" method="_setUserNewsStructurePermissions" file="SetRoleResourcePermissionsUpgradeProcess.java" line="200"/>
+</log4j:event>
+
