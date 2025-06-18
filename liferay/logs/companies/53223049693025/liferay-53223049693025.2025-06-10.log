@@ -1,1 +1,0 @@
-2025-06-10 13:13:28.287 WARN  [liferay/scheduler_dispatch-3][PoolBase:184] HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@6330067b (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.

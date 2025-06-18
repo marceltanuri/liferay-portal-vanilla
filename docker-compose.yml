@@ -1,14 +1,37 @@
 services:
+  database:
+    image: mysql:8.0.25
+    container_name: liferay-portal-7.4_db
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_DATABASE=lportal
+    command: --character-set-server=utf8 --collation-server=utf8_general_ci --character-set-filesystem=utf8 --lower-case-table-names=0
+    volumes:
+      - ./mysql-dump:/docker-entrypoint-initdb.d
+    ports:
+      - "3306:3306"
+
   liferay:
     image: liferay/dxp:2025.q1.8-lts
     container_name: liferay-local
     environment:
       - JAVA_VERSION=zulu21
-      - LIFERAY_JDBC_DEFAULT_DRIVERCLASSNAME=org.hsqldb.jdbcDriver
-      - LIFERAY_JDBC_DEFAULT_URL=jdbc:hsqldb:file:/opt/liferay/data/hypersonic/lportal;shutdown=true
-      - LIFERAY_JDBC_DEFAULT_USERNAME=sa
-      - LIFERAY_JDBC_DEFAULT_PASSWORD=
+      - LIFERAY_JDBC_PERIOD_DEFAULT_PERIOD_DRIVER_UPPERCASEC_LASS_UPPERCASEN_AME=com.mysql.cj.jdbc.Driver
+      - LIFERAY_JDBC_PERIOD_DEFAULT_PERIOD_URL=jdbc:mysql://database/lportal?characterEncoding=UTF-8&dontTrackOpenResources=true&holdResultsOpenOverStatementClose=true&serverTimezone=GMT&useFastDateParsing=false&useUnicode=true
+      - LIFERAY_JDBC_PERIOD_DEFAULT_PERIOD_USERNAME=root
+      - LIFERAY_JDBC_PERIOD_DEFAULT_PERIOD_PASSWORD=root
+      - LIFERAY_COMPANY_PERIOD_SECURITY_PERIOD_AUTH_PERIOD_REQUIRES_PERIOD_HTTPS=true
+      #- LIFERAY_WEB_PERIOD_SERVER_PERIOD_PROTOCOL=https
+      #- LIFERAY_WEB_PERIOD_SERVER_PERIOD_HTTP_PERIOD_PORT=80
+      #- LIFERAY_WEB_PERIOD_SERVER_PERIOD_HTTPS_PERIOD_PORT=443
+      #- LIFERAY_WEB_PERIOD_SERVER_PERIOD_HOST=mysite.com
       - LIFERAY_SESSION_PERIOD_ENABLE_PERIOD_PHISHING_PERIOD_PROTECTION=false
+      - LIFERAY_WEB_PERIOD_SERVER_PERIOD_FORWARDED_PERIOD_HOST_PERIOD_ENABLED=true
+      - LIFERAY_WEB_PERIOD_SERVER_PERIOD_FORWARDED_PERIOD_HOST_PERIOD_HEADER=X-Forwarded-Host
+      - LIFERAY_WEB_PERIOD_SERVER_PERIOD_FORWARDED_PERIOD_PORT_PERIOD_ENABLED=true
+      - LIFERAY_WEB_PERIOD_SERVER_PERIOD_FORWARDED_PERIOD_PORT_PERIOD_HEADER=X-Forwarded-Port
+      - LIFERAY_WEB_PERIOD_SERVER_PERIOD_FORWARDED_PERIOD_PROTOCOL_PERIOD_ENABLED=true
+      - LIFERAY_WEB_PERIOD_SERVER_PERIOD_FORWARDED_PERIOD_PROTOCOL_PERIOD_HEADER=X-Forwarded-Proto
       - LIFERAY_JVM_OPTS=-Xms6g -Xmx6g -Djdk.util.zip.disableZip64ExtraFieldValidation=true
       - LIFERAY_PASSWORDS_PERIOD_DEFAULT_PERIOD_POLICY_PERIOD_CHANGE_PERIOD_REQUIRED=false
       - LIFERAY_MODULE_PERIOD_FRAMEWORK_PERIOD_PROPERTIES_PERIOD_OSGI_PERIOD_CONSOLE=0.0.0.0:11311
@@ -34,6 +57,7 @@ services:
       - LIFERAY_LOCALE_PERIOD_PREPEND_PERIOD_FRIENDLY_PERIOD_URL_PERIOD_STYLE=0
       - LIFERAY_BROWSER_PERIOD_LAUNCHER_PERIOD_URL=
       - GLOWROOT_ENABLED=true
+      - LIFERAY_DISABLE_TRIAL_LICENSE=TRUE
 
     ports:
       - "8080:8080"
@@ -41,5 +65,45 @@ services:
       - ./liferay/deploy:/mnt/liferay/deploy
       - ./liferay/files:/mnt/liferay/files
       - ./liferay/logs:/opt/liferay/logs
-      - ./liferay/data:/opt/liferay/data
+      - ./liferay/document-library:/opt/liferay/data/document_library
       - ./liferay/patching:/mnt/liferay/patching
+    depends_on:
+      - database
+      - search
+
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+
+  nginx:
+    image: nginx:latest
+    container_name: nginx-proxy
+    volumes:
+      - ./webserver/nginx.conf:/etc/nginx/nginx.conf
+      - ./webserver/init-nginx.sh:/init-nginx.sh
+      - /etc/nginx/certs
+    entrypoint: /init-nginx.sh
+    ports:
+      - "80:80"
+      - "443:443"
+    depends_on:
+      - liferay
+  
+
+
+  search:
+    image: marceltanuri/elasticsearch-with-plugins:7.17.10
+    container_name: liferay-portal-7.4_search
+    environment:
+      - "cluster.name=LiferayElasticsearchCluster"
+      - "ES_JAVA_OPTS=-Xms512m -Xmx512m"
+      - "discovery.type=single-node"
+      - "node.name=es-node1"
+      - "xpack.security.enabled=false"
+    volumes:
+      - ./elasticsearch-data:/usr/share/elasticsearch/data
+    ports:
+      - "9200:9200"
+
+networks:
+  default:
+    driver: bridge
