@@ -1,0 +1,12 @@
+{
+  "name": "fake-oauth-server",
+  "version": "1.0.0",
+  "main": "fake-oauth-server.js",
+  "scripts": {
+    "start": "node fake-oauth-server.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "jsonwebtoken": "^9.0.2"
+  }
+}

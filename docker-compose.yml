@@ -1,5 +1,3 @@
-version: '3.8'
-
 services:
   database:
     image: mysql:8.0.25
@@ -14,73 +12,57 @@ services:
       - "3306:3306"
 
   liferay:
-    # image: liferay/dxp:7.3.10-dxp-1
-    # image: liferay/dxp:7.3.10-dxp-1-d1.6.2-20210628171603
-    # image: liferay/dxp:7.3.10-dxp-1-d2.0.4-20211022091526 (*)
-    # image: liferay/dxp:7.3.10-dxp-1-d2.0.2-20210920131018
-    # image: liferay/dxp:7.3.10-dxp-1-d1.6.1-20210608121929
-    # image: liferay/dxp:7.3.10-dxp-1-d1.6.1-20210607133304
-    # image: liferay/dxp:2023.q4.1
-    # image: liferay/dxp:2023.q4.8
-    image: liferay/dxp:2025.q1.4-lts
-    # image: liferay/dxp:7.4.13-u112
-    # image: liferay/dxp:7.4.13-u75
-    # image: liferay/portal:7.4.3.109-ga109
-    environment:
-      - LIFERAY_JVM_OPTS=-Xms6g -Xmx6g -Djdk.util.zip.disableZip64ExtraFieldValidation=true
-      - LIFERAY_JDBC_PERIOD_DEFAULT_PERIOD_DRIVER_UPPERCASEC_LASS_UPPERCASEN_AME=com.mysql.cj.jdbc.Driver
-      - LIFERAY_JDBC_PERIOD_DEFAULT_PERIOD_URL=jdbc:mysql://database/lportal?characterEncoding=UTF-8&dontTrackOpenResources=true&holdResultsOpenOverStatementClose=true&serverTimezone=GMT&useFastDateParsing=false&useUnicode=true
-      - LIFERAY_JDBC_PERIOD_DEFAULT_PERIOD_USERNAME=root
-      - LIFERAY_JDBC_PERIOD_DEFAULT_PERIOD_PASSWORD=root
-      - LIFERAY_PASSWORDS_PERIOD_DEFAULT_PERIOD_POLICY_PERIOD_CHANGE_PERIOD_REQUIRED=false
-      - LIFERAY_MODULE_PERIOD_FRAMEWORK_PERIOD_PROPERTIES_PERIOD_OSGI_PERIOD_CONSOLE=0.0.0.0:11311
-      - LIFERAY_RETRY_PERIOD_JDBC_PERIOD_ON_PERIOD_STARTUP_PERIOD_DELAY=20
-      - LIFERAY_RETRY_PERIOD_JDBC_PERIOD_ON_PERIOD_STARTUP_PERIOD_MAX_PERIOD_RETRIES=10
-      - LIFERAY_SETUP_PERIOD_WIZARD_PERIOD_ENABLED=false
-      - LIFERAY_COMPANY_PERIOD_SECURITY_PERIOD_STRANGERS_PERIOD_VERIFY=false
-      - LIFERAY_COMPANY_PERIOD_SECURITY_PERIOD_STRANGERS=true
-      - LIFERAY_COMPANY_PERIOD_SECURITY_PERIOD_SEND_PERIOD_PASSWORD_PERIOD_RESET_PERIOD_LINK=false
-      - LIFERAY_USERS_PERIOD_REMINDER_PERIOD_QUERIES_PERIOD_CUSTOM_PERIOD_QUESTION_PERIOD_ENABLED=false
-      - LIFERAY_USERS_PERIOD_REMINDER_PERIOD_QUERIES_PERIOD_ENABLED=false
-      - LIFERAY_LAYOUT_PERIOD_USER_PERIOD_PRIVATE_PERIOD_LAYOUTS_PERIOD_AUTO_PERIOD_CREATE=false
-      - LIFERAY_LAYOUT_PERIOD_USER_PERIOD_PRIVATE_PERIOD_LAYOUTS_PERIOD_ENABLED=false
-      - LIFERAY_LAYOUT_PERIOD_USER_PERIOD_PUBLIC_PERIOD_LAYOUTS_PERIOD_AUTO_PERIOD_CREATE=false
-      - LIFERAY_LAYOUT_PERIOD_USER_PERIOD_PUBLIC_PERIOD_LAYOUTS_PERIOD_ENABLED=false
-      - LIFERAY_TERMS_PERIOD_OF_PERIOD_USE_PERIOD_REQUIRED=false
-      - LIFERAY_CLUSTER_PERIOD_LINK_PERIOD_ENABLED=false
-      - LIFERAY_WEB_PERIOD_SERVER_PERIOD_DISPLAY_PERIOD_NODE=false
-      - LIFERAY_REDIRECT_PERIOD_URL_PERIOD_SECURITY_PERIOD_MODE=domain
-      - LIFERAY_BUFFERED_PERIOD_INCREMENT_PERIOD_ENABLED=true
-      - LIFERAY_XML_PERIOD_SITEMAP_PERIOD_INDEX_PERIOD_ENABLED=false
-      - LIFERAY_HTTP_PERIOD_HEADER_PERIOD_VERSION_PERIOD_VERBOSITY=off
-      - LIFERAY_LOCALE_PERIOD_PREPEND_PERIOD_FRIENDLY_PERIOD_URL_PERIOD_STYLE=0
-      - LIFERAY_BROWSER_PERIOD_LAUNCHER_PERIOD_URL=
-      - GLOWROOT_ENABLED=true
-      - LIFERAY_DISABLE_TRIAL_LICENSE=TRUE
+    build:
+      context: ./liferay
+      dockerfile: Dockerfile
+    container_name: liferay-local
+    env_file:
+      - ./liferay/.env
     ports:
       - "8080:8080"
-      - "11311:11311"
-      - "8000:8000"
     volumes:
-      - ./liferay-deploy:/mnt/liferay/deploy
-      - ./liferay-files:/mnt/liferay/files
-      - ./liferay-logs:/opt/liferay/logs
-      - ./liferay-document-library:/opt/liferay/data/document_library
-      - ./liferay-patching:/mnt/liferay/patching
+      - ./liferay/deploy:/mnt/liferay/deploy
+      - ./liferay/files:/mnt/liferay/files
+      - ./liferay/logs:/opt/liferay/logs
+      - ./liferay/document-library:/opt/liferay/data/document_library
+      - ./liferay/patching:/mnt/liferay/patching
     depends_on:
       - database
       - search
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
 
+  nginx:
+    image: nginx:latest
+    container_name: nginx-proxy
+    volumes:
+      - ./webserver/nginx.conf:/etc/nginx/nginx.conf
+    ports:
+      - "80:80"
+    depends_on:
+      - liferay
+  
   search:
-    image: marceltanuri/elasticsearch-with-plugins:7.17.10
+    build:
+      context: ./elasticsearch
+      dockerfile: Dockerfile
     container_name: liferay-portal-7.4_search
-    environment:
-      - "cluster.name=LiferayElasticsearchCluster"
-      - "ES_JAVA_OPTS=-Xms512m -Xmx512m"
-      - "discovery.type=single-node"
-      - "node.name=es-node1"
-      - "xpack.security.enabled=false"
+    env_file:
+      - ./elasticsearch/.env
     volumes:
       - ./elasticsearch-data:/usr/share/elasticsearch/data
     ports:
       - "9200:9200"
+  
+  fake-oauth-server:
+    build:
+      context: ./fake-oauth-server
+    container_name: fake-oauth-server
+    ports:
+      - "3000:3000"
+    networks:
+      - default
+
+networks:
+  default:
+    driver: bridge
