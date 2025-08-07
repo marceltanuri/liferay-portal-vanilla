@@ -3,13 +3,14 @@
 ## Requirements
 
 * Docker & Docker Compose - https://www.docker.com/
+* Make - https://www.make.com/
 
 ## Setup
 
 Start the compose:
 
 ```
-docker compose up --build -d
+make up
 ```
 
 Tail the log:
@@ -27,7 +28,7 @@ docker compose stop
 Destroy
 
 ```
-docker compose down
+make down
 ```
 
 
