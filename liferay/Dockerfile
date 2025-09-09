@@ -1,4 +1,4 @@
-FROM liferay/dxp:2025.q1.4-lts
+FROM liferay/dxp:2025.q3.0
 
 COPY license/activation-key.xml /tmp/license/
 COPY license/activation-key.xml /mnt/liferay/deploy/

@@ -1,10 +1,12 @@
-elasticsearch-data/nodes
 elasticsearch-data/
-liferay/document-library/**
-!liferay/document-library/.keep
-liferay/logs/**
-!liferay/logs/.keep
+document-library/
+!document-library/.keep
+logs/
+!logs/.keep
 liferay/license/**
+!liferay/license/.keep
 liferay/patching/*.zip
 mysql-dump/*.sql
 nb-cache/
+deploy/
+!deploy/.keep
