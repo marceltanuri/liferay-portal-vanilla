@@ -1,6 +1,4 @@
 .PHONY: up
-LICENSE_SOURCE_DIR := license
-LICENSE_TARGET_DIR := liferay/license
 
 # Monta o parâmetro de build somente se v vier setado
 ifeq ($(strip $(v)),)
@@ -10,17 +8,11 @@ BUILD_ARGS := --build-arg LIFERAY_VERSION=$(v)
 endif
 
 up:
-	@echo "==> Verificando arquivos de licença..."
-	@mkdir -p $(LICENSE_TARGET_DIR)
-	@for file in $(LICENSE_SOURCE_DIR)/*.xml; do \
-		filename=$$(basename $$file); \
-		if [ -f "$$file" ] && [ ! -f "$(LICENSE_TARGET_DIR)/$$filename" ]; then \
-			echo "==> Copiando $$filename para $(LICENSE_TARGET_DIR)"; \
-			cp "$$file" "$(LICENSE_TARGET_DIR)/"; \
-		else \
-			echo "==> $$filename já existe ou não encontrado."; \
-		fi; \
-	done
+	@echo "==> Verificando a existência do arquivo de licença..."
+	@if [ ! -f "license/activation-key.xml" ]; then \
+		echo "ERRO: Arquivo de licença não encontrado em 'license/activation-key.xml'."; \
+		exit 1; \
+	fi
 	@if [ -n "$(v)" ]; then \
 		echo "==> Build com LIFERAY_VERSION=$(v)"; \
 	else \
