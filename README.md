@@ -38,11 +38,11 @@ Este projeto utiliza um `Makefile` para automatizar tarefas comuns de desenvolvi
 
 *   **`make up`**
     Este comando realiza as seguintes ações:
-    1.  Verifica se o arquivo de licença `license/activation-key.xml` existe.
+    1.  Verifica se o arquivo de licença `liferay/license/activation-key.xml` existe.
     2.  Constrói as imagens Docker necessárias (`docker compose build`).
     3.  Inicia os contêineres em modo detached (`docker compose up -d`).
     
-    > **Importante**: Antes de executar este comando, você **deve** colocar seu arquivo de licença DXP no diretório `license/` com o nome `activation-key.xml`. O contêiner do Liferay irá copiar este arquivo para o diretório de deploy durante a inicialização.
+    > **Importante**: Antes de executar este comando, você **deve** colocar seu arquivo de licença DXP no diretório `liferay/license/` com o nome `activation-key.xml`. O contêiner do Liferay irá copiar este arquivo para o diretório de deploy durante a inicialização.
     
     **Uso com versão específica:**
 

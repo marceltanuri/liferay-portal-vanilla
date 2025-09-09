@@ -9,8 +9,8 @@ endif
 
 up:
 	@echo "==> Verificando a existência do arquivo de licença..."
-	@if [ ! -f "license/activation-key.xml" ]; then \
-		echo "ERRO: Arquivo de licença não encontrado em 'license/activation-key.xml'."; \
+	@if [ ! -f "liferay/license/activation-key.xml" ]; then \
+		echo "ERRO: Arquivo de licença não encontrado em 'liferay/license/activation-key.xml'."; \
 		exit 1; \
 	fi
 	@if [ -n "$(v)" ]; then \

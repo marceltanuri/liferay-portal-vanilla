@@ -32,7 +32,7 @@ services:
     extra_hosts:
       - "host.docker.internal:host-gateway"
 
-  nginx:
+  webserver:
     image: nginx:latest
     container_name: nginx-proxy
     volumes:
