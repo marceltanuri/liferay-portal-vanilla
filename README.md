@@ -39,22 +39,32 @@ Este projeto utiliza um `Makefile` para automatizar tarefas comuns de desenvolvi
 *   **`make up`**
     Este comando realiza as seguintes ações:
     1.  Verifica se o arquivo de licença `liferay/license/activation-key.xml` existe.
-    2.  Constrói as imagens Docker necessárias (`docker compose build`).
-    3.  Inicia os contêineres em modo detached (`docker compose up -d`).
+    2.  Se a variável `hotfix` for informada, faz o download do arquivo de hotfix correspondente.
+    3.  Constrói as imagens Docker necessárias (`docker compose build`).
+    4.  Inicia os contêineres em modo detached (`docker compose up -d`).
     
     > **Importante**: Antes de executar este comando, você **deve** colocar seu arquivo de licença DXP no diretório `liferay/license/` com o nome `activation-key.xml`. O contêiner do Liferay irá copiar este arquivo para o diretório de deploy durante a inicialização.
     
-    **Uso com versão específica:**
-
-    É possível especificar uma versão do Liferay para o build passando a variável `v`. Se nenhuma versão for informada, será utilizada a tag `latest` definida no Dockerfile.
-
+    **Uso Básico:**
     ```sh
-    # Exemplo para usar a versão 7.4.3-ga85
-    make up v=7.4.3-ga85
+    make up
+    ```
+    
+    **Uso com Versão e Hotfix:**
+    
+    É possível especificar uma versão do Liferay (`v`) e um número de hotfix (`hotfix`). Ao fazer isso, o `Makefile` tentará baixar o hotfix automaticamente do CDN da Liferay e o colocará na pasta `liferay/patching` para ser aplicado durante a inicialização do contêiner.
+    
+    ```sh
+    # Exemplo para usar a versão 2024.q2.8 com o hotfix 48
+    make up v=2024.q2.8 hotfix=48
     ```
 
 *   **`make down`**
-    Para e remove os contêineres, redes e volumes associados ao projeto. Este comando também remove as imagens Docker que foram construídas localmente (`--rmi local`), garantindo uma limpeza completa do ambiente.
+    Para e remove os contêineres, redes e volumes associados ao projeto. Este comando também:
+    - Remove as imagens Docker que foram construídas localmente (`--rmi local`).
+    - Apaga os arquivos de hotfix (`.zip`) baixados na pasta `liferay/patching/`.
+    
+    Isso garante uma limpeza completa do ambiente.
 
     ```sh
     make down
