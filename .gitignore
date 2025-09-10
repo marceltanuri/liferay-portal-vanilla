@@ -21,3 +21,11 @@ liferay/config/osgi/modules/*
 !liferay/config/osgi/modules/.keep
 
 /liferay/config/.all/
+
+/liferay/config/custom/*
+!/liferay/config/custom/.keep
+!/liferay/config/custom/osgi/.keep
+!/liferay/config/custom/osgi/configs.keep
+!/liferay/config/custom/osgi/modules.keep
+!/liferay/config/custom/tomcat/.keep
+!/liferay/config/custom/tomcat/lib/.keep
