@@ -1,55 +1,140 @@
-.PHONY: up ensure-patch-dir download-hotfix
+# ==============================================================================
+# up.mk - Lida com a inicialização e build do ambiente Docker.
+# ==============================================================================
 
-# Monta o parâmetro de build somente se v vier setado
+.PHONY: up _ensure-patch-dir _join-config _join-portal-ext _join-osgi-configs \
+        _join-tomcat-configs _check-license _download-hotfix-if-needed \
+        _download-hotfix _build-docker-images _inform-liferay-version \
+        _start-containers
+
+# --- Variáveis de Build e Download ---
+
+# Monta o parâmetro --build-arg para o Docker Compose somente se a variável 'v' (versão) for definida.
 ifeq ($(strip $(v)),)
 BUILD_ARGS :=
 else
 BUILD_ARGS := --build-arg LIFERAY_VERSION=$(v)
 endif
 
+# Diretórios para patching e arquivos de configuração que são montados como volumes.
 PATCH_DIR := liferay/patching
+CONFIG_DIR := liferay/config
+CUSTOM_CONFIG_DIR := ${CONFIG_DIR}/custom
+DEFAULT_CONFIG_DIR := ${CONFIG_DIR}/default
+CONFIG_ALL_DIR := ${CONFIG_DIR}/.all
+
+# Arquivos de configuração
+DEFAULT_PROPS_FILE := ${DEFAULT_CONFIG_DIR}/portal-ext.properties
+CUSTOM_PROPS_FILE := $(CUSTOM_CONFIG_DIR)/portal-ext.properties
+FINAL_PROPS_FILE := $(CONFIG_ALL_DIR)/portal-ext.properties
+
+# Define o nome do arquivo de hotfix e a URL de download com base nas variáveis 'v' e 'hotfix'.
 HOTFIX_FILE := $(PATCH_DIR)/liferay-dxp-${v}-hotfix-$(hotfix).zip
 HOTFIX_URL := https://releases-cdn.liferay.com/dxp/hotfix/$(v)/liferay-dxp-${v}-hotfix-$(hotfix).zip
 
-up: ensure-patch-dir
+# --- Alvos Principais ---
+
+up: _ensure-patch-dir _join-config _check-license _download-hotfix-if-needed _build-docker-images _start-containers ## Orquestra a subida do ambiente.
+
+## _check-license: Verifica a existência do arquivo de licença.
+_check-license:
 	@echo "==> Verificando a existência do arquivo de licença..."
 	@if [ ! -f "liferay/license/activation-key.xml" ]; then \
 		echo "ERRO: Arquivo de licença não encontrado em 'liferay/license/activation-key.xml'."; \
 		exit 1; \
 	fi
-
+	
+## _inform-liferay-version: Informa a versão do Liferay que será utilizada no build.
+_inform-liferay-version:
 	@if [ -n "$(v)" ]; then \
 		echo "==> Build com LIFERAY_VERSION=$(v)"; \
 	else \
 		echo "==> Build usando o default do Dockerfile (ARG LIFERAY_VERSION=latest)"; \
 	fi
-
-# Faz download do hotfix se 'hotfix' foi passado
+	
+## _download-hotfix-if-needed: Faz o download do hotfix, se a variável 'hotfix' foi passada.
+_download-hotfix-if-needed:
 ifeq ($(strip $(hotfix)),)
 	@echo "==> Nenhum HOTFIX informado. Prosseguindo sem aplicar hotfix."
 else
-	@$(MAKE) download-hotfix v=$(v) hotfix=$(hotfix) --no-print-directory
+	# Chama o alvo 'download-hotfix' de forma recursiva.
+	@$(MAKE) _download-hotfix v=$(v) hotfix=$(hotfix) --no-print-directory
 endif
-
+	
+## _build-docker-images: Constrói as imagens Docker.
+_build-docker-images: _inform-liferay-version
 	@docker compose build $(BUILD_ARGS)
+	
+## _start-containers: Inicia os contêineres em modo detached.
+_start-containers:
 	@docker compose up -d
 
-ensure-patch-dir:
-	@mkdir -p "$(PATCH_DIR)"
-
-download-hotfix: ensure-patch-dir
+## _download-hotfix: Baixa um arquivo de hotfix específico.
+_download-hotfix: _ensure-patch-dir
+	# Valida se as variáveis 'v' e 'hotfix' foram informadas.
 ifeq ($(strip $(v)),)
 	$(error É necessário informar a versão: make up v=2024.q2.8 hotfix=48)
 endif
 ifeq ($(strip $(hotfix)),)
 	$(error É necessário informar o hotfix: make up v=2024.q2.8 hotfix=48)
 endif
-	@if [ -f "$(HOTFIX_FILE)" ]; then \
+	# Verifica se o arquivo já existe, a menos que FORCE_DOWNLOAD seja 1.
+	@if [ -f "$(HOTFIX_FILE)" ] && [ "$(FORCE_DOWNLOAD)" != "1" ]; then \
 		echo "==> Hotfix já existe em $(HOTFIX_FILE). Use 'make download-hotfix FORCE_DOWNLOAD=1 ...' para forçar novo download."; \
 	else \
-		echo "==> Baixando hotfix $(hotfix) da versão $(v)"; \
+		echo "==> Baixando hotfix $(hotfix) da versão $(v)..."; \
 		echo "==> URL: $(HOTFIX_URL)"; \
 		curl -fL --retry 3 --retry-delay 2 -o "$(HOTFIX_FILE).part" "$(HOTFIX_URL)" && \
-		  mv "$(HOTFIX_FILE).part" "$(HOTFIX_FILE)"; \
+		  mv "$(HOTFIX_FILE).part" "$(HOTFIX_FILE)" || (rm -f "$(HOTFIX_FILE).part" && exit 1); \
 		echo "==> Hotfix salvo em $(HOTFIX_FILE)"; \
 	fi
+
+# --- Alvos Internos Auxiliares de Configuração ---
+
+## _ensure-patch-dir: Garante que o diretório de patching exista.
+_ensure-patch-dir:
+	@mkdir -p "$(PATCH_DIR)"
+
+## _join-config: Une as configurações padrão e customizadas em um único arquivo.
+_join-config: _join-portal-ext _join-osgi-configs _join-tomcat-configs
+	@echo "==> Todas as configurações foram unidas com sucesso."
+
+## _join-portal-ext: Une os arquivos portal-ext.properties padrão e customizado.
+_join-portal-ext:
+	@echo "==> Gerando arquivo de configuração final em $(FINAL_PROPS_FILE)..."
+	# Garante que o diretório de destino exista.
+	@mkdir -p "$(CONFIG_ALL_DIR)"
+	# Começa com o arquivo padrão.
+	@cp "$(DEFAULT_PROPS_FILE)" "$(FINAL_PROPS_FILE)"
+	# Se um arquivo customizado existir, anexa seu conteúdo ao final do arquivo final.
+	@if [ -f "$(CUSTOM_PROPS_FILE)" ]; then \
+		echo "" >> "$(FINAL_PROPS_FILE)"; \
+		echo "# --- Custom Properties (from $(CUSTOM_PROPS_FILE)) ---" >> "$(FINAL_PROPS_FILE)"; \
+		cat "$(CUSTOM_PROPS_FILE)" >> "$(FINAL_PROPS_FILE)"; \
+		echo "==> Configurações de '$(CUSTOM_PROPS_FILE)' foram aplicadas."; \
+	fi
+	@echo "==> Arquivo portal-ext.properties gerado com sucesso."
+
+## _join-osgi-configs: Une as configurações OSGi padrão e customizadas.
+_join-osgi-configs:
+	@echo "==> Unindo configurações OSGi..."
+	# Garante que os diretórios de destino existam
+	@mkdir -p "$(CONFIG_ALL_DIR)/osgi/configs"
+	@mkdir -p "$(CONFIG_ALL_DIR)/osgi/modules"
+
+	# Copia recursivamente, permitindo que 'custom' sobrescreva 'default'.
+	@cp -r $(DEFAULT_CONFIG_DIR)/osgi/configs/* "$(CONFIG_ALL_DIR)/osgi/configs/" 2>/dev/null || true
+	@cp -r $(CUSTOM_CONFIG_DIR)/osgi/configs/* "$(CONFIG_ALL_DIR)/osgi/configs/" 2>/dev/null || true
+	@cp -r $(CUSTOM_CONFIG_DIR)/osgi/modules/* "$(CONFIG_ALL_DIR)/osgi/modules/" 2>/dev/null || true
+	@echo "==> Configurações OSGi unidas com sucesso."
+
+## _join-tomcat-configs: Une as configurações do Tomcat padrão e customizadas.
+_join-tomcat-configs:
+	# Garante que os diretórios de destino existam.
+	@mkdir -p "$(CONFIG_ALL_DIR)/tomcat/lib"
+	# Copia recursivamente, permitindo que 'custom' sobrescreva 'default'.
+	@cp -r $(DEFAULT_CONFIG_DIR)/tomcat/* "$(CONFIG_ALL_DIR)/tomcat/" 2>/dev/null || true
+	@cp -r $(CUSTOM_CONFIG_DIR)/tomcat/* "$(CONFIG_ALL_DIR)/tomcat/" 2>/dev/null || true
+	@cp -r $(DEFAULT_CONFIG_DIR)/tomcat/lib/* "$(CONFIG_ALL_DIR)/tomcat/lib/" 2>/dev/null || true
+	@cp -r $(CUSTOM_CONFIG_DIR)/tomcat/lib/* "$(CONFIG_ALL_DIR)/tomcat/lib/" 2>/dev/null || true
+	@echo "==> Configurações do Tomcat unidas com sucesso."

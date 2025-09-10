@@ -22,7 +22,7 @@ services:
       - "8080:8080"
     volumes:
       - ./liferay/deploy:/mnt/liferay/deploy
-      - ./liferay/config:/mnt/liferay/files
+      - ./liferay/config/.all:/mnt/liferay/files
       - ./liferay/logs:/opt/liferay/logs
       - ./liferay/document-library:/opt/liferay/data/document_library
       - ./liferay/patching:/mnt/liferay/patching
