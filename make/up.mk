@@ -4,7 +4,7 @@
 
 .PHONY: up _ensure-patch-dir _join-config _join-portal-ext _join-osgi-configs \
         _join-tomcat-configs _check-license _download-hotfix-if-needed \
-        _download-hotfix _build-docker-images _inform-liferay-version \
+        _download-hotfix _build-docker-images _inform-liferay-version _setup_env \
         _start-containers
 
 # --- Variáveis de Build e Download ---
@@ -16,10 +16,13 @@ else
 BUILD_ARGS := --build-arg LIFERAY_VERSION=$(v)
 endif
 
+# Variável para o diretório de ambiente externo
+ENV_DIR ?=
+
 # Diretórios para patching e arquivos de configuração que são montados como volumes.
 PATCH_DIR := liferay/patching
 CONFIG_DIR := liferay/config
-CUSTOM_CONFIG_DIR := ${CONFIG_DIR}/custom
+CUSTOM_CONFIG_DIR := ${CONFIG_DIR}/.custom
 DEFAULT_CONFIG_DIR := ${CONFIG_DIR}/default
 CONFIG_ALL_DIR := ${CONFIG_DIR}/.all
 
@@ -34,7 +37,31 @@ HOTFIX_URL := https://releases-cdn.liferay.com/dxp/hotfix/$(v)/liferay-dxp-${v}-
 
 # --- Alvos Principais ---
 
-up: _ensure-patch-dir _join-config _check-license _download-hotfix-if-needed _build-docker-images _start-containers ## Orquestra a subida do ambiente.
+up: _setup_env ## Orquestra a subida do ambiente.
+
+## _setup_env: Configura o ambiente a partir de um diretório externo ou executa o fluxo padrão.
+_setup_env:
+ifeq ($(strip $(ENV_DIR)),)
+	# Fluxo padrão se ENV_DIR não for fornecido
+	@$(MAKE) _standard_up v=$(v) hotfix=$(hotfix) FORCE_DOWNLOAD=$(FORCE_DOWNLOAD) --no-print-directory
+else
+	# Fluxo com ENV_DIR: carrega variáveis do arquivo .up e executa o fluxo padrão
+	@echo "==> Configurando ambiente a partir de: $(ENV_DIR)"
+	@if [ ! -d "$(ENV_DIR)" ]; then echo "ERRO: Diretório ENV_DIR não encontrado: $(ENV_DIR)"; exit 1; fi
+	@if [ ! -f "$(ENV_DIR)/.up" ]; then echo "ERRO: Arquivo .up não encontrado em $(ENV_DIR)"; exit 1; fi
+	@echo "==> Copiando configurações de '$(ENV_DIR)' para '$(CUSTOM_CONFIG_DIR)'..."
+	@if [ -d "$(ENV_DIR)" ]; then \
+		mkdir -p $(CUSTOM_CONFIG_DIR); \
+		cp -r $(ENV_DIR)/* $(CUSTOM_CONFIG_DIR)/; \
+	else \
+		echo "==> Aviso: Diretório '$(ENV_DIR)' não encontrado. Nenhuma configuração customizada foi copiada."; \
+	fi
+	@echo "==> Carregando variáveis de $(ENV_DIR)/.up e iniciando o ambiente..."
+	@$(MAKE) _standard_up `cat $(ENV_DIR)/.up` FORCE_DOWNLOAD=$(FORCE_DOWNLOAD) --no-print-directory
+endif
+
+## _standard_up: Alvo interno que contém o fluxo de execução padrão.
+_standard_up: _ensure-patch-dir _join-config _check-license _download-hotfix-if-needed _build-docker-images _start-containers
 
 ## _check-license: Verifica a existência do arquivo de licença.
 _check-license:
