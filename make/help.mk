@@ -2,14 +2,16 @@ help: ## Mostra esta mensagem de ajuda.
 	@echo "Uso: make [alvo]"
 	@echo ""
 	@echo "Alvos disponíveis:"
-	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | sort | awk 'BEGIN {FS = ":.*?## "}; {printf "  \033[36m%-20s\033[0m %s\n", $$1, $$2}'
+	@grep -E '^[a-zA-Z0-9_-]+:.*?## .*$$' $(MAKEFILE_LIST) | grep -v '^_.*' | sort | awk 'BEGIN {FS = ":.*?## "}; {printf "  \033[36m%-20s\033[0m %s\n", $$1, $$2}'
 	@echo ""
 	@echo "Variáveis de ambiente:"
 	@echo "  v=<versão>        Define a versão do Liferay (ex.: v=7.4.3)"
 	@echo "  hotfix=<número>   Define o número do hotfix a ser aplicado (ex.: hotfix=1)"
+	@echo "  service=<serviço> Especifica um serviço para o comando 'logs' (ex: liferay, database)"
 	@echo ""
 	@echo "Exemplos:"
 	@echo "  make up v=2024.q2.8 hotfix=48"
 	@echo "  make down"
+	@echo "  make logs service=liferay"
 	@echo "  make reset-deploy"
 	@echo ""echo "Certifique-se de ter o Docker e Docker Compose instalados."
