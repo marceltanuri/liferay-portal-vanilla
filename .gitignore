@@ -1,6 +1,5 @@
 elasticsearch-data/
-document-library/
-!document-library/.keep
+liferay/document-library/
 
 liferay/logs/*
 !liferay/logs/.keep
