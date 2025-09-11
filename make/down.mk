@@ -6,3 +6,5 @@ down: ## Para e remove os contêineres, redes, volumes e imagens locais.
 	@rm -rf liferay/config/.custom
 	@rm	-rf elasticsearch-data
 	@rm	-rf liferay/document-library
+	@rm	-rf liferay/deploy/*
+	@rm	-rf echo "" > liferay/.all-env

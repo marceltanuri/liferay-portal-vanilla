@@ -2,7 +2,7 @@
 # up.mk - Lida com a inicialização e build do ambiente Docker.
 # ==============================================================================
 
-.PHONY: up _ensure-patch-dir _join-config _join-portal-ext _join-osgi-configs \
+.PHONY: up _ensure-patch-dir _join-config _join-portal-ext _join-env-file _join-osgi-configs \
         _join-tomcat-configs _check-license _download-hotfix-if-needed \
         _download-hotfix _build-docker-images _inform-liferay-version _setup_env \
         _start-containers
@@ -22,13 +22,14 @@ ENV_DIR ?=
 # Diretórios para patching e arquivos de configuração que são montados como volumes.
 PATCH_DIR := liferay/patching
 CONFIG_DIR := liferay/config
-CUSTOM_CONFIG_DIR := ${CONFIG_DIR}/.custom
 DEFAULT_CONFIG_DIR := ${CONFIG_DIR}/default
 CONFIG_ALL_DIR := ${CONFIG_DIR}/.all
 
+DEFAULT_ENV_FILE := liferay/.default-env
+FINAL_ENV_FILE := liferay/.all-env
+
 # Arquivos de configuração
 DEFAULT_PROPS_FILE := ${DEFAULT_CONFIG_DIR}/portal-ext.properties
-CUSTOM_PROPS_FILE := $(CUSTOM_CONFIG_DIR)/portal-ext.properties
 FINAL_PROPS_FILE := $(CONFIG_ALL_DIR)/portal-ext.properties
 
 # Define o nome do arquivo de hotfix e a URL de download com base nas variáveis 'v' e 'hotfix'.
@@ -45,19 +46,13 @@ ifeq ($(strip $(ENV_DIR)),)
 	# Fluxo padrão se ENV_DIR não for fornecido
 	@$(MAKE) _standard_up v=$(v) hotfix=$(hotfix) FORCE_DOWNLOAD=$(FORCE_DOWNLOAD) --no-print-directory
 else
-	# Fluxo com ENV_DIR: carrega variáveis do arquivo .up e executa o fluxo padrão
+	# Fluxo com ENV_DIR: carrega variáveis do arquivo .args e executa o fluxo padrão
 	@echo "==> Configurando ambiente a partir de: $(ENV_DIR)"
 	@if [ ! -d "$(ENV_DIR)" ]; then echo "ERRO: Diretório ENV_DIR não encontrado: $(ENV_DIR)"; exit 1; fi
-	@if [ ! -f "$(ENV_DIR)/.up" ]; then echo "ERRO: Arquivo .up não encontrado em $(ENV_DIR)"; exit 1; fi
-	@echo "==> Copiando configurações de '$(ENV_DIR)' para '$(CUSTOM_CONFIG_DIR)'..."
-	@if [ -d "$(ENV_DIR)" ]; then \
-		mkdir -p $(CUSTOM_CONFIG_DIR); \
-		cp -r $(ENV_DIR)/* $(CUSTOM_CONFIG_DIR)/; \
-	else \
-		echo "==> Aviso: Diretório '$(ENV_DIR)' não encontrado. Nenhuma configuração customizada foi copiada."; \
-	fi
-	@echo "==> Carregando variáveis de $(ENV_DIR)/.up e iniciando o ambiente..."
-	@$(MAKE) _standard_up `cat $(ENV_DIR)/.up` FORCE_DOWNLOAD=$(FORCE_DOWNLOAD) --no-print-directory
+	@if [ ! -d "$(ENV_DIR)/config" ]; then echo "ERRO: Diretório ENV_DIR/configs não encontrado: $(ENV_DIR)"; exit 1; fi
+	@if [ ! -f "$(ENV_DIR)/.args" ]; then echo "ERRO: Arquivo .args não encontrado em $(ENV_DIR)"; exit 1; fi
+	@echo "==> Carregando variáveis de $(ENV_DIR)/.args e iniciando o ambiente..."
+	@$(MAKE) _standard_up `cat $(ENV_DIR)/.args` FORCE_DOWNLOAD=$(FORCE_DOWNLOAD) --no-print-directory
 endif
 
 ## _standard_up: Alvo interno que contém o fluxo de execução padrão.
@@ -66,10 +61,11 @@ _standard_up: _ensure-patch-dir _join-config _check-license _download-hotfix-if-
 ## _check-license: Verifica a existência do arquivo de licença.
 _check-license:
 	@echo "==> Verificando a existência do arquivo de licença..."
-	@if [ ! -f "liferay/license/activation-key.xml" ]; then \
-		echo "ERRO: Arquivo de licença não encontrado em 'liferay/license/activation-key.xml'."; \
-		exit 1; \
-	fi
+	@if [ ! -f liferay/license/activation-key.xml ]; then echo "ERRO: Arquivo de licença não encontrado em 'liferay/license/activation-key.xml'."; exit 1; fi
+	@echo "==> Arquivo de licença encontrado."
+	@if [ ! -s liferay/license/activation-key.xml ]; then echo "ERRO: Arquivo de licença 'liferay/license/activation-key.xml' está vazio."; exit 1; fi
+	@echo "==> Arquivo de licença não está vazio."
+	@cp liferay/license/activation-key.xml liferay/deploy/ 
 	
 ## _inform-liferay-version: Informa a versão do Liferay que será utilizada no build.
 _inform-liferay-version:
@@ -123,7 +119,7 @@ _ensure-patch-dir:
 	@mkdir -p "$(PATCH_DIR)"
 
 ## _join-config: Une as configurações padrão e customizadas em um único arquivo.
-_join-config: _join-portal-ext _join-osgi-configs _join-tomcat-configs
+_join-config: _join-portal-ext _join-osgi-configs _join-env-file _join-tomcat-configs
 	@echo "==> Todas as configurações foram unidas com sucesso."
 
 ## _join-portal-ext: Une os arquivos portal-ext.properties padrão e customizado.
@@ -133,14 +129,41 @@ _join-portal-ext:
 	@mkdir -p "$(CONFIG_ALL_DIR)"
 	# Começa com o arquivo padrão.
 	@cp "$(DEFAULT_PROPS_FILE)" "$(FINAL_PROPS_FILE)"
-	# Se um arquivo customizado existir, anexa seu conteúdo ao final do arquivo final.
-	@if [ -f "$(CUSTOM_PROPS_FILE)" ]; then \
-		echo "" >> "$(FINAL_PROPS_FILE)"; \
-		echo "# --- Custom Properties (from $(CUSTOM_PROPS_FILE)) ---" >> "$(FINAL_PROPS_FILE)"; \
-		cat "$(CUSTOM_PROPS_FILE)" >> "$(FINAL_PROPS_FILE)"; \
-		echo "==> Configurações de '$(CUSTOM_PROPS_FILE)' foram aplicadas."; \
+	# Anexa o conteúdo de cada arquivo portal-*.properties encontrado no diretório customizado.
+	@echo "==> Lendo arquivos de configuração customizados em $(ENV_DIR)"
+	@if [ -d "$(ENV_DIR)" ]; then \
+		for custom_file in $(ENV_DIR)/portal-*.properties; do \
+			echo "==> Lendo arquivo de configuração customizado $$custom_file"; \
+			if [ -f "$$custom_file" ]; then \
+				echo "" >> "$(FINAL_PROPS_FILE)"; \
+				echo "# --- Custom Properties (from $$custom_file) ---" >> "$(FINAL_PROPS_FILE)"; \
+				cat "$$custom_file" >> "$(FINAL_PROPS_FILE)"; \
+				echo "==> Configurações de '$$custom_file' foram aplicadas."; \
+			fi \
+		done \
 	fi
 	@echo "==> Arquivo portal-ext.properties gerado com sucesso."
+
+
+## _join-env-file: Une os arquivos .env padrão e customizado.
+_join-env-file:
+	@echo "==> Gerando arquivo de configuração final em $(FINAL_ENV_FILE)..."
+	# Começa com o arquivo padrão.
+	@cp "$(DEFAULT_ENV_FILE)" "$(FINAL_ENV_FILE)"
+	# Anexa o conteúdo de cada arquivo .*env encontrado no diretório customizado.
+	@echo "==> Lendo arquivos .env customizados em $(ENV_DIR)"
+	@if [ -d "$(ENV_DIR)" ]; then \
+		for custom_file in $(ENV_DIR)/.*env; do \
+		echo "==> Lendo arquivo de .env customizado $$custom_file"; \
+			if [ -f "$$custom_file" ]; then \
+				echo "" >> "$(FINAL_ENV_FILE)"; \
+				echo "# --- Custom env (from $$custom_file) ---" >> "$(FINAL_ENV_FILE)"; \
+				cat "$$custom_file" >> "$(FINAL_ENV_FILE)"; \
+				echo "==> Configurações de '$$custom_file' foram aplicadas."; \
+			fi \
+		done \
+	fi
+	@echo "==> Arquivo .-all-env gerado com sucesso."
 
 ## _join-osgi-configs: Une as configurações OSGi padrão e customizadas.
 _join-osgi-configs:
@@ -151,8 +174,8 @@ _join-osgi-configs:
 
 	# Copia recursivamente, permitindo que 'custom' sobrescreva 'default'.
 	@cp -r $(DEFAULT_CONFIG_DIR)/osgi/configs/* "$(CONFIG_ALL_DIR)/osgi/configs/" 2>/dev/null || true
-	@cp -r $(CUSTOM_CONFIG_DIR)/osgi/configs/* "$(CONFIG_ALL_DIR)/osgi/configs/" 2>/dev/null || true
-	@cp -r $(CUSTOM_CONFIG_DIR)/osgi/modules/* "$(CONFIG_ALL_DIR)/osgi/modules/" 2>/dev/null || true
+	@cp -r $(ENV_DIR)/config/osgi/configs/* "$(CONFIG_ALL_DIR)/osgi/configs/" 2>/dev/null || true
+	@cp -r $(ENV_DIR)/config/osgi/modules/* "$(CONFIG_ALL_DIR)/osgi/modules/" 2>/dev/null || true
 	@echo "==> Configurações OSGi unidas com sucesso."
 
 ## _join-tomcat-configs: Une as configurações do Tomcat padrão e customizadas.
@@ -161,7 +184,7 @@ _join-tomcat-configs:
 	@mkdir -p "$(CONFIG_ALL_DIR)/tomcat/lib"
 	# Copia recursivamente, permitindo que 'custom' sobrescreva 'default'.
 	@cp -r $(DEFAULT_CONFIG_DIR)/tomcat/* "$(CONFIG_ALL_DIR)/tomcat/" 2>/dev/null || true
-	@cp -r $(CUSTOM_CONFIG_DIR)/tomcat/* "$(CONFIG_ALL_DIR)/tomcat/" 2>/dev/null || true
+	@cp -r $(ENV_DIR)/config/tomcat/* "$(CONFIG_ALL_DIR)/tomcat/" 2>/dev/null || true
 	@cp -r $(DEFAULT_CONFIG_DIR)/tomcat/lib/* "$(CONFIG_ALL_DIR)/tomcat/lib/" 2>/dev/null || true
-	@cp -r $(CUSTOM_CONFIG_DIR)/tomcat/lib/* "$(CONFIG_ALL_DIR)/tomcat/lib/" 2>/dev/null || true
+	@cp -r $(ENV_DIR)/config/tomcat/lib/* "$(CONFIG_ALL_DIR)/tomcat/lib/" 2>/dev/null || true
 	@echo "==> Configurações do Tomcat unidas com sucesso."

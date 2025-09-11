@@ -19,6 +19,5 @@ liferay/deploy/*
 liferay/config/osgi/modules/*
 !liferay/config/osgi/modules/.keep
 
-/liferay/config/.all/
-
-/liferay/config/.custom/
+liferay/config/.all/
+liferay/.all-env
