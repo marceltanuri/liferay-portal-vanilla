@@ -21,3 +21,9 @@ liferay/config/osgi/modules/*
 
 liferay/config/.all/
 liferay/.all-env
+
+liferay/document-library/*
+!liferay/document-library/.keep
+
+elasticsearch-data/*
+!elasticsearch-data/.keep
