@@ -132,7 +132,7 @@ _join-portal-ext:
 	# Anexa o conteúdo de cada arquivo portal-*.properties encontrado no diretório customizado.
 	@echo "==> Lendo arquivos de configuração customizados em $(ENV_DIR)"
 	@if [ -d "$(ENV_DIR)" ]; then \
-		for custom_file in $(ENV_DIR)/portal-*.properties; do \
+		for custom_file in $(ENV_DIR)/config/portal-*.properties; do \
 			echo "==> Lendo arquivo de configuração customizado $$custom_file"; \
 			if [ -f "$$custom_file" ]; then \
 				echo "" >> "$(FINAL_PROPS_FILE)"; \
