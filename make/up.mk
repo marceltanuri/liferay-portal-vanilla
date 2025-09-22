@@ -3,8 +3,8 @@
 # ==============================================================================
 
 .PHONY: up _ensure-patch-dir _join-config _join-portal-ext _join-env-file _join-osgi-configs \
-        _join-tomcat-configs _check-license _download-hotfix-if-needed \
-        _download-hotfix _build-docker-images _inform-liferay-version _setup_env \
+        _join-tomcat-configs _check-license _download-hotfix-if-needed _copy-document-library \
+        _download-hotfix _build-docker-images _inform-liferay-version _setup_env _copy-mysql-dump \
         _start-containers
 
 # --- Variáveis de Build e Download ---
@@ -56,7 +56,7 @@ else
 endif
 
 ## _standard_up: Alvo interno que contém o fluxo de execução padrão.
-_standard_up: _ensure-patch-dir _join-config _check-license _download-hotfix-if-needed _build-docker-images _start-containers
+_standard_up: _ensure-patch-dir _join-config _copy-mysql-dump _copy-document-library _check-license _download-hotfix-if-needed _build-docker-images _start-containers
 
 ## _check-license: Verifica a existência do arquivo de licença.
 _check-license:
@@ -110,6 +110,28 @@ endif
 		curl -fL --retry 3 --retry-delay 2 -o "$(HOTFIX_FILE).part" "$(HOTFIX_URL)" && \
 		  mv "$(HOTFIX_FILE).part" "$(HOTFIX_FILE)" || (rm -f "$(HOTFIX_FILE).part" && exit 1); \
 		echo "==> Hotfix salvo em $(HOTFIX_FILE)"; \
+	fi
+
+## _copy-mysql-dump: Copia o dump do banco de dados, se existir, para a pasta de inicialização do MySQL.
+_copy-mysql-dump:
+	@if [ -n "$(ENV_DIR)" ] && [ -f "$(ENV_DIR)/config/dump/dump.sql" ]; then \
+		echo "==> Copiando dump do banco de dados..."; \
+		mkdir -p mysql-dump; \
+		cp "$(ENV_DIR)/config/dump/dump.sql" mysql-dump/dump.sql; \
+		echo "==> Dump copiado para mysql-dump/dump.sql"; \
+	else \
+		echo "==> Nenhum dump de banco de dados encontrado em $(ENV_DIR)/config/dump/dump.sql. Prosseguindo sem dump."; \
+	fi
+
+## _copy-document-library: Copia o conteúdo da document library, se existir, para a pasta local.
+_copy-document-library:
+	@if [ -n "$(ENV_DIR)" ] && [ -d "$(ENV_DIR)/document_library" ]; then \
+		echo "==> Copiando conteúdo da document library..."; \
+		mkdir -p liferay/document-library; \
+		cp -r $(ENV_DIR)/document_library/* liferay/document-library/; \
+		echo "==> Conteúdo da document library copiado para liferay/document-library"; \
+	else \
+		echo "==> Nenhuma document library encontrada em $(ENV_DIR)/document_library. Prosseguindo sem copiar."; \
 	fi
 
 # --- Alvos Internos Auxiliares de Configuração ---
