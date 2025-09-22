@@ -114,13 +114,13 @@ endif
 
 ## _copy-mysql-dump: Copia o dump do banco de dados, se existir, para a pasta de inicialização do MySQL.
 _copy-mysql-dump:
-	@if [ -n "$(ENV_DIR)" ] && [ -f "$(ENV_DIR)/config/dump/dump.sql" ]; then \
+	@if [ -n "$(ENV_DIR)" ] && [ -f "$(ENV_DIR)/dump/dump.sql" ]; then \
 		echo "==> Copiando dump do banco de dados..."; \
 		mkdir -p mysql-dump; \
-		cp "$(ENV_DIR)/config/dump/dump.sql" mysql-dump/dump.sql; \
+		cp "$(ENV_DIR)/dump/dump.sql" mysql-dump/dump.sql; \
 		echo "==> Dump copiado para mysql-dump/dump.sql"; \
 	else \
-		echo "==> Nenhum dump de banco de dados encontrado em $(ENV_DIR)/config/dump/dump.sql. Prosseguindo sem dump."; \
+		echo "==> Nenhum dump de banco de dados encontrado em $(ENV_DIR)/dump/dump.sql. Prosseguindo sem dump."; \
 	fi
 
 ## _copy-document-library: Copia o conteúdo da document library, se existir, para a pasta local.
