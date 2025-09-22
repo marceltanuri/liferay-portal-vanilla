@@ -14,3 +14,4 @@ down: ## Para e remove os contêineres, redes, volumes e imagens locais.
 	@rm -rf elasticsearch-data/*
 	@rm -rf liferay/document-library/*
 	@rm -rf liferay/deploy/*
+	@rm -rf mysql-dump/*
