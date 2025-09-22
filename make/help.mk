@@ -1,3 +1,5 @@
+.PHONY: help
+
 help: ## Mostra esta mensagem de ajuda.
 	@echo "Uso: make [alvo]"
 	@echo ""

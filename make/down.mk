@@ -1,3 +1,5 @@
+.PHONY: down
+
 down: ## Para e remove os contêineres, redes, volumes e imagens locais.
 	@if [ ! -f liferay/.all-env ]; then \
 		echo "==> Criando arquivo liferay/.all-env (não existia)"; \

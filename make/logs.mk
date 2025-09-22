@@ -12,10 +12,3 @@ logs: ## Mostra os logs dos contêineres (opcional: make logs <nome_do_serviço>
 		echo "==> Mostrando logs do(s) serviço(s): $(ARGS)"; \
 		docker compose logs -f $(ARGS); \
 	fi
-
-# Adiciona uma regra vazia para os alvos que são nomes de serviços,
-# para que o make não reclame que não há regra para eles.
-ifneq ($(ARGS),)
-$(ARGS):
-	@
-endif
