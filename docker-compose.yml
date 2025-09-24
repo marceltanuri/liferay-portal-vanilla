@@ -29,6 +29,7 @@ services:
     depends_on:
       - database
       - search
+      - mailhog
     extra_hosts:
       - "host.docker.internal:host-gateway"
 
@@ -62,6 +63,20 @@ services:
       - "3000:3000"
     networks:
       - default
+
+
+  mailhog:
+      image: mailhog/mailhog
+      container_name: mailhog
+      ports:
+        - "1025:1025"   # SMTP
+        - "8025:8025"   # Web UI
+      restart: unless-stopped
+      healthcheck:
+        test: ["CMD", "curl", "-sf", "http://localhost:8025/api/v2/messages"]        
+        interval: 10s
+        timeout: 3s
+        retries: 5
 
 networks:
   default:
